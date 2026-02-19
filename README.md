@@ -280,4 +280,4 @@ author before reuse.
 
 ## Contact
 
-Ihor Kendiukhov -- kendiukhov@gmail.com
+Please open an issue in this repository for questions or correspondence.
