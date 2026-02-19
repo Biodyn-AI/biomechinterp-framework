@@ -1,0 +1,205 @@
+\section{Synthetic Validation Methodology}
+\label{sec:appendix-synthetic}
+
+This appendix provides detailed methodology for the synthetic validation experiments described in Section~\ref{sec:synthetic-validation}.
+
+\subsection{Custom Gene Regulatory Network Simulator}
+
+Since the SERGIO simulator \citep{dibaeinia2020sergio} was not directly compatible with our experimental framework, we implemented a custom GRN simulator based on steady-state dynamics. The simulator models gene expression as the solution to a linear system representing regulatory interactions:
+
+\begin{equation}
+\frac{dX}{dt} = AX + b
+\label{eq:grn-dynamics}
+\end{equation}
+
+where $X \in \mathbb{R}^{n}$ represents gene expression levels, $A \in \mathbb{R}^{n \times n}$ is the regulatory adjacency matrix, and $b \in \mathbb{R}^{n}$ encodes external inputs (transcriptional programs).
+
+At steady state, $\frac{dX}{dt} = 0$, yielding:
+\begin{equation}
+X_{\text{steady}} = -A^{-1}b
+\label{eq:steady-state-solution}
+\end{equation}
+
+\subsubsection{Network Architecture}
+
+The adjacency matrix $A$ is constructed with:
+\begin{itemize}
+    \item \textbf{Sparsity}: Edge probability $p = 0.15$ to model sparse biological networks
+    \item \textbf{Weight distribution}: Regulatory weights $w_{ij} \sim \text{Uniform}(-2, 2)$
+    \item \textbf{Self-regulation}: Diagonal elements $A_{ii} \sim -\text{Uniform}(0.5, 1.5)$ for stability
+    \item \textbf{Hierarchical structure}: Transcription factors (genes 1-5) $\rightarrow$ intermediates (genes 6-15) $\rightarrow$ targets
+\end{itemize}
+
+\subsubsection{Cell Type Programs}
+
+Each cell type $k$ has a distinct transcriptional program $b_k$:
+\begin{equation}
+b_k[i] = \begin{cases}
+\text{Uniform}(2, 5) & \text{if gene } i \text{ is active in type } k \\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+
+Active genes are randomly selected (10 per cell type) to model cell-type-specific expression programs.
+
+\subsubsection{Noise Model}
+
+The simulator incorporates multiple realistic noise sources:
+
+\textbf{Technical Noise}: Gaussian additive noise
+\begin{equation}
+X_{\text{observed}} = X_{\text{true}} + \epsilon_{\text{tech}}, \quad \epsilon_{\text{tech}} \sim \mathcal{N}(0, \sigma^2 I)
+\end{equation}
+
+\textbf{Dropout Noise}: Random gene silencing
+\begin{equation}
+X_{\text{dropout}}[i] = \begin{cases}
+X_{\text{observed}}[i] & \text{with probability } 1-p_{\text{dropout}} \\
+0 & \text{with probability } p_{\text{dropout}}
+\end{cases}
+\end{equation}
+where $p_{\text{dropout}} = 0.1$.
+
+\textbf{Non-negativity}: Expression values are clipped to ensure $X \geq 0$.
+
+\subsection{Attention Simulation Model}
+
+To simulate transformer attention patterns without running actual scGPT inference, we model attention weights as:
+
+\begin{equation}
+A_{\text{attention}} = \tanh(A_{\text{true}} + \epsilon_{\text{structured}} + \epsilon_{\text{bias}})
+\label{eq:attention-simulation}
+\end{equation}
+
+where:
+\begin{itemize}
+    \item $A_{\text{true}}$ is the ground-truth regulatory network
+    \item $\epsilon_{\text{structured}} \sim \mathcal{N}(0, \sigma_{\text{noise}}^2 I)$ represents attention head confusion
+    \item $\epsilon_{\text{bias}}$ models expression-dependent attention bias
+\end{itemize}
+
+The bias term is constructed as:
+\begin{equation}
+\epsilon_{\text{bias}}[i,j] = \alpha \cdot \text{Exponential}(0.5) \cdot \sigma_{\text{noise}}
+\end{equation}
+where $\alpha = 0.5$ weights the bias contribution.
+
+The noise level scales with cell count to model increased attention confusion:
+\begin{equation}
+\sigma_{\text{noise}} = 0.05 + 0.002 \times N_{\text{cells}}
+\end{equation}
+
+\subsection{Bias Quantification Experiments}
+
+\subsubsection{Mediation Network Generation}
+
+We construct hierarchical networks with three layers:
+\begin{itemize}
+    \item \textbf{Transcription factors}: Genes 1-5
+    \item \textbf{Intermediate regulators}: Genes 6-15  
+    \item \textbf{Target genes}: Genes 16-20
+\end{itemize}
+
+Connectivity follows:
+\begin{equation}
+P(\text{edge } i \rightarrow j) = \begin{cases}
+0.6 & \text{if } i \in \text{TFs}, j \in \text{intermediates} \\
+0.4 & \text{if } i \in \text{intermediates}, j \in \text{targets} \\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+
+Edge weights are drawn from $\text{Uniform}(0.3, 1.5)$ to ensure positive regulation.
+
+\subsubsection{Expression Simulation}
+
+Expression levels evolve through the network via iterative updates:
+\begin{equation}
+X^{(t+1)} = X^{(t)} + 0.1 \cdot (A^T X^{(t)} + \text{perturbations})
+\end{equation}
+
+Initial conditions include random perturbations $\sim \mathcal{N}(0, 0.5)$ and base expression levels $\sim \text{Exponential}(2)$.
+
+\subsubsection{Estimate Comparison}
+
+\textbf{Single-component estimates} use direct correlations:
+\begin{equation}
+\hat{\beta}_{\text{single}}[i,j] = |\text{corr}(X_i, X_j)|
+\end{equation}
+
+\textbf{Shapley estimates} use partial correlations controlling for confounders:
+\begin{equation}
+\hat{\beta}_{\text{Shapley}}[i,j] = |\text{corr}(X_i - \hat{X}_i, X_j - \hat{X}_j)|
+\end{equation}
+where $\hat{X}_k$ is the linear prediction from all other genes:
+\begin{equation}
+\hat{X}_k = \sum_{l \neq i,j} \gamma_l X_l
+\end{equation}
+
+\subsection{Sample Complexity Validation}
+
+\subsubsection{Signal Generation}
+
+Synthetic signals with controlled SNR are generated as:
+\begin{equation}
+Y = X_{\text{signal}} + X_{\text{noise}}
+\end{equation}
+where:
+\begin{equation}
+X_{\text{signal}}[i] = \begin{cases}
+s_i \cdot \mathcal{N}(0,1) & \text{if gene } i \text{ has true effect} \\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+
+Signal strengths $s_i \sim \text{Uniform}(1, 3)$ for effect genes (10 out of 50 total).
+
+The noise scaling ensures target SNR:
+\begin{equation}
+\text{SNR} = \frac{\text{Var}(X_{\text{signal}})}{\text{Var}(X_{\text{noise}})} = \frac{\sigma_{\text{signal}}^2}{\sigma_{\text{noise}}^2}
+\end{equation}
+
+\subsubsection{Detection Analysis}
+
+Signal detection uses one-sample t-tests:
+\begin{equation}
+t_i = \frac{\bar{X}_i}{\text{SE}(X_i)}, \quad \text{SE}(X_i) = \frac{s_i}{\sqrt{N}}
+\end{equation}
+
+Detection performance is measured via ROC AUC using $-\log_{10}(p\text{-values})$ as the ranking statistic.
+
+\subsubsection{Theoretical Prediction}
+
+Our theoretical detectability model uses:
+\begin{equation}
+P(\text{detection}) = \frac{1}{1 + \exp\left(-\gamma \left(\text{SNR} - \sqrt{\frac{\log p}{N}}\right)\right)}
+\end{equation}
+where $\gamma = 5$ is the sigmoid steepness parameter and $p = 50$ is the number of features.
+
+The threshold $\sqrt{\frac{\log p}{N}}$ derives from multiple testing theory and represents the minimum signal strength needed for reliable detection given sample size $N$ and feature dimension $p$.
+
+\subsection{Computational Implementation}
+
+All experiments were implemented in Python using:
+\begin{itemize}
+    \item \textbf{NumPy/SciPy}: Numerical computations and linear algebra
+    \item \textbf{scikit-learn}: PCA, standardization, and regression
+    \item \textbf{matplotlib/seaborn}: Publication-quality visualization
+    \item \textbf{NetworkX}: Graph analysis utilities
+\end{itemize}
+
+Code and data are available at: \texttt{synthetic\_validation/} in the supplementary materials.
+
+Statistical significance was assessed using non-parametric correlation tests (Spearman rank correlation) with $p < 0.05$ threshold. All results were validated across multiple random seeds to ensure reproducibility.
+
+\subsection{Limitations}
+
+Our synthetic validation has several limitations:
+\begin{enumerate}
+    \item \textbf{Simplified attention model}: Real transformer attention involves complex multi-head patterns not captured by our linear noise model
+    \item \textbf{Linear dynamics}: Biological GRNs exhibit nonlinear regulation not modeled in our steady-state framework  
+    \item \textbf{Homogeneous noise}: Real single-cell data has heterogeneous, gene-specific noise patterns
+    \item \textbf{Limited network topology}: Our hierarchical networks don't capture all biological regulatory motifs
+\end{enumerate}
+
+Despite these limitations, our results demonstrate the key theoretical predictions and provide controlled validation of the proposed diagnostic methods. Future work could extend this framework using more sophisticated GRN simulators and attention models.

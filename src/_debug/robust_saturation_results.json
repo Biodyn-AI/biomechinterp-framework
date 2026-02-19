@@ -1,0 +1,50 @@
+[
+  {
+    "completeness": 0.5,
+    "cell_count": 50,
+    "auroc": 0.7305078689035475,
+    "aupr": 0.1947469828348592,
+    "n_edges_evaluated": 19503,
+    "n_positive_edges": 250
+  },
+  {
+    "completeness": 0.5,
+    "cell_count": 100,
+    "auroc": 0.8480145431880746,
+    "aupr": 0.11592780113137499,
+    "n_edges_evaluated": 19503,
+    "n_positive_edges": 250
+  },
+  {
+    "completeness": 0.5,
+    "cell_count": 200,
+    "auroc": 0.6933136654027944,
+    "aupr": 0.05038503430158488,
+    "n_edges_evaluated": 19503,
+    "n_positive_edges": 250
+  },
+  {
+    "completeness": 1.0,
+    "cell_count": 50,
+    "auroc": 0.812063358417092,
+    "aupr": 0.20634304771141773,
+    "n_edges_evaluated": 19503,
+    "n_positive_edges": 500
+  },
+  {
+    "completeness": 1.0,
+    "cell_count": 100,
+    "auroc": 0.7800344156185864,
+    "aupr": 0.1588909876512356,
+    "n_edges_evaluated": 19503,
+    "n_positive_edges": 500
+  },
+  {
+    "completeness": 1.0,
+    "cell_count": 200,
+    "auroc": 0.6631495027100984,
+    "aupr": 0.06584362523972336,
+    "n_edges_evaluated": 19503,
+    "n_positive_edges": 500
+  }
+]

@@ -1,0 +1,35 @@
+\subsection{Cross-Model Validation: Geneformer}
+\label{sec:geneformer-validation}
+
+To test whether the limitations we identify in scGPT's attention-based GRN inference generalize beyond a single architecture, we replicated the full evaluation pipeline for Geneformer V1-10M~\citep{theodoris2023transfer}, a BERT-based single-cell foundation model trained on approximately 30 million human cells using rank-value gene encoding.
+
+\paragraph{Methods.}
+We applied the identical attention$\to$GRN pipeline to Geneformer:
+(1)~tokenized 11,202 cells from the DLPFC brain dataset using Geneformer's native rank-value encoding (19,905 genes successfully mapped);
+(2)~extracted attention weights from all 6 layers $\times$ 4 heads;
+(3)~averaged attention across layers and heads, retaining the top-20 most-attended target genes per source gene per cell;
+(4)~aggregated edge scores across cells;
+(5)~evaluated against TRRUST (8,427 curated regulatory edges) and DoRothEA (276,562 edges) reference GRNs.
+We tested at 200, 500, and 1,000 cells to assess scaling behavior.
+
+\paragraph{Results.}
+Table~\ref{tab:geneformer-grn} shows that Geneformer's attention-derived GRN predictions achieve near-random performance across all conditions. AUROC values range from 0.44 to 0.55 against TRRUST and 0.47 to 0.49 against DoRothEA (random baseline: 0.50). Top-$K$ precision, recall, and F1 scores are effectively zero at all thresholds tested (500, 1000, 5000 edges).
+
+\begin{table}[h]
+\centering
+\caption{Geneformer V1-10M attention-based GRN inference on DLPFC brain data. AUROC values near 0.5 indicate no discriminative power.}
+\label{tab:geneformer-grn}
+\begin{tabular}{lccccc}
+\toprule
+Cells & Edges & \multicolumn{2}{c}{TRRUST} & \multicolumn{2}{c}{DoRothEA} \\
+ & & AUROC & AUPRC & AUROC & AUPRC \\
+\midrule
+200  & 1.56M & 0.444 & 0.001 & 0.473 & 0.001 \\
+500  & 3.27M & 0.549 & 0.002 & 0.486 & 0.001 \\
+1000 & 5.38M & 0.522 & 0.001 & 0.486 & 0.001 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Cross-model convergence.}
+Critically, these results mirror scGPT's performance on the same task (Section~\ref{sec:grn-results}), despite fundamental differences in architecture (BERT encoder vs.\ GPT-style decoder), input representation (rank-value encoding vs.\ binned expression), and training corpus. Both models achieve AUROC $\approx 0.5$ for attention-based GRN inference, indicating that \textbf{the failure to recover regulatory relationships from attention weights is not model-specific but reflects a general limitation of current single-cell foundation models}. Attention in these models captures statistical co-occurrence patterns from pretraining, not causal regulatory structure---consistent with our theoretical analysis of the NMI gap (Section~\ref{sec:nmi-theory}).

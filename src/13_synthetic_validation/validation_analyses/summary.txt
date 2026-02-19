@@ -1,0 +1,13 @@
+Synthetic Validation Results Summary
+=====================================
+
+Generated: 2026-02-14T12:29:32.452651
+
+Scaling degradation: 0.495
+(How much GRN recovery degrades from 200 to 2000 cells)
+
+Bias reduction by Shapley values: 0.084
+(Improvement over single-component estimates)
+
+Theory-experiment correlation: 0.213
+(How well sample complexity formula predicts results)

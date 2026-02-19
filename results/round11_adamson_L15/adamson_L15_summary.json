@@ -1,0 +1,65 @@
+{
+  "experiment": "round11_adamson_L15",
+  "dataset": "Adamson_K562_CRISPRa",
+  "config": {
+    "model": "Geneformer-V2-316M",
+    "n_control_cells": 2000,
+    "n_hvg": 2000,
+    "lfc_threshold_used": 0.5,
+    "n_evaluable_perturbations": 77,
+    "perturbation_modality": "CRISPRa",
+    "eval_layers": [
+      15
+    ],
+    "primary_layer_0indexed": 14
+  },
+  "results_by_layer": {
+    "14": {
+      "layer_1indexed": 15,
+      "n_evaluated": 77,
+      "attention": {
+        "mean_auroc": 0.5798,
+        "std_auroc": 0.0519
+      },
+      "correlation": {
+        "mean_auroc": 0.6528,
+        "std_auroc": 0.122
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 4.9e-05,
+        "paired_t_p": 6e-06,
+        "mean_diff": -0.0731,
+        "cohens_d": -0.5593,
+        "bootstrap_ci_95": [
+          -0.1026,
+          -0.0438
+        ],
+        "n_attn_better": 28,
+        "n_corr_better": 49,
+        "replication_verdict": "REVERSED"
+      }
+    }
+  },
+  "replogle_L15_reference": {
+    "delta": 0.04,
+    "cohens_d": 0.22,
+    "pooled_wilcoxon_p": 0.000933,
+    "source": "nested CV analysis"
+  },
+  "replication_verdict": "REVERSED",
+  "L15_summary": {
+    "mean_diff": -0.0731,
+    "cohens_d": -0.5593,
+    "bootstrap_ci_95": [
+      -0.1026,
+      -0.0438
+    ],
+    "wilcoxon_p": 4.9e-05,
+    "paired_t_p": 6e-06,
+    "n_attn_better": 28,
+    "n_corr_better": 49,
+    "attn_mean_auroc": 0.5798,
+    "corr_mean_auroc": 0.6528,
+    "verdict": "REVERSED"
+  }
+}

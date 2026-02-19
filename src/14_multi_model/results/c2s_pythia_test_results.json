@@ -1,0 +1,255 @@
+{
+  "model_name": "C2S-Pythia",
+  "test_timestamp": "2026-02-14T13:04:31.761254",
+  "availability_test": {
+    "name": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+    "status": "available",
+    "config": {
+      "return_dict": true,
+      "output_hidden_states": false,
+      "torchscript": false,
+      "dtype": "float32",
+      "pruned_heads": {},
+      "tie_word_embeddings": false,
+      "chunk_size_feed_forward": 0,
+      "is_encoder_decoder": false,
+      "is_decoder": false,
+      "cross_attention_hidden_size": null,
+      "add_cross_attention": false,
+      "tie_encoder_decoder": false,
+      "architectures": [
+        "GPTNeoXForCausalLM"
+      ],
+      "finetuning_task": null,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "task_specific_params": null,
+      "problem_type": null,
+      "tokenizer_class": null,
+      "prefix": null,
+      "bos_token_id": 0,
+      "pad_token_id": null,
+      "eos_token_id": 0,
+      "sep_token_id": null,
+      "decoder_start_token_id": null,
+      "max_length": 20,
+      "min_length": 0,
+      "do_sample": false,
+      "early_stopping": false,
+      "num_beams": 1,
+      "temperature": 1.0,
+      "top_k": 50,
+      "top_p": 1.0,
+      "typical_p": 1.0,
+      "repetition_penalty": 1.0,
+      "length_penalty": 1.0,
+      "no_repeat_ngram_size": 0,
+      "encoder_no_repeat_ngram_size": 0,
+      "bad_words_ids": null,
+      "num_return_sequences": 1,
+      "output_scores": false,
+      "return_dict_in_generate": false,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "remove_invalid_values": false,
+      "exponential_decay_length_penalty": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "num_beam_groups": 1,
+      "diversity_penalty": 0.0,
+      "_name_or_path": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+      "transformers_version": "4.57.6",
+      "model_type": "gpt_neox",
+      "tf_legacy_loss": false,
+      "use_bfloat16": false,
+      "vocab_size": 50304,
+      "max_position_embeddings": 8192,
+      "hidden_size": 1024,
+      "num_hidden_layers": 24,
+      "num_attention_heads": 16,
+      "intermediate_size": 4096,
+      "hidden_act": "gelu",
+      "rotary_pct": 0.25,
+      "partial_rotary_factor": 0.25,
+      "rotary_emb_base": 10000,
+      "rope_theta": 10000,
+      "attention_dropout": 0.0,
+      "hidden_dropout": 0.0,
+      "classifier_dropout": 0.1,
+      "initializer_range": 0.02,
+      "layer_norm_eps": 1e-05,
+      "use_cache": false,
+      "use_parallel_residual": true,
+      "rope_scaling": null,
+      "attention_bias": true,
+      "output_attentions": false
+    },
+    "has_tokenizer": true
+  },
+  "basic_test": {
+    "timestamp": "2026-02-14T13:04:33.632269",
+    "model": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+    "status": "success",
+    "details": {
+      "model_name": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+      "model_type": "CausalLM",
+      "total_parameters": 405334016,
+      "trainable_parameters": 405334016,
+      "device": "cuda",
+      "input_shape": [
+        20,
+        56
+      ],
+      "embedding_shape": [
+        20,
+        56
+      ],
+      "has_tokenizer": true,
+      "has_attention": true,
+      "num_attention_layers": 24,
+      "config": {
+        "return_dict": true,
+        "output_hidden_states": false,
+        "torchscript": false,
+        "dtype": "float32",
+        "pruned_heads": {},
+        "tie_word_embeddings": false,
+        "chunk_size_feed_forward": 0,
+        "is_encoder_decoder": false,
+        "is_decoder": false,
+        "cross_attention_hidden_size": null,
+        "add_cross_attention": false,
+        "tie_encoder_decoder": false,
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "finetuning_task": null,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "label2id": {
+          "LABEL_0": 0,
+          "LABEL_1": 1
+        },
+        "task_specific_params": null,
+        "problem_type": null,
+        "tokenizer_class": null,
+        "prefix": null,
+        "bos_token_id": 0,
+        "pad_token_id": null,
+        "eos_token_id": 0,
+        "sep_token_id": null,
+        "decoder_start_token_id": null,
+        "max_length": 20,
+        "min_length": 0,
+        "do_sample": false,
+        "early_stopping": false,
+        "num_beams": 1,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "typical_p": 1.0,
+        "repetition_penalty": 1.0,
+        "length_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "encoder_no_repeat_ngram_size": 0,
+        "bad_words_ids": null,
+        "num_return_sequences": 1,
+        "output_scores": false,
+        "return_dict_in_generate": false,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "remove_invalid_values": false,
+        "exponential_decay_length_penalty": null,
+        "suppress_tokens": null,
+        "begin_suppress_tokens": null,
+        "num_beam_groups": 1,
+        "diversity_penalty": 0.0,
+        "_name_or_path": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+        "transformers_version": "4.57.6",
+        "model_type": "gpt_neox",
+        "tf_legacy_loss": false,
+        "use_bfloat16": false,
+        "vocab_size": 50304,
+        "max_position_embeddings": 8192,
+        "hidden_size": 1024,
+        "num_hidden_layers": 24,
+        "num_attention_heads": 16,
+        "intermediate_size": 4096,
+        "hidden_act": "gelu",
+        "rotary_pct": 0.25,
+        "partial_rotary_factor": 0.25,
+        "rotary_emb_base": 10000,
+        "rope_theta": 10000,
+        "attention_dropout": 0.0,
+        "hidden_dropout": 0.0,
+        "classifier_dropout": 0.1,
+        "initializer_range": 0.02,
+        "layer_norm_eps": 1e-05,
+        "use_cache": false,
+        "use_parallel_residual": true,
+        "rope_scaling": null,
+        "attention_bias": true,
+        "output_attentions": false
+      }
+    }
+  },
+  "scaling_test": [
+    {
+      "n_cells": 50,
+      "input_shape": [
+        50,
+        60
+      ],
+      "embedding_shape": [
+        50,
+        50304
+      ],
+      "embedding_mean": -2.208984375,
+      "embedding_std": 1.6494140625,
+      "batch_size": 16,
+      "status": "success"
+    },
+    {
+      "n_cells": 100,
+      "input_shape": [
+        100,
+        62
+      ],
+      "embedding_shape": [
+        100,
+        50304
+      ],
+      "embedding_mean": -2.158203125,
+      "embedding_std": 1.640625,
+      "batch_size": 16,
+      "status": "success"
+    },
+    {
+      "n_cells": 200,
+      "input_shape": [
+        200,
+        62
+      ],
+      "embedding_shape": [
+        200,
+        50304
+      ],
+      "embedding_mean": -2.142578125,
+      "embedding_std": 1.630859375,
+      "batch_size": 16,
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "scaling_behavior": "3.01% change",
+    "status": "success"
+  }
+}

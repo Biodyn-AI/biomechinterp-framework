@@ -1,0 +1,71 @@
+{
+  "experiment": "round9_adamson_cross_context",
+  "dataset": "Adamson_K562_CRISPRa",
+  "config": {
+    "model": "Geneformer-V2-316M",
+    "n_control_cells": 2000,
+    "n_hvg": 2000,
+    "lfc_threshold_used": 0.5,
+    "n_evaluable_perturbations": 77,
+    "perturbation_modality": "CRISPRa"
+  },
+  "results_by_layer": {
+    "5": {
+      "layer_1indexed": 6,
+      "n_evaluated": 77,
+      "attention": {
+        "mean_auroc": 0.555,
+        "std_auroc": 0.0682
+      },
+      "correlation": {
+        "mean_auroc": 0.6528,
+        "std_auroc": 0.122
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 1e-06,
+        "paired_t_p": 0.0,
+        "mean_diff": -0.0978,
+        "n_attn_better": 22,
+        "n_corr_better": 55
+      }
+    },
+    "12": {
+      "layer_1indexed": 13,
+      "n_evaluated": 77,
+      "attention": {
+        "mean_auroc": 0.5469,
+        "std_auroc": 0.064
+      },
+      "correlation": {
+        "mean_auroc": 0.6528,
+        "std_auroc": 0.122
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.0,
+        "paired_t_p": 0.0,
+        "mean_diff": -0.106,
+        "n_attn_better": 22,
+        "n_corr_better": 55
+      }
+    },
+    "17": {
+      "layer_1indexed": 18,
+      "n_evaluated": 77,
+      "attention": {
+        "mean_auroc": 0.5481,
+        "std_auroc": 0.0636
+      },
+      "correlation": {
+        "mean_auroc": 0.6528,
+        "std_auroc": 0.122
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.0,
+        "paired_t_p": 0.0,
+        "mean_diff": -0.1047,
+        "n_attn_better": 14,
+        "n_corr_better": 63
+      }
+    }
+  }
+}

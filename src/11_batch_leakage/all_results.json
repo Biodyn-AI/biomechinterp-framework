@@ -1,0 +1,180 @@
+{
+  "Immune": {
+    "dataset": "Immune",
+    "n_edges": 8208,
+    "donor_leakage": {
+      "LogisticRegression": {
+        "accuracy": 0.4400980441198539,
+        "balanced_accuracy": 0.24289102153545772,
+        "auc": 0.8470186046583974,
+        "chance_level": 0.047619047619047616,
+        "n_classes": 21,
+        "n_samples": 19991
+      },
+      "RandomForest": {
+        "accuracy": 0.4545545495472963,
+        "balanced_accuracy": 0.15829759142006963,
+        "auc": 0.8663495486458229,
+        "chance_level": 0.047619047619047616,
+        "n_classes": 21,
+        "n_samples": 19991
+      }
+    },
+    "batch_leakage": {
+      "LogisticRegression": {
+        "accuracy": 0.4426934814147781,
+        "balanced_accuracy": 0.21730928602094227,
+        "auc": 0.8607012685792004,
+        "chance_level": 0.027777777777777776,
+        "n_classes": 36,
+        "n_samples": 19989
+      },
+      "RandomForest": {
+        "accuracy": 0.4331882535394467,
+        "balanced_accuracy": 0.14130479418836428,
+        "auc": 0.8863551979988332,
+        "chance_level": 0.027777777777777776,
+        "n_classes": 36,
+        "n_samples": 19989
+      }
+    },
+    "method_leakage": {
+      "LogisticRegression": {
+        "accuracy": 0.97725,
+        "balanced_accuracy": 0.7655597685878497,
+        "auc": 0.9634267629284196,
+        "chance_level": 0.5,
+        "n_classes": 2,
+        "n_samples": 20000
+      },
+      "RandomForest": {
+        "accuracy": 0.98245,
+        "balanced_accuracy": 0.7635910525080043,
+        "auc": 0.9681222032262171,
+        "chance_level": 0.5,
+        "n_classes": 2,
+        "n_samples": 20000
+      }
+    },
+    "ASI_mean": 1.1733765602111816,
+    "ASI_median": 0.5822306871414185,
+    "n_high_ASI": 4355,
+    "pct_high_ASI": 54.57393483709273,
+    "batch_ASI_mean": 0.9709648489952087,
+    "batch_ASI_median": 0.4871675372123718,
+    "n_blacklisted": 4355,
+    "n_sign_flipped": 1364,
+    "edge_score_correlation": 0.9294061660766602,
+    "celltype_donor_cramersV": 0.20298805201038306,
+    "celltype_donor_chi2_p": 0.0
+  },
+  "Lung": {
+    "dataset": "Lung",
+    "n_edges": 8132,
+    "donor_leakage": {
+      "LogisticRegression": {
+        "accuracy": 0.8116,
+        "balanced_accuracy": 0.7892443356910555,
+        "auc": 0.9369903803845809,
+        "chance_level": 0.25,
+        "n_classes": 4,
+        "n_samples": 20000
+      },
+      "RandomForest": {
+        "accuracy": 0.82225,
+        "balanced_accuracy": 0.7903118422347779,
+        "auc": 0.9588901431250574,
+        "chance_level": 0.25,
+        "n_classes": 4,
+        "n_samples": 20000
+      }
+    },
+    "batch_leakage": {
+      "LogisticRegression": {
+        "accuracy": 0.80975,
+        "balanced_accuracy": 0.6493214601759859,
+        "auc": 0.9464851570444853,
+        "chance_level": 0.14285714285714285,
+        "n_classes": 7,
+        "n_samples": 20000
+      },
+      "RandomForest": {
+        "accuracy": 0.80955,
+        "balanced_accuracy": 0.5895392625020897,
+        "auc": 0.9686787192163215,
+        "chance_level": 0.14285714285714285,
+        "n_classes": 7,
+        "n_samples": 20000
+      }
+    },
+    "method_leakage": {
+      "LogisticRegression": {
+        "accuracy": 0.985,
+        "balanced_accuracy": 0.8878249940576592,
+        "auc": 0.9708195978190919,
+        "chance_level": 0.5,
+        "n_classes": 2,
+        "n_samples": 20000
+      },
+      "RandomForest": {
+        "accuracy": 0.98545,
+        "balanced_accuracy": 0.8431203552612313,
+        "auc": 0.9867824840176438,
+        "chance_level": 0.5,
+        "n_classes": 2,
+        "n_samples": 20000
+      }
+    },
+    "ASI_mean": 0.19802115857601166,
+    "ASI_median": 0.09484788775444031,
+    "n_high_ASI": 825,
+    "pct_high_ASI": 10.14510575504181,
+    "batch_ASI_mean": 0.9575576186180115,
+    "batch_ASI_median": 0.4347009062767029,
+    "n_blacklisted": 825,
+    "n_sign_flipped": 306,
+    "edge_score_correlation": 0.9969292879104614,
+    "celltype_donor_cramersV": 0.4357978516386058,
+    "celltype_donor_chi2_p": 0.0
+  },
+  "Kidney": {
+    "dataset": "Kidney",
+    "n_edges": 7575,
+    "batch_leakage": {
+      "LogisticRegression": {
+        "accuracy": 0.9811884669479606,
+        "balanced_accuracy": 0.779903763689141,
+        "auc": 0.941869340859612,
+        "chance_level": 0.5,
+        "n_classes": 2,
+        "n_samples": 11376
+      },
+      "RandomForest": {
+        "accuracy": 0.9891877637130801,
+        "balanced_accuracy": 0.8321595856973216,
+        "auc": 0.925000154621322,
+        "chance_level": 0.5,
+        "n_classes": 2,
+        "n_samples": 11376
+      }
+    },
+    "method_leakage": {
+      "LogisticRegression": {
+        "accuracy": 0.9811884669479606,
+        "balanced_accuracy": 0.779903763689141,
+        "auc": 0.941869340859612,
+        "chance_level": 0.5,
+        "n_classes": 2,
+        "n_samples": 11376
+      },
+      "RandomForest": {
+        "accuracy": 0.9891877637130801,
+        "balanced_accuracy": 0.8321595856973216,
+        "auc": 0.925000154621322,
+        "chance_level": 0.5,
+        "n_classes": 2,
+        "n_samples": 11376
+      }
+    }
+  }
+}

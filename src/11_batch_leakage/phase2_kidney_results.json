@@ -1,0 +1,15 @@
+{
+  "n_cells": 11376,
+  "n_donors": 1,
+  "n_batches": 2,
+  "n_methods": 2,
+  "n_cell_types": 13,
+  "n_edges": 7575,
+  "method_ASI_mean": 1.2626327276229858,
+  "method_ASI_median": 0.7222254276275635,
+  "n_high_ASI": 4645,
+  "pct_high_ASI": 62.77027027027027,
+  "n_sign_flipped": 1924,
+  "edge_score_correlation": 0.833107590675354,
+  "celltype_method_cramersV": 0.22052166175495547
+}

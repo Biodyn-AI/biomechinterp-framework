@@ -1,0 +1,556 @@
+{
+  "experiment": "analysis_b_biological_characterization_CORRECTED",
+  "corrections_applied": [
+    "STRING AUROC computed at all 18 layers (was 6)",
+    "BH correction applied to trend tests and enrichment tests",
+    "TRRUST excluded from enrichment table (too sparse for Fisher test)",
+    "Reactome acknowledged as null result",
+    "Honest characterization of weak pathway signals"
+  ],
+  "n_hvg_genes": 2000,
+  "n_hvg_tok": 1941,
+  "reference_summary": {
+    "TRRUST": {
+      "n_pairs": 175,
+      "n_genes": 133
+    },
+    "STRING_700": {
+      "n_pairs": 2747,
+      "n_genes": 1185
+    },
+    "STRING_900": {
+      "n_pairs": 1675,
+      "n_genes": 883
+    },
+    "Reactome": {
+      "n_pairs": 238640,
+      "n_genes": 1302
+    },
+    "KEGG": {
+      "n_pairs": 24812,
+      "n_genes": 889
+    },
+    "GO_BP": {
+      "n_pairs": 135596,
+      "n_genes": 1624
+    }
+  },
+  "auroc_results": {
+    "TRRUST": {
+      "attention": {
+        "0": 0.5576,
+        "1": 0.6913,
+        "2": 0.6413,
+        "3": 0.6569,
+        "4": 0.6862,
+        "5": 0.6636,
+        "6": 0.6465,
+        "7": 0.6307,
+        "8": 0.6314,
+        "9": 0.6499,
+        "10": 0.6121,
+        "11": 0.6504,
+        "12": 0.6581,
+        "13": 0.7084,
+        "14": 0.7353,
+        "15": 0.7497,
+        "16": 0.733,
+        "17": 0.664
+      },
+      "correlation": 0.6488,
+      "n_pairs": 171
+    },
+    "STRING_700": {
+      "attention": {
+        "0": 0.6397,
+        "1": 0.517,
+        "2": 0.5456,
+        "3": 0.5536,
+        "4": 0.5458,
+        "5": 0.5482,
+        "6": 0.5403,
+        "7": 0.5311,
+        "8": 0.5303,
+        "9": 0.537,
+        "10": 0.5475,
+        "11": 0.5183,
+        "12": 0.5155,
+        "13": 0.5742,
+        "14": 0.5119,
+        "15": 0.5249,
+        "16": 0.4746,
+        "17": 0.4847
+      },
+      "correlation": 0.5624,
+      "n_pairs": 2732
+    },
+    "STRING_900": {
+      "attention": {
+        "0": 0.6441,
+        "1": 0.5013,
+        "2": 0.5362,
+        "3": 0.5488,
+        "4": 0.5301,
+        "5": 0.5374,
+        "6": 0.5287,
+        "7": 0.5152,
+        "8": 0.5192,
+        "9": 0.541,
+        "10": 0.5421,
+        "11": 0.5108,
+        "12": 0.5018,
+        "13": 0.5593,
+        "14": 0.493,
+        "15": 0.4998,
+        "16": 0.4574,
+        "17": 0.4604
+      },
+      "correlation": 0.5586,
+      "n_pairs": 1672
+    },
+    "Reactome": {
+      "attention": {
+        "0": 0.5047,
+        "1": 0.5008,
+        "2": 0.5068,
+        "3": 0.5016,
+        "4": 0.5164,
+        "5": 0.5037,
+        "6": 0.5078,
+        "7": 0.5109,
+        "8": 0.5088,
+        "9": 0.5182,
+        "10": 0.5123,
+        "11": 0.513,
+        "12": 0.5061,
+        "13": 0.5234,
+        "14": 0.5186,
+        "15": 0.5206,
+        "16": 0.5156,
+        "17": 0.5164
+      },
+      "correlation": 0.5139,
+      "n_pairs": 238592
+    },
+    "KEGG": {
+      "attention": {
+        "0": 0.5299,
+        "1": 0.484,
+        "2": 0.4683,
+        "3": 0.4727,
+        "4": 0.5246,
+        "5": 0.4992,
+        "6": 0.5207,
+        "7": 0.5171,
+        "8": 0.5314,
+        "9": 0.5543,
+        "10": 0.5416,
+        "11": 0.5438,
+        "12": 0.5331,
+        "13": 0.5475,
+        "14": 0.5546,
+        "15": 0.5551,
+        "16": 0.5637,
+        "17": 0.5385
+      },
+      "correlation": 0.5412,
+      "n_pairs": 24701
+    },
+    "GO_BP": {
+      "attention": {
+        "0": 0.5262,
+        "1": 0.5012,
+        "2": 0.485,
+        "3": 0.4822,
+        "4": 0.5153,
+        "5": 0.5033,
+        "6": 0.5135,
+        "7": 0.5185,
+        "8": 0.5337,
+        "9": 0.527,
+        "10": 0.5287,
+        "11": 0.5298,
+        "12": 0.5163,
+        "13": 0.5304,
+        "14": 0.5364,
+        "15": 0.5411,
+        "16": 0.544,
+        "17": 0.5411
+      },
+      "correlation": 0.5128,
+      "n_pairs": 135104
+    }
+  },
+  "statistical_comparisons": {
+    "TRRUST": {
+      "best_attn_layer": 15,
+      "best_attn_auroc": 0.7497,
+      "correlation_auroc": 0.6488,
+      "attn_minus_corr": 0.1009,
+      "attn_better": true,
+      "mean_attn_auroc": 0.6648,
+      "mean_attn_minus_corr": 0.016
+    },
+    "STRING_700": {
+      "best_attn_layer": 0,
+      "best_attn_auroc": 0.6397,
+      "correlation_auroc": 0.5624,
+      "attn_minus_corr": 0.0773,
+      "attn_better": true,
+      "mean_attn_auroc": 0.5356,
+      "mean_attn_minus_corr": -0.0268
+    },
+    "STRING_900": {
+      "best_attn_layer": 0,
+      "best_attn_auroc": 0.6441,
+      "correlation_auroc": 0.5586,
+      "attn_minus_corr": 0.0855,
+      "attn_better": true,
+      "mean_attn_auroc": 0.5237,
+      "mean_attn_minus_corr": -0.0349
+    },
+    "Reactome": {
+      "best_attn_layer": 13,
+      "best_attn_auroc": 0.5234,
+      "correlation_auroc": 0.5139,
+      "attn_minus_corr": 0.0095,
+      "attn_better": true,
+      "mean_attn_auroc": 0.5114,
+      "mean_attn_minus_corr": -0.0025
+    },
+    "KEGG": {
+      "best_attn_layer": 16,
+      "best_attn_auroc": 0.5637,
+      "correlation_auroc": 0.5412,
+      "attn_minus_corr": 0.0225,
+      "attn_better": true,
+      "mean_attn_auroc": 0.5267,
+      "mean_attn_minus_corr": -0.0145
+    },
+    "GO_BP": {
+      "best_attn_layer": 16,
+      "best_attn_auroc": 0.544,
+      "correlation_auroc": 0.5128,
+      "attn_minus_corr": 0.0312,
+      "attn_better": true,
+      "mean_attn_auroc": 0.5208,
+      "mean_attn_minus_corr": 0.008
+    }
+  },
+  "trend_analysis": {
+    "TRRUST": {
+      "spearman_rho": 0.5108,
+      "p_value_raw": 0.03027974699120303,
+      "n_layers": 18,
+      "direction": "increasing",
+      "p_value_bh": 0.03027974699120303
+    },
+    "STRING_700": {
+      "spearman_rho": -0.6078,
+      "p_value_raw": 0.007450054518883103,
+      "n_layers": 18,
+      "direction": "decreasing",
+      "p_value_bh": 0.011175081778324655
+    },
+    "STRING_900": {
+      "spearman_rho": -0.581,
+      "p_value_raw": 0.0114508540069193,
+      "n_layers": 18,
+      "direction": "decreasing",
+      "p_value_bh": 0.01374102480830316
+    },
+    "Reactome": {
+      "spearman_rho": 0.731,
+      "p_value_raw": 0.0005677199660550454,
+      "n_layers": 18,
+      "direction": "increasing",
+      "p_value_bh": 0.0011354399321100907
+    },
+    "KEGG": {
+      "spearman_rho": 0.8308,
+      "p_value_raw": 1.9612643482449587e-05,
+      "n_layers": 18,
+      "direction": "increasing",
+      "p_value_bh": 5.883793044734876e-05
+    },
+    "GO_BP": {
+      "spearman_rho": 0.8456,
+      "p_value_raw": 9.868130979147698e-06,
+      "n_layers": 18,
+      "direction": "increasing",
+      "p_value_bh": 5.883793044734876e-05
+    }
+  },
+  "cross_layer_correlations": {
+    "TRRUST_vs_STRING_700": {
+      "spearman_rho": -0.4448,
+      "p_value": 0.0643852241036506
+    },
+    "TRRUST_vs_STRING_900": {
+      "spearman_rho": -0.5459,
+      "p_value": 0.019092729509875183
+    },
+    "TRRUST_vs_Reactome": {
+      "spearman_rho": 0.4461,
+      "p_value": 0.06354177073413395
+    },
+    "TRRUST_vs_KEGG": {
+      "spearman_rho": 0.4365,
+      "p_value": 0.07010903657780519
+    },
+    "TRRUST_vs_GO_BP": {
+      "spearman_rho": 0.348,
+      "p_value": 0.15707889712370768
+    },
+    "STRING_700_vs_STRING_900": {
+      "spearman_rho": 0.9567,
+      "p_value": 5.46578066361063e-10
+    },
+    "STRING_700_vs_Reactome": {
+      "spearman_rho": -0.2334,
+      "p_value": 0.3513865525250379
+    },
+    "STRING_700_vs_KEGG": {
+      "spearman_rho": -0.4262,
+      "p_value": 0.07778293683965698
+    },
+    "STRING_700_vs_GO_BP": {
+      "spearman_rho": -0.5039,
+      "p_value": 0.0330047923646447
+    },
+    "STRING_900_vs_Reactome": {
+      "spearman_rho": -0.2354,
+      "p_value": 0.34701758280748385
+    },
+    "STRING_900_vs_KEGG": {
+      "spearman_rho": -0.3643,
+      "p_value": 0.1372167161243323
+    },
+    "STRING_900_vs_GO_BP": {
+      "spearman_rho": -0.4863,
+      "p_value": 0.0407140797755503
+    },
+    "Reactome_vs_KEGG": {
+      "spearman_rho": 0.7961,
+      "p_value": 7.752005713729731e-05
+    },
+    "Reactome_vs_GO_BP": {
+      "spearman_rho": 0.7454,
+      "p_value": 0.0003851658287935534
+    },
+    "KEGG_vs_GO_BP": {
+      "spearman_rho": 0.889,
+      "p_value": 8.13429538056489e-07
+    }
+  },
+  "enrichment_results": {
+    "L0": {
+      "Reactome": {
+        "top_overlap": 153,
+        "top_odds_ratio": 1.245,
+        "top_p_value_raw": 0.008265555096336462,
+        "bottom_overlap": 97,
+        "bottom_odds_ratio": 0.74,
+        "bottom_p_value_raw": 0.9985146622675516,
+        "top_q_value_bh": 0.027551850321121542,
+        "bottom_q_value_bh": 0.9999737938057581
+      },
+      "KEGG": {
+        "top_overlap": 43,
+        "top_odds_ratio": 3.384,
+        "top_p_value_raw": 3.479050274934871e-11,
+        "bottom_overlap": 7,
+        "bottom_odds_ratio": 0.53,
+        "bottom_p_value_raw": 0.9765540979857426,
+        "top_q_value_bh": 2.6092877062011533e-10,
+        "bottom_q_value_bh": 0.9999737938057581
+      },
+      "GO_BP": {
+        "top_overlap": 102,
+        "top_odds_ratio": 1.47,
+        "top_p_value_raw": 0.0002673006314806966,
+        "bottom_overlap": 58,
+        "bottom_odds_ratio": 0.796,
+        "bottom_p_value_raw": 0.9630856287375752,
+        "top_q_value_bh": 0.001336503157403483,
+        "bottom_q_value_bh": 0.9999737938057581
+      }
+    },
+    "L5": {
+      "Reactome": {
+        "top_overlap": 149,
+        "top_odds_ratio": 1.207,
+        "top_p_value_raw": 0.02093502963174121,
+        "bottom_overlap": 105,
+        "bottom_odds_ratio": 0.808,
+        "bottom_p_value_raw": 0.9845404486922302,
+        "top_q_value_bh": 0.06280508889522363,
+        "bottom_q_value_bh": 0.9999737938057581
+      },
+      "KEGG": {
+        "top_overlap": 4,
+        "top_odds_ratio": 0.302,
+        "top_p_value_raw": 0.9990954144166722,
+        "bottom_overlap": 12,
+        "bottom_odds_ratio": 0.914,
+        "bottom_p_value_raw": 0.6603009472324572,
+        "top_q_value_bh": 0.9999737938057581,
+        "bottom_q_value_bh": 0.9999737938057581
+      },
+      "GO_BP": {
+        "top_overlap": 107,
+        "top_odds_ratio": 1.55,
+        "top_p_value_raw": 3.046746820574739e-05,
+        "bottom_overlap": 77,
+        "bottom_odds_ratio": 1.079,
+        "bottom_p_value_raw": 0.2766875639818513,
+        "top_q_value_bh": 0.00018280480923448433,
+        "bottom_q_value_bh": 0.6385097630350415
+      }
+    },
+    "L10": {
+      "Reactome": {
+        "top_overlap": 129,
+        "top_odds_ratio": 1.021,
+        "top_p_value_raw": 0.4284445260193688,
+        "bottom_overlap": 127,
+        "bottom_odds_ratio": 1.002,
+        "bottom_p_value_raw": 0.5037745180112743,
+        "top_q_value_bh": 0.8568890520387374,
+        "bottom_q_value_bh": 0.9445772212711392
+      },
+      "KEGG": {
+        "top_overlap": 15,
+        "top_odds_ratio": 1.146,
+        "top_p_value_raw": 0.33649487161637404,
+        "bottom_overlap": 10,
+        "bottom_odds_ratio": 0.76,
+        "bottom_p_value_raw": 0.8437349687202735,
+        "top_q_value_bh": 0.7210604391779444,
+        "bottom_q_value_bh": 0.9999737938057581
+      },
+      "GO_BP": {
+        "top_overlap": 62,
+        "top_odds_ratio": 0.855,
+        "top_p_value_raw": 0.8977177147369638,
+        "bottom_overlap": 62,
+        "bottom_odds_ratio": 0.855,
+        "bottom_p_value_raw": 0.8977177147369638,
+        "top_q_value_bh": 0.9999737938057581,
+        "bottom_q_value_bh": 0.9999737938057581
+      }
+    },
+    "L14": {
+      "Reactome": {
+        "top_overlap": 148,
+        "top_odds_ratio": 1.197,
+        "top_p_value_raw": 0.0259573644177488,
+        "bottom_overlap": 160,
+        "bottom_odds_ratio": 1.313,
+        "bottom_p_value_raw": 0.0012456407564415246,
+        "top_q_value_bh": 0.07079281204840582,
+        "bottom_q_value_bh": 0.005338460384749391
+      },
+      "KEGG": {
+        "top_overlap": 24,
+        "top_odds_ratio": 1.851,
+        "top_p_value_raw": 0.00416288351449606,
+        "bottom_overlap": 7,
+        "bottom_odds_ratio": 0.53,
+        "bottom_p_value_raw": 0.9765540979857426,
+        "top_q_value_bh": 0.015610813179360226,
+        "bottom_q_value_bh": 0.9999737938057581
+      },
+      "GO_BP": {
+        "top_overlap": 87,
+        "top_odds_ratio": 1.233,
+        "top_p_value_raw": 0.038274960233601094,
+        "bottom_overlap": 52,
+        "bottom_odds_ratio": 0.709,
+        "bottom_p_value_raw": 0.9951647705720402,
+        "top_q_value_bh": 0.09568740058400273,
+        "bottom_q_value_bh": 0.9999737938057581
+      }
+    },
+    "L17": {
+      "Reactome": {
+        "top_overlap": 224,
+        "top_odds_ratio": 1.99,
+        "top_p_value_raw": 1.430650660889364e-17,
+        "bottom_overlap": 101,
+        "bottom_odds_ratio": 0.774,
+        "bottom_p_value_raw": 0.994798234305018,
+        "top_q_value_bh": 4.2919519826680917e-16,
+        "bottom_q_value_bh": 0.9999737938057581
+      },
+      "KEGG": {
+        "top_overlap": 47,
+        "top_odds_ratio": 3.715,
+        "top_p_value_raw": 2.0349049586072282e-13,
+        "bottom_overlap": 2,
+        "bottom_odds_ratio": 0.151,
+        "bottom_p_value_raw": 0.9999737938057581,
+        "top_q_value_bh": 2.0349049586072284e-12,
+        "bottom_q_value_bh": 0.9999737938057581
+      },
+      "GO_BP": {
+        "top_overlap": 141,
+        "top_odds_ratio": 2.124,
+        "top_p_value_raw": 2.402369857186848e-14,
+        "bottom_overlap": 53,
+        "bottom_odds_ratio": 0.724,
+        "bottom_p_value_raw": 0.9929010955481324,
+        "top_q_value_bh": 3.603554785780272e-13,
+        "bottom_q_value_bh": 0.9999737938057581
+      }
+    }
+  },
+  "enrichment_note": "TRRUST excluded: 175 pairs in ~1.88M possible = 0.009% prevalence, yielding 0 overlap in top-1000 edges at every layer. Fisher test uninformative at this base rate.",
+  "partial_correlation_results": {
+    "TRRUST": {
+      "n_pairs": 350,
+      "n_positive": 175,
+      "attn_corr_with_membership": 0.3628,
+      "attn_p": 2.4887173348766888e-12,
+      "expr_corr_with_membership": 0.2368,
+      "expr_p": 7.496136258840038e-06,
+      "partial_attn_corr": 0.3529,
+      "partial_p": 1.0597396297825903e-11,
+      "signal_retained": 0.973
+    },
+    "Reactome": {
+      "n_pairs": 10000,
+      "n_positive": 5000,
+      "attn_corr_with_membership": 0.0205,
+      "attn_p": 0.04027001861979372,
+      "expr_corr_with_membership": 0.0452,
+      "expr_p": 6.219126518307682e-06,
+      "partial_attn_corr": 0.0154,
+      "partial_p": 0.12387837613084444,
+      "signal_retained": 0.75
+    },
+    "KEGG": {
+      "n_pairs": 9948,
+      "n_positive": 4974,
+      "attn_corr_with_membership": 0.0782,
+      "attn_p": 5.761263443537383e-15,
+      "expr_corr_with_membership": 0.0953,
+      "expr_p": 1.6912851673639805e-21,
+      "partial_attn_corr": 0.0559,
+      "partial_p": 2.3782522611719636e-08,
+      "signal_retained": 0.715
+    },
+    "GO_BP": {
+      "n_pairs": 9968,
+      "n_positive": 4984,
+      "attn_corr_with_membership": 0.0691,
+      "attn_p": 5.1208735500834525e-12,
+      "expr_corr_with_membership": 0.0376,
+      "expr_p": 0.00017078792592117888,
+      "partial_attn_corr": 0.0616,
+      "partial_p": 7.376287048922794e-10,
+      "signal_retained": 0.892
+    }
+  },
+  "total_time_seconds": 73.2
+}

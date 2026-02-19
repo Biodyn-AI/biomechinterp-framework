@@ -1,0 +1,6 @@
+{
+  "n_human_genes": 60606,
+  "n_mouse_genes": 53514,
+  "n_ensembl_overlap": 53482,
+  "n_mapped_orthologs": 53482
+}

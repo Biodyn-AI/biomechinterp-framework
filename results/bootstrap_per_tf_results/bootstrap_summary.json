@@ -1,0 +1,39 @@
+{
+  "experiment": "bootstrap_per_tf_auroc",
+  "dataset": "tabula_sapiens_immune",
+  "n_genes": 2000,
+  "n_tfs_evaluable": 18,
+  "n_cells_subsample": 5000,
+  "n_bootstrap_iterations": 200,
+  "runtime_seconds": 141.6,
+  "global_auroc": {
+    "observed": 0.7571,
+    "boot_mean": 0.7407,
+    "boot_std": 0.0182,
+    "ci_95": [
+      0.7067,
+      0.77
+    ]
+  },
+  "mean_per_tf_auroc": {
+    "observed": 0.6916,
+    "boot_mean": 0.659,
+    "boot_std": 0.0332,
+    "ci_95": [
+      0.5943,
+      0.7185
+    ]
+  },
+  "per_tf_summary": {
+    "n_tfs_with_ci": 18,
+    "n_tfs_ci_above_0.5": 7,
+    "fraction_ci_above_0.5": 0.3889,
+    "mean_ci_width": 0.2943
+  },
+  "degree_matched_control": {
+    "mean_auroc": 0.6695,
+    "mean_across_seeds": 0.5448,
+    "std_across_seeds": 0.0447,
+    "n_tfs": 18
+  }
+}

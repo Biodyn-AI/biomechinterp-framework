@@ -1,0 +1,59 @@
+{
+  "n_perturbations_matched": 1167,
+  "n_perturbations_skipped": 0,
+  "n_pairs_before": 3838263,
+  "n_pairs_after": 226580,
+  "positive_rate_before": 0.0212,
+  "positive_rate_after": 0.36,
+  "covariate_balance": {
+    "tgt_mean_expr": {
+      "smd_after": 0.1291,
+      "pos_mean": 1.4596,
+      "neg_mean": 1.3607,
+      "smd_before": 1.1418
+    },
+    "tgt_variance": {
+      "smd_after": 0.4181,
+      "pos_mean": 0.3696,
+      "neg_mean": 0.2977,
+      "smd_before": 1.1149
+    },
+    "tgt_dropout": {
+      "smd_after": 0.0375,
+      "pos_mean": 0.1475,
+      "neg_mean": 0.142,
+      "smd_before": -1.1963
+    },
+    "tgt_n_affected": {
+      "smd_after": 1.0274,
+      "pos_mean": 380.5488,
+      "neg_mean": 131.751,
+      "smd_before": 1.671
+    }
+  },
+  "raw_edge_results": {
+    "attn_mean_auroc": 0.5679,
+    "attn_std_auroc": 0.0915,
+    "corr_mean_auroc": 0.5613,
+    "corr_std_auroc": 0.1129,
+    "n_perturbations": 1167
+  },
+  "matched_cv_results": {
+    "A_gene_only": {
+      "mean_auroc": 0.7788,
+      "std_auroc": 0.0021
+    },
+    "B_gene_plus_attn": {
+      "mean_auroc": 0.7788,
+      "std_auroc": 0.0021
+    },
+    "C_gene_plus_corr": {
+      "mean_auroc": 0.7784,
+      "std_auroc": 0.002
+    }
+  },
+  "matched_deltas": {
+    "B_gene_plus_attn": 0.0,
+    "C_gene_plus_corr": -0.0004
+  }
+}

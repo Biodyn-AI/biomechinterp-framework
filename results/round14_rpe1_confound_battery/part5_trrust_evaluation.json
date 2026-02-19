@@ -1,0 +1,388 @@
+{
+  "n_evaluable_tfs": 54,
+  "n_direct_targets_total": 207,
+  "mean_attn_auroc": 0.5594,
+  "std_attn_auroc": 0.2501,
+  "mean_corr_auroc": 0.5399,
+  "std_corr_auroc": 0.2327,
+  "per_tf_results": [
+    {
+      "tf": "AATF",
+      "n_trrust_targets": 3,
+      "n_non_targets": 3286,
+      "attn_auroc": 0.7407,
+      "corr_auroc": 0.6462
+    },
+    {
+      "tf": "ATF5",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.6512,
+      "corr_auroc": 0.7254
+    },
+    {
+      "tf": "BDP1",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.6849,
+      "corr_auroc": 0.3096
+    },
+    {
+      "tf": "BRCA2",
+      "n_trrust_targets": 3,
+      "n_non_targets": 3286,
+      "attn_auroc": 0.2728,
+      "corr_auroc": 0.4293
+    },
+    {
+      "tf": "BTAF1",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.4592,
+      "corr_auroc": 0.7834
+    },
+    {
+      "tf": "BTF3",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.7845,
+      "corr_auroc": 0.6034
+    },
+    {
+      "tf": "CDC5L",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.0845,
+      "corr_auroc": 0.9471
+    },
+    {
+      "tf": "CHD4",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.3391,
+      "corr_auroc": 0.0809
+    },
+    {
+      "tf": "CLOCK",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.424,
+      "corr_auroc": 0.8707
+    },
+    {
+      "tf": "COPS5",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.6129,
+      "corr_auroc": 0.1506
+    },
+    {
+      "tf": "CTCF",
+      "n_trrust_targets": 9,
+      "n_non_targets": 3280,
+      "attn_auroc": 0.5375,
+      "corr_auroc": 0.4214
+    },
+    {
+      "tf": "DMAP1",
+      "n_trrust_targets": 3,
+      "n_non_targets": 3286,
+      "attn_auroc": 0.6047,
+      "corr_auroc": 0.4823
+    },
+    {
+      "tf": "DNMT1",
+      "n_trrust_targets": 6,
+      "n_non_targets": 3283,
+      "attn_auroc": 0.7404,
+      "corr_auroc": 0.6801
+    },
+    {
+      "tf": "DR1",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.1633,
+      "corr_auroc": 0.6353
+    },
+    {
+      "tf": "E4F1",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.6153,
+      "corr_auroc": 0.9523
+    },
+    {
+      "tf": "EHMT2",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.8453,
+      "corr_auroc": 0.4553
+    },
+    {
+      "tf": "ELL",
+      "n_trrust_targets": 3,
+      "n_non_targets": 3286,
+      "attn_auroc": 0.4303,
+      "corr_auroc": 0.6906
+    },
+    {
+      "tf": "ERCC2",
+      "n_trrust_targets": 3,
+      "n_non_targets": 3286,
+      "attn_auroc": 0.5073,
+      "corr_auroc": 0.3676
+    },
+    {
+      "tf": "GABPA",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.8903,
+      "corr_auroc": 0.6673
+    },
+    {
+      "tf": "GABPB1",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.6995,
+      "corr_auroc": 0.3349
+    },
+    {
+      "tf": "GTF2A1",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.3783,
+      "corr_auroc": 0.7056
+    },
+    {
+      "tf": "GTF3A",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.8686,
+      "corr_auroc": 0.9675
+    },
+    {
+      "tf": "HDAC3",
+      "n_trrust_targets": 7,
+      "n_non_targets": 3282,
+      "attn_auroc": 0.8062,
+      "corr_auroc": 0.5358
+    },
+    {
+      "tf": "HDAC7",
+      "n_trrust_targets": 5,
+      "n_non_targets": 3284,
+      "attn_auroc": 0.6407,
+      "corr_auroc": 0.4481
+    },
+    {
+      "tf": "HSF1",
+      "n_trrust_targets": 7,
+      "n_non_targets": 3282,
+      "attn_auroc": 0.7933,
+      "corr_auroc": 0.4317
+    },
+    {
+      "tf": "ILF2",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.4282,
+      "corr_auroc": 0.8701
+    },
+    {
+      "tf": "ILF3",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.7921,
+      "corr_auroc": 0.6351
+    },
+    {
+      "tf": "KAT5",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.0577,
+      "corr_auroc": 0.5414
+    },
+    {
+      "tf": "MCM2",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.0773,
+      "corr_auroc": 0.5271
+    },
+    {
+      "tf": "MED1",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.7741,
+      "corr_auroc": 0.8745
+    },
+    {
+      "tf": "MEF2A",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.9169,
+      "corr_auroc": 0.1746
+    },
+    {
+      "tf": "MYC",
+      "n_trrust_targets": 41,
+      "n_non_targets": 3248,
+      "attn_auroc": 0.572,
+      "corr_auroc": 0.5691
+    },
+    {
+      "tf": "NELFCD",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.9177,
+      "corr_auroc": 0.4414
+    },
+    {
+      "tf": "NFYB",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.2604,
+      "corr_auroc": 0.5636
+    },
+    {
+      "tf": "NFYC",
+      "n_trrust_targets": 3,
+      "n_non_targets": 3286,
+      "attn_auroc": 0.4556,
+      "corr_auroc": 0.4333
+    },
+    {
+      "tf": "NPM1",
+      "n_trrust_targets": 8,
+      "n_non_targets": 3281,
+      "attn_auroc": 0.6195,
+      "corr_auroc": 0.6388
+    },
+    {
+      "tf": "RBMX",
+      "n_trrust_targets": 3,
+      "n_non_targets": 3286,
+      "attn_auroc": 0.8822,
+      "corr_auroc": 0.5986
+    },
+    {
+      "tf": "SF1",
+      "n_trrust_targets": 3,
+      "n_non_targets": 3286,
+      "attn_auroc": 0.4787,
+      "corr_auroc": 0.716
+    },
+    {
+      "tf": "SFPQ",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.0029,
+      "corr_auroc": 0.9477
+    },
+    {
+      "tf": "SMG6",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.7342,
+      "corr_auroc": 0.2275
+    },
+    {
+      "tf": "SNIP1",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.5586,
+      "corr_auroc": 0.2108
+    },
+    {
+      "tf": "SRF",
+      "n_trrust_targets": 13,
+      "n_non_targets": 3276,
+      "attn_auroc": 0.7438,
+      "corr_auroc": 0.7212
+    },
+    {
+      "tf": "SRSF1",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.625,
+      "corr_auroc": 0.4063
+    },
+    {
+      "tf": "SUGP1",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.1286,
+      "corr_auroc": 0.0596
+    },
+    {
+      "tf": "TAF5",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.8634,
+      "corr_auroc": 0.2935
+    },
+    {
+      "tf": "TBP",
+      "n_trrust_targets": 6,
+      "n_non_targets": 3283,
+      "attn_auroc": 0.8121,
+      "corr_auroc": 0.4828
+    },
+    {
+      "tf": "TSG101",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.7254,
+      "corr_auroc": 0.6118
+    },
+    {
+      "tf": "TTF2",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.038,
+      "corr_auroc": 0.7576
+    },
+    {
+      "tf": "UPF1",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.5053,
+      "corr_auroc": 0.4372
+    },
+    {
+      "tf": "UPF2",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.6323,
+      "corr_auroc": 0.5295
+    },
+    {
+      "tf": "USF2",
+      "n_trrust_targets": 15,
+      "n_non_targets": 3274,
+      "attn_auroc": 0.6301,
+      "corr_auroc": 0.3557
+    },
+    {
+      "tf": "WDR5",
+      "n_trrust_targets": 1,
+      "n_non_targets": 3288,
+      "attn_auroc": 0.5575,
+      "corr_auroc": 0.0639
+    },
+    {
+      "tf": "YBX1",
+      "n_trrust_targets": 15,
+      "n_non_targets": 3274,
+      "attn_auroc": 0.4156,
+      "corr_auroc": 0.4738
+    },
+    {
+      "tf": "ZNF143",
+      "n_trrust_targets": 2,
+      "n_non_targets": 3287,
+      "attn_auroc": 0.4297,
+      "corr_auroc": 0.6684
+    }
+  ]
+}

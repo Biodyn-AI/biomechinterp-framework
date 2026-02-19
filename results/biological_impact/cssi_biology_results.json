@@ -1,0 +1,747 @@
+{
+  "stratification": {
+    "n_strata": 7,
+    "resolution": "ground_truth",
+    "annotations": {
+      "B_cell": {
+        "assigned_type": "B cell",
+        "marker_score": 1.2412049770355225,
+        "all_scores": {
+          "T cell": 0.012858941219747066,
+          "B cell": 1.2412049770355225,
+          "NK cell": 0.012236935086548328,
+          "Monocyte": 0.022865135222673416,
+          "Dendritic cell": 0.04313100874423981
+        },
+        "n_cells": 4623
+      },
+      "Erythrocyte": {
+        "assigned_type": "Erythrocyte",
+        "marker_score": 1.0389457941055298,
+        "all_scores": {
+          "T cell": 0.011417394503951073,
+          "B cell": 0.00889513548463583,
+          "NK cell": 0.259935587644577,
+          "Monocyte": 1.0389457941055298,
+          "Dendritic cell": 0.002207918092608452
+        },
+        "n_cells": 506
+      },
+      "Monocyte": {
+        "assigned_type": "Monocyte",
+        "marker_score": 1.4748237133026123,
+        "all_scores": {
+          "T cell": 0.1479644775390625,
+          "B cell": 0.01932075247168541,
+          "NK cell": 0.09808611124753952,
+          "Monocyte": 1.4748237133026123,
+          "Dendritic cell": 0.0960427075624466
+        },
+        "n_cells": 3848
+      },
+      "NK_cell": {
+        "assigned_type": "NK cell",
+        "marker_score": 1.680252194404602,
+        "all_scores": {
+          "T cell": 0.10560435056686401,
+          "B cell": 0.056090112775564194,
+          "NK cell": 1.680252194404602,
+          "Monocyte": 0.043613966554403305,
+          "Dendritic cell": 0.0
+        },
+        "n_cells": 467
+      },
+      "Neutrophil": {
+        "assigned_type": "Monocyte",
+        "marker_score": 1.5134079456329346,
+        "all_scores": {
+          "T cell": 0.0022777279373258352,
+          "B cell": 0.00280966330319643,
+          "NK cell": 0.08597209304571152,
+          "Monocyte": 1.5134079456329346,
+          "Dendritic cell": 0.000883224536664784
+        },
+        "n_cells": 2455
+      },
+      "Other": {
+        "assigned_type": "T cell",
+        "marker_score": 0.43501830101013184,
+        "all_scores": {
+          "T cell": 0.43501830101013184,
+          "B cell": 0.036049146205186844,
+          "NK cell": 0.22897672653198242,
+          "Monocyte": 0.4009770154953003,
+          "Dendritic cell": 0.05746183916926384
+        },
+        "n_cells": 2179
+      },
+      "T_cell": {
+        "assigned_type": "T cell",
+        "marker_score": 0.8656676411628723,
+        "all_scores": {
+          "T cell": 0.8656676411628723,
+          "B cell": 0.04009614884853363,
+          "NK cell": 0.33745715022087097,
+          "Monocyte": 0.030916336923837662,
+          "Dendritic cell": 0.000542596448212862
+        },
+        "n_cells": 5920
+      }
+    }
+  },
+  "trrust_evaluation": {
+    "pooled": {
+      "auroc": 0.840142664991052,
+      "n_positive": 109,
+      "n_negative": 39874,
+      "n_cells": 19998
+    },
+    "B_cell": {
+      "auroc": 0.7341582406599136,
+      "n_positive": 109,
+      "n_cells": 4623,
+      "assigned_type": "B cell"
+    },
+    "Erythrocyte": {
+      "auroc": 0.7750949895841625,
+      "n_positive": 109,
+      "n_cells": 506,
+      "assigned_type": "Erythrocyte"
+    },
+    "Monocyte": {
+      "auroc": 0.7888057242699824,
+      "n_positive": 109,
+      "n_cells": 3848,
+      "assigned_type": "Monocyte"
+    },
+    "NK_cell": {
+      "auroc": 0.7282221106577462,
+      "n_positive": 109,
+      "n_cells": 467,
+      "assigned_type": "NK cell"
+    },
+    "Neutrophil": {
+      "auroc": 0.7163589389144613,
+      "n_positive": 109,
+      "n_cells": 2455,
+      "assigned_type": "Monocyte"
+    },
+    "Other": {
+      "auroc": 0.7728677904205588,
+      "n_positive": 109,
+      "n_cells": 2179,
+      "assigned_type": "T cell"
+    },
+    "T_cell": {
+      "auroc": 0.7053605324662596,
+      "n_positive": 109,
+      "n_cells": 5920,
+      "assigned_type": "T cell"
+    },
+    "cssi_max": {
+      "auroc": 0.8352228096485581
+    },
+    "cssi_mean": {
+      "auroc": 0.8422703534482243
+    }
+  },
+  "enrichment": {
+    "B_cell": {
+      "assigned_type": "B cell",
+      "enrichment_tests": {
+        "T cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "LEF1"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 2,
+          "fisher_or": 0.125,
+          "fisher_p": 0.9842105263157894,
+          "is_matching_celltype": false
+        },
+        "B cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 1,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": true
+        },
+        "NK cell": {
+          "skipped": true,
+          "reason": "No expected TFs in HVG"
+        },
+        "Monocyte": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "SPI1"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 17,
+          "fisher_or": Infinity,
+          "fisher_p": 0.85,
+          "is_matching_celltype": false
+        },
+        "Dendritic cell": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 0,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        }
+      }
+    },
+    "Erythrocyte": {
+      "assigned_type": "Erythrocyte",
+      "enrichment_tests": {
+        "T cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "LEF1"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 2,
+          "fisher_or": 0.2,
+          "fisher_p": 0.968421052631579,
+          "is_matching_celltype": false
+        },
+        "B cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "BCL6"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 1,
+          "fisher_or": 0.2,
+          "fisher_p": 0.968421052631579,
+          "is_matching_celltype": false
+        },
+        "NK cell": {
+          "skipped": true,
+          "reason": "No expected TFs in HVG"
+        },
+        "Monocyte": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "SPI1"
+          ],
+          "expected_edges_in_top500": 8,
+          "total_expected_edges": 17,
+          "fisher_or": Infinity,
+          "fisher_p": 0.7999999999999999,
+          "is_matching_celltype": false
+        },
+        "Dendritic cell": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 0,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        }
+      }
+    },
+    "Monocyte": {
+      "assigned_type": "Monocyte",
+      "enrichment_tests": {
+        "T cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "LEF1"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 2,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        },
+        "B cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "BCL6"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 1,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        },
+        "NK cell": {
+          "skipped": true,
+          "reason": "No expected TFs in HVG"
+        },
+        "Monocyte": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "SPI1"
+          ],
+          "expected_edges_in_top500": 2,
+          "total_expected_edges": 17,
+          "fisher_or": null,
+          "fisher_p": 1.0,
+          "is_matching_celltype": true
+        },
+        "Dendritic cell": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 0,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        }
+      }
+    },
+    "NK_cell": {
+      "assigned_type": "NK cell",
+      "enrichment_tests": {
+        "T cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "LEF1"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 2,
+          "fisher_or": 0.2,
+          "fisher_p": 0.968421052631579,
+          "is_matching_celltype": false
+        },
+        "B cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "BCL6"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 1,
+          "fisher_or": 0.2,
+          "fisher_p": 0.968421052631579,
+          "is_matching_celltype": false
+        },
+        "NK cell": {
+          "skipped": true,
+          "reason": "No expected TFs in HVG"
+        },
+        "Monocyte": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "SPI1"
+          ],
+          "expected_edges_in_top500": 1,
+          "total_expected_edges": 17,
+          "fisher_or": Infinity,
+          "fisher_p": 0.7999999999999999,
+          "is_matching_celltype": false
+        },
+        "Dendritic cell": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 0,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        }
+      }
+    },
+    "Neutrophil": {
+      "assigned_type": "Monocyte",
+      "enrichment_tests": {
+        "T cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "LEF1"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 2,
+          "fisher_or": 0.38461538461538464,
+          "fisher_p": 0.9210526315789473,
+          "is_matching_celltype": false
+        },
+        "B cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "BCL6"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 1,
+          "fisher_or": 0.38461538461538464,
+          "fisher_p": 0.9210526315789473,
+          "is_matching_celltype": false
+        },
+        "NK cell": {
+          "skipped": true,
+          "reason": "No expected TFs in HVG"
+        },
+        "Monocyte": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "SPI1"
+          ],
+          "expected_edges_in_top500": 5,
+          "total_expected_edges": 17,
+          "fisher_or": Infinity,
+          "fisher_p": 0.7,
+          "is_matching_celltype": true
+        },
+        "Dendritic cell": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 0,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        }
+      }
+    },
+    "Other": {
+      "assigned_type": "T cell",
+      "enrichment_tests": {
+        "T cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "LEF1"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 2,
+          "fisher_or": 0.2,
+          "fisher_p": 0.968421052631579,
+          "is_matching_celltype": true
+        },
+        "B cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 1,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        },
+        "NK cell": {
+          "skipped": true,
+          "reason": "No expected TFs in HVG"
+        },
+        "Monocyte": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "SPI1"
+          ],
+          "expected_edges_in_top500": 6,
+          "total_expected_edges": 17,
+          "fisher_or": Infinity,
+          "fisher_p": 0.7999999999999999,
+          "is_matching_celltype": false
+        },
+        "Dendritic cell": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 0,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        }
+      }
+    },
+    "T_cell": {
+      "assigned_type": "T cell",
+      "enrichment_tests": {
+        "T cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "LEF1"
+          ],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 2,
+          "fisher_or": 0.125,
+          "fisher_p": 0.9842105263157894,
+          "is_matching_celltype": true
+        },
+        "B cell": {
+          "n_expected_tfs_in_hvg": 2,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 1,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        },
+        "NK cell": {
+          "skipped": true,
+          "reason": "No expected TFs in HVG"
+        },
+        "Monocyte": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 1,
+          "tfs_found": [
+            "SPI1"
+          ],
+          "expected_edges_in_top500": 10,
+          "total_expected_edges": 17,
+          "fisher_or": Infinity,
+          "fisher_p": 0.85,
+          "is_matching_celltype": false
+        },
+        "Dendritic cell": {
+          "n_expected_tfs_in_hvg": 1,
+          "n_expected_tfs_in_top500": 0,
+          "tfs_found": [],
+          "expected_edges_in_top500": 0,
+          "total_expected_edges": 0,
+          "fisher_or": 0.0,
+          "fisher_p": 1.0,
+          "is_matching_celltype": false
+        }
+      }
+    }
+  },
+  "edge_enrichment": {
+    "B_cell": {
+      "assigned_type": "B cell",
+      "n_matching_tfs": 2,
+      "matching_tfs": [
+        "EBF1",
+        "BCL6"
+      ],
+      "n_nonmatching_tfs": 4,
+      "matching_mean_score": 0.022671306415265366,
+      "nonmatching_mean_score": 0.014519056709098631,
+      "matching_median_score": 0.007936742829970615,
+      "nonmatching_median_score": 0.004064077135186344,
+      "mann_whitney_U": 18213946.0,
+      "mann_whitney_p": 1.2217775831534016e-36,
+      "rank_biserial": -0.13951085097326055
+    },
+    "Erythrocyte": {
+      "skipped": true,
+      "reason": "matching=0, nonmatching=6"
+    },
+    "Monocyte": {
+      "assigned_type": "Monocyte",
+      "n_matching_tfs": 1,
+      "matching_tfs": [
+        "SPI1"
+      ],
+      "n_nonmatching_tfs": 5,
+      "matching_mean_score": 0.031570057578686396,
+      "nonmatching_mean_score": 0.02586547101026295,
+      "matching_median_score": 0.024404628738853035,
+      "nonmatching_median_score": 0.0070539611641913915,
+      "mann_whitney_U": 11859787.5,
+      "mann_whitney_p": 1.84262911951695e-40,
+      "rank_biserial": -0.18716561882742266
+    },
+    "NK_cell": {
+      "skipped": true,
+      "reason": "matching=0, nonmatching=6"
+    },
+    "Neutrophil": {
+      "assigned_type": "Monocyte",
+      "n_matching_tfs": 1,
+      "matching_tfs": [
+        "SPI1"
+      ],
+      "n_nonmatching_tfs": 5,
+      "matching_mean_score": 0.029563651304815915,
+      "nonmatching_mean_score": 0.016801848160560896,
+      "matching_median_score": 0.013298198452188653,
+      "nonmatching_median_score": 0.0017310543588070458,
+      "mann_whitney_U": 11989285.5,
+      "mann_whitney_p": 2.6211647975393174e-47,
+      "rank_biserial": -0.20012837834625175
+    },
+    "Other": {
+      "assigned_type": "T cell",
+      "n_matching_tfs": 2,
+      "matching_tfs": [
+        "BCL11B",
+        "LEF1"
+      ],
+      "n_nonmatching_tfs": 4,
+      "matching_mean_score": 0.05367188528977352,
+      "nonmatching_mean_score": 0.04043558827846511,
+      "matching_median_score": 0.018400879273218308,
+      "nonmatching_median_score": 0.011189391151174939,
+      "mann_whitney_U": 17805903.5,
+      "mann_whitney_p": 3.3792259878527833e-25,
+      "rank_biserial": -0.11398267292725905
+    },
+    "T_cell": {
+      "assigned_type": "T cell",
+      "n_matching_tfs": 2,
+      "matching_tfs": [
+        "BCL11B",
+        "LEF1"
+      ],
+      "n_nonmatching_tfs": 4,
+      "matching_mean_score": 0.020140845217731997,
+      "nonmatching_mean_score": 0.01909478907030319,
+      "matching_median_score": 0.010236159189739039,
+      "nonmatching_median_score": 0.0034454690738332915,
+      "mann_whitney_U": 19208014.5,
+      "mann_whitney_p": 8.101084796837536e-74,
+      "rank_biserial": -0.20170230813255552
+    }
+  },
+  "specificity": {
+    "B_cell": {
+      "assigned_type": "B cell",
+      "matching_p": 1.0,
+      "mean_nonmatching_p": 0.9447368421052631,
+      "specificity": false
+    },
+    "Erythrocyte": {
+      "assigned_type": "Erythrocyte",
+      "matching_p": null,
+      "mean_nonmatching_p": 0.9342105263157895,
+      "specificity": false
+    },
+    "Monocyte": {
+      "assigned_type": "Monocyte",
+      "matching_p": 1.0,
+      "mean_nonmatching_p": 1.0,
+      "specificity": false
+    },
+    "NK_cell": {
+      "assigned_type": "NK cell",
+      "matching_p": null,
+      "mean_nonmatching_p": 0.9342105263157895,
+      "specificity": false
+    },
+    "Neutrophil": {
+      "assigned_type": "Monocyte",
+      "matching_p": 0.7,
+      "mean_nonmatching_p": 0.9473684210526315,
+      "specificity": false
+    },
+    "Other": {
+      "assigned_type": "T cell",
+      "matching_p": 0.968421052631579,
+      "mean_nonmatching_p": 0.9333333333333332,
+      "specificity": false
+    },
+    "T_cell": {
+      "assigned_type": "T cell",
+      "matching_p": 0.9842105263157894,
+      "mean_nonmatching_p": 0.9500000000000001,
+      "specificity": false
+    }
+  },
+  "differential_edge_summary": {
+    "n_edges_analyzed": 109,
+    "n_expected_in_best_ct": 2,
+    "top_10_most_variable": [
+      {
+        "tf": "SPI1",
+        "target": "BPI",
+        "variance": 0.08252821395728313,
+        "range": 0.9085394108352237,
+        "best_celltype": "NK cell",
+        "pooled_score": 0.11955853384542077
+      },
+      {
+        "tf": "GATA2",
+        "target": "MS4A2",
+        "variance": 0.06312054680104721,
+        "range": 0.6404999133437891,
+        "best_celltype": "T cell",
+        "pooled_score": 0.6329989785798344
+      },
+      {
+        "tf": "GATA2",
+        "target": "IL1RL1",
+        "variance": 0.058588108353884324,
+        "range": 0.7367570466779468,
+        "best_celltype": "T cell",
+        "pooled_score": 0.5528993106284497
+      },
+      {
+        "tf": "SPI1",
+        "target": "HCK",
+        "variance": 0.0584154973057999,
+        "range": 0.6436079951017003,
+        "best_celltype": "T cell",
+        "pooled_score": 0.7025459544317524
+      },
+      {
+        "tf": "SPI1",
+        "target": "CD163",
+        "variance": 0.05805502025873598,
+        "range": 0.6795620344430213,
+        "best_celltype": "T cell",
+        "pooled_score": 0.5157242999055781
+      },
+      {
+        "tf": "SPI1",
+        "target": "MNDA",
+        "variance": 0.04922463332447619,
+        "range": 0.6255995013299226,
+        "best_celltype": "T cell",
+        "pooled_score": 0.6773979786822748
+      },
+      {
+        "tf": "SPI1",
+        "target": "CSF3R",
+        "variance": 0.048391087938994104,
+        "range": 0.5849923356314987,
+        "best_celltype": "T cell",
+        "pooled_score": 0.6680266469832645
+      },
+      {
+        "tf": "KLF1",
+        "target": "HBB",
+        "variance": 0.04759849000537076,
+        "range": 0.6871459216394548,
+        "best_celltype": "T cell",
+        "pooled_score": 0.48162666246612723
+      },
+      {
+        "tf": "SPI1",
+        "target": "IL1B",
+        "variance": 0.03628091932832855,
+        "range": 0.4737194459274391,
+        "best_celltype": "T cell",
+        "pooled_score": 0.36158915526288965
+      },
+      {
+        "tf": "SPI1",
+        "target": "NCF2",
+        "variance": 0.033877310556550466,
+        "range": 0.5735149435041064,
+        "best_celltype": "T cell",
+        "pooled_score": 0.6791329460204757
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "n_shared_edges": 25876,
+  "spearman_rho": 0.74312851412043,
+  "spearman_p": 0.0,
+  "pearson_r": 0.7766033300444579,
+  "pearson_p": 0.0,
+  "sign_agreement_all": 0.8859174524656052,
+  "sign_agreement_strong_02": 0.9932307692307693,
+  "sign_agreement_strong_04": 1.0,
+  "null_rho_mean": 0.010987543612851062,
+  "null_rho_std": 0.007907655936808502,
+  "observed_vs_null_zscore": 92.58634623942277,
+  "n_conserved": 2362,
+  "n_fragile": 599,
+  "n_anti_conserved": 2535,
+  "per_tf_conservation_median": 0.6826759051486205
+}

@@ -1,0 +1,3 @@
+Some weights of BertModel were not initialized from the model checkpoint at ctheodoris/Geneformer and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Layers: 18, Heads: 18

@@ -1,0 +1,162 @@
+{
+  "experiment": "round10_shifrut_cross_context",
+  "dataset": "Shifrut_TCells_CRISPRi",
+  "cell_type": "Primary human T cells",
+  "perturbation_modality": "CRISPRi",
+  "n_cells_total": 52236,
+  "n_control_cells_used": 2000,
+  "n_hvg": 2000,
+  "primary_lfc_threshold": 0.1,
+  "n_evaluable_perturbations": 20,
+  "evaluable_perturbations": [
+    "ARID1A",
+    "BTLA",
+    "C10orf54",
+    "CBLB",
+    "CD3D",
+    "CD5",
+    "CDKN1B",
+    "DGKA",
+    "DGKZ",
+    "HAVCR2",
+    "LAG3",
+    "LCP2",
+    "MEF2D",
+    "PDCD1",
+    "RASA2",
+    "SOCS1",
+    "STAT6",
+    "TCEB2",
+    "TMEM222",
+    "TNFRSF9"
+  ],
+  "eval_layers": [
+    6,
+    13,
+    15,
+    18
+  ],
+  "results_by_layer": {
+    "5": {
+      "layer_1indexed": 6,
+      "n_evaluated": 7,
+      "attention": {
+        "mean_auroc": 0.6669,
+        "std_auroc": 0.1295,
+        "median_auroc": 0.6797
+      },
+      "correlation": {
+        "mean_auroc": 0.6507,
+        "std_auroc": 0.0991,
+        "median_auroc": 0.648
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 1.0,
+        "paired_t_p": 0.850036,
+        "mean_diff": 0.0162,
+        "cohens_d": 0.0806,
+        "n_attn_better": 4,
+        "n_corr_better": 3,
+        "ci_95": [
+          -0.2621,
+          0.3165
+        ]
+      }
+    },
+    "12": {
+      "layer_1indexed": 13,
+      "n_evaluated": 7,
+      "attention": {
+        "mean_auroc": 0.6482,
+        "std_auroc": 0.104,
+        "median_auroc": 0.6657
+      },
+      "correlation": {
+        "mean_auroc": 0.6507,
+        "std_auroc": 0.0991,
+        "median_auroc": 0.648
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.9375,
+        "paired_t_p": 0.973814,
+        "mean_diff": -0.0025,
+        "cohens_d": -0.014,
+        "n_attn_better": 4,
+        "n_corr_better": 3,
+        "ci_95": [
+          -0.2371,
+          0.2776
+        ]
+      }
+    },
+    "14": {
+      "layer_1indexed": 15,
+      "n_evaluated": 7,
+      "attention": {
+        "mean_auroc": 0.6794,
+        "std_auroc": 0.1083,
+        "median_auroc": 0.7174
+      },
+      "correlation": {
+        "mean_auroc": 0.6507,
+        "std_auroc": 0.0991,
+        "median_auroc": 0.648
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.8125,
+        "paired_t_p": 0.70639,
+        "mean_diff": 0.0287,
+        "cohens_d": 0.1613,
+        "n_attn_better": 4,
+        "n_corr_better": 3,
+        "ci_95": [
+          -0.2012,
+          0.3116
+        ]
+      }
+    },
+    "17": {
+      "layer_1indexed": 18,
+      "n_evaluated": 7,
+      "attention": {
+        "mean_auroc": 0.6809,
+        "std_auroc": 0.0937,
+        "median_auroc": 0.7012
+      },
+      "correlation": {
+        "mean_auroc": 0.6507,
+        "std_auroc": 0.0991,
+        "median_auroc": 0.648
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.9375,
+        "paired_t_p": 0.682438,
+        "mean_diff": 0.0302,
+        "cohens_d": 0.1754,
+        "n_attn_better": 4,
+        "n_corr_better": 3,
+        "ci_95": [
+          -0.1703,
+          0.3078
+        ]
+      }
+    }
+  },
+  "threshold_comparison": [
+    {
+      "lfc_threshold": 0.25,
+      "n_evaluable": 2,
+      "attn_mean": 0.6384,
+      "corr_mean": 0.9039,
+      "diff": -0.2656
+    },
+    {
+      "lfc_threshold": 0.1,
+      "n_evaluable": 7,
+      "attn_mean": 0.6794,
+      "corr_mean": 0.6507,
+      "diff": 0.0287
+    }
+  ],
+  "total_time_seconds": 1431.5
+}

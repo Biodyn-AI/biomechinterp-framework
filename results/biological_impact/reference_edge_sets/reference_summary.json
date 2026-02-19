@@ -1,0 +1,26 @@
+{
+  "TRRUST": {
+    "n_pairs": 175,
+    "n_genes": 133
+  },
+  "STRING_700": {
+    "n_pairs": 0,
+    "n_genes": 0
+  },
+  "STRING_900": {
+    "n_pairs": 0,
+    "n_genes": 0
+  },
+  "Reactome": {
+    "n_pairs": 238640,
+    "n_genes": 1302
+  },
+  "KEGG": {
+    "n_pairs": 24812,
+    "n_genes": 889
+  },
+  "GO_BP": {
+    "n_pairs": 135596,
+    "n_genes": 1624
+  }
+}

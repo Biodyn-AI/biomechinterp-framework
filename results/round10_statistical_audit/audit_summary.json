@@ -1,0 +1,229 @@
+{
+  "experiment": "round10_statistical_audit",
+  "n_analyses": 29,
+  "n_total_tests": 113,
+  "n_confirmatory": 75,
+  "n_descriptive": 38,
+  "n_significant_bh_005": 54,
+  "bh_alpha": 0.05,
+  "family_definition": "All confirmatory tests with explicit p-values across all 29 analyses",
+  "analysis_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "per_analysis_counts": {
+    "1": {
+      "name": "Scaling Behavior",
+      "total": 5,
+      "confirmatory": 4,
+      "significant": 4
+    },
+    "2": {
+      "name": "Mediation Bias",
+      "total": 2,
+      "confirmatory": 2,
+      "significant": 2
+    },
+    "3": {
+      "name": "Detectability Theory",
+      "total": 2,
+      "confirmatory": 2,
+      "significant": 2
+    },
+    "4": {
+      "name": "Cross-Context Consistency",
+      "total": 5,
+      "confirmatory": 4,
+      "significant": 2
+    },
+    "5": {
+      "name": "Perturbation Validation",
+      "total": 6,
+      "confirmatory": 6,
+      "significant": 3
+    },
+    "6": {
+      "name": "Cross-Species Ortholog",
+      "total": 4,
+      "confirmatory": 3,
+      "significant": 3
+    },
+    "7": {
+      "name": "Pseudotime",
+      "total": 6,
+      "confirmatory": 3,
+      "significant": 0
+    },
+    "8": {
+      "name": "Batch/Donor Leakage",
+      "total": 6,
+      "confirmatory": 5,
+      "significant": 5
+    },
+    "9": {
+      "name": "Calibration",
+      "total": 5,
+      "confirmatory": 3,
+      "significant": 3
+    },
+    "10": {
+      "name": "CSSI",
+      "total": 6,
+      "confirmatory": 5,
+      "significant": 4
+    },
+    "11": {
+      "name": "Synthetic Validation",
+      "total": 3,
+      "confirmatory": 3,
+      "significant": 3
+    },
+    "12": {
+      "name": "Multi-Model",
+      "total": 6,
+      "confirmatory": 4,
+      "significant": 1
+    },
+    "13": {
+      "name": "Controlled-Composition Scaling",
+      "total": 3,
+      "confirmatory": 3,
+      "significant": 1
+    },
+    "14": {
+      "name": "Perturbation-First Validation",
+      "total": 3,
+      "confirmatory": 3,
+      "significant": 1
+    },
+    "15": {
+      "name": "Robust Attention Residualization",
+      "total": 5,
+      "confirmatory": 1,
+      "significant": 1
+    },
+    "16": {
+      "name": "Degree-Preserving Null Models",
+      "total": 6,
+      "confirmatory": 2,
+      "significant": 2
+    },
+    "17": {
+      "name": "Attention-Correlation Mapping",
+      "total": 3,
+      "confirmatory": 2,
+      "significant": 2
+    },
+    "18": {
+      "name": "Perturbation Sensitivity",
+      "total": 2,
+      "confirmatory": 1,
+      "significant": 1
+    },
+    "19": {
+      "name": "CSSI Extended Null",
+      "total": 3,
+      "confirmatory": 0,
+      "significant": 0
+    },
+    "20": {
+      "name": "K-Sensitivity Analysis",
+      "total": 2,
+      "confirmatory": 0,
+      "significant": 0
+    },
+    "21": {
+      "name": "Trivial Baseline Comparison",
+      "total": 4,
+      "confirmatory": 4,
+      "significant": 4
+    },
+    "22": {
+      "name": "Bootstrap Per-TF CIs",
+      "total": 2,
+      "confirmatory": 0,
+      "significant": 0
+    },
+    "23": {
+      "name": "Attention Perturbation-First",
+      "total": 2,
+      "confirmatory": 2,
+      "significant": 0
+    },
+    "24": {
+      "name": "Full 18-Layer Perturbation-First",
+      "total": 3,
+      "confirmatory": 3,
+      "significant": 3
+    },
+    "25": {
+      "name": "Attention-Specific Confound Decomposition",
+      "total": 5,
+      "confirmatory": 2,
+      "significant": 2
+    },
+    "26": {
+      "name": "Conditional Incremental Value",
+      "total": 4,
+      "confirmatory": 0,
+      "significant": 0
+    },
+    "27": {
+      "name": "Per-Head TRRUST Ranking",
+      "total": 2,
+      "confirmatory": 0,
+      "significant": 0
+    },
+    "28": {
+      "name": "Cross-Context CRISPRa Replication",
+      "total": 3,
+      "confirmatory": 3,
+      "significant": 3
+    },
+    "29": {
+      "name": "Head-Level Causal Ablation",
+      "total": 5,
+      "confirmatory": 5,
+      "significant": 2
+    }
+  },
+  "stale_references": {
+    "main_tex_L121": "twenty-three analyses...78 tests",
+    "appendix_L4": "approximately 88...27 analyses",
+    "appendix_L8": "~88 total tests",
+    "appendix_L236": "approximately 93 across 29",
+    "correct_values": {
+      "n_analyses": 29,
+      "n_total_tests": 113,
+      "n_confirmatory": 75,
+      "n_significant": 54
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "experiment": "round13_non_k562_replication",
+  "n_datasets": 2,
+  "datasets": [
+    {
+      "name": "TianKampmann2021",
+      "cell_type": "iPSC-derived neurons",
+      "n_evaluable": 7,
+      "primary_layer": 15,
+      "attn_auroc": 0.5333,
+      "corr_auroc": 0.4754,
+      "diff": 0.0579,
+      "cohens_d": 0.7991,
+      "wilcoxon_p": 0.078125,
+      "bootstrap_ci": [
+        -0.0022,
+        0.1066
+      ],
+      "power": {
+        "n_evaluable": 7,
+        "min_detectable_d": 1.0589,
+        "alpha": 0.05,
+        "power": 0.8
+      }
+    },
+    {
+      "name": "ReplogleRPE1",
+      "cell_type": "RPE1 retinal pigment epithelial",
+      "n_evaluable": 1251,
+      "primary_layer": 15,
+      "attn_auroc": 0.7477,
+      "corr_auroc": 0.6581,
+      "diff": 0.0896,
+      "cohens_d": 0.4681,
+      "wilcoxon_p": 0.0,
+      "bootstrap_ci": [
+        0.0785,
+        0.1003
+      ],
+      "power": {
+        "n_evaluable": 1251,
+        "min_detectable_d": 0.0792,
+        "alpha": 0.05,
+        "power": 0.8
+      }
+    }
+  ],
+  "total_time_seconds": 17663.4
+}

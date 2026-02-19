@@ -1,0 +1,142 @@
+{
+  "analysis_results": {
+    "scaling": {
+      "cell_counts": [
+        200,
+        500
+      ],
+      "edge_counts": [
+        50,
+        50
+      ],
+      "max_attentions": [
+        0.00785765486449236,
+        0.007834568113757996
+      ],
+      "mean_attentions": [
+        0.0014991290463678567,
+        0.0014931827582867062
+      ],
+      "sparsity_values": [
+        0.0,
+        0.0
+      ],
+      "edge_change_percent": 0.0,
+      "attention_change_percent": -0.39664951430014245,
+      "scaling_interpretation": "STABLE - No significant degradation with scale"
+    },
+    "cross_context": {
+      "similarities": {
+        "brain_vs_liver": 0.9774849604354924,
+        "brain_vs_immune": 0.979477165398207,
+        "brain_vs_generic": 0.9818788455026184,
+        "liver_vs_immune": 0.9791775366472432,
+        "liver_vs_generic": 0.9783157676431053,
+        "immune_vs_generic": 0.9796945290920054
+      },
+      "avg_similarity": 0.9793381341197785,
+      "std_similarity": 0.0013605659893614528,
+      "min_similarity": 0.9774849604354924,
+      "max_similarity": 0.9818788455026184,
+      "consistency_interpretation": "HIGH - Very similar attention patterns across contexts",
+      "context_stats": {
+        "brain": {
+          "context": "brain",
+          "avg_attention_strength": 0.0014824544942829462,
+          "attention_sparsity": 0.0,
+          "max_attention": 0.00804353029486568,
+          "attention_entropy": 2389.557670650497,
+          "top_attention_positions": [
+            6668,
+            12,
+            14877,
+            5644,
+            8721,
+            13338,
+            5643,
+            12825,
+            9234,
+            6156
+          ]
+        },
+        "liver": {
+          "context": "liver",
+          "avg_attention_strength": 0.0014885819218741771,
+          "attention_sparsity": 0.0,
+          "max_attention": 0.007994270201052131,
+          "attention_entropy": 2412.678306399655,
+          "top_attention_positions": [
+            1,
+            6669,
+            13851,
+            513,
+            6156,
+            7695,
+            10773,
+            8721,
+            5643,
+            9234
+          ]
+        },
+        "immune": {
+          "context": "immune",
+          "avg_attention_strength": 0.0015189329460967365,
+          "attention_sparsity": 0.0,
+          "max_attention": 0.007511734342127359,
+          "attention_entropy": 2437.9267588711755,
+          "top_attention_positions": [
+            1,
+            5643,
+            6669,
+            513,
+            18981,
+            17442,
+            7182,
+            0,
+            9234,
+            8721
+          ]
+        },
+        "generic": {
+          "context": "generic",
+          "avg_attention_strength": 0.0014955008088605364,
+          "attention_sparsity": 0.0,
+          "max_attention": 0.007766520406815592,
+          "attention_entropy": 2417.2158113930436,
+          "top_attention_positions": [
+            0,
+            14877,
+            15903,
+            1026,
+            8721,
+            7695,
+            6669,
+            10773,
+            18981,
+            6156
+          ]
+        }
+      },
+      "context_variation": 0.009236713471456789
+    }
+  },
+  "comparison_with_scgpt": {
+    "scgpt": {
+      "scaling_degradation": true,
+      "attention_sparsity": "LOW",
+      "context_consistency": "MODERATE",
+      "grn_recovery_quality": "GOOD"
+    },
+    "geneformer": {
+      "scaling_degradation": null,
+      "attention_sparsity": null,
+      "context_consistency": null,
+      "grn_recovery_quality": null
+    },
+    "similarities": [],
+    "differences": []
+  },
+  "timestamp": "2026-02-14T12:36:00.137630",
+  "model_used": "Geneformer-V1-10M",
+  "experimental_status": "Completed"
+}

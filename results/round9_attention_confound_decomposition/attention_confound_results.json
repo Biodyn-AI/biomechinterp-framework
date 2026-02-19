@@ -1,0 +1,54 @@
+{
+  "experiment": "round9_attention_confound_decomposition",
+  "primary_layer": 12,
+  "n_tfs": 108,
+  "n_genes": 2000,
+  "n_positive_edges": 174,
+  "residualization": {
+    "attention": {
+      "baseline_auroc": 0.6574,
+      "ols": {
+        "auroc_abs_residual": 0.5383497164721119,
+        "mean_r2": 0.029468910569029783,
+        "std_r2": 0.0019564088300792265
+      },
+      "gbdt": {
+        "auroc_abs_residual": 0.5542939574261118,
+        "mean_r2": 0.23363132706862316,
+        "std_r2": 0.009423632765453398
+      },
+      "stability_mean": 0.5384,
+      "stability_std": 0.0003
+    },
+    "correlation": {
+      "baseline_auroc": 0.6338,
+      "ols": {
+        "auroc_abs_residual": 0.6224342433869335,
+        "mean_r2": 0.14193372049665914,
+        "std_r2": 0.0015006163002926854
+      },
+      "gbdt": {
+        "auroc_abs_residual": 0.6455294097775373,
+        "mean_r2": 0.3084398808714532,
+        "std_r2": 0.0035638918415530226
+      }
+    }
+  },
+  "degree_null": {
+    "attention": {
+      "observed_auroc": 0.6574,
+      "degree_null_mean": 0.6265,
+      "degree_null_std": 0.0155,
+      "excess": 0.0309,
+      "z_score": 2.0
+    },
+    "correlation": {
+      "observed_auroc": 0.6338,
+      "degree_null_mean": 0.5986,
+      "degree_null_std": 0.0167,
+      "excess": 0.0351,
+      "z_score": 2.11
+    }
+  },
+  "per_tf_mean_auroc": 0.6286
+}

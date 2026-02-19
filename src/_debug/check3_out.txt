@@ -1,0 +1,16 @@
+Geneformer dir: /home/agent/.local/lib/python3.12/site-packages/geneformer
+Files: ['gene_median_dictionary_gc104M.pkl', 'classifier_utils.py', 'collator_for_classification.py', 'gene_median_dictionary.pkl', 'emb_extractor.py', 'token_dictionary_gc104M.pkl', 'mtl_classifier.py', '__init__.py', '__pycache__', 'ensembl_mapping_dict.pkl', 'gene_dictionaries_30m', 'evaluation_utils.py', 'pretrainer.py', 'token_dictionary.pkl', 'tokenizer.py', 'in_silico_perturber_stats.py', 'ensembl_mapping_dict_gc104M.pkl', 'mtl', 'gene_name_id_dict.pkl', 'in_silico_perturber.py', 'perturber_utils.py', 'gene_name_id_dict_gc104M.pkl', 'classifier.py']
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/gene_median_dictionary_gc104M.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/gene_median_dictionary.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/token_dictionary_gc104M.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/ensembl_mapping_dict.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/token_dictionary.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/ensembl_mapping_dict_gc104M.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/gene_name_id_dict.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/gene_name_id_dict_gc104M.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/gene_dictionaries_30m/ensembl_mapping_dict_gc30M.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/gene_dictionaries_30m/gene_name_id_dict_gc30M.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/gene_dictionaries_30m/gene_median_dictionary_gc30M.pkl
+Found: /home/agent/.local/lib/python3.12/site-packages/geneformer/gene_dictionaries_30m/token_dictionary_gc30M.pkl
+Token dict: <class 'dict'>, 25426 entries
+Sample: [('<pad>', 0), ('<mask>', 1), ('ENSG00000000003', np.int16(2)), ('ENSG00000000005', np.int16(3)), ('ENSG00000000419', np.int16(4))]

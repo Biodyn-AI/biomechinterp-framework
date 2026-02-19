@@ -1,0 +1,3 @@
+run_id,tissue,granularity,pair,source,target,component_a,component_b,component_c,config_path
+kidney:mlp,kidney,mlp,JUN->JUN,JUN,JUN,mlp:0,mlp:6,mlp:9,subproject_09_causal_mediation_circuit_map/implementation/configs/mediation_kidney_mlp.yaml
+immune:mlp,immune,mlp,JUN->JUN,JUN,JUN,mlp:11,mlp:6,mlp:0,subproject_09_causal_mediation_circuit_map/implementation/configs/mediation_immune_mlp.yaml

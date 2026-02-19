@@ -1,0 +1,45 @@
+{
+  "raw_edge_results": {
+    "attn_raw": {
+      "mean_auroc": 0.6089788559451962,
+      "std_auroc": 0.12120789090613236,
+      "mean_auprc": 0.4093676604440579,
+      "std_auprc": 0.16239262234966959,
+      "n_perturbations": 280
+    },
+    "corr_raw": {
+      "mean_auroc": 0.5742179254985265,
+      "std_auroc": 0.16893840151967265,
+      "mean_auprc": 0.37421573497039123,
+      "std_auprc": 0.18867006590446736,
+      "n_perturbations": 280
+    }
+  },
+  "cv_results": {
+    "A_gene_only": {
+      "mean_auroc": 0.749190344559068,
+      "std_auroc": 0.017651499859926752,
+      "mean_auprc": 0.49481498027551646,
+      "std_auprc": 0.02059220933469601,
+      "n_folds_valid": 5
+    },
+    "B_gene_plus_attn": {
+      "mean_auroc": 0.7490741402462039,
+      "std_auroc": 0.01776887085453135,
+      "mean_auprc": 0.4958343423870442,
+      "std_auprc": 0.02111086835483349,
+      "n_folds_valid": 5
+    },
+    "C_gene_plus_corr": {
+      "mean_auroc": 0.7488817332065275,
+      "std_auroc": 0.017673351628512152,
+      "mean_auprc": 0.49534966674345055,
+      "std_auprc": 0.020536524886304225,
+      "n_folds_valid": 5
+    },
+    "delta_auroc_B_gene_plus_attn": -0.00011620431286407662,
+    "delta_auprc_B_gene_plus_attn": 0.0010193621115277551,
+    "delta_auroc_C_gene_plus_corr": -0.00030861135254045546,
+    "delta_auprc_C_gene_plus_corr": 0.0005346864679340868
+  }
+}

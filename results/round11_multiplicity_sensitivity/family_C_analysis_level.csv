@@ -1,0 +1,28 @@
+test_id,analysis_id,analysis_name,hypothesis,raw_p,bh_p,significant
+1,1,Scaling Behavior,Cell count improves GRN (TRRUST),0.002,0.0038571428571428576,True
+6,2,Mediation Bias,Components additive,0.001,0.002076923076923077,True
+8,3,Detectability Theory,Theory matches empirical,1e-06,4.5e-06,True
+10,4,Cross-Context Consistency,Immune-kidney transfer,0.024,0.036000000000000004,True
+15,5,Perturbation Validation,Dixit 13d raw,0.032,0.04547368421052632,True
+21,6,Cross-Species Ortholog,Global conservation,1e-300,2.7e-299,True
+25,7,Pseudotime,TFs precede targets,0.068,0.0918,False
+31,8,Batch/Donor Leakage,Donor (immune),0.001,0.002076923076923077,True
+37,9,Calibration,Calibration improves,0.001,0.002076923076923077,True
+42,10,CSSI,CSSI prevents degradation,0.99,1.0,False
+48,11,Synthetic Validation,Recovery degrades,0.01,0.016875,True
+51,12,Multi-Model,Geneformer TRRUST,0.89,0.9612,False
+57,13,Controlled-Composition Scaling,N degrades AUROC (single type),0.079,0.10157142857142858,False
+60,14,Perturbation-First Validation,Replogle primary,0.0001,0.0003857142857142858,True
+63,15,Robust Attention Residualization,Edge-expression correlation,1e-50,9.000000000000001e-50,True
+68,16,Degree-Preserving Null Models,AUROC > random,0.001,0.002076923076923077,True
+74,17,Attention-Correlation Mapping,Within-tissue R2,1e-50,9.000000000000001e-50,True
+77,18,Perturbation Sensitivity,All AUROC > 0.5 (27 conditions),0.005,0.009,True
+84,21,Trivial Baseline Comparison,Variance vs Correlation,1e-24,6.75e-24,True
+90,23,Attention Perturbation-First,Attn vs Corr L13 (Wilcoxon),0.726,0.81675,False
+92,24,Full 18-Layer Perturbation-First,L15 vs Corr,0.0009,0.002076923076923077,True
+98,25,Attention-Specific Confound Decomposition,Attn degree-null,0.023,0.036000000000000004,True
+106,28,Cross-Context CRISPRa Replication,Attn vs Corr L13 CRISPRa,1e-06,4.5e-06,True
+109,29,Head-Level Causal Ablation,Regulatory vs baseline,0.244,0.28643478260869565,False
+114,30,Nested Layer Selection,L15 pooled Wilcoxon,0.000933,0.002076923076923077,True
+124,32,Expanded Ablation Controls,Reg top-5 vs baseline,0.244,0.28643478260869565,False
+133,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L6 T-cell,1.0,1.0,False

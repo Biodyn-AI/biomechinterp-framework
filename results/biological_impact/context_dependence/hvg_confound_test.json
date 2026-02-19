@@ -1,0 +1,9 @@
+{
+  "k562_forced_hvg": {
+    "status": "skipped",
+    "reason": "K562 raw expression data not available locally. Only pre-extracted features exist.",
+    "n_pert_genes_in_hvg": 280,
+    "n_pert_genes_not_in_hvg": 0,
+    "note": "The round9 extraction already captured all edges within the 2000 HVG universe. To test forced HVG inclusion, the raw K562 h5ad would need to be re-downloaded from scperturb to recompute the correlation matrix on an expanded gene set."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "experiment": "attention_correlation_mapping",
+  "description": "R\u00b2 between Geneformer attention-derived and correlation-based edge scores",
+  "results_by_cell_count": {
+    "200": {
+      "n_matched": 25991,
+      "n_common_genes": 2000,
+      "spearman_abs": -0.0187,
+      "spearman_abs_p": 0.0025191350928228736,
+      "spearman_signed": -0.0266,
+      "spearman_signed_p": 1.8519672431640697e-05,
+      "r2_abs_corr": 0.0012,
+      "r2_signed_corr": 0.0012,
+      "r2_multi": 0.0075
+    },
+    "500": {
+      "n_matched": 23729,
+      "n_common_genes": 2000,
+      "spearman_abs": -0.046,
+      "spearman_abs_p": 1.4183402305919885e-12,
+      "spearman_signed": -0.0399,
+      "spearman_signed_p": 7.72382813051371e-10,
+      "r2_abs_corr": 0.0046,
+      "r2_signed_corr": 0.0029,
+      "r2_multi": 0.0187
+    },
+    "1000": {
+      "n_matched": 20878,
+      "n_common_genes": 2000,
+      "spearman_abs": -0.0499,
+      "spearman_abs_p": 5.19295456958306e-13,
+      "spearman_signed": -0.0404,
+      "spearman_signed_p": 5.3221966136986886e-09,
+      "r2_abs_corr": 0.0051,
+      "r2_signed_corr": 0.0032,
+      "r2_multi": 0.0149
+    }
+  }
+}

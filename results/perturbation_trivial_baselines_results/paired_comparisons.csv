@@ -1,0 +1,5 @@
+comparison,mean_diff,paired_t_p
+Correlation vs Mean Expression,-0.1458,5.206511864671566e-20
+Correlation vs 1 - Dropout Rate,-0.1128,8.469435704687509e-13
+Correlation vs Variance,-0.1858,2.3409323098207523e-24
+Correlation vs TF Degree (const),0.1955,4.5670031327707857e-29

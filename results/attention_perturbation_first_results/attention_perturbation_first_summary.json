@@ -1,0 +1,105 @@
+{
+  "experiment": "attention_perturbation_first",
+  "config": {
+    "model": "Geneformer-V2-316M",
+    "n_control_cells": 2000,
+    "n_hvg": 2000,
+    "lfc_threshold": 0.5,
+    "pval_threshold": 0.05,
+    "min_de_targets": 5,
+    "eval_layers_0indexed": [
+      5,
+      12,
+      17
+    ],
+    "primary_layer_0indexed": 12,
+    "max_seq_len": 2048,
+    "n_evaluable_perturbations": 280
+  },
+  "results_by_layer": {
+    "5": {
+      "layer_1indexed": 6,
+      "n_evaluated": 280,
+      "attention": {
+        "mean_auroc": 0.7051,
+        "std_auroc": 0.1447,
+        "median_auroc": 0.6819,
+        "iqr": [
+          0.624,
+          0.7977
+        ]
+      },
+      "correlation": {
+        "mean_auroc": 0.7026,
+        "std_auroc": 0.1642,
+        "median_auroc": 0.6726
+      },
+      "random": {
+        "mean_auroc": 0.498
+      },
+      "attn_vs_corr": {
+        "paired_t_p": 0.809107,
+        "wilcoxon_p": 0.760156,
+        "mean_diff": 0.0025,
+        "n_attn_better": 146,
+        "n_corr_better": 134
+      }
+    },
+    "12": {
+      "layer_1indexed": 13,
+      "n_evaluated": 280,
+      "attention": {
+        "mean_auroc": 0.7035,
+        "std_auroc": 0.147,
+        "median_auroc": 0.6894,
+        "iqr": [
+          0.621,
+          0.8014
+        ]
+      },
+      "correlation": {
+        "mean_auroc": 0.7026,
+        "std_auroc": 0.1642,
+        "median_auroc": 0.6726
+      },
+      "random": {
+        "mean_auroc": 0.498
+      },
+      "attn_vs_corr": {
+        "paired_t_p": 0.930699,
+        "wilcoxon_p": 0.726147,
+        "mean_diff": 0.001,
+        "n_attn_better": 132,
+        "n_corr_better": 148
+      }
+    },
+    "17": {
+      "layer_1indexed": 18,
+      "n_evaluated": 280,
+      "attention": {
+        "mean_auroc": 0.708,
+        "std_auroc": 0.1565,
+        "median_auroc": 0.6946,
+        "iqr": [
+          0.6139,
+          0.8236
+        ]
+      },
+      "correlation": {
+        "mean_auroc": 0.7026,
+        "std_auroc": 0.1642,
+        "median_auroc": 0.6726
+      },
+      "random": {
+        "mean_auroc": 0.498
+      },
+      "attn_vs_corr": {
+        "paired_t_p": 0.652275,
+        "wilcoxon_p": 0.750069,
+        "mean_diff": 0.0054,
+        "n_attn_better": 134,
+        "n_corr_better": 146
+      }
+    }
+  }
+}

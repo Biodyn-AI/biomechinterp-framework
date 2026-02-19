@@ -1,0 +1,44 @@
+{
+  "experiment": "round9_unified_extraction_v2",
+  "model": "Geneformer-V2-316M",
+  "n_control_cells": 2000,
+  "n_hvg": 2000,
+  "n_hvg_with_tokens": 1941,
+  "lfc_threshold": 0.5,
+  "pval_threshold": 0.05,
+  "min_de_targets": 5,
+  "n_layers": 18,
+  "n_heads": 18,
+  "max_seq_len": 2048,
+  "n_evaluable_perturbations": 280,
+  "n_trrust_pairs_in_hvg": 178,
+  "n_tfs_in_data": 108,
+  "top5_regulatory_heads": [
+    {
+      "layer": 8,
+      "head": 3,
+      "auroc": 0.999891
+    },
+    {
+      "layer": 7,
+      "head": 12,
+      "auroc": 0.999887
+    },
+    {
+      "layer": 2,
+      "head": 7,
+      "auroc": 0.999886
+    },
+    {
+      "layer": 17,
+      "head": 6,
+      "auroc": 0.999885
+    },
+    {
+      "layer": 7,
+      "head": 13,
+      "auroc": 0.999885
+    }
+  ],
+  "total_time_seconds": 8388.1
+}

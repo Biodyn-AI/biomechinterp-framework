@@ -1,0 +1,16 @@
+{
+  "experiment": "attention_residualization",
+  "dataset": "tabula_sapiens_immune_20k",
+  "n_cells_used": 2000,
+  "n_genes": 500,
+  "n_pairs": 5988,
+  "n_trrust_positives": 4,
+  "baseline_auroc": 0.5918,
+  "auroc_after_expr_residual": 0.1905,
+  "auroc_after_meanexpr_dropout_residual": 0.2986,
+  "cv_auroc_raw": NaN,
+  "cv_auroc_residual": NaN,
+  "cv_auroc_covariates_only": NaN,
+  "spearman_edge_vs_expr_product": 0.7451,
+  "interpretation": "If residual AUROC drops to ~0.5, attention captures only co-expression. If residual retains signal, attention encodes additional regulatory info."
+}

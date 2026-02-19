@@ -1,0 +1,160 @@
+{
+  "experiment": "round11_orthogonal_interventions",
+  "n_conditions": 7,
+  "conditions": {
+    "baseline": {
+      "description": "Full model (no intervention)",
+      "mean_auroc_attn": 0.7035,
+      "n_evaluated": 280,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "uniform_attn_reg_top5": {
+      "description": "Uniform attention on top-5 TRRUST heads",
+      "type": "uniform_attention",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.704,
+      "std_auroc_attn": 0.1469,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11",
+      "n_per_gene": 280
+    },
+    "uniform_attn_reg_top10": {
+      "description": "Uniform attention on top-10 TRRUST heads",
+      "type": "uniform_attention",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7033,
+      "std_auroc_attn": 0.1468,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11",
+      "n_per_gene": 280
+    },
+    "uniform_attn_random_10": {
+      "description": "Uniform attention on 10 random heads (control)",
+      "type": "uniform_attention",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7067,
+      "std_auroc_attn": 0.1468,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11",
+      "n_per_gene": 280
+    },
+    "mlp_zero_L15": {
+      "description": "Zero MLP output at L15 (best perturbation-first)",
+      "type": "mlp_ablation",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.147,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11",
+      "n_per_gene": 280
+    },
+    "mlp_zero_L13_L14_L15": {
+      "description": "Zero MLP output at L13+L14+L15",
+      "type": "mlp_ablation",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.147,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11",
+      "n_per_gene": 280
+    },
+    "mlp_zero_random_layer": {
+      "description": "Zero MLP output at L8 (random control)",
+      "type": "mlp_ablation",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7088,
+      "std_auroc_attn": 0.1474,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11",
+      "n_per_gene": 280
+    }
+  },
+  "comparisons": {
+    "uniform_attn_reg_top5": {
+      "n_compared": 280,
+      "mean_drop": -0.0004,
+      "std_drop": 0.0026,
+      "wilcoxon_p": 0.004208236313074688,
+      "ttest_p": 0.004943943794168735,
+      "cohens_d": -0.1696,
+      "n_baseline_better": 111,
+      "n_ablation_better": 150,
+      "ci_95": [
+        -0.0055,
+        0.0041
+      ]
+    },
+    "uniform_attn_reg_top10": {
+      "n_compared": 280,
+      "mean_drop": 0.0002,
+      "std_drop": 0.003,
+      "wilcoxon_p": 0.05153342274400466,
+      "ttest_p": 0.2609446472925651,
+      "cohens_d": 0.0674,
+      "n_baseline_better": 146,
+      "n_ablation_better": 114,
+      "ci_95": [
+        -0.0056,
+        0.0057
+      ]
+    },
+    "uniform_attn_random_10": {
+      "n_compared": 280,
+      "mean_drop": -0.0032,
+      "std_drop": 0.0156,
+      "wilcoxon_p": 0.0005149935001985895,
+      "ttest_p": 0.0007998276957753019,
+      "cohens_d": -0.203,
+      "n_baseline_better": 107,
+      "n_ablation_better": 159,
+      "ci_95": [
+        -0.0377,
+        0.0253
+      ]
+    },
+    "mlp_zero_L15": {
+      "n_compared": 280,
+      "mean_drop": 0.0,
+      "std_drop": 0.0,
+      "wilcoxon_p": NaN,
+      "ttest_p": NaN,
+      "cohens_d": 0.0,
+      "n_baseline_better": 0,
+      "n_ablation_better": 0,
+      "ci_95": [
+        0.0,
+        0.0
+      ]
+    },
+    "mlp_zero_L13_L14_L15": {
+      "n_compared": 280,
+      "mean_drop": 0.0,
+      "std_drop": 0.0,
+      "wilcoxon_p": NaN,
+      "ttest_p": NaN,
+      "cohens_d": 0.0,
+      "n_baseline_better": 0,
+      "n_ablation_better": 0,
+      "ci_95": [
+        0.0,
+        0.0
+      ]
+    },
+    "mlp_zero_random_layer": {
+      "n_compared": 280,
+      "mean_drop": -0.0053,
+      "std_drop": 0.0199,
+      "wilcoxon_p": 4.176565743349855e-08,
+      "ttest_p": 1.3113070713368039e-05,
+      "cohens_d": -0.2657,
+      "n_baseline_better": 89,
+      "n_ablation_better": 179,
+      "ci_95": [
+        -0.0413,
+        0.0393
+      ]
+    }
+  },
+  "total_time_seconds": 9295.9
+}

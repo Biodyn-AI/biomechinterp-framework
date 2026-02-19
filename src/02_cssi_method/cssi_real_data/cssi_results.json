@@ -1,0 +1,23 @@
+{
+  "200": {
+    "n_cells": 200,
+    "n_genes": 200,
+    "TRRUST_pooled": null,
+    "TRRUST_cssi_max": null,
+    "TRRUST_cssi_mean": null
+  },
+  "500": {
+    "n_cells": 500,
+    "n_genes": 200,
+    "TRRUST_pooled": null,
+    "TRRUST_cssi_max": null,
+    "TRRUST_cssi_mean": null
+  },
+  "1000": {
+    "n_cells": 1000,
+    "n_genes": 200,
+    "TRRUST_pooled": null,
+    "TRRUST_cssi_max": null,
+    "TRRUST_cssi_mean": null
+  }
+}

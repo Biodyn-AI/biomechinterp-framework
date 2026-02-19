@@ -1,0 +1,48 @@
+{
+  "experiment": "degree_preserving_nulls",
+  "dataset": "tabula_sapiens_immune",
+  "n_genes": 2000,
+  "n_tfs": 38,
+  "n_positive_edges": 61,
+  "n_pairs": 75962,
+  "observed_auroc": 0.7571,
+  "label_shuffled_null": {
+    "mean": 0.4997,
+    "std": 0.0373,
+    "p_value": 0.0,
+    "z_score": 6.9,
+    "n_permutations": 1000
+  },
+  "degree_preserving_null": {
+    "mean": 0.6868,
+    "std": 0.0193,
+    "p_value": 0.0,
+    "z_score": 3.63,
+    "n_permutations": 200
+  },
+  "confound_analysis": {
+    "mean_rho_edge_vs_target_expr": 0.8093,
+    "rho_degree_vs_auroc": 0.1477,
+    "p_degree_vs_auroc": 0.5588,
+    "rho_expr_vs_auroc": 0.0568,
+    "p_expr_vs_auroc": 0.823
+  },
+  "auroc_decomposition": {
+    "chance": 0.5,
+    "degree_confound": 0.1868,
+    "excess_above_degree": 0.0703
+  },
+  "per_tf_evaluation": {
+    "n_tfs_evaluated": 18,
+    "mean_per_tf_auroc": 0.6916,
+    "std_per_tf_auroc": 0.209,
+    "median_per_tf_auroc": 0.6595,
+    "iqr": [
+      0.56,
+      0.8583
+    ],
+    "tfs_above_chance": 14,
+    "mean_precision_at_k": 0.0302,
+    "mean_excess_above_degree_null": 0.0346
+  }
+}

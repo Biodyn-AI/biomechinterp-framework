@@ -1,0 +1,15 @@
+{
+  "n_matched": 243,
+  "n_blacklisted": 145,
+  "n_clean": 98,
+  "bl_mean_abs_pert_effect": 0.005033717253542568,
+  "clean_mean_abs_pert_effect": 0.006948720684168408,
+  "bl_sig_fraction": 0.034482758620689655,
+  "clean_sig_fraction": 0.09183673469387756,
+  "mw_u_stat": 6130.0,
+  "mw_p_value": 0.06977378694643561,
+  "asi_pert_correlation": -0.11758343155743112,
+  "asi_pert_p_value": 0.06727299088868718,
+  "score_pert_spearman": 0.06180180689606418,
+  "score_pert_spearman_p": 0.3373851235614477
+}

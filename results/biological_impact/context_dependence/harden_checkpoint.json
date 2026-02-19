@@ -1,0 +1,86 @@
+{
+  "hvg_confound": {
+    "n_restricted_hvgs": 2000,
+    "n_original_hvgs": 3309,
+    "n_pert_in_restricted": 418,
+    "n_pert_dropped": 833,
+    "n_evaluable_restricted": 418,
+    "n_evaluable_both": 418,
+    "restricted": {
+      "mean_auroc_attn": 0.7615536630351027,
+      "mean_auroc_corr": 0.5933283084304011,
+      "mean_delta": 0.1682253546047016,
+      "median_delta": 0.16034125317037728,
+      "frac_attn_wins": 0.8899521531100478
+    },
+    "original": {
+      "mean_auroc_attn": 0.6988885167464115,
+      "mean_auroc_corr": 0.7225090909090908,
+      "mean_delta": -0.023620574162679417,
+      "median_delta": -0.005199999999999982,
+      "frac_attn_wins": 0.4880382775119617
+    },
+    "paired_test": {
+      "test": "Wilcoxon signed-rank",
+      "statistic": 8428.0,
+      "p_value": 1.9968211803271328e-46,
+      "interpretation": "Tests whether restricting HVGs changes the attention advantage"
+    },
+    "restriction_effect": {
+      "attn_auroc_change": 0.06266514628869124,
+      "corr_auroc_change": -0.1291807824786897,
+      "delta_change": 0.191845928767381,
+      "interpretation": "Restricting to 2000 HVGs changes attention AUROC by +0.0627, correlation AUROC by -0.1292, and delta by +0.1918"
+    }
+  },
+  "bootstrap_cis": {
+    "RPE1_CRISPRi": {
+      "n": 1167,
+      "mean_delta": 0.08959717223650386,
+      "median_delta": 0.1054,
+      "bootstrap_mean_95ci": [
+        0.07866854970008569,
+        0.10056242930591258
+      ],
+      "bootstrap_median_95ci": [
+        0.0868999999999999,
+        0.1218
+      ],
+      "wilcoxon_signed_rank_p": 2.2105621883220945e-54,
+      "ci_excludes_zero_mean": true,
+      "ci_excludes_zero_median": true
+    },
+    "K562_CRISPRi": {
+      "n": 280,
+      "mean_delta": 0.06032488446179519,
+      "median_delta": 0.04242357872374265,
+      "bootstrap_mean_95ci": [
+        0.04029747939488071,
+        0.08038866166775507
+      ],
+      "bootstrap_median_95ci": [
+        0.031025167675631397,
+        0.06846160052802144
+      ],
+      "wilcoxon_signed_rank_p": 8.864006296857555e-08,
+      "ci_excludes_zero_mean": true,
+      "ci_excludes_zero_median": true
+    },
+    "RPE1_restricted_2000": {
+      "n": 418,
+      "mean_delta": 0.16822535460470156,
+      "median_delta": 0.16034125317037723,
+      "bootstrap_mean_95ci": [
+        0.15474604671463038,
+        0.18185690975430996
+      ],
+      "bootstrap_median_95ci": [
+        0.137268143345939,
+        0.18278589831221415
+      ],
+      "wilcoxon_signed_rank_p": 4.8937100944509294e-60,
+      "ci_excludes_zero_mean": true,
+      "ci_excludes_zero_median": true
+    }
+  }
+}

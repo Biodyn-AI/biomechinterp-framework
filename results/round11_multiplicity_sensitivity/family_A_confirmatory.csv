@@ -1,0 +1,91 @@
+test_id,analysis_id,analysis_name,hypothesis,raw_p,bh_p,significant
+1,1,Scaling Behavior,Cell count improves GRN (TRRUST),0.002,0.004090909090909091,True
+2,1,Scaling Behavior,Cell count improves GRN (TRRUST),0.002,0.004090909090909091,True
+3,1,Scaling Behavior,Cell count improves GRN (DoRothEA),0.002,0.004090909090909091,True
+5,1,Scaling Behavior,Seed stability w/ scaling,0.001,0.0021951219512195124,True
+6,2,Mediation Bias,Components additive,0.001,0.0021951219512195124,True
+7,2,Mediation Bias,Rankings stable,0.001,0.0021951219512195124,True
+8,3,Detectability Theory,Theory matches empirical,1e-06,4.736842105263158e-06,True
+9,3,Detectability Theory,Intervention more detectable,0.001,0.0021951219512195124,True
+10,4,Cross-Context Consistency,Immune-kidney transfer,0.024,0.03857142857142857,True
+11,4,Cross-Context Consistency,Immune-lung transfer,0.089,0.11955223880597014,False
+12,4,Cross-Context Consistency,Kidney-lung transfer,0.156,0.20057142857142857,False
+14,4,Cross-Context Consistency,Correlation significance,0.001,0.0021951219512195124,True
+15,5,Perturbation Validation,Dixit 13d raw,0.032,0.0488135593220339,True
+16,5,Perturbation Validation,Dixit 13d adjusted,0.02,0.03333333333333333,True
+17,5,Perturbation Validation,Dixit 7d,0.15,0.19565217391304346,False
+18,5,Perturbation Validation,Adamson,0.089,0.11955223880597014,False
+19,5,Perturbation Validation,Shifrut raw,0.031,0.04810344827586206,True
+20,5,Perturbation Validation,Shifrut adjusted,0.876,0.9498795180722891,False
+21,6,Cross-Species Ortholog,Global conservation,1e-300,9e-299,True
+22,6,Cross-Species Ortholog,Signs conserved,0.001,0.0021951219512195124,True
+23,6,Cross-Species Ortholog,Overlap above chance,0.001,0.0021951219512195124,True
+25,7,Pseudotime,TFs precede targets,0.068,0.09703125,False
+26,7,Pseudotime,Exceeds shuffled,0.068,0.09703125,False
+27,7,Pseudotime,Exceeds random,0.37,0.4324675324675325,False
+31,8,Batch/Donor Leakage,Donor (immune),0.001,0.0021951219512195124,True
+32,8,Batch/Donor Leakage,Donor (lung),0.001,0.0021951219512195124,True
+33,8,Batch/Donor Leakage,Assay method,0.001,0.0021951219512195124,True
+35,8,Batch/Donor Leakage,Edge stability (LODO),0.001,0.0021951219512195124,True
+36,8,Batch/Donor Leakage,Generalization gap,0.012,0.0216,True
+37,9,Calibration,Calibration improves,0.001,0.0021951219512195124,True
+38,9,Calibration,Isotonic better,0.001,0.0021951219512195124,True
+41,9,Calibration,Calibrators dont transfer,0.001,0.0021951219512195124,True
+42,10,CSSI,CSSI prevents degradation,0.99,1.0,False
+43,10,CSSI,Pooled degrades,0.0001,0.00040909090909090913,True
+44,10,CSSI,CSSI outperforms pooled,2.5e-11,2.5e-10,True
+45,10,CSSI,Real PBMC improvement,0.03,0.04736842105263158,True
+46,10,CSSI,CSSI w/ real proportions,2.4e-08,1.8e-07,True
+48,11,Synthetic Validation,Recovery degrades,0.01,0.018367346938775512,True
+49,11,Synthetic Validation,Shapley outperforms,0.001,0.0021951219512195124,True
+50,11,Synthetic Validation,Empirical = theory,1e-06,4.736842105263158e-06,True
+51,12,Multi-Model,Geneformer TRRUST,0.89,0.9535714285714286,False
+52,12,Multi-Model,Geneformer DoRothEA,0.76,0.8550000000000001,False
+55,12,Multi-Model,Attention = co-expression,1e-50,2.25e-49,True
+56,12,Multi-Model,Attention != regulation,0.3,0.36486486486486486,False
+57,13,Controlled-Composition Scaling,N degrades AUROC (single type),0.079,0.10938461538461539,False
+58,13,Controlled-Composition Scaling,N degrades AUROC (fixed comp),0.82,0.8999999999999999,False
+59,13,Controlled-Composition Scaling,Diversity improves,0.0001,0.00040909090909090913,True
+60,14,Perturbation-First Validation,Replogle primary,0.0001,0.00040909090909090913,True
+61,14,Perturbation-First Validation,Replogle baseline,0.32,0.384,False
+62,14,Perturbation-First Validation,Replogle Wilcoxon,0.3,0.36486486486486486,False
+63,15,Robust Attention Residualization,Edge-expression correlation,1e-50,2.25e-49,True
+68,16,Degree-Preserving Null Models,AUROC > random,0.001,0.0021951219512195124,True
+69,16,Degree-Preserving Null Models,AUROC > degree,0.005,0.009574468085106383,True
+74,17,Attention-Correlation Mapping,Within-tissue R2,1e-50,2.25e-49,True
+76,17,Attention-Correlation Mapping,Cross-tissue rho,1e-09,9.000000000000001e-09,True
+77,18,Perturbation Sensitivity,All AUROC > 0.5 (27 conditions),0.005,0.009574468085106383,True
+84,21,Trivial Baseline Comparison,Variance vs Correlation,1e-24,1.5e-23,True
+85,21,Trivial Baseline Comparison,Mean expr vs Correlation,1e-20,1.2857142857142856e-19,True
+86,21,Trivial Baseline Comparison,Dropout vs Correlation,1e-12,1.125e-11,True
+87,21,Trivial Baseline Comparison,TF degree vs Correlation,1e-29,1.8e-28,True
+90,23,Attention Perturbation-First,Attn vs Corr L13 (Wilcoxon),0.726,0.8270886075949367,False
+91,23,Attention Perturbation-First,Attn vs Corr L13 (Paired t),0.931,0.9593181818181818,False
+92,24,Full 18-Layer Perturbation-First,L15 vs Corr,0.0009,0.0021951219512195124,True
+93,24,Full 18-Layer Perturbation-First,Split-sample validation,0.017,0.029423076923076927,True
+94,24,Full 18-Layer Perturbation-First,Per-layer (18),0.0009,0.0021951219512195124,True
+98,25,Attention-Specific Confound Decomposition,Attn degree-null,0.023,0.037636363636363634,True
+99,25,Attention-Specific Confound Decomposition,Corr degree-null,0.018,0.030566037735849053,True
+106,28,Cross-Context CRISPRa Replication,Attn vs Corr L13 CRISPRa,1e-06,4.736842105263158e-06,True
+107,28,Cross-Context CRISPRa Replication,Attn vs Corr L6 CRISPRa,1e-06,4.736842105263158e-06,True
+108,28,Cross-Context CRISPRa Replication,Attn vs Corr L18 CRISPRa,1e-06,4.736842105263158e-06,True
+109,29,Head-Level Causal Ablation,Regulatory vs baseline,0.244,0.305,False
+110,29,Head-Level Causal Ablation,Random vs baseline (rep 1),0.065,0.0959016393442623,False
+111,29,Head-Level Causal Ablation,Random vs baseline (rep 2),0.069,0.09703125,False
+112,29,Head-Level Causal Ablation,Random vs baseline (rep 3),1e-06,4.736842105263158e-06,True
+113,29,Head-Level Causal Ablation,Entropy-matched vs baseline,1e-06,4.736842105263158e-06,True
+114,30,Nested Layer Selection,L15 pooled Wilcoxon,0.000933,0.0021951219512195124,True
+115,30,Nested Layer Selection,Bonferroni-adjusted,0.01679,0.029423076923076927,True
+124,32,Expanded Ablation Controls,Reg top-5 vs baseline,0.244,0.305,False
+125,32,Expanded Ablation Controls,Reg top-10 vs baseline,0.937,0.9593181818181818,False
+126,32,Expanded Ablation Controls,Reg top-20 vs baseline,0.596,0.6876923076923076,False
+127,32,Expanded Ablation Controls,Reg top-50 vs baseline,0.1,0.1323529411764706,False
+128,32,Expanded Ablation Controls,Bottom-5 vs baseline,0.005,0.009574468085106383,True
+129,32,Expanded Ablation Controls,Bottom-10 vs baseline,0.05,0.07500000000000001,False
+130,32,Expanded Ablation Controls,Random-10 vs baseline,0.009,0.016874999999999998,True
+131,32,Expanded Ablation Controls,Random-20 vs baseline,1.09e-08,8.918181818181819e-08,True
+132,32,Expanded Ablation Controls,Random-50 vs baseline,0.351,0.41565789473684206,False
+133,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L6 T-cell,1.0,1.0,False
+134,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L13 T-cell,0.938,0.9593181818181818,False
+135,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L15 T-cell,0.813,0.8999999999999999,False
+136,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L18 T-cell,0.938,0.9593181818181818,False

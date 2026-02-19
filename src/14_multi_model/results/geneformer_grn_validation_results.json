@@ -1,0 +1,30 @@
+{
+  "experiment_info": {
+    "data_path": "D:\\openclaw\\intelligence-augmentation\\data\\brain_scrna\\DLPFC_11k.h5ad",
+    "model_path": "D:\\openclaw\\intelligence-augmentation\\models\\Geneformer\\Geneformer-V1-10M",
+    "device": "cpu",
+    "timestamp": "2026-02-15T16:35:13.246412"
+  },
+  "results": [
+    {
+      "n_cells": 200,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "auroc": 0.5,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0
+    },
+    {
+      "n_cells": 500,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "auroc": 0.5,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0
+    }
+  ]
+}

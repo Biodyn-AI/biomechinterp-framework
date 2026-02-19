@@ -1,0 +1,85 @@
+{
+  "cv_results": {
+    "A_gene_only": {
+      "mean_auroc": 0.9417,
+      "std_auroc": 0.0015,
+      "mean_auprc": 0.4365,
+      "std_auprc": 0.0053,
+      "n_folds_valid": 5
+    },
+    "B_attn_only": {
+      "mean_auroc": 0.7222,
+      "std_auroc": 0.0059,
+      "mean_auprc": 0.0486,
+      "std_auprc": 0.0041,
+      "n_folds_valid": 5
+    },
+    "C_corr_only": {
+      "mean_auroc": 0.6558,
+      "std_auroc": 0.0048,
+      "mean_auprc": 0.0635,
+      "std_auprc": 0.0034,
+      "n_folds_valid": 5
+    },
+    "D_gene_plus_attn": {
+      "mean_auroc": 0.9418,
+      "std_auroc": 0.0015,
+      "mean_auprc": 0.4384,
+      "std_auprc": 0.0053,
+      "n_folds_valid": 5
+    },
+    "E_gene_plus_corr": {
+      "mean_auroc": 0.9412,
+      "std_auroc": 0.0012,
+      "mean_auprc": 0.4414,
+      "std_auprc": 0.006,
+      "n_folds_valid": 5
+    },
+    "delta_D_gene_plus_attn": 0.0001,
+    "delta_E_gene_plus_corr": -0.0005
+  },
+  "bootstrap_cis": {
+    "A_gene_only": {
+      "mean": 0.9482,
+      "ci_lo": 0.9455,
+      "ci_hi": 0.9506,
+      "n_valid": 200
+    },
+    "B_attn_only": {
+      "mean": 0.7475,
+      "ci_lo": 0.741,
+      "ci_hi": 0.7549,
+      "n_valid": 200
+    },
+    "C_corr_only": {
+      "mean": 0.6582,
+      "ci_lo": 0.6511,
+      "ci_hi": 0.6663,
+      "n_valid": 200
+    },
+    "D_gene_plus_attn": {
+      "mean": 0.9483,
+      "ci_lo": 0.9456,
+      "ci_hi": 0.9507,
+      "n_valid": 200
+    },
+    "E_gene_plus_corr": {
+      "mean": 0.9476,
+      "ci_lo": 0.9449,
+      "ci_hi": 0.9501,
+      "n_valid": 200
+    },
+    "delta_attn": {
+      "mean": 0.0001,
+      "ci_lo": 0.0001,
+      "ci_hi": 0.0001
+    },
+    "delta_corr": {
+      "mean": -0.0006,
+      "ci_lo": -0.0008,
+      "ci_hi": -0.0005
+    }
+  },
+  "bootstrap_method": "perturbation_level_resample",
+  "n_common_perts": 1167
+}

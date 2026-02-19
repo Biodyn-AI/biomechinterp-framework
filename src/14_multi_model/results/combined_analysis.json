@@ -1,0 +1,396 @@
+{
+  "timestamp": "2026-02-14T13:04:58.946520",
+  "models_tested": [
+    "scVI",
+    "UCE",
+    "C2S-Pythia"
+  ],
+  "successful_models": [
+    "scVI",
+    "C2S-Pythia"
+  ],
+  "raw_results": {
+    "scVI": {
+      "model_name": "scVI",
+      "test_timestamp": "2026-02-14T13:02:19.726846",
+      "basic_test": {
+        "timestamp": "2026-02-14T13:02:19.726846",
+        "model": "scVI",
+        "status": "success",
+        "details": {
+          "dataset_shape": [
+            200,
+            290
+          ],
+          "model_parameters": 225566,
+          "latent_dim": 10,
+          "reconstruction_error": 1114.2886962890625,
+          "device": "cuda",
+          "training_epochs": "50 (early stopped)"
+        }
+      },
+      "scaling_test": [
+        {
+          "n_cells": 200,
+          "n_genes": 800,
+          "latent_dim": 10,
+          "reconstruction_error": 2914.251708984375,
+          "batch_size": 32,
+          "status": "success"
+        },
+        {
+          "n_cells": 500,
+          "n_genes": 800,
+          "latent_dim": 10,
+          "reconstruction_error": 2885.35107421875,
+          "batch_size": 62,
+          "status": "success"
+        }
+      ],
+      "summary": {
+        "scaling_behavior": "-0.99% change"
+      }
+    },
+    "UCE": {
+      "model_name": "UCE",
+      "test_timestamp": "2026-02-14T13:00:25.114476",
+      "availability_test": [
+        {
+          "name": "minwoosun/uce-100m",
+          "status": "failed",
+          "error": "Unrecognized model in minwoosun/uce-100m. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: aimv2, aimv2_vision_model, albert, align, altclip, apertus, arcee, aria, aria_text, audio-spectrogram-transformer, autoformer, aya_vision, bamba, bark, bart, beit, bert, bert-generation, big_bird, bigbird_pegasus, biogpt, bit, bitnet, blenderbot, blenderbot-small, blip, blip-2, blip_2_qformer, bloom, blt, bridgetower, bros, camembert, canine, chameleon, chinese_clip, chinese_clip_vision_model, clap, clip, clip_text_model, clip_vision_model, clipseg, clvp, code_llama, codegen, cohere, cohere2, cohere2_vision, colpali, colqwen2, conditional_detr, convbert, convnext, convnextv2, cpmant, csm, ctrl, cvt, d_fine, dab-detr, dac, data2vec-audio, data2vec-text, data2vec-vision, dbrx, deberta, deberta-v2, decision_transformer, deepseek_v2, deepseek_v3, deepseek_vl, deepseek_vl_hybrid, deformable_detr, deit, depth_anything, depth_pro, deta, detr, dia, diffllama, dinat, dinov2, dinov2_with_registers, dinov3_convnext, dinov3_vit, distilbert, doge, donut-swin, dots1, dpr, dpt, edgetam, edgetam_video, edgetam_vision_model, efficientformer, efficientloftr, efficientnet, electra, emu3, encodec, encoder-decoder, eomt, ernie, ernie4_5, ernie4_5_moe, ernie_m, esm, evolla, exaone4, falcon, falcon_h1, falcon_mamba, fastspeech2_conformer, fastspeech2_conformer_with_hifigan, flaubert, flava, flex_olmo, florence2, fnet, focalnet, fsmt, funnel, fuyu, gemma, gemma2, gemma3, gemma3_text, gemma3n, gemma3n_audio, gemma3n_text, gemma3n_vision, git, glm, glm4, glm4_moe, glm4v, glm4v_moe, glm4v_moe_text, glm4v_text, glpn, got_ocr2, gpt-sw3, gpt2, gpt_bigcode, gpt_neo, gpt_neox, gpt_neox_japanese, gpt_oss, gptj, gptsan-japanese, granite, granite_speech, granitemoe, granitemoehybrid, granitemoeshared, granitevision, graphormer, grounding-dino, groupvit, helium, hgnet_v2, hiera, hubert, hunyuan_v1_dense, hunyuan_v1_moe, ibert, idefics, idefics2, idefics3, idefics3_vision, ijepa, imagegpt, informer, instructblip, instructblipvideo, internvl, internvl_vision, jamba, janus, jetmoe, jukebox, kosmos-2, kosmos-2.5, kyutai_speech_to_text, layoutlm, layoutlmv2, layoutlmv3, led, levit, lfm2, lfm2_vl, lightglue, lilt, llama, llama4, llama4_text, llava, llava_next, llava_next_video, llava_onevision, longcat_flash, longformer, longt5, luke, lxmert, m2m_100, mamba, mamba2, marian, markuplm, mask2former, maskformer, maskformer-swin, mbart, mctct, mega, megatron-bert, metaclip_2, mgp-str, mimi, minimax, ministral, mistral, mistral3, mixtral, mlcd, mllama, mm-grounding-dino, mobilebert, mobilenet_v1, mobilenet_v2, mobilevit, mobilevitv2, modernbert, modernbert-decoder, moonshine, moshi, mpnet, mpt, mra, mt5, musicgen, musicgen_melody, mvp, nat, nemotron, nezha, nllb-moe, nougat, nystromformer, olmo, olmo2, olmo3, olmoe, omdet-turbo, oneformer, open-llama, openai-gpt, opt, ovis2, owlv2, owlvit, paligemma, parakeet_ctc, parakeet_encoder, patchtsmixer, patchtst, pegasus, pegasus_x, perceiver, perception_encoder, perception_lm, persimmon, phi, phi3, phi4_multimodal, phimoe, pix2struct, pixtral, plbart, poolformer, pop2piano, prompt_depth_anything, prophetnet, pvt, pvt_v2, qdqbert, qwen2, qwen2_5_omni, qwen2_5_vl, qwen2_5_vl_text, qwen2_audio, qwen2_audio_encoder, qwen2_moe, qwen2_vl, qwen2_vl_text, qwen3, qwen3_moe, qwen3_next, qwen3_omni_moe, qwen3_vl, qwen3_vl_moe, qwen3_vl_moe_text, qwen3_vl_text, rag, realm, recurrent_gemma, reformer, regnet, rembert, resnet, retribert, roberta, roberta-prelayernorm, roc_bert, roformer, rt_detr, rt_detr_resnet, rt_detr_v2, rwkv, sam, sam2, sam2_hiera_det_model, sam2_video, sam2_vision_model, sam_hq, sam_hq_vision_model, sam_vision_model, seamless_m4t, seamless_m4t_v2, seed_oss, segformer, seggpt, sew, sew-d, shieldgemma2, siglip, siglip2, siglip2_vision_model, siglip_vision_model, smollm3, smolvlm, smolvlm_vision, speech-encoder-decoder, speech_to_text, speech_to_text_2, speecht5, splinter, squeezebert, stablelm, starcoder2, superglue, superpoint, swiftformer, swin, swin2sr, swinv2, switch_transformers, t5, t5gemma, table-transformer, tapas, textnet, time_series_transformer, timesfm, timesformer, timm_backbone, timm_wrapper, trajectory_transformer, transfo-xl, trocr, tvlt, tvp, udop, umt5, unispeech, unispeech-sat, univnet, upernet, van, vaultgemma, video_llava, videomae, vilt, vipllava, vision-encoder-decoder, vision-text-dual-encoder, visual_bert, vit, vit_hybrid, vit_mae, vit_msn, vitdet, vitmatte, vitpose, vitpose_backbone, vits, vivit, vjepa2, voxtral, voxtral_encoder, wav2vec2, wav2vec2-bert, wav2vec2-conformer, wavlm, whisper, xclip, xcodec, xglm, xlm, xlm-prophetnet, xlm-roberta, xlm-roberta-xl, xlnet, xlstm, xmod, yolos, yoso, zamba, zamba2, zoedepth"
+        },
+        {
+          "name": "minwoosun/uce-650m",
+          "status": "failed",
+          "error": "Unrecognized model in minwoosun/uce-650m. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: aimv2, aimv2_vision_model, albert, align, altclip, apertus, arcee, aria, aria_text, audio-spectrogram-transformer, autoformer, aya_vision, bamba, bark, bart, beit, bert, bert-generation, big_bird, bigbird_pegasus, biogpt, bit, bitnet, blenderbot, blenderbot-small, blip, blip-2, blip_2_qformer, bloom, blt, bridgetower, bros, camembert, canine, chameleon, chinese_clip, chinese_clip_vision_model, clap, clip, clip_text_model, clip_vision_model, clipseg, clvp, code_llama, codegen, cohere, cohere2, cohere2_vision, colpali, colqwen2, conditional_detr, convbert, convnext, convnextv2, cpmant, csm, ctrl, cvt, d_fine, dab-detr, dac, data2vec-audio, data2vec-text, data2vec-vision, dbrx, deberta, deberta-v2, decision_transformer, deepseek_v2, deepseek_v3, deepseek_vl, deepseek_vl_hybrid, deformable_detr, deit, depth_anything, depth_pro, deta, detr, dia, diffllama, dinat, dinov2, dinov2_with_registers, dinov3_convnext, dinov3_vit, distilbert, doge, donut-swin, dots1, dpr, dpt, edgetam, edgetam_video, edgetam_vision_model, efficientformer, efficientloftr, efficientnet, electra, emu3, encodec, encoder-decoder, eomt, ernie, ernie4_5, ernie4_5_moe, ernie_m, esm, evolla, exaone4, falcon, falcon_h1, falcon_mamba, fastspeech2_conformer, fastspeech2_conformer_with_hifigan, flaubert, flava, flex_olmo, florence2, fnet, focalnet, fsmt, funnel, fuyu, gemma, gemma2, gemma3, gemma3_text, gemma3n, gemma3n_audio, gemma3n_text, gemma3n_vision, git, glm, glm4, glm4_moe, glm4v, glm4v_moe, glm4v_moe_text, glm4v_text, glpn, got_ocr2, gpt-sw3, gpt2, gpt_bigcode, gpt_neo, gpt_neox, gpt_neox_japanese, gpt_oss, gptj, gptsan-japanese, granite, granite_speech, granitemoe, granitemoehybrid, granitemoeshared, granitevision, graphormer, grounding-dino, groupvit, helium, hgnet_v2, hiera, hubert, hunyuan_v1_dense, hunyuan_v1_moe, ibert, idefics, idefics2, idefics3, idefics3_vision, ijepa, imagegpt, informer, instructblip, instructblipvideo, internvl, internvl_vision, jamba, janus, jetmoe, jukebox, kosmos-2, kosmos-2.5, kyutai_speech_to_text, layoutlm, layoutlmv2, layoutlmv3, led, levit, lfm2, lfm2_vl, lightglue, lilt, llama, llama4, llama4_text, llava, llava_next, llava_next_video, llava_onevision, longcat_flash, longformer, longt5, luke, lxmert, m2m_100, mamba, mamba2, marian, markuplm, mask2former, maskformer, maskformer-swin, mbart, mctct, mega, megatron-bert, metaclip_2, mgp-str, mimi, minimax, ministral, mistral, mistral3, mixtral, mlcd, mllama, mm-grounding-dino, mobilebert, mobilenet_v1, mobilenet_v2, mobilevit, mobilevitv2, modernbert, modernbert-decoder, moonshine, moshi, mpnet, mpt, mra, mt5, musicgen, musicgen_melody, mvp, nat, nemotron, nezha, nllb-moe, nougat, nystromformer, olmo, olmo2, olmo3, olmoe, omdet-turbo, oneformer, open-llama, openai-gpt, opt, ovis2, owlv2, owlvit, paligemma, parakeet_ctc, parakeet_encoder, patchtsmixer, patchtst, pegasus, pegasus_x, perceiver, perception_encoder, perception_lm, persimmon, phi, phi3, phi4_multimodal, phimoe, pix2struct, pixtral, plbart, poolformer, pop2piano, prompt_depth_anything, prophetnet, pvt, pvt_v2, qdqbert, qwen2, qwen2_5_omni, qwen2_5_vl, qwen2_5_vl_text, qwen2_audio, qwen2_audio_encoder, qwen2_moe, qwen2_vl, qwen2_vl_text, qwen3, qwen3_moe, qwen3_next, qwen3_omni_moe, qwen3_vl, qwen3_vl_moe, qwen3_vl_moe_text, qwen3_vl_text, rag, realm, recurrent_gemma, reformer, regnet, rembert, resnet, retribert, roberta, roberta-prelayernorm, roc_bert, roformer, rt_detr, rt_detr_resnet, rt_detr_v2, rwkv, sam, sam2, sam2_hiera_det_model, sam2_video, sam2_vision_model, sam_hq, sam_hq_vision_model, sam_vision_model, seamless_m4t, seamless_m4t_v2, seed_oss, segformer, seggpt, sew, sew-d, shieldgemma2, siglip, siglip2, siglip2_vision_model, siglip_vision_model, smollm3, smolvlm, smolvlm_vision, speech-encoder-decoder, speech_to_text, speech_to_text_2, speecht5, splinter, squeezebert, stablelm, starcoder2, superglue, superpoint, swiftformer, swin, swin2sr, swinv2, switch_transformers, t5, t5gemma, table-transformer, tapas, textnet, time_series_transformer, timesfm, timesformer, timm_backbone, timm_wrapper, trajectory_transformer, transfo-xl, trocr, tvlt, tvp, udop, umt5, unispeech, unispeech-sat, univnet, upernet, van, vaultgemma, video_llava, videomae, vilt, vipllava, vision-encoder-decoder, vision-text-dual-encoder, visual_bert, vit, vit_hybrid, vit_mae, vit_msn, vitdet, vitmatte, vitpose, vitpose_backbone, vits, vivit, vjepa2, voxtral, voxtral_encoder, wav2vec2, wav2vec2-bert, wav2vec2-conformer, wavlm, whisper, xclip, xcodec, xglm, xlm, xlm-prophetnet, xlm-roberta, xlm-roberta-xl, xlnet, xlstm, xmod, yolos, yoso, zamba, zamba2, zoedepth"
+        }
+      ],
+      "basic_test": {},
+      "scaling_test": [],
+      "summary": {
+        "status": "no_models_available"
+      }
+    },
+    "C2S-Pythia": {
+      "model_name": "C2S-Pythia",
+      "test_timestamp": "2026-02-14T13:04:31.761254",
+      "availability_test": {
+        "name": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+        "status": "available",
+        "config": {
+          "return_dict": true,
+          "output_hidden_states": false,
+          "torchscript": false,
+          "dtype": "float32",
+          "pruned_heads": {},
+          "tie_word_embeddings": false,
+          "chunk_size_feed_forward": 0,
+          "is_encoder_decoder": false,
+          "is_decoder": false,
+          "cross_attention_hidden_size": null,
+          "add_cross_attention": false,
+          "tie_encoder_decoder": false,
+          "architectures": [
+            "GPTNeoXForCausalLM"
+          ],
+          "finetuning_task": null,
+          "id2label": {
+            "0": "LABEL_0",
+            "1": "LABEL_1"
+          },
+          "label2id": {
+            "LABEL_0": 0,
+            "LABEL_1": 1
+          },
+          "task_specific_params": null,
+          "problem_type": null,
+          "tokenizer_class": null,
+          "prefix": null,
+          "bos_token_id": 0,
+          "pad_token_id": null,
+          "eos_token_id": 0,
+          "sep_token_id": null,
+          "decoder_start_token_id": null,
+          "max_length": 20,
+          "min_length": 0,
+          "do_sample": false,
+          "early_stopping": false,
+          "num_beams": 1,
+          "temperature": 1.0,
+          "top_k": 50,
+          "top_p": 1.0,
+          "typical_p": 1.0,
+          "repetition_penalty": 1.0,
+          "length_penalty": 1.0,
+          "no_repeat_ngram_size": 0,
+          "encoder_no_repeat_ngram_size": 0,
+          "bad_words_ids": null,
+          "num_return_sequences": 1,
+          "output_scores": false,
+          "return_dict_in_generate": false,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "remove_invalid_values": false,
+          "exponential_decay_length_penalty": null,
+          "suppress_tokens": null,
+          "begin_suppress_tokens": null,
+          "num_beam_groups": 1,
+          "diversity_penalty": 0.0,
+          "_name_or_path": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+          "transformers_version": "4.57.6",
+          "model_type": "gpt_neox",
+          "tf_legacy_loss": false,
+          "use_bfloat16": false,
+          "vocab_size": 50304,
+          "max_position_embeddings": 8192,
+          "hidden_size": 1024,
+          "num_hidden_layers": 24,
+          "num_attention_heads": 16,
+          "intermediate_size": 4096,
+          "hidden_act": "gelu",
+          "rotary_pct": 0.25,
+          "partial_rotary_factor": 0.25,
+          "rotary_emb_base": 10000,
+          "rope_theta": 10000,
+          "attention_dropout": 0.0,
+          "hidden_dropout": 0.0,
+          "classifier_dropout": 0.1,
+          "initializer_range": 0.02,
+          "layer_norm_eps": 1e-05,
+          "use_cache": false,
+          "use_parallel_residual": true,
+          "rope_scaling": null,
+          "attention_bias": true,
+          "output_attentions": false
+        },
+        "has_tokenizer": true
+      },
+      "basic_test": {
+        "timestamp": "2026-02-14T13:04:33.632269",
+        "model": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+        "status": "success",
+        "details": {
+          "model_name": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+          "model_type": "CausalLM",
+          "total_parameters": 405334016,
+          "trainable_parameters": 405334016,
+          "device": "cuda",
+          "input_shape": [
+            20,
+            56
+          ],
+          "embedding_shape": [
+            20,
+            56
+          ],
+          "has_tokenizer": true,
+          "has_attention": true,
+          "num_attention_layers": 24,
+          "config": {
+            "return_dict": true,
+            "output_hidden_states": false,
+            "torchscript": false,
+            "dtype": "float32",
+            "pruned_heads": {},
+            "tie_word_embeddings": false,
+            "chunk_size_feed_forward": 0,
+            "is_encoder_decoder": false,
+            "is_decoder": false,
+            "cross_attention_hidden_size": null,
+            "add_cross_attention": false,
+            "tie_encoder_decoder": false,
+            "architectures": [
+              "GPTNeoXForCausalLM"
+            ],
+            "finetuning_task": null,
+            "id2label": {
+              "0": "LABEL_0",
+              "1": "LABEL_1"
+            },
+            "label2id": {
+              "LABEL_0": 0,
+              "LABEL_1": 1
+            },
+            "task_specific_params": null,
+            "problem_type": null,
+            "tokenizer_class": null,
+            "prefix": null,
+            "bos_token_id": 0,
+            "pad_token_id": null,
+            "eos_token_id": 0,
+            "sep_token_id": null,
+            "decoder_start_token_id": null,
+            "max_length": 20,
+            "min_length": 0,
+            "do_sample": false,
+            "early_stopping": false,
+            "num_beams": 1,
+            "temperature": 1.0,
+            "top_k": 50,
+            "top_p": 1.0,
+            "typical_p": 1.0,
+            "repetition_penalty": 1.0,
+            "length_penalty": 1.0,
+            "no_repeat_ngram_size": 0,
+            "encoder_no_repeat_ngram_size": 0,
+            "bad_words_ids": null,
+            "num_return_sequences": 1,
+            "output_scores": false,
+            "return_dict_in_generate": false,
+            "forced_bos_token_id": null,
+            "forced_eos_token_id": null,
+            "remove_invalid_values": false,
+            "exponential_decay_length_penalty": null,
+            "suppress_tokens": null,
+            "begin_suppress_tokens": null,
+            "num_beam_groups": 1,
+            "diversity_penalty": 0.0,
+            "_name_or_path": "vandijklab/C2S-Pythia-410m-diverse-single-and-multi-cell-tasks",
+            "transformers_version": "4.57.6",
+            "model_type": "gpt_neox",
+            "tf_legacy_loss": false,
+            "use_bfloat16": false,
+            "vocab_size": 50304,
+            "max_position_embeddings": 8192,
+            "hidden_size": 1024,
+            "num_hidden_layers": 24,
+            "num_attention_heads": 16,
+            "intermediate_size": 4096,
+            "hidden_act": "gelu",
+            "rotary_pct": 0.25,
+            "partial_rotary_factor": 0.25,
+            "rotary_emb_base": 10000,
+            "rope_theta": 10000,
+            "attention_dropout": 0.0,
+            "hidden_dropout": 0.0,
+            "classifier_dropout": 0.1,
+            "initializer_range": 0.02,
+            "layer_norm_eps": 1e-05,
+            "use_cache": false,
+            "use_parallel_residual": true,
+            "rope_scaling": null,
+            "attention_bias": true,
+            "output_attentions": false
+          }
+        }
+      },
+      "scaling_test": [
+        {
+          "n_cells": 50,
+          "input_shape": [
+            50,
+            60
+          ],
+          "embedding_shape": [
+            50,
+            50304
+          ],
+          "embedding_mean": -2.208984375,
+          "embedding_std": 1.6494140625,
+          "batch_size": 16,
+          "status": "success"
+        },
+        {
+          "n_cells": 100,
+          "input_shape": [
+            100,
+            62
+          ],
+          "embedding_shape": [
+            100,
+            50304
+          ],
+          "embedding_mean": -2.158203125,
+          "embedding_std": 1.640625,
+          "batch_size": 16,
+          "status": "success"
+        },
+        {
+          "n_cells": 200,
+          "input_shape": [
+            200,
+            62
+          ],
+          "embedding_shape": [
+            200,
+            50304
+          ],
+          "embedding_mean": -2.142578125,
+          "embedding_std": 1.630859375,
+          "batch_size": 16,
+          "status": "success"
+        }
+      ],
+      "summary": {
+        "scaling_behavior": "3.01% change",
+        "status": "success"
+      }
+    }
+  },
+  "scaling_analysis": {
+    "scVI": {
+      "cell_counts": [
+        200,
+        500
+      ],
+      "metrics": [
+        2914.251708984375,
+        2885.35107421875
+      ],
+      "metric_name": "reconstruction_error",
+      "change_percent": -0.9917000194776227,
+      "status": "success",
+      "interpretation": "STABLE_IMPROVEMENT"
+    },
+    "UCE": {
+      "status": "insufficient_data",
+      "reason": "Only 0 successful tests"
+    },
+    "C2S-Pythia": {
+      "cell_counts": [
+        50,
+        100,
+        200
+      ],
+      "metrics": [
+        -2.208984375,
+        -2.158203125,
+        -2.142578125
+      ],
+      "metric_name": "embedding_mean",
+      "change_percent": 3.0061892130857646,
+      "status": "success",
+      "interpretation": "STABLE_INCREASE"
+    }
+  },
+  "architecture_comparison": {
+    "scVI": {
+      "architecture_type": "Variational_Autoencoder",
+      "parameters": 0,
+      "has_attention": false,
+      "attention_layers": 0,
+      "device": "cuda",
+      "success": true
+    },
+    "UCE": {
+      "architecture_type": "Foundation_Transformer",
+      "success": false,
+      "error": "Unknown error"
+    },
+    "C2S-Pythia": {
+      "architecture_type": "Causal_Language_Model",
+      "parameters": 405334016,
+      "has_attention": true,
+      "attention_layers": 24,
+      "device": "cuda",
+      "success": true
+    }
+  },
+  "summary": {
+    "total_models": 3,
+    "successful_models": 2,
+    "models_with_attention": 1,
+    "models_with_scaling_data": 2
+  }
+}

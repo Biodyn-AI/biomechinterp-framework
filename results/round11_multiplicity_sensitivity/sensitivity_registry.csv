@@ -1,0 +1,137 @@
+test_id,analysis_id,analysis_name,hypothesis,test_type,raw_p,effect_size,sample_size,is_confirmatory,is_primary
+1,1,Scaling Behavior,Cell count improves GRN (TRRUST),Sign test,0.002,100% degradation,9 runs,True,True
+2,1,Scaling Behavior,Cell count improves GRN (TRRUST),Wilcoxon,0.002,--,9 runs,True,False
+3,1,Scaling Behavior,Cell count improves GRN (DoRothEA),Sign test,0.002,100% degradation,9 runs,True,False
+4,1,Scaling Behavior,F1 confidence intervals,Bootstrap,,--,10k resamples,False,False
+5,1,Scaling Behavior,Seed stability w/ scaling,Paired test,0.001,46-48% drop,3 seeds,True,False
+6,2,Mediation Bias,Components additive,Lower bound,0.001,A_lb/|TE|=0.73,16 pairs,True,True
+7,2,Mediation Bias,Rankings stable,Stability,0.001,0.067->0.003,16 pairs,True,False
+8,3,Detectability Theory,Theory matches empirical,Correlation,1e-06,r=0.887,Phase space,True,True
+9,3,Detectability Theory,Intervention more detectable,Ratio,0.001,44.4% cells,Simulation,True,False
+10,4,Cross-Context Consistency,Immune-kidney transfer,Spearman,0.024,rho=0.71,Pairs,True,True
+11,4,Cross-Context Consistency,Immune-lung transfer,Spearman,0.089,rho=0.32,Pairs,True,False
+12,4,Cross-Context Consistency,Kidney-lung transfer,Spearman,0.156,rho=-0.44,Pairs,True,False
+13,4,Cross-Context Consistency,Correlation confidence,Bootstrap,,--,10k resamples,False,False
+14,4,Cross-Context Consistency,Correlation significance,Permutation,0.001,--,5k permutations,True,False
+15,5,Perturbation Validation,Dixit 13d raw,Spearman,0.032,rho=0.269,Pert. pairs,True,True
+16,5,Perturbation Validation,Dixit 13d adjusted,Spearman,0.02,rho=0.199,Pert. pairs,True,False
+17,5,Perturbation Validation,Dixit 7d,Spearman,0.15,rho=0.112,Pert. pairs,True,False
+18,5,Perturbation Validation,Adamson,Spearman,0.089,Marginal,Pert. pairs,True,False
+19,5,Perturbation Validation,Shifrut raw,Spearman,0.031,rho=-0.325,Pert. pairs,True,False
+20,5,Perturbation Validation,Shifrut adjusted,Spearman,0.876,rho=0.004,Pert. pairs,True,False
+21,6,Cross-Species Ortholog,Global conservation,Spearman,1e-300,rho=0.743,25876,True,True
+22,6,Cross-Species Ortholog,Signs conserved,Sign test,0.001,88.6%,25876,True,False
+23,6,Cross-Species Ortholog,Overlap above chance,Permutation,0.001,8-484x,1k permutations,True,False
+24,6,Cross-Species Ortholog,TF conservation varies,Range,,-0.12 to 0.90,61 TFs,False,False
+25,7,Pseudotime,TFs precede targets,Directionality test,0.068,21.4% consistent,56 pairs,True,True
+26,7,Pseudotime,Exceeds shuffled,Mann-Whitney,0.068,d=1.58,500 permutations,True,False
+27,7,Pseudotime,Exceeds random,Mann-Whitney,0.37,--,200 sets,True,False
+28,7,Pseudotime,T cell lineage,Lineage,,16.7%,24 pairs,False,False
+29,7,Pseudotime,B cell lineage,Lineage,,13.3%,15 pairs,False,False
+30,7,Pseudotime,Myeloid lineage,Lineage,,35.3%,17 pairs,False,False
+31,8,Batch/Donor Leakage,Donor (immune),Logistic regression,0.001,AUC 0.85-0.87,"20k, 24 donors",True,True
+32,8,Batch/Donor Leakage,Donor (lung),Logistic regression,0.001,AUC 0.94-0.96,"20k, 4 donors",True,False
+33,8,Batch/Donor Leakage,Assay method,Random forest,0.001,AUC 0.96-0.99,All tissues,True,False
+34,8,Batch/Donor Leakage,CV accuracy,5-fold CV,,--,5 folds,False,False
+35,8,Batch/Donor Leakage,Edge stability (LODO),LODO variance,0.001,High variance,Var. donors,True,False
+36,8,Batch/Donor Leakage,Generalization gap,Cross-donor,0.012,6.6 pp gap,Lung,True,False
+37,9,Calibration,Calibration improves,Paired,0.001,4-7x,6 methods,True,True
+38,9,Calibration,Isotonic better,Paired,0.001,ECE 0.06-0.08,6 methods,True,False
+39,9,Calibration,Coverage valid,Coverage,,>=95%,alpha=0.05,False,False
+40,9,Calibration,Calibration robust,Bootstrap,,CI < 0.02,200 resamples,False,False
+41,9,Calibration,Calibrators dont transfer,Transfer,0.001,ECE 0.32-0.42,K562->T,True,False
+42,10,CSSI,CSSI prevents degradation,Spearman,0.99,r=-0.001,10 seeds,True,True
+43,10,CSSI,Pooled degrades,Spearman,0.0001,r=-0.618,10 seeds,True,False
+44,10,CSSI,CSSI outperforms pooled,Wilcoxon,2.5e-11,1.13-1.85x,60 combinations,True,False
+45,10,CSSI,Real PBMC improvement,Bootstrap,0.03,1.16x,3k cells,True,False
+46,10,CSSI,CSSI w/ real proportions,Wilcoxon,2.4e-08,1.62x,10 seeds,True,False
+47,10,CSSI,CSSI on attention,Layer analysis,,AUROC 0.68-0.69,497 cells,False,False
+48,11,Synthetic Validation,Recovery degrades,Correlation,0.01,r: 0.85->0.62,Synthetic,True,True
+49,11,Synthetic Validation,Shapley outperforms,Paired,0.001,91% improvement,Synthetic,True,False
+50,11,Synthetic Validation,Empirical = theory,Correlation,1e-06,r=0.887,Phase space,True,False
+51,12,Multi-Model,Geneformer TRRUST,AUROC,0.89,AUROC 0.44-0.55,3 counts,True,True
+52,12,Multi-Model,Geneformer DoRothEA,AUROC,0.76,AUROC 0.47-0.49,3 counts,True,False
+53,12,Multi-Model,Cross-model comparison,Comparative,,Both ~0.5,2 models,False,False
+54,12,Multi-Model,GF confidence intervals,Bootstrap,,CIs incl. 0.5,10k resamples,False,False
+55,12,Multi-Model,Attention = co-expression,Correlation,1e-50,rho=0.31-0.42,Both,True,False
+56,12,Multi-Model,Attention != regulation,Correlation,0.3,rho=-0.01-0.02,Both,True,False
+57,13,Controlled-Composition Scaling,N degrades AUROC (single type),Spearman,0.079,rho=-0.33,30 runs,True,True
+58,13,Controlled-Composition Scaling,N degrades AUROC (fixed comp),Spearman,0.82,rho=-0.05,20 runs,True,False
+59,13,Controlled-Composition Scaling,Diversity improves,Spearman,0.0001,rho=+0.63,35 runs,True,False
+60,14,Perturbation-First Validation,Replogle primary,One-sample t,0.0001,AUROC=0.696,151 perts,True,True
+61,14,Perturbation-First Validation,Replogle baseline,One-sample t,0.32,AUROC=0.511,44 perts,True,False
+62,14,Perturbation-First Validation,Replogle Wilcoxon,Wilcoxon,0.3,Median=0.503,44 perts,True,False
+63,15,Robust Attention Residualization,Edge-expression correlation,Spearman,1e-50,rho=0.842,75962 pairs,True,True
+64,15,Robust Attention Residualization,R2 OLS full,OLS R2,,R2=0.27,75962 pairs,False,False
+65,15,Robust Attention Residualization,R2 GBDT,GBDT R2,,R2=0.51,75962 pairs,False,False
+66,15,Robust Attention Residualization,CF residual AUROC,CF-AUROC,,AUROC=0.73,61 positives,False,False
+67,15,Robust Attention Residualization,CF stability,10-seed variance,,sigma=0.001,10 seeds,False,False
+68,16,Degree-Preserving Null Models,AUROC > random,Permutation,0.001,z=6.9,1k permutations,True,True
+69,16,Degree-Preserving Null Models,AUROC > degree,Permutation,0.005,z=3.63,200 permutations,True,False
+70,16,Degree-Preserving Null Models,Degree explains AUROC,Decomposition,,73% global,75962 pairs,False,False
+71,16,Degree-Preserving Null Models,Per-TF AUROC,Per-TF eval,,mean=0.69+/-0.20,18 TFs,False,False
+72,16,Degree-Preserving Null Models,Per-TF excess,Per-TF eval,,+0.035+/-0.20,18 TFs,False,False
+73,16,Degree-Preserving Null Models,Precision@k,Prec@k,,0.030 vs 0.002,18 TFs,False,False
+74,17,Attention-Correlation Mapping,Within-tissue R2,rho^2,1e-50,R2=0.10-0.18,50k edges,True,True
+75,17,Attention-Correlation Mapping,Cross-tissue R2,OLS R2,,R2<0.02,21k-26k edges,False,False
+76,17,Attention-Correlation Mapping,Cross-tissue rho,Spearman,1e-09,rho=-0.02 to -0.05,3 conditions,True,False
+77,18,Perturbation Sensitivity,All AUROC > 0.5 (27 conditions),t-test,0.005,AUROC=0.62-0.76,13-1158 perts,True,True
+78,18,Perturbation Sensitivity,TF vs non-TF,Comparison,,Delta<=0.02,1-83 TFs,False,False
+79,19,CSSI Extended Null,Null inflation,Delta AUROC,,<=-0.20,K=2-20,False,False
+80,19,CSSI Extended Null,CSSI vs SCENIC,Comparative,,Equivalent,3 methods,False,False
+81,19,CSSI Extended Null,Per-edge FDR,BH-FDR,,FDR<=0.11,K=5-15,False,False
+82,20,K-Sensitivity Analysis,Continuous AUROC,Comparison,,0.86->0.93,9 runs,False,False
+83,20,K-Sensitivity Analysis,K-sensitivity,Comparison,,F1~10^-4 all K,5 K values,False,False
+84,21,Trivial Baseline Comparison,Variance vs Correlation,Paired t,1e-24,Delta=+0.186,151 perts,True,True
+85,21,Trivial Baseline Comparison,Mean expr vs Correlation,Paired t,1e-20,Delta=+0.146,151 perts,True,False
+86,21,Trivial Baseline Comparison,Dropout vs Correlation,Paired t,1e-12,Delta=+0.113,151 perts,True,False
+87,21,Trivial Baseline Comparison,TF degree vs Correlation,Paired t,1e-29,Delta=-0.196,151 perts,True,False
+88,22,Bootstrap Per-TF CIs,Global boot CI,Bootstrap,,"CI=[0.71,0.77]",200 iterations,False,False
+89,22,Bootstrap Per-TF CIs,Per-TF boot CI,Bootstrap,,"CI=[0.59,0.72]",200 iterations,False,False
+90,23,Attention Perturbation-First,Attn vs Corr L13 (Wilcoxon),Wilcoxon,0.726,diff=0.001,n=280,True,True
+91,23,Attention Perturbation-First,Attn vs Corr L13 (Paired t),Paired t,0.931,diff=0.001,n=280,True,False
+92,24,Full 18-Layer Perturbation-First,L15 vs Corr,Wilcoxon,0.0009,Delta=+0.040,n=280,True,True
+93,24,Full 18-Layer Perturbation-First,Split-sample validation,Wilcoxon,0.017,AUROC=0.750,n=140,True,False
+94,24,Full 18-Layer Perturbation-First,Per-layer (18),Wilcoxon,0.0009,AUROC 0.47-0.74,n=280,True,False
+95,25,Attention-Specific Confound Decomposition,Attn residual OLS,CF-AUROC,,AUROC=0.538,174 positives,False,False
+96,25,Attention-Specific Confound Decomposition,Attn residual GBDT,CF-AUROC,,AUROC=0.554,174 positives,False,False
+97,25,Attention-Specific Confound Decomposition,Corr residual OLS,CF-AUROC,,AUROC=0.622,174 positives,False,False
+98,25,Attention-Specific Confound Decomposition,Attn degree-null,Permutation,0.023,z=2.0,200 permutations,True,True
+99,25,Attention-Specific Confound Decomposition,Corr degree-null,Permutation,0.018,z=2.1,200 permutations,True,False
+100,26,Conditional Incremental Value,Gene-only CV,5-fold CV,,AUROC=0.895,280 perts,False,False
+101,26,Conditional Incremental Value,Delta gene+attn,Bootstrap,,"-0.0004 [-0.001,0]",100 iterations,False,False
+102,26,Conditional Incremental Value,Delta gene+corr,Bootstrap,,"-0.002 [-0.005,0]",100 iterations,False,False
+103,26,Conditional Incremental Value,TF stratified,Subgroup,,"TF 0.913, non-TF 0.895",14/266,False,False
+104,27,Per-Head TRRUST Ranking,Heads differ in reg.,AUROC range,,0.34-0.75,324 heads,False,False
+105,27,Per-Head TRRUST Ranking,Top-5 heads identified,AUROC,,AUROC=0.70-0.75,500 cells,False,False
+106,28,Cross-Context CRISPRa Replication,Attn vs Corr L13 CRISPRa,Wilcoxon,1e-06,diff=-0.106,n=77,True,True
+107,28,Cross-Context CRISPRa Replication,Attn vs Corr L6 CRISPRa,Wilcoxon,1e-06,diff=-0.098,n=77,True,False
+108,28,Cross-Context CRISPRa Replication,Attn vs Corr L18 CRISPRa,Wilcoxon,1e-06,diff=-0.105,n=77,True,False
+109,29,Head-Level Causal Ablation,Regulatory vs baseline,Wilcoxon,0.244,Delta=-0.0002,n=280,True,True
+110,29,Head-Level Causal Ablation,Random vs baseline (rep 1),Wilcoxon,0.065,Delta=+0.0007,n=280,True,False
+111,29,Head-Level Causal Ablation,Random vs baseline (rep 2),Wilcoxon,0.069,Delta=+0.0004,n=280,True,False
+112,29,Head-Level Causal Ablation,Random vs baseline (rep 3),Wilcoxon,1e-06,Delta=+0.0028,n=280,True,False
+113,29,Head-Level Causal Ablation,Entropy-matched vs baseline,Wilcoxon,1e-06,Delta=+0.0042,n=280,True,False
+114,30,Nested Layer Selection,L15 pooled Wilcoxon,Wilcoxon,0.000933,Delta=+0.040,n=280,True,True
+115,30,Nested Layer Selection,Bonferroni-adjusted,Bonferroni,0.01679,d=0.22,n=280,True,False
+116,30,Nested Layer Selection,Bootstrap CI,Bootstrap,,"[0.018, 0.062]",280 perts,False,False
+117,30,Nested Layer Selection,Cohen d,Effect size,,d=0.224,280 perts,False,False
+118,31,Hard-Generalization Incremental,Cross-pert delta gene+attn,Bootstrap CI,,"-0.0004 [-0.001,0]",280 perts,False,True
+119,31,Hard-Generalization Incremental,Cross-pert delta gene+corr,Bootstrap CI,,"-0.0015 [-0.004,0]",280 perts,False,False
+120,31,Hard-Generalization Incremental,Cross-gene delta gene+attn,Bootstrap CI,,"-0.0003 [-0.001,0]",280 perts,False,False
+121,31,Hard-Generalization Incremental,Cross-gene delta gene+corr,Bootstrap CI,,"-0.0010 [-0.004,0]",280 perts,False,False
+122,31,Hard-Generalization Incremental,Joint delta gene+attn,Bootstrap CI,,"-0.0003 [-0.001,0]",280 perts,False,False
+123,31,Hard-Generalization Incremental,Joint delta gene+corr,Bootstrap CI,,"-0.0011 [-0.004,0]",280 perts,False,False
+124,32,Expanded Ablation Controls,Reg top-5 vs baseline,Wilcoxon,0.244,Drop=-0.0002,n=280,True,True
+125,32,Expanded Ablation Controls,Reg top-10 vs baseline,Wilcoxon,0.937,Drop=0.0,n=280,True,False
+126,32,Expanded Ablation Controls,Reg top-20 vs baseline,Wilcoxon,0.596,Drop=+0.0003,n=280,True,False
+127,32,Expanded Ablation Controls,Reg top-50 vs baseline,Wilcoxon,0.1,Drop=+0.0021,n=280,True,False
+128,32,Expanded Ablation Controls,Bottom-5 vs baseline,Wilcoxon,0.005,Drop=-0.0025,n=280,True,False
+129,32,Expanded Ablation Controls,Bottom-10 vs baseline,Wilcoxon,0.05,Drop=-0.0030,n=280,True,False
+130,32,Expanded Ablation Controls,Random-10 vs baseline,Wilcoxon,0.009,Drop=+0.0029,n=280,True,False
+131,32,Expanded Ablation Controls,Random-20 vs baseline,Wilcoxon,1.09e-08,Drop=+0.0071,n=280,True,False
+132,32,Expanded Ablation Controls,Random-50 vs baseline,Wilcoxon,0.351,Drop=+0.0002,n=280,True,False
+133,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L6 T-cell,Wilcoxon,1.0,diff=+0.016,n=7,True,True
+134,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L13 T-cell,Wilcoxon,0.938,diff=-0.003,n=7,True,False
+135,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L15 T-cell,Wilcoxon,0.813,diff=+0.029,n=7,True,False
+136,33,Cross-Context T-Cell CRISPRi,Attn vs Corr L18 T-cell,Wilcoxon,0.938,diff=+0.030,n=7,True,False

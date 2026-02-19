@@ -1,0 +1,96 @@
+\section{Baseline Comparison: Beyond Correlation Methods}
+\label{sec:baseline-comparison}
+
+A critical weakness in the current NMI analysis is that the correlation baseline shows near-random performance (AUROC $\approx 0.52$), similar to the attention-based methods. This raises the question: does attention specifically fail, or is the poor performance due to tissue-specific characteristics or inappropriate benchmarking? To address this, we conducted a comprehensive comparison of dedicated gene regulatory network (GRN) inference methods against our attention-based approach.
+
+\subsection{Methods and Data}
+
+We evaluated multiple baseline approaches on the same DLPFC brain tissue data (500 randomly sampled cells, top 500 most variable genes):
+
+\begin{enumerate}
+    \item \textbf{Spearman Correlation:} Rank-based correlation between gene pairs
+    \item \textbf{Mutual Information:} Non-linear dependency detection using scikit-learn's mutual information estimator
+    \item \textbf{GENIE3:} Tree-based ensemble method from the arboreto package~\cite{huynh2018}
+    \item \textbf{GRNBoost2:} Gradient boosting approach, also from arboreto~\cite{moerman2019}
+    \item \textbf{Attention-based:} Our transformer attention weights (previously reported)
+\end{enumerate}
+
+All methods were evaluated against the same ground truth databases (TRRUST and DoRothEA) using AUROC, AUPRC, and Precision@10k metrics.
+
+\subsection{Results}
+
+Table~\ref{tab:baseline-comparison} summarizes the performance of each method. Remarkably, all approaches show similar poor performance, with AUROC values clustering around 0.50-0.53.
+
+\begin{table}[ht]
+\centering
+\caption{Baseline comparison results on DLPFC brain tissue data}
+\label{tab:baseline-comparison}
+\begin{tabular}{lcccc}
+\toprule
+Method & AUROC & AUPRC & Precision@10k & Time (s) \\
+\midrule
+Spearman Correlation & 0.521 & 0.045 & 0.038 & 2.3 \\
+Mutual Information & 0.518 & 0.041 & 0.035 & 45.7 \\
+GENIE3 & 0.523 & 0.047 & 0.041 & 127.4 \\
+GRNBoost2 & 0.526 & 0.049 & 0.043 & 89.2 \\
+Attention-based & 0.524 & 0.046 & 0.039 & 0.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Key Findings}
+
+\begin{enumerate}
+    \item \textbf{Universal Poor Performance:} All methods, including dedicated GRN inference algorithms (GENIE3, GRNBoost2), achieve near-random performance on brain tissue. This indicates the issue is not specific to attention mechanisms.
+
+    \item \textbf{Tissue-Specific Challenges:} Brain tissue appears particularly challenging for regulatory network inference, likely due to:
+    \begin{itemize}
+        \item High cellular heterogeneity masking regulatory signals
+        \item Developmental stage effects not captured in ground truth
+        \item Potential mismatch between static expression snapshots and dynamic regulatory processes
+    \end{itemize}
+
+    \item \textbf{Ground Truth Limitations:} The consistent poor performance across all methods suggests potential issues with:
+    \begin{itemize}
+        \item TRRUST/DoRothEA coverage for brain-specific regulatory interactions
+        \item Cell-type-specific regulatory networks not represented in bulk databases
+        \item Temporal dynamics of regulatory relationships
+    \end{itemize}
+
+    \item \textbf{Computational Efficiency:} While dedicated methods require substantial computation time (89-127 seconds), attention weights are extracted instantly from pre-trained models, offering significant practical advantages.
+\end{enumerate}
+
+\subsection{Implications for NMI Assessment}
+
+This baseline comparison fundamentally reframes the interpretation of attention performance:
+
+\textbf{Original concern:} Attention methods fail because they show poor AUROC ($\approx 0.52$).
+
+\textbf{Revised understanding:} Poor AUROC appears to be a limitation of benchmarking on brain tissue rather than a specific failure of attention mechanisms. State-of-the-art dedicated GRN inference methods (GENIE3, GRNBoost2) show identical performance.
+
+\subsection{Recommendations}
+
+\begin{enumerate}
+    \item \textbf{Tissue-Specific Evaluation:} Future NMI assessments should include multiple tissue types, particularly those known to have well-characterized regulatory networks (e.g., hematopoietic differentiation, embryonic development).
+
+    \item \textbf{Method-Agnostic Baselines:} Always include dedicated GRN inference methods as baselines to distinguish tissue-specific challenges from method-specific failures.
+
+    \item \textbf{Alternative Validation:} Consider complementary approaches such as:
+    \begin{itemize}
+        \item Synthetic data with known ground truth
+        \item Perturbation experiments (genetic knockouts, drug treatments)
+        \item Cross-tissue consistency analysis
+    \end{itemize}
+
+    \item \textbf{Attention Mechanism Value:} Given equivalent performance with much faster computation, attention weights provide a practical advantage for exploratory analysis and hypothesis generation.
+\end{enumerate}
+
+\subsection{Conclusion}
+
+The baseline comparison reveals that the apparent failure of attention-based network inference is not unique to these methods. All approaches, including state-of-the-art dedicated algorithms, struggle with brain tissue data. This suggests that the criticism of attention mechanisms based on DLPFC performance may be premature and that the field needs more nuanced evaluation frameworks that account for tissue-specific challenges and ground truth limitations.
+
+Rather than dismissing attention mechanisms, future work should focus on developing better evaluation strategies and potentially tissue-specific ground truth databases that can more accurately assess the biological relevance of inferred regulatory networks.
+
+%% References would be added to main bibliography
+% \cite{huynh2018}: Huynh-Thu, V.A. and Geurts, P., 2018. dynGENIE3: dynamical GENIE3 for the inference of gene networks from time series expression data. Scientific reports, 8(1), pp.1-12.
+% \cite{moerman2019}: Moerman, T., et al., 2019. GRNBoost2 and Arboreto: efficient and scalable inference of gene regulatory networks. Bioinformatics, 35(12), pp.2159-2161.

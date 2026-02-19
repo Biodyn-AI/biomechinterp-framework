@@ -1,0 +1,84 @@
+{
+  "n_perturbations_evaluated": 1167,
+  "summary": [
+    {
+      "predictor": "Mean Expression",
+      "n": 1167,
+      "mean_auroc": 0.8506,
+      "std_auroc": 0.0467,
+      "se_auroc": 0.0014,
+      "ci95_lo": 0.8479,
+      "ci95_hi": 0.8533,
+      "ttest_vs_0.5_p": 0.0
+    },
+    {
+      "predictor": "1 - Dropout Rate",
+      "n": 1167,
+      "mean_auroc": 0.7973,
+      "std_auroc": 0.0484,
+      "se_auroc": 0.0014,
+      "ci95_lo": 0.7945,
+      "ci95_hi": 0.8001,
+      "ttest_vs_0.5_p": 0.0
+    },
+    {
+      "predictor": "Variance",
+      "n": 1167,
+      "mean_auroc": 0.8655,
+      "std_auroc": 0.0845,
+      "se_auroc": 0.0025,
+      "ci95_lo": 0.8607,
+      "ci95_hi": 0.8704,
+      "ttest_vs_0.5_p": 0.0
+    },
+    {
+      "predictor": "Attention (L15)",
+      "n": 1167,
+      "mean_auroc": 0.7474,
+      "std_auroc": 0.1289,
+      "se_auroc": 0.0038,
+      "ci95_lo": 0.74,
+      "ci95_hi": 0.7547,
+      "ttest_vs_0.5_p": 0.0
+    },
+    {
+      "predictor": "|Spearman Corr|",
+      "n": 1167,
+      "mean_auroc": 0.6583,
+      "std_auroc": 0.1449,
+      "se_auroc": 0.0042,
+      "ci95_lo": 0.65,
+      "ci95_hi": 0.6666,
+      "ttest_vs_0.5_p": 4.045811491004662e-201
+    }
+  ],
+  "paired_vs_baselines": [
+    {
+      "baseline": "Mean Expression",
+      "attn_minus_baseline": -0.1033,
+      "attn_p": 2.5671292731013217e-144,
+      "corr_minus_baseline": -0.1923,
+      "corr_p": 1.162490840734396e-265
+    },
+    {
+      "baseline": "1 - Dropout Rate",
+      "attn_minus_baseline": -0.0499,
+      "attn_p": 7.115551852855022e-39,
+      "corr_minus_baseline": -0.139,
+      "corr_p": 1.605342876660807e-159
+    },
+    {
+      "baseline": "Variance",
+      "attn_minus_baseline": -0.1182,
+      "attn_p": 2.9101534371943547e-130,
+      "corr_minus_baseline": -0.2072,
+      "corr_p": 2.5949402169315237e-265
+    }
+  ],
+  "attn_vs_corr": {
+    "mean_diff": 0.0891,
+    "paired_t_p": 1.3505488727325908e-51,
+    "n_attn_better": 823,
+    "n_corr_better": 344
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "experiment": "attention_residualization_v2",
+  "dataset": "tabula_sapiens_immune_20k",
+  "n_cells": 5000,
+  "n_genes": 2000,
+  "n_pairs": 75962,
+  "n_trrust_positives": 61,
+  "positive_rate": 0.000803033095495116,
+  "baseline": {
+    "auroc_abs_corr": 0.7571,
+    "auroc_signed_corr": 0.7018,
+    "rho_edge_vs_expr": 0.8422
+  },
+  "r_squared": {
+    "ols_full": 0.2656,
+    "ols_expr_only": 0.1596,
+    "ols_minimal": 0.1358,
+    "gbdt_full": 0.5129
+  },
+  "cross_fitted_ols_full": {
+    "auroc_abs_residual": 0.7322,
+    "auroc_signed_residual": 0.7035,
+    "auroc_negated_residual": 0.2965
+  },
+  "cross_fitted_gbdt_full": {
+    "auroc_abs_residual": 0.736,
+    "auroc_signed_residual": 0.7091,
+    "auroc_negated_residual": 0.2909
+  },
+  "non_cross_fitted": {
+    "auroc_abs_residual": 0.7311,
+    "auroc_signed_residual": 0.7038,
+    "auroc_negated_residual": 0.2962
+  },
+  "stability_10seeds": {
+    "mean": 0.731,
+    "std": 0.0009,
+    "min": 0.7294,
+    "max": 0.7323
+  },
+  "signed_vs_abs": {
+    "signed_ols_full_auroc": 0.7466,
+    "signed_ols_minimal_auroc": 0.726
+  }
+}

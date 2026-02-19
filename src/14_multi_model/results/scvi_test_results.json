@@ -1,0 +1,41 @@
+{
+  "model_name": "scVI",
+  "test_timestamp": "2026-02-14T13:02:19.726846",
+  "basic_test": {
+    "timestamp": "2026-02-14T13:02:19.726846",
+    "model": "scVI",
+    "status": "success",
+    "details": {
+      "dataset_shape": [
+        200,
+        290
+      ],
+      "model_parameters": 225566,
+      "latent_dim": 10,
+      "reconstruction_error": 1114.2886962890625,
+      "device": "cuda",
+      "training_epochs": "50 (early stopped)"
+    }
+  },
+  "scaling_test": [
+    {
+      "n_cells": 200,
+      "n_genes": 800,
+      "latent_dim": 10,
+      "reconstruction_error": 2914.251708984375,
+      "batch_size": 32,
+      "status": "success"
+    },
+    {
+      "n_cells": 500,
+      "n_genes": 800,
+      "latent_dim": 10,
+      "reconstruction_error": 2885.35107421875,
+      "batch_size": 62,
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "scaling_behavior": "-0.99% change"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "n_evaluable_tfs": 6,
+  "n_direct_targets_total": 43,
+  "mean_attn_auroc": 0.6947654505502343,
+  "std_attn_auroc": 0.10534609628569827,
+  "mean_corr_auroc": 0.5777440903720416,
+  "std_corr_auroc": 0.20899245414588594,
+  "mean_attn_auprc": 0.01198356413002692,
+  "std_attn_auprc": 0.009536345307346058,
+  "mean_corr_auprc": 0.011746724436715423,
+  "std_corr_auprc": 0.00969404087173589,
+  "per_tf_details": [
+    {
+      "tf": "CTCF",
+      "n_direct": 2,
+      "n_total": 1999,
+      "attn_auroc": 0.6604907361041562,
+      "corr_auroc": 0.5946419629444166,
+      "attn_auprc": 0.0025926041406834624,
+      "corr_auprc": 0.002135257952419139
+    },
+    {
+      "tf": "AATF",
+      "n_direct": 2,
+      "n_total": 1999,
+      "attn_auroc": 0.8587881822734101,
+      "corr_auroc": 0.16599899849774663,
+      "attn_auprc": 0.0057823129251700685,
+      "corr_auprc": 0.0008817920708590803
+    },
+    {
+      "tf": "MYC",
+      "n_direct": 23,
+      "n_total": 1999,
+      "attn_auroc": 0.5886727688787184,
+      "corr_auroc": 0.6274203485301884,
+      "attn_auprc": 0.027467769335716458,
+      "corr_auprc": 0.022113155756399456
+    },
+    {
+      "tf": "UHRF1",
+      "n_direct": 2,
+      "n_total": 1999,
+      "attn_auroc": 0.5525788683024537,
+      "corr_auroc": 0.5881321982974462,
+      "attn_auprc": 0.008272017837235229,
+      "corr_auprc": 0.004311448405126397
+    },
+    {
+      "tf": "BDP1",
+      "n_direct": 2,
+      "n_total": 1999,
+      "attn_auroc": 0.7563845768652979,
+      "corr_auroc": 0.8748122183274912,
+      "attn_auprc": 0.005000225845792493,
+      "corr_auprc": 0.024806274806274807
+    },
+    {
+      "tf": "BRCA1",
+      "n_direct": 12,
+      "n_total": 1999,
+      "attn_auroc": 0.7516775708773695,
+      "corr_auroc": 0.6154588156349606,
+      "attn_auprc": 0.022786454695563802,
+      "corr_auprc": 0.01623241762921366
+    }
+  ]
+}

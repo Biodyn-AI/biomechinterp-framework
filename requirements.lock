@@ -1,0 +1,23 @@
+# Pinned, Mac-friendly environment for reproducing analysis/figures in this repo.
+# NOTE: We intentionally pin NumPy < 2 to avoid scanpy/numba ABI breakage.
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.11.4
+scikit-learn==1.4.2
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Single-cell stack (scanpy pulls in numba/llvmlite/umap-learn, etc.)
+anndata==0.10.8
+scanpy==1.10.1
+
+# Stats / misc utilities used across scripts.
+statsmodels==0.14.2
+pingouin==0.5.4
+networkx==3.3
+h5py==3.11.0
+tqdm==4.66.4
+pyyaml==6.0.1
+
+# Dev / testing helpers.
+pytest==8.2.2

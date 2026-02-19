@@ -1,0 +1,92 @@
+{
+  "experiment": "perturbation_trivial_baselines",
+  "description": "Compares correlation-edge perturbation-first AUROC against trivial baselines (mean expression, dropout, variance, TF degree) at primary parameterization.",
+  "parameterization": {
+    "n_ctrl": 2000,
+    "n_hvg": 2000,
+    "lfc_threshold": 0.5,
+    "min_de_targets": 5
+  },
+  "n_perturbations_evaluated": 151,
+  "n_skipped_few_de": 191,
+  "summary": [
+    {
+      "predictor": "Mean Expression",
+      "n": 151,
+      "mean_auroc": 0.8413,
+      "std_auroc": 0.0604,
+      "se_auroc": 0.0049,
+      "median_auroc": 0.8522,
+      "ci95_lo": 0.8316,
+      "ci95_hi": 0.8509,
+      "ttest_vs_0.5_p": 9.195360037162291e-116
+    },
+    {
+      "predictor": "1 - Dropout Rate",
+      "n": 151,
+      "mean_auroc": 0.8083,
+      "std_auroc": 0.06,
+      "se_auroc": 0.0049,
+      "median_auroc": 0.8146,
+      "ci95_lo": 0.7987,
+      "ci95_hi": 0.8178,
+      "ttest_vs_0.5_p": 9.380476318613562e-110
+    },
+    {
+      "predictor": "Variance",
+      "n": 151,
+      "mean_auroc": 0.8813,
+      "std_auroc": 0.1107,
+      "se_auroc": 0.009,
+      "median_auroc": 0.8931,
+      "ci95_lo": 0.8636,
+      "ci95_hi": 0.8989,
+      "ttest_vs_0.5_p": 4.532391551032412e-85
+    },
+    {
+      "predictor": "TF Degree (const)",
+      "n": 151,
+      "mean_auroc": 0.5,
+      "std_auroc": 0.0,
+      "se_auroc": 0.0,
+      "median_auroc": 0.5,
+      "ci95_lo": 0.5,
+      "ci95_hi": 0.5,
+      "ttest_vs_0.5_p": NaN
+    },
+    {
+      "predictor": "|Spearman Corr|",
+      "n": 151,
+      "mean_auroc": 0.6955,
+      "std_auroc": 0.1708,
+      "se_auroc": 0.0139,
+      "median_auroc": 0.6836,
+      "ci95_lo": 0.6682,
+      "ci95_hi": 0.7227,
+      "ttest_vs_0.5_p": 4.5670031327707857e-29
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "comparison": "Correlation vs Mean Expression",
+      "mean_diff": -0.1458,
+      "paired_t_p": 5.206511864671566e-20
+    },
+    {
+      "comparison": "Correlation vs 1 - Dropout Rate",
+      "mean_diff": -0.1128,
+      "paired_t_p": 8.469435704687509e-13
+    },
+    {
+      "comparison": "Correlation vs Variance",
+      "mean_diff": -0.1858,
+      "paired_t_p": 2.3409323098207523e-24
+    },
+    {
+      "comparison": "Correlation vs TF Degree (const)",
+      "mean_diff": 0.1955,
+      "paired_t_p": 4.5670031327707857e-29
+    }
+  ],
+  "elapsed_seconds": 135.6
+}

@@ -1,0 +1,221 @@
+{
+  "experiment": "round10_hard_generalization",
+  "n_observations": 559720,
+  "n_perturbations": 280,
+  "n_unique_targets": 2000,
+  "n_positive": 15693,
+  "positive_rate": 0.02803723290216537,
+  "split_results": {
+    "cross_perturbation": {
+      "A_gene_only": {
+        "mean_auroc": 0.8953573902840928,
+        "std_auroc": 0.007958905268110522,
+        "mean_auprc": 0.24228937047767599,
+        "n_folds_valid": 5
+      },
+      "B_attn_only": {
+        "mean_auroc": 0.6555173251274728,
+        "std_auroc": 0.007120780802419785,
+        "mean_auprc": 0.05943523181469549,
+        "n_folds_valid": 5
+      },
+      "C_corr_only": {
+        "mean_auroc": 0.6390239678119273,
+        "std_auroc": 0.024659746157626908,
+        "mean_auprc": 0.07078973984265871,
+        "n_folds_valid": 5
+      },
+      "D_gene_plus_attn": {
+        "mean_auroc": 0.8950232279239383,
+        "std_auroc": 0.008323911388902287,
+        "mean_auprc": 0.24388397571871218,
+        "n_folds_valid": 5
+      },
+      "E_gene_plus_corr": {
+        "mean_auroc": 0.8938627698200504,
+        "std_auroc": 0.008209910474295864,
+        "mean_auprc": 0.24262574868809855,
+        "n_folds_valid": 5
+      }
+    },
+    "cross_gene": {
+      "A_gene_only": {
+        "mean_auroc": 0.8928137602818131,
+        "std_auroc": 0.007969391324923076,
+        "mean_auprc": 0.22653971987679933,
+        "n_folds_valid": 5
+      },
+      "B_attn_only": {
+        "mean_auroc": 0.6556426798598574,
+        "std_auroc": 0.026129026421693895,
+        "mean_auprc": 0.06034198884068025,
+        "n_folds_valid": 5
+      },
+      "C_corr_only": {
+        "mean_auroc": 0.6352251930517749,
+        "std_auroc": 0.018881497941394747,
+        "mean_auprc": 0.06933796130117278,
+        "n_folds_valid": 5
+      },
+      "D_gene_plus_attn": {
+        "mean_auroc": 0.8926538351707419,
+        "std_auroc": 0.00802529707935369,
+        "mean_auprc": 0.23160114686756864,
+        "n_folds_valid": 5
+      },
+      "E_gene_plus_corr": {
+        "mean_auroc": 0.8921706368402356,
+        "std_auroc": 0.008308726497547542,
+        "mean_auprc": 0.23130189486994573,
+        "n_folds_valid": 5
+      }
+    },
+    "joint": {
+      "A_gene_only": {
+        "mean_auroc": 0.8942832307727148,
+        "std_auroc": 0.008746926541766937,
+        "mean_auprc": 0.24066466925188248,
+        "n_folds_valid": 5
+      },
+      "B_attn_only": {
+        "mean_auroc": 0.6570176513628362,
+        "std_auroc": 0.02882377882627549,
+        "mean_auprc": 0.062360270008698405,
+        "n_folds_valid": 5
+      },
+      "C_corr_only": {
+        "mean_auroc": 0.6377153343034847,
+        "std_auroc": 0.024916979694265047,
+        "mean_auprc": 0.0720220955153127,
+        "n_folds_valid": 5
+      },
+      "D_gene_plus_attn": {
+        "mean_auroc": 0.8943108780715636,
+        "std_auroc": 0.008947140722368217,
+        "mean_auprc": 0.24612845755279938,
+        "n_folds_valid": 5
+      },
+      "E_gene_plus_corr": {
+        "mean_auroc": 0.8936092104531681,
+        "std_auroc": 0.007957298638373245,
+        "mean_auprc": 0.24730715434308795,
+        "n_folds_valid": 5
+      }
+    }
+  },
+  "bootstrap_cis": {
+    "cross_perturbation": {
+      "A_gene_only": {
+        "ci_lo": 0.8845827313372092,
+        "ci_hi": 0.9050396409936391,
+        "n_valid": 200
+      },
+      "B_attn_only": {
+        "ci_lo": 0.6406355711229617,
+        "ci_hi": 0.6733232488352815,
+        "n_valid": 200
+      },
+      "C_corr_only": {
+        "ci_lo": 0.6125082130025524,
+        "ci_hi": 0.6620234881148672,
+        "n_valid": 200
+      },
+      "D_gene_plus_attn": {
+        "ci_lo": 0.8844120537580219,
+        "ci_hi": 0.904534809176998,
+        "n_valid": 200
+      },
+      "E_gene_plus_corr": {
+        "ci_lo": 0.8829939687921403,
+        "ci_hi": 0.9025864787209795,
+        "n_valid": 200
+      },
+      "delta_D_gene_plus_attn": {
+        "mean": -0.00040981353432532674,
+        "ci_lo": -0.001244376415302667,
+        "ci_hi": 2.5198655561981092e-05
+      },
+      "delta_E_gene_plus_corr": {
+        "mean": -0.0015266645938262302,
+        "ci_lo": -0.00413964566008769,
+        "ci_hi": -8.327090607801178e-05
+      }
+    },
+    "cross_gene": {
+      "A_gene_only": {
+        "ci_lo": 0.8828620059227854,
+        "ci_hi": 0.9027844879050334,
+        "n_valid": 200
+      },
+      "B_attn_only": {
+        "ci_lo": 0.6379358259187062,
+        "ci_hi": 0.6703369466017622,
+        "n_valid": 200
+      },
+      "C_corr_only": {
+        "ci_lo": 0.6089369509792105,
+        "ci_hi": 0.6600983106652155,
+        "n_valid": 200
+      },
+      "D_gene_plus_attn": {
+        "ci_lo": 0.8824740693616966,
+        "ci_hi": 0.9023594817954556,
+        "n_valid": 200
+      },
+      "E_gene_plus_corr": {
+        "ci_lo": 0.882007699482328,
+        "ci_hi": 0.9014819009296792,
+        "n_valid": 200
+      },
+      "delta_D_gene_plus_attn": {
+        "mean": -0.0003245402414917126,
+        "ci_lo": -0.0012799381262379088,
+        "ci_hi": 0.0001794999800916298
+      },
+      "delta_E_gene_plus_corr": {
+        "mean": -0.0010242506828026805,
+        "ci_lo": -0.003518314325869726,
+        "ci_hi": 8.037330129370975e-05
+      }
+    },
+    "joint": {
+      "A_gene_only": {
+        "ci_lo": 0.8833347471231161,
+        "ci_hi": 0.9040869430732003,
+        "n_valid": 200
+      },
+      "B_attn_only": {
+        "ci_lo": 0.6388896928615013,
+        "ci_hi": 0.6716920476242503,
+        "n_valid": 200
+      },
+      "C_corr_only": {
+        "ci_lo": 0.6105944655919607,
+        "ci_hi": 0.6691491243383456,
+        "n_valid": 200
+      },
+      "D_gene_plus_attn": {
+        "ci_lo": 0.882984090032592,
+        "ci_hi": 0.904219422596353,
+        "n_valid": 200
+      },
+      "E_gene_plus_corr": {
+        "ci_lo": 0.881655155375787,
+        "ci_hi": 0.9034071078901427,
+        "n_valid": 200
+      },
+      "delta_D_gene_plus_attn": {
+        "mean": -0.0002665873678679909,
+        "ci_lo": -0.001332501545111317,
+        "ci_hi": 0.00031908001126629564
+      },
+      "delta_E_gene_plus_corr": {
+        "mean": -0.001071700433595159,
+        "ci_lo": -0.003889642587805522,
+        "ci_hi": 0.00016047907486967398
+      }
+    }
+  },
+  "n_bootstrap": 200,
+  "n_folds": 5
+}

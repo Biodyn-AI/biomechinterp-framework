@@ -1,0 +1,534 @@
+{
+  "best_resolution": "0.5",
+  "n_clusters_tested": 20,
+  "n_mannwhitney_significant_bh": 7,
+  "n_fisher_significant_bh": 0,
+  "results": [
+    {
+      "cluster": "0",
+      "n_cells": 2974,
+      "dominant_type": "CD4-positive, alpha-beta T cell",
+      "ct_key": "T cell",
+      "purity": 0.7330195023537324,
+      "expected_tfs": [
+        "LEF1",
+        "STAT4"
+      ],
+      "n_matching_edges": 4,
+      "n_nonmatching_edges": 105,
+      "matching_mean_score": 0.03381781762761772,
+      "nonmatching_mean_score": 0.04368400463928428,
+      "mannwhitney_p": 0.2690284390664065,
+      "rank_biserial_r": -0.18333333333333335,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "LEF1",
+        "STAT4"
+      ],
+      "mannwhitney_bh_q": 0.35870458542187533,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "1",
+      "n_cells": 2429,
+      "dominant_type": "CD8-positive, alpha-beta T cell",
+      "ct_key": "T cell",
+      "purity": 0.6825854261012763,
+      "expected_tfs": [
+        "LEF1",
+        "STAT4"
+      ],
+      "n_matching_edges": 4,
+      "n_nonmatching_edges": 105,
+      "matching_mean_score": 0.03353493591405177,
+      "nonmatching_mean_score": 0.056418675279882154,
+      "mannwhitney_p": 0.18085175916666069,
+      "rank_biserial_r": -0.27142857142857135,
+      "fisher_or": "inf",
+      "fisher_p": 0.9,
+      "matching_tfs_in_top100": [
+        "LEF1",
+        "STAT4"
+      ],
+      "mannwhitney_bh_q": 0.2583596559523724,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "10",
+      "n_cells": 495,
+      "dominant_type": "CD4-positive, alpha-beta T cell",
+      "ct_key": "T cell",
+      "purity": 0.17575757575757575,
+      "expected_tfs": [
+        "LEF1",
+        "STAT4"
+      ],
+      "n_matching_edges": 4,
+      "n_nonmatching_edges": 105,
+      "matching_mean_score": 0.05016558759247127,
+      "nonmatching_mean_score": 0.15873394195325238,
+      "mannwhitney_p": 0.910814846330092,
+      "rank_biserial_r": 0.3952380952380953,
+      "fisher_or": "inf",
+      "fisher_p": 0.9,
+      "matching_tfs_in_top100": [
+        "LEF1",
+        "STAT4"
+      ],
+      "mannwhitney_bh_q": 0.910814846330092,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "11",
+      "n_cells": 485,
+      "dominant_type": "neutrophil",
+      "ct_key": "neutrophil",
+      "purity": 0.9092783505154639,
+      "expected_tfs": [
+        "SPI1"
+      ],
+      "n_matching_edges": 17,
+      "n_nonmatching_edges": 92,
+      "matching_mean_score": 0.06922789894493624,
+      "nonmatching_mean_score": 0.07203548593684961,
+      "mannwhitney_p": 0.007458014643512369,
+      "rank_biserial_r": -0.3702046035805626,
+      "fisher_or": "inf",
+      "fisher_p": 0.95,
+      "matching_tfs_in_top100": [
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.029832058574049476,
+      "mannwhitney_significant_bh": true,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "12",
+      "n_cells": 483,
+      "dominant_type": "erythrocyte",
+      "ct_key": "erythrocyte",
+      "purity": 0.9254658385093167,
+      "expected_tfs": [
+        "GATA1",
+        "KLF1",
+        "TAL1"
+      ],
+      "n_matching_edges": 22,
+      "n_nonmatching_edges": 87,
+      "matching_mean_score": 0.17501417876580974,
+      "nonmatching_mean_score": 0.11529312796929721,
+      "mannwhitney_p": 0.030639057036544393,
+      "rank_biserial_r": -0.25757575757575757,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "GATA1",
+        "KLF1",
+        "TAL1"
+      ],
+      "mannwhitney_bh_q": 0.06127811407308879,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "13",
+      "n_cells": 417,
+      "dominant_type": "macrophage",
+      "ct_key": "macrophage",
+      "purity": 1.0,
+      "expected_tfs": [
+        "SPI1"
+      ],
+      "n_matching_edges": 17,
+      "n_nonmatching_edges": 92,
+      "matching_mean_score": 0.0669882425036569,
+      "nonmatching_mean_score": 0.06605186460233235,
+      "mannwhitney_p": 0.024916030436912418,
+      "rank_biserial_r": -0.28516624040920724,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.061116492877708636,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "14",
+      "n_cells": 267,
+      "dominant_type": "mast cell",
+      "ct_key": "T cell",
+      "purity": 0.7565543071161048,
+      "expected_tfs": [
+        "LEF1",
+        "STAT4"
+      ],
+      "n_matching_edges": 4,
+      "n_nonmatching_edges": 105,
+      "matching_mean_score": 0.02618745117348167,
+      "nonmatching_mean_score": 0.07894395016910215,
+      "mannwhitney_p": 0.7969178406866095,
+      "rank_biserial_r": 0.2404761904761905,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "LEF1",
+        "STAT4"
+      ],
+      "mannwhitney_bh_q": 0.8388608849332733,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "15",
+      "n_cells": 176,
+      "dominant_type": "macrophage",
+      "ct_key": "macrophage",
+      "purity": 0.5625,
+      "expected_tfs": [
+        "SPI1"
+      ],
+      "n_matching_edges": 17,
+      "n_nonmatching_edges": 92,
+      "matching_mean_score": 0.04795502618751917,
+      "nonmatching_mean_score": 0.1193915628299577,
+      "mannwhitney_p": 0.37567296948904416,
+      "rank_biserial_r": -0.04859335038363177,
+      "fisher_or": "inf",
+      "fisher_p": 0.95,
+      "matching_tfs_in_top100": [
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.4174144105433824,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "16",
+      "n_cells": 171,
+      "dominant_type": "CD8-positive, alpha-beta T cell",
+      "ct_key": "T cell",
+      "purity": 0.2573099415204678,
+      "expected_tfs": [
+        "LEF1",
+        "STAT4"
+      ],
+      "n_matching_edges": 4,
+      "n_nonmatching_edges": 105,
+      "matching_mean_score": 0.2073224788172876,
+      "nonmatching_mean_score": 0.16319971544464065,
+      "mannwhitney_p": 0.3605476403811666,
+      "rank_biserial_r": -0.1071428571428572,
+      "fisher_or": "inf",
+      "fisher_p": 0.9,
+      "matching_tfs_in_top100": [
+        "LEF1",
+        "STAT4"
+      ],
+      "mannwhitney_bh_q": 0.4174144105433824,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "17",
+      "n_cells": 165,
+      "dominant_type": "CD8-positive, alpha-beta T cell",
+      "ct_key": "T cell",
+      "purity": 0.5393939393939394,
+      "expected_tfs": [
+        "LEF1",
+        "STAT4"
+      ],
+      "n_matching_edges": 4,
+      "n_nonmatching_edges": 105,
+      "matching_mean_score": 0.1264153127462503,
+      "nonmatching_mean_score": 0.15580330447274385,
+      "mannwhitney_p": 0.29245645323983965,
+      "rank_biserial_r": -0.15476190476190466,
+      "fisher_or": "inf",
+      "fisher_p": 0.9,
+      "matching_tfs_in_top100": [
+        "LEF1",
+        "STAT4"
+      ],
+      "mannwhitney_bh_q": 0.3655705665497995,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "18",
+      "n_cells": 144,
+      "dominant_type": "macrophage",
+      "ct_key": "macrophage",
+      "purity": 0.7083333333333334,
+      "expected_tfs": [
+        "SPI1"
+      ],
+      "n_matching_edges": 17,
+      "n_nonmatching_edges": 92,
+      "matching_mean_score": 0.12580769161015704,
+      "nonmatching_mean_score": 0.0909645227047327,
+      "mannwhitney_p": 0.0020324236985925915,
+      "rank_biserial_r": -0.4213554987212276,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.020324236985925913,
+      "mannwhitney_significant_bh": true,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "19",
+      "n_cells": 140,
+      "dominant_type": "B cell",
+      "ct_key": "B cell",
+      "purity": 0.9928571428571429,
+      "expected_tfs": [
+        "BCL6",
+        "SPI1"
+      ],
+      "n_matching_edges": 19,
+      "n_nonmatching_edges": 90,
+      "matching_mean_score": 0.08386796361001987,
+      "nonmatching_mean_score": 0.03461841640847717,
+      "mannwhitney_p": 0.0032005268164418403,
+      "rank_biserial_r": -0.3374269005847954,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "BCL6",
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.021336845442945604,
+      "mannwhitney_significant_bh": true,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "2",
+      "n_cells": 2251,
+      "dominant_type": "macrophage",
+      "ct_key": "macrophage",
+      "purity": 0.6814749000444247,
+      "expected_tfs": [
+        "SPI1"
+      ],
+      "n_matching_edges": 17,
+      "n_nonmatching_edges": 92,
+      "matching_mean_score": 0.04691009168615358,
+      "nonmatching_mean_score": 0.0729949514994517,
+      "mannwhitney_p": 0.055310142800763046,
+      "rank_biserial_r": -0.24488491048593342,
+      "fisher_or": "inf",
+      "fisher_p": 0.9,
+      "matching_tfs_in_top100": [
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.09218357133460509,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "20",
+      "n_cells": 61,
+      "dominant_type": "CD4-positive, alpha-beta T cell",
+      "ct_key": "T cell",
+      "purity": 0.32786885245901637,
+      "expected_tfs": [
+        "LEF1",
+        "STAT4"
+      ],
+      "n_matching_edges": 4,
+      "n_nonmatching_edges": 105,
+      "matching_mean_score": 0.1440217685934361,
+      "nonmatching_mean_score": 0.12783990454996805,
+      "mannwhitney_p": 0.05208449401542481,
+      "rank_biserial_r": -0.45238095238095233,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "LEF1",
+        "STAT4"
+      ],
+      "mannwhitney_bh_q": 0.09218357133460509,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "3",
+      "n_cells": 2194,
+      "dominant_type": "B cell",
+      "ct_key": "B cell",
+      "purity": 0.9949863263445761,
+      "expected_tfs": [
+        "BCL6",
+        "SPI1"
+      ],
+      "n_matching_edges": 19,
+      "n_nonmatching_edges": 90,
+      "matching_mean_score": 0.08460860012784419,
+      "nonmatching_mean_score": 0.041152203388068624,
+      "mannwhitney_p": 0.0001279164920617731,
+      "rank_biserial_r": -0.5327485380116959,
+      "fisher_or": "inf",
+      "fisher_p": 0.7157894736842105,
+      "matching_tfs_in_top100": [
+        "BCL6",
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.002558329841235462,
+      "mannwhitney_significant_bh": true,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "4",
+      "n_cells": 2006,
+      "dominant_type": "neutrophil",
+      "ct_key": "neutrophil",
+      "purity": 0.9745762711864406,
+      "expected_tfs": [
+        "SPI1"
+      ],
+      "n_matching_edges": 17,
+      "n_nonmatching_edges": 92,
+      "matching_mean_score": 0.08256861888931703,
+      "nonmatching_mean_score": 0.0735047568901617,
+      "mannwhitney_p": 0.0049635766617879265,
+      "rank_biserial_r": -0.38554987212276215,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.02481788330893963,
+      "mannwhitney_significant_bh": true,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "5",
+      "n_cells": 1421,
+      "dominant_type": "B cell",
+      "ct_key": "B cell",
+      "purity": 0.9950738916256158,
+      "expected_tfs": [
+        "BCL6",
+        "SPI1"
+      ],
+      "n_matching_edges": 19,
+      "n_nonmatching_edges": 90,
+      "matching_mean_score": 0.07888635406071969,
+      "nonmatching_mean_score": 0.04451222136255043,
+      "mannwhitney_p": 0.012469383843647602,
+      "rank_biserial_r": -0.32573099415204676,
+      "fisher_or": "inf",
+      "fisher_p": 0.8052631578947369,
+      "matching_tfs_in_top100": [
+        "BCL6",
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.03562681098185029,
+      "mannwhitney_significant_bh": true,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "6",
+      "n_cells": 1216,
+      "dominant_type": "classical monocyte",
+      "ct_key": "monocyte",
+      "purity": 0.4276315789473684,
+      "expected_tfs": [
+        "SPI1"
+      ],
+      "n_matching_edges": 17,
+      "n_nonmatching_edges": 92,
+      "matching_mean_score": 0.07387035355274353,
+      "nonmatching_mean_score": 0.08333280646658979,
+      "mannwhitney_p": 0.02750242179496889,
+      "rank_biserial_r": -0.2921994884910486,
+      "fisher_or": "inf",
+      "fisher_p": 0.95,
+      "matching_tfs_in_top100": [
+        "SPI1"
+      ],
+      "mannwhitney_bh_q": 0.061116492877708636,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "7",
+      "n_cells": 967,
+      "dominant_type": "CD4-positive, alpha-beta T cell",
+      "ct_key": "T cell",
+      "purity": 0.4612202688728025,
+      "expected_tfs": [
+        "LEF1",
+        "STAT4"
+      ],
+      "n_matching_edges": 4,
+      "n_nonmatching_edges": 105,
+      "matching_mean_score": 0.07805253310970045,
+      "nonmatching_mean_score": 0.03361335946347805,
+      "mannwhitney_p": 0.012124812267222354,
+      "rank_biserial_r": -0.5857142857142856,
+      "fisher_or": NaN,
+      "fisher_p": 1.0,
+      "matching_tfs_in_top100": [
+        "LEF1",
+        "STAT4"
+      ],
+      "mannwhitney_bh_q": 0.03562681098185029,
+      "mannwhitney_significant_bh": true,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    },
+    {
+      "cluster": "8",
+      "n_cells": 826,
+      "dominant_type": "plasma cell",
+      "ct_key": "plasma cell",
+      "purity": 0.9975786924939467,
+      "expected_tfs": [
+        "BCL6"
+      ],
+      "n_matching_edges": 2,
+      "n_nonmatching_edges": 107,
+      "matching_mean_score": 0.5258642033688812,
+      "nonmatching_mean_score": 0.08171120941802357,
+      "mannwhitney_p": 0.06914076798559288,
+      "rank_biserial_r": -0.6168224299065421,
+      "fisher_or": "inf",
+      "fisher_p": 0.95,
+      "matching_tfs_in_top100": [
+        "BCL6"
+      ],
+      "mannwhitney_bh_q": 0.1063704122855275,
+      "mannwhitney_significant_bh": false,
+      "fisher_bh_q": 1.0,
+      "fisher_significant_bh": false
+    }
+  ]
+}

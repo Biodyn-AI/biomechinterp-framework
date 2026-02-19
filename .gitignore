@@ -1,0 +1,40 @@
+# Filesystem artifact (corrupted directory entry on exFAT)
+D/
+
+# Private / non-public directories
+archive/
+paper/
+docs/
+prompts/
+AGENTS.md
+CLAUDE.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Virtual environment
+.venv/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# macOS
+.DS_Store
+._*
+
+# Large data files
+*.h5ad
+*.pkl
+*.npy
+*.npz

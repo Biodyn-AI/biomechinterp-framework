@@ -1,0 +1,29 @@
+{
+  "experiment": "controlled_composition_scaling",
+  "dataset": "tabula_sapiens_kidney",
+  "n_hvgs": 500,
+  "n_seeds": 5,
+  "conditions": {
+    "single_cell_type": {
+      "n_runs": 30,
+      "spearman_rho": -0.3258,
+      "spearman_p": 0.07888032506767789,
+      "mean_auroc": 0.5668,
+      "std_auroc": 0.0326
+    },
+    "fixed_composition": {
+      "n_runs": 20,
+      "spearman_rho": -0.0543,
+      "spearman_p": 0.8201712736891071,
+      "mean_auroc": 0.6507,
+      "std_auroc": 0.0129
+    },
+    "increasing_heterogeneity": {
+      "n_runs": 35,
+      "spearman_rho": 0.6295,
+      "spearman_p": 5.102575765765799e-05,
+      "mean_auroc": 0.6245,
+      "std_auroc": 0.0349
+    }
+  }
+}

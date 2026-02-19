@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "n_cells": 497,
+    "n_genes": 1000,
+    "cell_types": {
+      "GABAergic interneuron": 35,
+      "astrocyte": 35,
+      "glutamatergic neuron": 106,
+      "microglial cell": 17,
+      "oligodendrocyte": 244,
+      "oligodendrocyte precursor cell": 25,
+      "pvalb GABAergic cortical interneuron": 35
+    },
+    "trrust_edges": 8330,
+    "baseline_all_layers_pooled": 0.543
+  },
+  "per_layer": {
+    "0": {
+      "pooled": 0.5524,
+      "best_cssi": "cssi_mean",
+      "best_cssi_auroc": 0.5661
+    },
+    "1": {
+      "pooled": 0.6004,
+      "best_cssi": "cssi_mean",
+      "best_cssi_auroc": 0.6075
+    },
+    "2": {
+      "pooled": 0.5643,
+      "best_cssi": "cssi_mean",
+      "best_cssi_auroc": 0.5866
+    },
+    "3": {
+      "pooled": 0.5727,
+      "best_cssi": "cssi_mean",
+      "best_cssi_auroc": 0.5801
+    },
+    "4": {
+      "pooled": 0.6101,
+      "best_cssi": "cssi_range",
+      "best_cssi_auroc": 0.609
+    },
+    "5": {
+      "pooled": 0.532,
+      "best_cssi": "cssi_mean",
+      "best_cssi_auroc": 0.5511
+    },
+    "6": {
+      "pooled": 0.5131,
+      "best_cssi": "cssi_mean",
+      "best_cssi_auroc": 0.5384
+    },
+    "7": {
+      "pooled": 0.5971,
+      "best_cssi": "cssi_deviation",
+      "best_cssi_auroc": 0.6076
+    },
+    "8": {
+      "pooled": 0.5294,
+      "best_cssi": "cssi_range",
+      "best_cssi_auroc": 0.5897
+    },
+    "9": {
+      "pooled": 0.5944,
+      "best_cssi": "cssi_range",
+      "best_cssi_auroc": 0.6106
+    },
+    "10": {
+      "pooled": 0.6152,
+      "best_cssi": "cssi_range",
+      "best_cssi_auroc": 0.6477
+    },
+    "11": {
+      "pooled": 0.5679,
+      "best_cssi": "cssi_range",
+      "best_cssi_auroc": 0.5887
+    },
+    "12": {
+      "pooled": 0.6556,
+      "best_cssi": "cssi_range",
+      "best_cssi_auroc": 0.6662
+    },
+    "13": {
+      "pooled": 0.694,
+      "best_cssi": "cssi_deviation",
+      "best_cssi_auroc": 0.6937
+    },
+    "14": {
+      "pooled": 0.6829,
+      "best_cssi": "cssi_deviation",
+      "best_cssi_auroc": 0.6824
+    },
+    "15": {
+      "pooled": 0.6314,
+      "best_cssi": "cssi_range",
+      "best_cssi_auroc": 0.6405
+    },
+    "16": {
+      "pooled": 0.6685,
+      "best_cssi": "cssi_range",
+      "best_cssi_auroc": 0.6779
+    },
+    "17": {
+      "pooled": 0.6732,
+      "best_cssi": "cssi_deviation",
+      "best_cssi_auroc": 0.6727
+    }
+  },
+  "per_head": {
+    "L13_H0": {
+      "auroc": 0.6402639831793211,
+      "n_pos": 18
+    },
+    "L13_H1": {
+      "auroc": 0.6600858284845083,
+      "n_pos": 18
+    },
+    "L13_H2": {
+      "auroc": 0.651229813060807,
+      "n_pos": 18
+    },
+    "L13_H3": {
+      "auroc": 0.6499961127094048,
+      "n_pos": 18
+    },
+    "L13_H4": {
+      "auroc": 0.6042798513331015,
+      "n_pos": 18
+    },
+    "L13_H5": {
+      "auroc": 0.6179891129169495,
+      "n_pos": 18
+    },
+    "L13_H6": {
+      "auroc": 0.6039925032572047,
+      "n_pos": 18
+    },
+    "L13_H7": {
+      "auroc": 0.6921730488303761,
+      "n_pos": 18
+    },
+    "L13_H8": {
+      "auroc": 0.5775079308513844,
+      "n_pos": 18
+    },
+    "L13_H9": {
+      "auroc": 0.6025322389303422,
+      "n_pos": 18
+    },
+    "L13_H10": {
+      "auroc": 0.7055811983265631,
+      "n_pos": 18
+    },
+    "L13_H11": {
+      "auroc": 0.572532365726087,
+      "n_pos": 18
+    },
+    "L13_H12": {
+      "auroc": 0.6029200225829895,
+      "n_pos": 18
+    },
+    "L13_H13": {
+      "auroc": 0.6463517360673166,
+      "n_pos": 18
+    },
+    "L13_H14": {
+      "auroc": 0.6272805994279955,
+      "n_pos": 18
+    },
+    "L13_H15": {
+      "auroc": 0.6456701533271982,
+      "n_pos": 18
+    },
+    "L13_H16": {
+      "auroc": 0.6393957660009001,
+      "n_pos": 18
+    },
+    "L13_H17": {
+      "auroc": 0.6942133480772315,
+      "n_pos": 18
+    },
+    "L14_H0": {
+      "auroc": 0.6372470786371637,
+      "n_pos": 18
+    },
+    "L14_H1": {
+      "auroc": 0.5901967925570453,
+      "n_pos": 18
+    },
+    "L14_H2": {
+      "auroc": 0.6048694515461184,
+      "n_pos": 18
+    },
+    "L14_H3": {
+      "auroc": 0.6353059914993463,
+      "n_pos": 18
+    },
+    "L14_H4": {
+      "auroc": 0.5939878741002786,
+      "n_pos": 18
+    },
+    "L14_H5": {
+      "auroc": 0.6787761051861907,
+      "n_pos": 18
+    },
+    "L14_H6": {
+      "auroc": 0.6677261618994804,
+      "n_pos": 18
+    },
+    "L14_H7": {
+      "auroc": 0.5801980582900059,
+      "n_pos": 18
+    },
+    "L14_H8": {
+      "auroc": 0.6090940855568747,
+      "n_pos": 18
+    },
+    "L14_H9": {
+      "auroc": 0.6665586400288828,
+      "n_pos": 18
+    },
+    "L14_H10": {
+      "auroc": 0.6246970249046861,
+      "n_pos": 18
+    },
+    "L14_H11": {
+      "auroc": 0.5559203435764275,
+      "n_pos": 18
+    },
+    "L14_H12": {
+      "auroc": 0.6856227139227734,
+      "n_pos": 18
+    },
+    "L14_H13": {
+      "auroc": 0.6465486865629211,
+      "n_pos": 18
+    },
+    "L14_H14": {
+      "auroc": 0.6142239188382662,
+      "n_pos": 18
+    },
+    "L14_H15": {
+      "auroc": 0.705588817193681,
+      "n_pos": 18
+    },
+    "L14_H16": {
+      "auroc": 0.6463270442643945,
+      "n_pos": 18
+    },
+    "L14_H17": {
+      "auroc": 0.695474910125174,
+      "n_pos": 18
+    }
+  },
+  "ensemble": {},
+  "cell_type_stratified": {}
+}

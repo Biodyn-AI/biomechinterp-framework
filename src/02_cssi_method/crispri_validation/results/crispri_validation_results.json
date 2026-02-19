@@ -1,0 +1,2972 @@
+{
+  "config": {
+    "attention_layer": 13,
+    "model": "Geneformer-V2-316M",
+    "max_control_cells": 500,
+    "cells_used": 500,
+    "n_perturbed_genes": 100,
+    "de_pvalue_threshold": 0.05,
+    "de_log2fc_threshold": 0.25,
+    "cell_line": "k562"
+  },
+  "attention_results": {
+    "aggregate": {
+      "aggregate_auroc": 0.48672470839234094,
+      "aggregate_auprc": 0.24082645429233934,
+      "baseline_auprc": 0.24481973724411854,
+      "n_genes_evaluated": 100,
+      "n_total_pairs": 654600,
+      "n_positive_pairs": 160259,
+      "median_auroc": 0.47148735989392165,
+      "median_auprc": 0.23258295330549436,
+      "mean_auroc": 0.47451413809046644,
+      "mean_auprc": 0.23237585647122125,
+      "std_auroc": 0.026457976271600712,
+      "std_auprc": 0.13657701750487616
+    },
+    "per_gene": {
+      "NCBP2": {
+        "auroc": 0.45222532294233425,
+        "auprc": 0.24691344984298935,
+        "baseline_auprc": 0.2737549648640391,
+        "n_positive": 1792,
+        "n_total": 6546
+      },
+      "SLC39A9": {
+        "auroc": 0.44660345142084784,
+        "auprc": 0.05791454186404975,
+        "baseline_auprc": 0.06691109074243813,
+        "n_positive": 438,
+        "n_total": 6546
+      },
+      "DONSON": {
+        "auroc": 0.46824712721385714,
+        "auprc": 0.1102345969205373,
+        "baseline_auprc": 0.11732355637030248,
+        "n_positive": 768,
+        "n_total": 6546
+      },
+      "CHMP6": {
+        "auroc": 0.4637697016705783,
+        "auprc": 0.12971929354209827,
+        "baseline_auprc": 0.14252978918423465,
+        "n_positive": 933,
+        "n_total": 6546
+      },
+      "CPSF3": {
+        "auroc": 0.47312298634277083,
+        "auprc": 0.18798417151464408,
+        "baseline_auprc": 0.20623281393217233,
+        "n_positive": 1350,
+        "n_total": 6546
+      },
+      "BUB1": {
+        "auroc": 0.49585928407992585,
+        "auprc": 0.04340056715290082,
+        "baseline_auprc": 0.03941338221814849,
+        "n_positive": 258,
+        "n_total": 6546
+      },
+      "MED12": {
+        "auroc": 0.5,
+        "auprc": 0.4144515734799878,
+        "baseline_auprc": 0.4144515734799878,
+        "n_positive": 2713,
+        "n_total": 6546
+      },
+      "MED19": {
+        "auroc": 0.5099009378394584,
+        "auprc": 0.33476685074359824,
+        "baseline_auprc": 0.3365413993278338,
+        "n_positive": 2203,
+        "n_total": 6546
+      },
+      "NRDE2": {
+        "auroc": 0.47738079398710664,
+        "auprc": 0.22879539571787205,
+        "baseline_auprc": 0.24686831652917812,
+        "n_positive": 1616,
+        "n_total": 6546
+      },
+      "TSR2": {
+        "auroc": 0.4494937186022504,
+        "auprc": 0.3473109097843883,
+        "baseline_auprc": 0.38512068438741215,
+        "n_positive": 2521,
+        "n_total": 6546
+      },
+      "TIMM23B": {
+        "auroc": 0.5040101473021317,
+        "auprc": 0.3644475111589136,
+        "baseline_auprc": 0.3696914146043385,
+        "n_positive": 2420,
+        "n_total": 6546
+      },
+      "ORC1": {
+        "auroc": 0.47722288894910936,
+        "auprc": 0.08485454208516573,
+        "baseline_auprc": 0.08936755270394134,
+        "n_positive": 585,
+        "n_total": 6546
+      },
+      "SSRP1": {
+        "auroc": 0.5092332797536012,
+        "auprc": 0.298556464982364,
+        "baseline_auprc": 0.2952948365413993,
+        "n_positive": 1933,
+        "n_total": 6546
+      },
+      "PMPCB": {
+        "auroc": 0.515118889780484,
+        "auprc": 0.24956883500551472,
+        "baseline_auprc": 0.2522150931866789,
+        "n_positive": 1651,
+        "n_total": 6546
+      },
+      "MED10": {
+        "auroc": 0.47631893419716276,
+        "auprc": 0.2481989596595177,
+        "baseline_auprc": 0.2714634891536816,
+        "n_positive": 1777,
+        "n_total": 6546
+      },
+      "ARGLU1": {
+        "auroc": 0.47203516385973016,
+        "auprc": 0.06186525344432838,
+        "baseline_auprc": 0.06889703635808127,
+        "n_positive": 451,
+        "n_total": 6546
+      },
+      "MZT1": {
+        "auroc": 0.42778521270551473,
+        "auprc": 0.03834487235154255,
+        "baseline_auprc": 0.043996333638863426,
+        "n_positive": 288,
+        "n_total": 6546
+      },
+      "LSM6": {
+        "auroc": 0.47511524332112265,
+        "auprc": 0.3068336220091588,
+        "baseline_auprc": 0.33531927894897645,
+        "n_positive": 2195,
+        "n_total": 6546
+      },
+      "RPL24": {
+        "auroc": 0.47366067580438687,
+        "auprc": 0.3004177624675459,
+        "baseline_auprc": 0.320959364497403,
+        "n_positive": 2101,
+        "n_total": 6546
+      },
+      "EIF2B5": {
+        "auroc": 0.5144253115354129,
+        "auprc": 0.32258267727398726,
+        "baseline_auprc": 0.3214176596394745,
+        "n_positive": 2104,
+        "n_total": 6546
+      },
+      "GTF2H1": {
+        "auroc": 0.4593238325722402,
+        "auprc": 0.1876980659726535,
+        "baseline_auprc": 0.20852428964252978,
+        "n_positive": 1365,
+        "n_total": 6546
+      },
+      "ATP6V1B2": {
+        "auroc": 0.46282638186453,
+        "auprc": 0.13189991931808487,
+        "baseline_auprc": 0.14375190956309197,
+        "n_positive": 941,
+        "n_total": 6546
+      },
+      "RPS12": {
+        "auroc": 0.48821269600990636,
+        "auprc": 0.3040339383552734,
+        "baseline_auprc": 0.3198900091659028,
+        "n_positive": 2094,
+        "n_total": 6546
+      },
+      "KRR1": {
+        "auroc": 0.46814436959497974,
+        "auprc": 0.2116090847237323,
+        "baseline_auprc": 0.2314390467461045,
+        "n_positive": 1515,
+        "n_total": 6546
+      },
+      "NLE1": {
+        "auroc": 0.4640336960028153,
+        "auprc": 0.1770491339913528,
+        "baseline_auprc": 0.1985945615643141,
+        "n_positive": 1300,
+        "n_total": 6546
+      },
+      "RPS19": {
+        "auroc": 0.47147945759967613,
+        "auprc": 0.27897962662862963,
+        "baseline_auprc": 0.3010999083409716,
+        "n_positive": 1971,
+        "n_total": 6546
+      },
+      "TRRAP": {
+        "auroc": 0.46047926193345656,
+        "auprc": 0.20206071002855008,
+        "baseline_auprc": 0.22425908952031776,
+        "n_positive": 1468,
+        "n_total": 6546
+      },
+      "HSPA9": {
+        "auroc": 0.5872050859936169,
+        "auprc": 0.5480621232637304,
+        "baseline_auprc": 0.485181790406355,
+        "n_positive": 3176,
+        "n_total": 6546
+      },
+      "QARS": {
+        "auroc": 0.5,
+        "auprc": 0.35227619920562175,
+        "baseline_auprc": 0.35227619920562175,
+        "n_positive": 2306,
+        "n_total": 6546
+      },
+      "CSE1L": {
+        "auroc": 0.4851898349705367,
+        "auprc": 0.3637791454952025,
+        "baseline_auprc": 0.37305224564619616,
+        "n_positive": 2442,
+        "n_total": 6546
+      },
+      "RPAP2": {
+        "auroc": 0.45321192575968494,
+        "auprc": 0.299635342321502,
+        "baseline_auprc": 0.33379162847540483,
+        "n_positive": 2185,
+        "n_total": 6546
+      },
+      "GPS1": {
+        "auroc": 0.44241773651296884,
+        "auprc": 0.09295143073620016,
+        "baseline_auprc": 0.10815765352887259,
+        "n_positive": 708,
+        "n_total": 6546
+      },
+      "SUPT5H": {
+        "auroc": 0.5281587777244436,
+        "auprc": 0.5586823481758904,
+        "baseline_auprc": 0.5424686831652917,
+        "n_positive": 3551,
+        "n_total": 6546
+      },
+      "PSTK": {
+        "auroc": 0.436115869937068,
+        "auprc": 0.03452789584642596,
+        "baseline_auprc": 0.03635808127100519,
+        "n_positive": 238,
+        "n_total": 6546
+      },
+      "BUB3": {
+        "auroc": 0.44710677439177227,
+        "auprc": 0.08792489383935648,
+        "baseline_auprc": 0.10296364191872899,
+        "n_positive": 674,
+        "n_total": 6546
+      },
+      "RPL23": {
+        "auroc": 0.4671461136743883,
+        "auprc": 0.3701681455585697,
+        "baseline_auprc": 0.39978612893369997,
+        "n_positive": 2617,
+        "n_total": 6546
+      },
+      "INTS2": {
+        "auroc": 0.48964245256810757,
+        "auprc": 0.46718934706674986,
+        "baseline_auprc": 0.48411243507485485,
+        "n_positive": 3169,
+        "n_total": 6546
+      },
+      "ZMAT2": {
+        "auroc": 0.4661289212791211,
+        "auprc": 0.1798035898775645,
+        "baseline_auprc": 0.20470516345860068,
+        "n_positive": 1340,
+        "n_total": 6546
+      },
+      "EIF4E": {
+        "auroc": 0.5156493633472563,
+        "auprc": 0.223286837002434,
+        "baseline_auprc": 0.21432936144210205,
+        "n_positive": 1403,
+        "n_total": 6546
+      },
+      "SLC7A5": {
+        "auroc": 0.46642572728813375,
+        "auprc": 0.07621144088918211,
+        "baseline_auprc": 0.08172930033608311,
+        "n_positive": 535,
+        "n_total": 6546
+      },
+      "EIF3H": {
+        "auroc": 0.4351151904961617,
+        "auprc": 0.14002722044864196,
+        "baseline_auprc": 0.16575007638252368,
+        "n_positive": 1085,
+        "n_total": 6546
+      },
+      "RARS": {
+        "auroc": 0.5,
+        "auprc": 0.3206538344026887,
+        "baseline_auprc": 0.3206538344026887,
+        "n_positive": 2099,
+        "n_total": 6546
+      },
+      "COG2": {
+        "auroc": 0.42713203807102756,
+        "auprc": 0.03163918038671087,
+        "baseline_auprc": 0.0384967919340055,
+        "n_positive": 252,
+        "n_total": 6546
+      },
+      "FAM32A": {
+        "auroc": 0.4568829381318914,
+        "auprc": 0.203264614011455,
+        "baseline_auprc": 0.22746715551481822,
+        "n_positive": 1489,
+        "n_total": 6546
+      },
+      "SLC1A5": {
+        "auroc": 0.4633349975398686,
+        "auprc": 0.0363017050282645,
+        "baseline_auprc": 0.04032997250229148,
+        "n_positive": 264,
+        "n_total": 6546
+      },
+      "WDR3": {
+        "auroc": 0.47224234675758225,
+        "auprc": 0.1601891142195756,
+        "baseline_auprc": 0.17277726856095327,
+        "n_positive": 1131,
+        "n_total": 6546
+      },
+      "DNAJC19": {
+        "auroc": 0.5054491871567989,
+        "auprc": 0.3601261065313443,
+        "baseline_auprc": 0.36617781851512377,
+        "n_positive": 2397,
+        "n_total": 6546
+      },
+      "EIF4G1": {
+        "auroc": 0.4642345043475641,
+        "auprc": 0.1544140553496578,
+        "baseline_auprc": 0.1721662083715246,
+        "n_positive": 1127,
+        "n_total": 6546
+      },
+      "PHB2": {
+        "auroc": 0.5060209945580847,
+        "auprc": 0.4823977021595708,
+        "baseline_auprc": 0.48105713412771156,
+        "n_positive": 3149,
+        "n_total": 6546
+      },
+      "PSMD4": {
+        "auroc": 0.4631431960386843,
+        "auprc": 0.16226761789511587,
+        "baseline_auprc": 0.18179040635502597,
+        "n_positive": 1190,
+        "n_total": 6546
+      },
+      "SNRPG": {
+        "auroc": 0.47382495947258535,
+        "auprc": 0.29522631149267037,
+        "baseline_auprc": 0.31423770241368776,
+        "n_positive": 2057,
+        "n_total": 6546
+      },
+      "GNL2": {
+        "auroc": 0.46748034778598613,
+        "auprc": 0.20089517052714725,
+        "baseline_auprc": 0.21295447601588757,
+        "n_positive": 1394,
+        "n_total": 6546
+      },
+      "PSMG3": {
+        "auroc": 0.4542981718174216,
+        "auprc": 0.04364663864945764,
+        "baseline_auprc": 0.04934311029636419,
+        "n_positive": 323,
+        "n_total": 6546
+      },
+      "WDR4": {
+        "auroc": 0.42465612111169887,
+        "auprc": 0.03078590015433234,
+        "baseline_auprc": 0.03773296669721968,
+        "n_positive": 247,
+        "n_total": 6546
+      },
+      "DHX15": {
+        "auroc": 0.5135962559221243,
+        "auprc": 0.41185173268910064,
+        "baseline_auprc": 0.4144515734799878,
+        "n_positive": 2713,
+        "n_total": 6546
+      },
+      "EIF2B2": {
+        "auroc": 0.5082357112328554,
+        "auprc": 0.31358864082343774,
+        "baseline_auprc": 0.3162236480293309,
+        "n_positive": 2070,
+        "n_total": 6546
+      },
+      "INTS8": {
+        "auroc": 0.5056388333917748,
+        "auprc": 0.37857728743589636,
+        "baseline_auprc": 0.38084326306141153,
+        "n_positive": 2493,
+        "n_total": 6546
+      },
+      "NACA": {
+        "auroc": 0.490175331481915,
+        "auprc": 0.28780301129776453,
+        "baseline_auprc": 0.3065994500458295,
+        "n_positive": 2007,
+        "n_total": 6546
+      },
+      "DHX16": {
+        "auroc": 0.4677241665715993,
+        "auprc": 0.4049855119549291,
+        "baseline_auprc": 0.4343110296364192,
+        "n_positive": 2843,
+        "n_total": 6546
+      },
+      "OXA1L": {
+        "auroc": 0.45228237238561364,
+        "auprc": 0.12299587481677696,
+        "baseline_auprc": 0.14222425908952033,
+        "n_positive": 931,
+        "n_total": 6546
+      },
+      "CNOT3": {
+        "auroc": 0.4571619190678605,
+        "auprc": 0.2590768318734704,
+        "baseline_auprc": 0.28658722884204096,
+        "n_positive": 1876,
+        "n_total": 6546
+      },
+      "VPS41": {
+        "auroc": 0.47408554004372017,
+        "auprc": 0.03590410800061347,
+        "baseline_auprc": 0.03910785212343416,
+        "n_positive": 256,
+        "n_total": 6546
+      },
+      "EIF2B4": {
+        "auroc": 0.5025418164254196,
+        "auprc": 0.3128894219149074,
+        "baseline_auprc": 0.31897341888175984,
+        "n_positive": 2088,
+        "n_total": 6546
+      },
+      "LSM2": {
+        "auroc": 0.5037291881763981,
+        "auprc": 0.365265471050916,
+        "baseline_auprc": 0.38206538344026886,
+        "n_positive": 2501,
+        "n_total": 6546
+      },
+      "RPL30": {
+        "auroc": 0.4761833971596451,
+        "auprc": 0.303504708116722,
+        "baseline_auprc": 0.3261533761075466,
+        "n_positive": 2135,
+        "n_total": 6546
+      },
+      "RIOK1": {
+        "auroc": 0.4508026273127432,
+        "auprc": 0.20266632767021503,
+        "baseline_auprc": 0.23113351665139018,
+        "n_positive": 1513,
+        "n_total": 6546
+      },
+      "TPX2": {
+        "auroc": 0.4445276654346506,
+        "auprc": 0.08345098361461895,
+        "baseline_auprc": 0.09639474488237092,
+        "n_positive": 631,
+        "n_total": 6546
+      },
+      "DLD": {
+        "auroc": 0.46263623777920504,
+        "auprc": 0.2626150299269546,
+        "baseline_auprc": 0.2864344637946838,
+        "n_positive": 1875,
+        "n_total": 6546
+      },
+      "MED30": {
+        "auroc": 0.49858777895912854,
+        "auprc": 0.4336435095301696,
+        "baseline_auprc": 0.4395050412465628,
+        "n_positive": 2877,
+        "n_total": 6546
+      },
+      "MED22": {
+        "auroc": 0.5,
+        "auprc": 0.3027803238619004,
+        "baseline_auprc": 0.3027803238619004,
+        "n_positive": 1982,
+        "n_total": 6546
+      },
+      "BDP1": {
+        "auroc": 0.4492960223990098,
+        "auprc": 0.11930295890195727,
+        "baseline_auprc": 0.13733577757409104,
+        "n_positive": 899,
+        "n_total": 6546
+      },
+      "U2SURP": {
+        "auroc": 0.479360814620832,
+        "auprc": 0.24013612030975437,
+        "baseline_auprc": 0.25802016498625113,
+        "n_positive": 1689,
+        "n_total": 6546
+      },
+      "RAB4A": {
+        "auroc": 0.41346862712975097,
+        "auprc": 0.026925720823920266,
+        "baseline_auprc": 0.03421937060800489,
+        "n_positive": 224,
+        "n_total": 6546
+      },
+      "HNRNPC": {
+        "auroc": 0.4860099732535378,
+        "auprc": 0.31490766669049663,
+        "baseline_auprc": 0.32981973724411856,
+        "n_positive": 2159,
+        "n_total": 6546
+      },
+      "ASF1B": {
+        "auroc": 0.48767194927753393,
+        "auprc": 0.035874364135715514,
+        "baseline_auprc": 0.03712190650779102,
+        "n_positive": 243,
+        "n_total": 6546
+      },
+      "GOLT1B": {
+        "auroc": 0.46570716726326067,
+        "auprc": 0.056674996746884206,
+        "baseline_auprc": 0.061106018942865874,
+        "n_positive": 400,
+        "n_total": 6546
+      },
+      "DHX36": {
+        "auroc": 0.45854454514989623,
+        "auprc": 0.09607164599894352,
+        "baseline_auprc": 0.10876871371830125,
+        "n_positive": 712,
+        "n_total": 6546
+      },
+      "DNAJC8": {
+        "auroc": 0.4387813855323431,
+        "auprc": 0.05271276891946453,
+        "baseline_auprc": 0.06339749465322335,
+        "n_positive": 415,
+        "n_total": 6546
+      },
+      "NUP54": {
+        "auroc": 0.48762275555607393,
+        "auprc": 0.1933791529628362,
+        "baseline_auprc": 0.20012221203788574,
+        "n_positive": 1310,
+        "n_total": 6546
+      },
+      "CENPJ": {
+        "auroc": 0.4376614712381973,
+        "auprc": 0.1415683889458972,
+        "baseline_auprc": 0.1674304919034525,
+        "n_positive": 1096,
+        "n_total": 6546
+      },
+      "MED7": {
+        "auroc": 0.4724148431027497,
+        "auprc": 0.39842477123948483,
+        "baseline_auprc": 0.4227008860372747,
+        "n_positive": 2767,
+        "n_total": 6546
+      },
+      "HARS": {
+        "auroc": 0.5,
+        "auprc": 0.4126183929117018,
+        "baseline_auprc": 0.4126183929117018,
+        "n_positive": 2701,
+        "n_total": 6546
+      },
+      "SRRT": {
+        "auroc": 0.4668198960893458,
+        "auprc": 0.3595893749155201,
+        "baseline_auprc": 0.38435685915062634,
+        "n_positive": 2516,
+        "n_total": 6546
+      },
+      "DDX41": {
+        "auroc": 0.4634357283426327,
+        "auprc": 0.4476263613653573,
+        "baseline_auprc": 0.4891536816376413,
+        "n_positive": 3202,
+        "n_total": 6546
+      },
+      "LTV1": {
+        "auroc": 0.4732679164504293,
+        "auprc": 0.27203401894656976,
+        "baseline_auprc": 0.29055912007332724,
+        "n_positive": 1902,
+        "n_total": 6546
+      },
+      "RPS28": {
+        "auroc": 0.4826440260447613,
+        "auprc": 0.23637051089311667,
+        "baseline_auprc": 0.2520623281393217,
+        "n_positive": 1650,
+        "n_total": 6546
+      },
+      "PRPF18": {
+        "auroc": 0.4627304580346235,
+        "auprc": 0.25761747297474813,
+        "baseline_auprc": 0.282004277421326,
+        "n_positive": 1846,
+        "n_total": 6546
+      },
+      "SUPT6H": {
+        "auroc": 0.532784522008031,
+        "auprc": 0.5711297867251465,
+        "baseline_auprc": 0.5436908035441491,
+        "n_positive": 3559,
+        "n_total": 6546
+      },
+      "PMF1": {
+        "auroc": 0.4626844346343148,
+        "auprc": 0.08475916038662659,
+        "baseline_auprc": 0.0956309196455851,
+        "n_positive": 626,
+        "n_total": 6546
+      },
+      "AATF": {
+        "auroc": 0.4426923305114112,
+        "auprc": 0.1994404081534711,
+        "baseline_auprc": 0.23128628169874732,
+        "n_positive": 1514,
+        "n_total": 6546
+      },
+      "NAGLU": {
+        "auroc": 0.5,
+        "auprc": 0.03819126183929117,
+        "baseline_auprc": 0.03819126183929117,
+        "n_positive": 250,
+        "n_total": 6546
+      },
+      "COPS4": {
+        "auroc": 0.4592200438451699,
+        "auprc": 0.13194662334448948,
+        "baseline_auprc": 0.14772380079437825,
+        "n_positive": 967,
+        "n_total": 6546
+      },
+      "XRCC1": {
+        "auroc": 0.4476274357981675,
+        "auprc": 0.03166406519874225,
+        "baseline_auprc": 0.03758020164986251,
+        "n_positive": 246,
+        "n_total": 6546
+      },
+      "RPL31": {
+        "auroc": 0.47208750818914025,
+        "auprc": 0.38186604167014215,
+        "baseline_auprc": 0.41185456767491596,
+        "n_positive": 2696,
+        "n_total": 6546
+      },
+      "UBA1": {
+        "auroc": 0.47149526218816723,
+        "auprc": 0.3139553048574523,
+        "baseline_auprc": 0.3369996944699053,
+        "n_positive": 2206,
+        "n_total": 6546
+      },
+      "GPN3": {
+        "auroc": 0.49327299087925724,
+        "auprc": 0.33326224231241736,
+        "baseline_auprc": 0.34417965169569203,
+        "n_positive": 2253,
+        "n_total": 6546
+      },
+      "WDR36": {
+        "auroc": 0.4579077788954332,
+        "auprc": 0.19645814906051257,
+        "baseline_auprc": 0.22043996333638863,
+        "n_positive": 1443,
+        "n_total": 6546
+      },
+      "IGBP1": {
+        "auroc": 0.471069284027978,
+        "auprc": 0.16828457440334885,
+        "baseline_auprc": 0.1882065383440269,
+        "n_positive": 1232,
+        "n_total": 6546
+      },
+      "RPS3": {
+        "auroc": 0.4698992721123447,
+        "auprc": 0.3822114875016212,
+        "baseline_auprc": 0.40635502597005807,
+        "n_positive": 2660,
+        "n_total": 6546
+      },
+      "ACTR8": {
+        "auroc": 0.4830841815097541,
+        "auprc": 0.11415683885366447,
+        "baseline_auprc": 0.12007332722273144,
+        "n_positive": 786,
+        "n_total": 6546
+      }
+    }
+  },
+  "correlation_results": {
+    "aggregate": {
+      "aggregate_auroc": 0.4989606460163568,
+      "aggregate_auprc": 0.24348156572996488,
+      "baseline_auprc": 0.24481973724411854,
+      "n_genes_evaluated": 100,
+      "n_total_pairs": 654600,
+      "n_positive_pairs": 160259,
+      "median_auroc": 0.4967859262636933,
+      "median_auprc": 0.23535291592088536,
+      "mean_auroc": 0.49684051757066106,
+      "mean_auprc": 0.24388534938118356,
+      "std_auroc": 0.01199471530084393,
+      "std_auprc": 0.13551372353388846
+    },
+    "per_gene": {
+      "NCBP2": {
+        "auroc": 0.49144928237123625,
+        "auprc": 0.26643904222875314,
+        "baseline_auprc": 0.2737549648640391,
+        "n_positive": 1792,
+        "n_total": 6546
+      },
+      "SLC39A9": {
+        "auroc": 0.5097330994907494,
+        "auprc": 0.07332079699971472,
+        "baseline_auprc": 0.06691109074243813,
+        "n_positive": 438,
+        "n_total": 6546
+      },
+      "DONSON": {
+        "auroc": 0.5147008318189685,
+        "auprc": 0.1246550590903355,
+        "baseline_auprc": 0.11732355637030248,
+        "n_positive": 768,
+        "n_total": 6546
+      },
+      "CHMP6": {
+        "auroc": 0.49408976138496435,
+        "auprc": 0.14048594754155383,
+        "baseline_auprc": 0.14252978918423465,
+        "n_positive": 933,
+        "n_total": 6546
+      },
+      "CPSF3": {
+        "auroc": 0.49917864169018905,
+        "auprc": 0.2071566810952109,
+        "baseline_auprc": 0.20623281393217233,
+        "n_positive": 1350,
+        "n_total": 6546
+      },
+      "BUB1": {
+        "auroc": 0.4798749186342387,
+        "auprc": 0.03828392487348696,
+        "baseline_auprc": 0.03941338221814849,
+        "n_positive": 258,
+        "n_total": 6546
+      },
+      "MED12": {
+        "auroc": 0.5,
+        "auprc": 0.4144515734799878,
+        "baseline_auprc": 0.4144515734799878,
+        "n_positive": 2713,
+        "n_total": 6546
+      },
+      "MED19": {
+        "auroc": 0.49219707411313707,
+        "auprc": 0.3346882115863941,
+        "baseline_auprc": 0.3365413993278338,
+        "n_positive": 2203,
+        "n_total": 6546
+      },
+      "NRDE2": {
+        "auroc": 0.47471657662723676,
+        "auprc": 0.23183493091554408,
+        "baseline_auprc": 0.24686831652917812,
+        "n_positive": 1616,
+        "n_total": 6546
+      },
+      "TSR2": {
+        "auroc": 0.4929469475043178,
+        "auprc": 0.3843705241138161,
+        "baseline_auprc": 0.38512068438741215,
+        "n_positive": 2521,
+        "n_total": 6546
+      },
+      "TIMM23B": {
+        "auroc": 0.5012338105863643,
+        "auprc": 0.37519666085326314,
+        "baseline_auprc": 0.3696914146043385,
+        "n_positive": 2420,
+        "n_total": 6546
+      },
+      "ORC1": {
+        "auroc": 0.4882419487351546,
+        "auprc": 0.08672447727444685,
+        "baseline_auprc": 0.08936755270394134,
+        "n_positive": 585,
+        "n_total": 6546
+      },
+      "SSRP1": {
+        "auroc": 0.5026738465675794,
+        "auprc": 0.3002155045591731,
+        "baseline_auprc": 0.2952948365413993,
+        "n_positive": 1933,
+        "n_total": 6546
+      },
+      "PMPCB": {
+        "auroc": 0.5024345909774557,
+        "auprc": 0.25543064641877433,
+        "baseline_auprc": 0.2522150931866789,
+        "n_positive": 1651,
+        "n_total": 6546
+      },
+      "MED10": {
+        "auroc": 0.4966850602506598,
+        "auprc": 0.27114876229617557,
+        "baseline_auprc": 0.2714634891536816,
+        "n_positive": 1777,
+        "n_total": 6546
+      },
+      "ARGLU1": {
+        "auroc": 0.48980317187764316,
+        "auprc": 0.06815460267010406,
+        "baseline_auprc": 0.06889703635808127,
+        "n_positive": 451,
+        "n_total": 6546
+      },
+      "MZT1": {
+        "auroc": 0.4918121471183552,
+        "auprc": 0.04508807736990298,
+        "baseline_auprc": 0.043996333638863426,
+        "n_positive": 288,
+        "n_total": 6546
+      },
+      "LSM6": {
+        "auroc": 0.5052075583912582,
+        "auprc": 0.3371387729601506,
+        "baseline_auprc": 0.33531927894897645,
+        "n_positive": 2195,
+        "n_total": 6546
+      },
+      "RPL24": {
+        "auroc": 0.468840966511742,
+        "auprc": 0.2930991059431468,
+        "baseline_auprc": 0.320959364497403,
+        "n_positive": 2101,
+        "n_total": 6546
+      },
+      "EIF2B5": {
+        "auroc": 0.5108960890942489,
+        "auprc": 0.33351757121082704,
+        "baseline_auprc": 0.3214176596394745,
+        "n_positive": 2104,
+        "n_total": 6546
+      },
+      "GTF2H1": {
+        "auroc": 0.48771299471936413,
+        "auprc": 0.2065524663087437,
+        "baseline_auprc": 0.20852428964252978,
+        "n_positive": 1365,
+        "n_total": 6546
+      },
+      "ATP6V1B2": {
+        "auroc": 0.49716009976669917,
+        "auprc": 0.14290714067730048,
+        "baseline_auprc": 0.14375190956309197,
+        "n_positive": 941,
+        "n_total": 6546
+      },
+      "RPS12": {
+        "auroc": 0.48664004716337517,
+        "auprc": 0.3028361702743151,
+        "baseline_auprc": 0.3198900091659028,
+        "n_positive": 2094,
+        "n_total": 6546
+      },
+      "KRR1": {
+        "auroc": 0.49962063588589034,
+        "auprc": 0.22862600487881593,
+        "baseline_auprc": 0.2314390467461045,
+        "n_positive": 1515,
+        "n_total": 6546
+      },
+      "NLE1": {
+        "auroc": 0.4923704507463562,
+        "auprc": 0.19743241979935894,
+        "baseline_auprc": 0.1985945615643141,
+        "n_positive": 1300,
+        "n_total": 6546
+      },
+      "RPS19": {
+        "auroc": 0.4833246001447214,
+        "auprc": 0.28494715606461185,
+        "baseline_auprc": 0.3010999083409716,
+        "n_positive": 1971,
+        "n_total": 6546
+      },
+      "TRRAP": {
+        "auroc": 0.50125306794389,
+        "auprc": 0.22697767106762504,
+        "baseline_auprc": 0.22425908952031776,
+        "n_positive": 1468,
+        "n_total": 6546
+      },
+      "HSPA9": {
+        "auroc": 0.510130130279769,
+        "auprc": 0.4901744223907245,
+        "baseline_auprc": 0.485181790406355,
+        "n_positive": 3176,
+        "n_total": 6546
+      },
+      "QARS": {
+        "auroc": 0.5018125398877415,
+        "auprc": 0.35683546705887725,
+        "baseline_auprc": 0.35227619920562175,
+        "n_positive": 2306,
+        "n_total": 6546
+      },
+      "CSE1L": {
+        "auroc": 0.49685810212126,
+        "auprc": 0.3684741685919759,
+        "baseline_auprc": 0.37305224564619616,
+        "n_positive": 2442,
+        "n_total": 6546
+      },
+      "RPAP2": {
+        "auroc": 0.502458288228772,
+        "auprc": 0.3330845979159602,
+        "baseline_auprc": 0.33379162847540483,
+        "n_positive": 2185,
+        "n_total": 6546
+      },
+      "GPS1": {
+        "auroc": 0.502097595531323,
+        "auprc": 0.10753060875095566,
+        "baseline_auprc": 0.10815765352887259,
+        "n_positive": 708,
+        "n_total": 6546
+      },
+      "SUPT5H": {
+        "auroc": 0.5054300112503285,
+        "auprc": 0.5478560596730774,
+        "baseline_auprc": 0.5424686831652917,
+        "n_positive": 3551,
+        "n_total": 6546
+      },
+      "PSTK": {
+        "auroc": 0.4896509967335063,
+        "auprc": 0.03526571346047593,
+        "baseline_auprc": 0.03635808127100519,
+        "n_positive": 238,
+        "n_total": 6546
+      },
+      "BUB3": {
+        "auroc": 0.5170439959491911,
+        "auprc": 0.10652345986397367,
+        "baseline_auprc": 0.10296364191872899,
+        "n_positive": 674,
+        "n_total": 6546
+      },
+      "RPL23": {
+        "auroc": 0.4959234863613239,
+        "auprc": 0.3855229971132861,
+        "baseline_auprc": 0.39978612893369997,
+        "n_positive": 2617,
+        "n_total": 6546
+      },
+      "INTS2": {
+        "auroc": 0.49671375040612653,
+        "auprc": 0.48412213651898556,
+        "baseline_auprc": 0.48411243507485485,
+        "n_positive": 3169,
+        "n_total": 6546
+      },
+      "ZMAT2": {
+        "auroc": 0.4946757759416517,
+        "auprc": 0.20232051706222556,
+        "baseline_auprc": 0.20470516345860068,
+        "n_positive": 1340,
+        "n_total": 6546
+      },
+      "EIF4E": {
+        "auroc": 0.5153782158145881,
+        "auprc": 0.23052382712639016,
+        "baseline_auprc": 0.21432936144210205,
+        "n_positive": 1403,
+        "n_total": 6546
+      },
+      "SLC7A5": {
+        "auroc": 0.49331521494083286,
+        "auprc": 0.08787276466936662,
+        "baseline_auprc": 0.08172930033608311,
+        "n_positive": 535,
+        "n_total": 6546
+      },
+      "EIF3H": {
+        "auroc": 0.48603292555422317,
+        "auprc": 0.15908549824092375,
+        "baseline_auprc": 0.16575007638252368,
+        "n_positive": 1085,
+        "n_total": 6546
+      },
+      "RARS": {
+        "auroc": 0.5088317190459698,
+        "auprc": 0.33225043413743427,
+        "baseline_auprc": 0.3206538344026887,
+        "n_positive": 2099,
+        "n_total": 6546
+      },
+      "COG2": {
+        "auroc": 0.49301425898184714,
+        "auprc": 0.036285369664376746,
+        "baseline_auprc": 0.0384967919340055,
+        "n_positive": 252,
+        "n_total": 6546
+      },
+      "FAM32A": {
+        "auroc": 0.4996183866580486,
+        "auprc": 0.22979057642803216,
+        "baseline_auprc": 0.22746715551481822,
+        "n_positive": 1489,
+        "n_total": 6546
+      },
+      "SLC1A5": {
+        "auroc": 0.4705308818847501,
+        "auprc": 0.03839264020910299,
+        "baseline_auprc": 0.04032997250229148,
+        "n_positive": 264,
+        "n_total": 6546
+      },
+      "WDR3": {
+        "auroc": 0.5097487657904125,
+        "auprc": 0.17600892858360778,
+        "baseline_auprc": 0.17277726856095327,
+        "n_positive": 1131,
+        "n_total": 6546
+      },
+      "DNAJC19": {
+        "auroc": 0.49017677254437414,
+        "auprc": 0.35716599420990003,
+        "baseline_auprc": 0.36617781851512377,
+        "n_positive": 2397,
+        "n_total": 6546
+      },
+      "EIF4G1": {
+        "auroc": 0.47504999416264015,
+        "auprc": 0.16159501147254038,
+        "baseline_auprc": 0.1721662083715246,
+        "n_positive": 1127,
+        "n_total": 6546
+      },
+      "PHB2": {
+        "auroc": 0.5160545053436181,
+        "auprc": 0.4985170548279942,
+        "baseline_auprc": 0.48105713412771156,
+        "n_positive": 3149,
+        "n_total": 6546
+      },
+      "PSMD4": {
+        "auroc": 0.496694824307617,
+        "auprc": 0.1850022994010555,
+        "baseline_auprc": 0.18179040635502597,
+        "n_positive": 1190,
+        "n_total": 6546
+      },
+      "SNRPG": {
+        "auroc": 0.5182837147532785,
+        "auprc": 0.3273231575393257,
+        "baseline_auprc": 0.31423770241368776,
+        "n_positive": 2057,
+        "n_total": 6546
+      },
+      "GNL2": {
+        "auroc": 0.4791677341668375,
+        "auprc": 0.1990864695249191,
+        "baseline_auprc": 0.21295447601588757,
+        "n_positive": 1394,
+        "n_total": 6546
+      },
+      "PSMG3": {
+        "auroc": 0.5026350366089245,
+        "auprc": 0.05130336184654837,
+        "baseline_auprc": 0.04934311029636419,
+        "n_positive": 323,
+        "n_total": 6546
+      },
+      "WDR4": {
+        "auroc": 0.5033798180162266,
+        "auprc": 0.03883658246335795,
+        "baseline_auprc": 0.03773296669721968,
+        "n_positive": 247,
+        "n_total": 6546
+      },
+      "DHX15": {
+        "auroc": 0.504414781560678,
+        "auprc": 0.4155606458793087,
+        "baseline_auprc": 0.4144515734799878,
+        "n_positive": 2713,
+        "n_total": 6546
+      },
+      "EIF2B2": {
+        "auroc": 0.5041903031951407,
+        "auprc": 0.3217528440958696,
+        "baseline_auprc": 0.3162236480293309,
+        "n_positive": 2070,
+        "n_total": 6546
+      },
+      "INTS8": {
+        "auroc": 0.4945841942437592,
+        "auprc": 0.37591654763705645,
+        "baseline_auprc": 0.38084326306141153,
+        "n_positive": 2493,
+        "n_total": 6546
+      },
+      "NACA": {
+        "auroc": 0.5016607987926812,
+        "auprc": 0.30090211048458415,
+        "baseline_auprc": 0.3065994500458295,
+        "n_positive": 2007,
+        "n_total": 6546
+      },
+      "DHX16": {
+        "auroc": 0.4955047333069963,
+        "auprc": 0.4360584661142083,
+        "baseline_auprc": 0.4343110296364192,
+        "n_positive": 2843,
+        "n_total": 6546
+      },
+      "OXA1L": {
+        "auroc": 0.5235232847415575,
+        "auprc": 0.15945940031256717,
+        "baseline_auprc": 0.14222425908952033,
+        "n_positive": 931,
+        "n_total": 6546
+      },
+      "CNOT3": {
+        "auroc": 0.5095928281504682,
+        "auprc": 0.29518939139488326,
+        "baseline_auprc": 0.28658722884204096,
+        "n_positive": 1876,
+        "n_total": 6546
+      },
+      "VPS41": {
+        "auroc": 0.47436717507949133,
+        "auprc": 0.0367792459686084,
+        "baseline_auprc": 0.03910785212343416,
+        "n_positive": 256,
+        "n_total": 6546
+      },
+      "EIF2B4": {
+        "auroc": 0.5010718386507359,
+        "auprc": 0.3214202996554874,
+        "baseline_auprc": 0.31897341888175984,
+        "n_positive": 2088,
+        "n_total": 6546
+      },
+      "LSM2": {
+        "auroc": 0.5277178621752782,
+        "auprc": 0.4070573309563724,
+        "baseline_auprc": 0.38206538344026886,
+        "n_positive": 2501,
+        "n_total": 6546
+      },
+      "RPL30": {
+        "auroc": 0.47501588799982164,
+        "auprc": 0.30063864880246727,
+        "baseline_auprc": 0.3261533761075466,
+        "n_positive": 2135,
+        "n_total": 6546
+      },
+      "RIOK1": {
+        "auroc": 0.5040980684127193,
+        "auprc": 0.23636691318302083,
+        "baseline_auprc": 0.23113351665139018,
+        "n_positive": 1513,
+        "n_total": 6546
+      },
+      "TPX2": {
+        "auroc": 0.4865140467237261,
+        "auprc": 0.09274152609054018,
+        "baseline_auprc": 0.09639474488237092,
+        "n_positive": 631,
+        "n_total": 6546
+      },
+      "DLD": {
+        "auroc": 0.5005437807749946,
+        "auprc": 0.2912733335661569,
+        "baseline_auprc": 0.2864344637946838,
+        "n_positive": 1875,
+        "n_total": 6546
+      },
+      "MED30": {
+        "auroc": 0.49637745929621235,
+        "auprc": 0.43681618524754545,
+        "baseline_auprc": 0.4395050412465628,
+        "n_positive": 2877,
+        "n_total": 6546
+      },
+      "MED22": {
+        "auroc": 0.5,
+        "auprc": 0.3027803238619004,
+        "baseline_auprc": 0.3027803238619004,
+        "n_positive": 1982,
+        "n_total": 6546
+      },
+      "BDP1": {
+        "auroc": 0.5006150705986799,
+        "auprc": 0.1332735516821698,
+        "baseline_auprc": 0.13733577757409104,
+        "n_positive": 899,
+        "n_total": 6546
+      },
+      "U2SURP": {
+        "auroc": 0.4793140661278461,
+        "auprc": 0.24438537552456946,
+        "baseline_auprc": 0.25802016498625113,
+        "n_positive": 1689,
+        "n_total": 6546
+      },
+      "RAB4A": {
+        "auroc": 0.5023274732227596,
+        "auprc": 0.03335012301116939,
+        "baseline_auprc": 0.03421937060800489,
+        "n_positive": 224,
+        "n_total": 6546
+      },
+      "HNRNPC": {
+        "auroc": 0.5060939976664812,
+        "auprc": 0.3368325770965932,
+        "baseline_auprc": 0.32981973724411856,
+        "n_positive": 2159,
+        "n_total": 6546
+      },
+      "ASF1B": {
+        "auroc": 0.4782274297496326,
+        "auprc": 0.034232640775357134,
+        "baseline_auprc": 0.03712190650779102,
+        "n_positive": 243,
+        "n_total": 6546
+      },
+      "GOLT1B": {
+        "auroc": 0.532252684672958,
+        "auprc": 0.07143601983560183,
+        "baseline_auprc": 0.061106018942865874,
+        "n_positive": 400,
+        "n_total": 6546
+      },
+      "DHX36": {
+        "auroc": 0.48341606063640885,
+        "auprc": 0.10511110590670951,
+        "baseline_auprc": 0.10876871371830125,
+        "n_positive": 712,
+        "n_total": 6546
+      },
+      "DNAJC8": {
+        "auroc": 0.49190544595606367,
+        "auprc": 0.060783678700147586,
+        "baseline_auprc": 0.06339749465322335,
+        "n_positive": 415,
+        "n_total": 6546
+      },
+      "NUP54": {
+        "auroc": 0.5032313723546324,
+        "auprc": 0.20013398274509248,
+        "baseline_auprc": 0.20012221203788574,
+        "n_positive": 1310,
+        "n_total": 6546
+      },
+      "CENPJ": {
+        "auroc": 0.4853688140360276,
+        "auprc": 0.1602527941563252,
+        "baseline_auprc": 0.1674304919034525,
+        "n_positive": 1096,
+        "n_total": 6546
+      },
+      "MED7": {
+        "auroc": 0.48864930144361024,
+        "auprc": 0.40524012044184676,
+        "baseline_auprc": 0.4227008860372747,
+        "n_positive": 2767,
+        "n_total": 6546
+      },
+      "HARS": {
+        "auroc": 0.5093170231706313,
+        "auprc": 0.4179915589083583,
+        "baseline_auprc": 0.4126183929117018,
+        "n_positive": 2701,
+        "n_total": 6546
+      },
+      "SRRT": {
+        "auroc": 0.49937945535668493,
+        "auprc": 0.37688296682029065,
+        "baseline_auprc": 0.38435685915062634,
+        "n_positive": 2516,
+        "n_total": 6546
+      },
+      "DDX41": {
+        "auroc": 0.5071262279257283,
+        "auprc": 0.4911089640995877,
+        "baseline_auprc": 0.4891536816376413,
+        "n_positive": 3202,
+        "n_total": 6546
+      },
+      "LTV1": {
+        "auroc": 0.4972216335132972,
+        "auprc": 0.2912212926886859,
+        "baseline_auprc": 0.29055912007332724,
+        "n_positive": 1902,
+        "n_total": 6546
+      },
+      "RPS28": {
+        "auroc": 0.4792846974648445,
+        "auprc": 0.23433891865874992,
+        "baseline_auprc": 0.2520623281393217,
+        "n_positive": 1650,
+        "n_total": 6546
+      },
+      "PRPF18": {
+        "auroc": 0.49733812037527947,
+        "auprc": 0.28116842569040823,
+        "baseline_auprc": 0.282004277421326,
+        "n_positive": 1846,
+        "n_total": 6546
+      },
+      "SUPT6H": {
+        "auroc": 0.491105646242832,
+        "auprc": 0.5359265918995568,
+        "baseline_auprc": 0.5436908035441491,
+        "n_positive": 3559,
+        "n_total": 6546
+      },
+      "PMF1": {
+        "auroc": 0.4966143359813488,
+        "auprc": 0.093080519573074,
+        "baseline_auprc": 0.0956309196455851,
+        "n_positive": 626,
+        "n_total": 6546
+      },
+      "AATF": {
+        "auroc": 0.49908025886637275,
+        "auprc": 0.22901401318342257,
+        "baseline_auprc": 0.23128628169874732,
+        "n_positive": 1514,
+        "n_total": 6546
+      },
+      "NAGLU": {
+        "auroc": 0.5,
+        "auprc": 0.03819126183929117,
+        "baseline_auprc": 0.03819126183929117,
+        "n_positive": 250,
+        "n_total": 6546
+      },
+      "COPS4": {
+        "auroc": 0.5127224951449455,
+        "auprc": 0.15362770369309459,
+        "baseline_auprc": 0.14772380079437825,
+        "n_positive": 967,
+        "n_total": 6546
+      },
+      "XRCC1": {
+        "auroc": 0.4845173570783327,
+        "auprc": 0.04086457926886626,
+        "baseline_auprc": 0.03758020164986251,
+        "n_positive": 246,
+        "n_total": 6546
+      },
+      "RPL31": {
+        "auroc": 0.48865447608771045,
+        "auprc": 0.40185324376601145,
+        "baseline_auprc": 0.41185456767491596,
+        "n_positive": 2696,
+        "n_total": 6546
+      },
+      "UBA1": {
+        "auroc": 0.493853378511057,
+        "auprc": 0.33309292968110854,
+        "baseline_auprc": 0.3369996944699053,
+        "n_positive": 2206,
+        "n_total": 6546
+      },
+      "GPN3": {
+        "auroc": 0.4954869812013467,
+        "auprc": 0.34292271194641244,
+        "baseline_auprc": 0.34417965169569203,
+        "n_positive": 2253,
+        "n_total": 6546
+      },
+      "WDR36": {
+        "auroc": 0.4933704563334193,
+        "auprc": 0.21551877824581928,
+        "baseline_auprc": 0.22043996333638863,
+        "n_positive": 1443,
+        "n_total": 6546
+      },
+      "IGBP1": {
+        "auroc": 0.49583158185435194,
+        "auprc": 0.19501690693574703,
+        "baseline_auprc": 0.1882065383440269,
+        "n_positive": 1232,
+        "n_total": 6546
+      },
+      "RPS3": {
+        "auroc": 0.49332774486396125,
+        "auprc": 0.3886160330596734,
+        "baseline_auprc": 0.40635502597005807,
+        "n_positive": 2660,
+        "n_total": 6546
+      },
+      "ACTR8": {
+        "auroc": 0.47373546614362455,
+        "auprc": 0.11392233373711172,
+        "baseline_auprc": 0.12007332722273144,
+        "n_positive": 786,
+        "n_total": 6546
+      }
+    }
+  },
+  "random_results": {
+    "aggregate": {
+      "aggregate_auroc": 0.498340076835019,
+      "aggregate_auprc": 0.24381124205495527,
+      "baseline_auprc": 0.24481973724411854,
+      "n_genes_evaluated": 100,
+      "n_total_pairs": 654600,
+      "n_positive_pairs": 160259,
+      "median_auroc": 0.49780593586505834,
+      "median_auprc": 0.25350148691015584,
+      "mean_auroc": 0.49742231711274976,
+      "mean_auprc": 0.2446797783801091,
+      "std_auroc": 0.010722350899490345,
+      "std_auprc": 0.13612252427980098
+    },
+    "per_gene": {
+      "NCBP2": {
+        "auroc": 0.4928907376870605,
+        "auprc": 0.2693573170002651,
+        "baseline_auprc": 0.2737549648640391,
+        "n_positive": 1792,
+        "n_total": 6546
+      },
+      "SLC39A9": {
+        "auroc": 0.5101341754058604,
+        "auprc": 0.07021471320708725,
+        "baseline_auprc": 0.06691109074243813,
+        "n_positive": 438,
+        "n_total": 6546
+      },
+      "DONSON": {
+        "auroc": 0.4789388358861198,
+        "auprc": 0.1131693457961305,
+        "baseline_auprc": 0.11732355637030248,
+        "n_positive": 768,
+        "n_total": 6546
+      },
+      "CHMP6": {
+        "auroc": 0.48314594297535823,
+        "auprc": 0.13984686467385743,
+        "baseline_auprc": 0.14252978918423465,
+        "n_positive": 933,
+        "n_total": 6546
+      },
+      "CPSF3": {
+        "auroc": 0.4970815156958344,
+        "auprc": 0.20625673662657618,
+        "baseline_auprc": 0.20623281393217233,
+        "n_positive": 1350,
+        "n_total": 6546
+      },
+      "BUB1": {
+        "auroc": 0.4773568948852989,
+        "auprc": 0.036345843478834974,
+        "baseline_auprc": 0.03941338221814849,
+        "n_positive": 258,
+        "n_total": 6546
+      },
+      "MED12": {
+        "auroc": 0.4917164065645606,
+        "auprc": 0.40482152297288276,
+        "baseline_auprc": 0.4144515734799878,
+        "n_positive": 2713,
+        "n_total": 6546
+      },
+      "MED19": {
+        "auroc": 0.48222072574093333,
+        "auprc": 0.3249183874013044,
+        "baseline_auprc": 0.3365413993278338,
+        "n_positive": 2203,
+        "n_total": 6546
+      },
+      "NRDE2": {
+        "auroc": 0.5061323880866788,
+        "auprc": 0.250006122200435,
+        "baseline_auprc": 0.24686831652917812,
+        "n_positive": 1616,
+        "n_total": 6546
+      },
+      "TSR2": {
+        "auroc": 0.50135236682673,
+        "auprc": 0.3854461516963764,
+        "baseline_auprc": 0.38512068438741215,
+        "n_positive": 2521,
+        "n_total": 6546
+      },
+      "TIMM23B": {
+        "auroc": 0.49898116359470085,
+        "auprc": 0.3711688195617462,
+        "baseline_auprc": 0.3696914146043385,
+        "n_positive": 2420,
+        "n_total": 6546
+      },
+      "ORC1": {
+        "auroc": 0.4914069657904585,
+        "auprc": 0.08607750971144001,
+        "baseline_auprc": 0.08936755270394134,
+        "n_positive": 585,
+        "n_total": 6546
+      },
+      "SSRP1": {
+        "auroc": 0.5108396623994651,
+        "auprc": 0.3017443896798354,
+        "baseline_auprc": 0.2952948365413993,
+        "n_positive": 1933,
+        "n_total": 6546
+      },
+      "PMPCB": {
+        "auroc": 0.5117078268100121,
+        "auprc": 0.25978759855523154,
+        "baseline_auprc": 0.2522150931866789,
+        "n_positive": 1651,
+        "n_total": 6546
+      },
+      "MED10": {
+        "auroc": 0.49498089152733615,
+        "auprc": 0.2759173060726273,
+        "baseline_auprc": 0.2714634891536816,
+        "n_positive": 1777,
+        "n_total": 6546
+      },
+      "ARGLU1": {
+        "auroc": 0.48601685435155495,
+        "auprc": 0.06633151834036971,
+        "baseline_auprc": 0.06889703635808127,
+        "n_positive": 451,
+        "n_total": 6546
+      },
+      "MZT1": {
+        "auroc": 0.4662631831255992,
+        "auprc": 0.039007863617594424,
+        "baseline_auprc": 0.043996333638863426,
+        "n_positive": 288,
+        "n_total": 6546
+      },
+      "LSM6": {
+        "auroc": 0.5109425791154234,
+        "auprc": 0.342892431316819,
+        "baseline_auprc": 0.33531927894897645,
+        "n_positive": 2195,
+        "n_total": 6546
+      },
+      "RPL24": {
+        "auroc": 0.49364612383947004,
+        "auprc": 0.31437712978915855,
+        "baseline_auprc": 0.320959364497403,
+        "n_positive": 2101,
+        "n_total": 6546
+      },
+      "EIF2B5": {
+        "auroc": 0.5153094896109209,
+        "auprc": 0.33194381567372067,
+        "baseline_auprc": 0.3214176596394745,
+        "n_positive": 2104,
+        "n_total": 6546
+      },
+      "GTF2H1": {
+        "auroc": 0.48117233085385946,
+        "auprc": 0.19883377197105684,
+        "baseline_auprc": 0.20852428964252978,
+        "n_positive": 1365,
+        "n_total": 6546
+      },
+      "ATP6V1B2": {
+        "auroc": 0.48266131746267993,
+        "auprc": 0.13714492109033977,
+        "baseline_auprc": 0.14375190956309197,
+        "n_positive": 941,
+        "n_total": 6546
+      },
+      "RPS12": {
+        "auroc": 0.5032932195782929,
+        "auprc": 0.3193529805553649,
+        "baseline_auprc": 0.3198900091659028,
+        "n_positive": 2094,
+        "n_total": 6546
+      },
+      "KRR1": {
+        "auroc": 0.49047627481889516,
+        "auprc": 0.22523489236368077,
+        "baseline_auprc": 0.2314390467461045,
+        "n_positive": 1515,
+        "n_total": 6546
+      },
+      "NLE1": {
+        "auroc": 0.5018081175401038,
+        "auprc": 0.20138919975797676,
+        "baseline_auprc": 0.1985945615643141,
+        "n_positive": 1300,
+        "n_total": 6546
+      },
+      "RPS19": {
+        "auroc": 0.489116339934515,
+        "auprc": 0.2941127049911062,
+        "baseline_auprc": 0.3010999083409716,
+        "n_positive": 1971,
+        "n_total": 6546
+      },
+      "TRRAP": {
+        "auroc": 0.49431457813960533,
+        "auprc": 0.2220671283368055,
+        "baseline_auprc": 0.22425908952031776,
+        "n_positive": 1468,
+        "n_total": 6546
+      },
+      "HSPA9": {
+        "auroc": 0.4995496640232007,
+        "auprc": 0.4834369851732745,
+        "baseline_auprc": 0.485181790406355,
+        "n_positive": 3176,
+        "n_total": 6546
+      },
+      "QARS": {
+        "auroc": 0.4906058232011651,
+        "auprc": 0.34794782651686984,
+        "baseline_auprc": 0.35227619920562175,
+        "n_positive": 2306,
+        "n_total": 6546
+      },
+      "CSE1L": {
+        "auroc": 0.506224326399765,
+        "auprc": 0.37638488552370086,
+        "baseline_auprc": 0.37305224564619616,
+        "n_positive": 2442,
+        "n_total": 6546
+      },
+      "RPAP2": {
+        "auroc": 0.5153820765186747,
+        "auprc": 0.3478362352849926,
+        "baseline_auprc": 0.33379162847540483,
+        "n_positive": 2185,
+        "n_total": 6546
+      },
+      "GPS1": {
+        "auroc": 0.48288415272624513,
+        "auprc": 0.10657135709121554,
+        "baseline_auprc": 0.10815765352887259,
+        "n_positive": 708,
+        "n_total": 6546
+      },
+      "SUPT5H": {
+        "auroc": 0.5035318885460561,
+        "auprc": 0.5443239736549413,
+        "baseline_auprc": 0.5424686831652917,
+        "n_positive": 3551,
+        "n_total": 6546
+      },
+      "PSTK": {
+        "auroc": 0.4853633907589669,
+        "auprc": 0.03471670658738919,
+        "baseline_auprc": 0.03635808127100519,
+        "n_positive": 238,
+        "n_total": 6546
+      },
+      "BUB3": {
+        "auroc": 0.517337725078631,
+        "auprc": 0.10918755706296335,
+        "baseline_auprc": 0.10296364191872899,
+        "n_positive": 674,
+        "n_total": 6546
+      },
+      "RPL23": {
+        "auroc": 0.4924871571657914,
+        "auprc": 0.39744857416762014,
+        "baseline_auprc": 0.39978612893369997,
+        "n_positive": 2617,
+        "n_total": 6546
+      },
+      "INTS2": {
+        "auroc": 0.4928132533548601,
+        "auprc": 0.4844415168109589,
+        "baseline_auprc": 0.48411243507485485,
+        "n_positive": 3169,
+        "n_total": 6546
+      },
+      "ZMAT2": {
+        "auroc": 0.49898839456195776,
+        "auprc": 0.20569630532949928,
+        "baseline_auprc": 0.20470516345860068,
+        "n_positive": 1340,
+        "n_total": 6546
+      },
+      "EIF4E": {
+        "auroc": 0.49780829917946173,
+        "auprc": 0.21253849262968075,
+        "baseline_auprc": 0.21432936144210205,
+        "n_positive": 1403,
+        "n_total": 6546
+      },
+      "SLC7A5": {
+        "auroc": 0.48440693619330294,
+        "auprc": 0.07873468901048625,
+        "baseline_auprc": 0.08172930033608311,
+        "n_positive": 535,
+        "n_total": 6546
+      },
+      "EIF3H": {
+        "auroc": 0.5054659052839701,
+        "auprc": 0.17048213595691397,
+        "baseline_auprc": 0.16575007638252368,
+        "n_positive": 1085,
+        "n_total": 6546
+      },
+      "RARS": {
+        "auroc": 0.49871135912000675,
+        "auprc": 0.3174494093569602,
+        "baseline_auprc": 0.3206538344026887,
+        "n_positive": 2099,
+        "n_total": 6546
+      },
+      "COG2": {
+        "auroc": 0.5011632393662899,
+        "auprc": 0.03974213669225789,
+        "baseline_auprc": 0.0384967919340055,
+        "n_positive": 252,
+        "n_total": 6546
+      },
+      "FAM32A": {
+        "auroc": 0.51287106701534,
+        "auprc": 0.2392460642286316,
+        "baseline_auprc": 0.22746715551481822,
+        "n_positive": 1489,
+        "n_total": 6546
+      },
+      "SLC1A5": {
+        "auroc": 0.4957381841335996,
+        "auprc": 0.039120559594874656,
+        "baseline_auprc": 0.04032997250229148,
+        "n_positive": 264,
+        "n_total": 6546
+      },
+      "WDR3": {
+        "auroc": 0.47650491112139787,
+        "auprc": 0.1637657336035328,
+        "baseline_auprc": 0.17277726856095327,
+        "n_positive": 1131,
+        "n_total": 6546
+      },
+      "DNAJC19": {
+        "auroc": 0.48256864424308,
+        "auprc": 0.35453013632014196,
+        "baseline_auprc": 0.36617781851512377,
+        "n_positive": 2397,
+        "n_total": 6546
+      },
+      "EIF4G1": {
+        "auroc": 0.5050806317054931,
+        "auprc": 0.17440703196143306,
+        "baseline_auprc": 0.1721662083715246,
+        "n_positive": 1127,
+        "n_total": 6546
+      },
+      "PHB2": {
+        "auroc": 0.5038442471562293,
+        "auprc": 0.4838183737274119,
+        "baseline_auprc": 0.48105713412771156,
+        "n_positive": 3149,
+        "n_total": 6546
+      },
+      "PSMD4": {
+        "auroc": 0.48651492710601785,
+        "auprc": 0.17459773729383776,
+        "baseline_auprc": 0.18179040635502597,
+        "n_positive": 1190,
+        "n_total": 6546
+      },
+      "SNRPG": {
+        "auroc": 0.497039216372155,
+        "auprc": 0.3105424514620408,
+        "baseline_auprc": 0.31423770241368776,
+        "n_positive": 2057,
+        "n_total": 6546
+      },
+      "GNL2": {
+        "auroc": 0.5019486519422192,
+        "auprc": 0.21337328633246466,
+        "baseline_auprc": 0.21295447601588757,
+        "n_positive": 1394,
+        "n_total": 6546
+      },
+      "PSMG3": {
+        "auroc": 0.4870342666697844,
+        "auprc": 0.04796328971636803,
+        "baseline_auprc": 0.04934311029636419,
+        "n_positive": 323,
+        "n_total": 6546
+      },
+      "WDR4": {
+        "auroc": 0.48980205713521785,
+        "auprc": 0.037651954109538865,
+        "baseline_auprc": 0.03773296669721968,
+        "n_positive": 247,
+        "n_total": 6546
+      },
+      "DHX15": {
+        "auroc": 0.5086079537613921,
+        "auprc": 0.4256691286781291,
+        "baseline_auprc": 0.4144515734799878,
+        "n_positive": 2713,
+        "n_total": 6546
+      },
+      "EIF2B2": {
+        "auroc": 0.5019261072472403,
+        "auprc": 0.31531605084246894,
+        "baseline_auprc": 0.3162236480293309,
+        "n_positive": 2070,
+        "n_total": 6546
+      },
+      "INTS8": {
+        "auroc": 0.49782925376348613,
+        "auprc": 0.38175705206785565,
+        "baseline_auprc": 0.38084326306141153,
+        "n_positive": 2493,
+        "n_total": 6546
+      },
+      "NACA": {
+        "auroc": 0.5085350644851414,
+        "auprc": 0.31411125276842955,
+        "baseline_auprc": 0.3065994500458295,
+        "n_positive": 2007,
+        "n_total": 6546
+      },
+      "DHX16": {
+        "auroc": 0.5034440328396831,
+        "auprc": 0.434018725916598,
+        "baseline_auprc": 0.4343110296364192,
+        "n_positive": 2843,
+        "n_total": 6546
+      },
+      "OXA1L": {
+        "auroc": 0.5141954236819628,
+        "auprc": 0.1518832477243223,
+        "baseline_auprc": 0.14222425908952033,
+        "n_positive": 931,
+        "n_total": 6546
+      },
+      "CNOT3": {
+        "auroc": 0.502684763700616,
+        "auprc": 0.28758438218529814,
+        "baseline_auprc": 0.28658722884204096,
+        "n_positive": 1876,
+        "n_total": 6546
+      },
+      "VPS41": {
+        "auroc": 0.4824479580683625,
+        "auprc": 0.03679071546945325,
+        "baseline_auprc": 0.03910785212343416,
+        "n_positive": 256,
+        "n_total": 6546
+      },
+      "EIF2B4": {
+        "auroc": 0.5082693904281597,
+        "auprc": 0.32648856493341094,
+        "baseline_auprc": 0.31897341888175984,
+        "n_positive": 2088,
+        "n_total": 6546
+      },
+      "LSM2": {
+        "auroc": 0.49630857175053344,
+        "auprc": 0.3792166249351463,
+        "baseline_auprc": 0.38206538344026886,
+        "n_positive": 2501,
+        "n_total": 6546
+      },
+      "RPL30": {
+        "auroc": 0.4887570301412745,
+        "auprc": 0.3215123111570842,
+        "baseline_auprc": 0.3261533761075466,
+        "n_positive": 2135,
+        "n_total": 6546
+      },
+      "RIOK1": {
+        "auroc": 0.49670167640433677,
+        "auprc": 0.23062501543025943,
+        "baseline_auprc": 0.23113351665139018,
+        "n_positive": 1513,
+        "n_total": 6546
+      },
+      "TPX2": {
+        "auroc": 0.4956546318487072,
+        "auprc": 0.09538939918395171,
+        "baseline_auprc": 0.09639474488237092,
+        "n_positive": 631,
+        "n_total": 6546
+      },
+      "DLD": {
+        "auroc": 0.5046307286091487,
+        "auprc": 0.29512584236045264,
+        "baseline_auprc": 0.2864344637946838,
+        "n_positive": 1875,
+        "n_total": 6546
+      },
+      "MED30": {
+        "auroc": 0.5028947831378137,
+        "auprc": 0.447563414483066,
+        "baseline_auprc": 0.4395050412465628,
+        "n_positive": 2877,
+        "n_total": 6546
+      },
+      "MED22": {
+        "auroc": 0.4870252075869504,
+        "auprc": 0.2955286060202335,
+        "baseline_auprc": 0.3027803238619004,
+        "n_positive": 1982,
+        "n_total": 6546
+      },
+      "BDP1": {
+        "auroc": 0.49780357255065494,
+        "auprc": 0.13432291949596767,
+        "baseline_auprc": 0.13733577757409104,
+        "n_positive": 899,
+        "n_total": 6546
+      },
+      "U2SURP": {
+        "auroc": 0.5037290913251009,
+        "auprc": 0.25699685161987673,
+        "baseline_auprc": 0.25802016498625113,
+        "n_positive": 1689,
+        "n_total": 6546
+      },
+      "RAB4A": {
+        "auroc": 0.5031600250824784,
+        "auprc": 0.039594605832201944,
+        "baseline_auprc": 0.03421937060800489,
+        "n_positive": 224,
+        "n_total": 6546
+      },
+      "HNRNPC": {
+        "auroc": 0.5106129071186258,
+        "auprc": 0.33828149043725353,
+        "baseline_auprc": 0.32981973724411856,
+        "n_positive": 2159,
+        "n_total": 6546
+      },
+      "ASF1B": {
+        "auroc": 0.524151083584863,
+        "auprc": 0.04140784853989232,
+        "baseline_auprc": 0.03712190650779102,
+        "n_positive": 243,
+        "n_total": 6546
+      },
+      "GOLT1B": {
+        "auroc": 0.4996741783273674,
+        "auprc": 0.06012856688560206,
+        "baseline_auprc": 0.061106018942865874,
+        "n_positive": 400,
+        "n_total": 6546
+      },
+      "DHX36": {
+        "auroc": 0.4970634174713901,
+        "auprc": 0.10919705759926976,
+        "baseline_auprc": 0.10876871371830125,
+        "n_positive": 712,
+        "n_total": 6546
+      },
+      "DNAJC8": {
+        "auroc": 0.4933175861167718,
+        "auprc": 0.06340557897762297,
+        "baseline_auprc": 0.06339749465322335,
+        "n_positive": 415,
+        "n_total": 6546
+      },
+      "NUP54": {
+        "auroc": 0.5034549420045604,
+        "auprc": 0.20525681033888635,
+        "baseline_auprc": 0.20012221203788574,
+        "n_positive": 1310,
+        "n_total": 6546
+      },
+      "CENPJ": {
+        "auroc": 0.5010197214223531,
+        "auprc": 0.16699520259571693,
+        "baseline_auprc": 0.1674304919034525,
+        "n_positive": 1096,
+        "n_total": 6546
+      },
+      "MED7": {
+        "auroc": 0.49290350024621066,
+        "auprc": 0.41711486385523106,
+        "baseline_auprc": 0.4227008860372747,
+        "n_positive": 2767,
+        "n_total": 6546
+      },
+      "HARS": {
+        "auroc": 0.501557916467869,
+        "auprc": 0.41635084276962964,
+        "baseline_auprc": 0.4126183929117018,
+        "n_positive": 2701,
+        "n_total": 6546
+      },
+      "SRRT": {
+        "auroc": 0.49739838729402297,
+        "auprc": 0.3824423967330351,
+        "baseline_auprc": 0.38435685915062634,
+        "n_positive": 2516,
+        "n_total": 6546
+      },
+      "DDX41": {
+        "auroc": 0.49166022880436566,
+        "auprc": 0.484097937220746,
+        "baseline_auprc": 0.4891536816376413,
+        "n_positive": 3202,
+        "n_total": 6546
+      },
+      "LTV1": {
+        "auroc": 0.48950490485105214,
+        "auprc": 0.28536624585388737,
+        "baseline_auprc": 0.29055912007332724,
+        "n_positive": 1902,
+        "n_total": 6546
+      },
+      "RPS28": {
+        "auroc": 0.5062987720340661,
+        "auprc": 0.2575969334739485,
+        "baseline_auprc": 0.2520623281393217,
+        "n_positive": 1650,
+        "n_total": 6546
+      },
+      "PRPF18": {
+        "auroc": 0.48819736751112236,
+        "auprc": 0.27629230612799544,
+        "baseline_auprc": 0.282004277421326,
+        "n_positive": 1846,
+        "n_total": 6546
+      },
+      "SUPT6H": {
+        "auroc": 0.5023356338645698,
+        "auprc": 0.5416785579209175,
+        "baseline_auprc": 0.5436908035441491,
+        "n_positive": 3559,
+        "n_total": 6546
+      },
+      "PMF1": {
+        "auroc": 0.49140051593126677,
+        "auprc": 0.09412653271177107,
+        "baseline_auprc": 0.0956309196455851,
+        "n_positive": 626,
+        "n_total": 6546
+      },
+      "AATF": {
+        "auroc": 0.4795316578914761,
+        "auprc": 0.2177842366149612,
+        "baseline_auprc": 0.23128628169874732,
+        "n_positive": 1514,
+        "n_total": 6546
+      },
+      "NAGLU": {
+        "auroc": 0.5330120711562897,
+        "auprc": 0.043288698507877664,
+        "baseline_auprc": 0.03819126183929117,
+        "n_positive": 250,
+        "n_total": 6546
+      },
+      "COPS4": {
+        "auroc": 0.49767122350712045,
+        "auprc": 0.14923823142004525,
+        "baseline_auprc": 0.14772380079437825,
+        "n_positive": 967,
+        "n_total": 6546
+      },
+      "XRCC1": {
+        "auroc": 0.5000967866821525,
+        "auprc": 0.037563440207721024,
+        "baseline_auprc": 0.03758020164986251,
+        "n_positive": 246,
+        "n_total": 6546
+      },
+      "RPL31": {
+        "auroc": 0.4916688504373964,
+        "auprc": 0.41183628419978563,
+        "baseline_auprc": 0.41185456767491596,
+        "n_positive": 2696,
+        "n_total": 6546
+      },
+      "UBA1": {
+        "auroc": 0.5063811097509515,
+        "auprc": 0.3404522537873096,
+        "baseline_auprc": 0.3369996944699053,
+        "n_positive": 2206,
+        "n_total": 6546
+      },
+      "GPN3": {
+        "auroc": 0.5010299180252868,
+        "auprc": 0.3430659937524807,
+        "baseline_auprc": 0.34417965169569203,
+        "n_positive": 2253,
+        "n_total": 6546
+      },
+      "WDR36": {
+        "auroc": 0.49535331016812495,
+        "auprc": 0.21824498384701901,
+        "baseline_auprc": 0.22043996333638863,
+        "n_positive": 1443,
+        "n_total": 6546
+      },
+      "IGBP1": {
+        "auroc": 0.49935770618166175,
+        "auprc": 0.18597142333111258,
+        "baseline_auprc": 0.1882065383440269,
+        "n_positive": 1232,
+        "n_total": 6546
+      },
+      "RPS3": {
+        "auroc": 0.5002135098425425,
+        "auprc": 0.4107164474447565,
+        "baseline_auprc": 0.40635502597005807,
+        "n_positive": 2660,
+        "n_total": 6546
+      },
+      "ACTR8": {
+        "auroc": 0.4871819338422392,
+        "auprc": 0.11685957011360887,
+        "baseline_auprc": 0.12007332722273144,
+        "n_positive": 786,
+        "n_total": 6546
+      }
+    }
+  },
+  "selected_genes": [
+    [
+      "NCBP2",
+      765
+    ],
+    [
+      "SLC39A9",
+      724
+    ],
+    [
+      "DONSON",
+      688
+    ],
+    [
+      "CHMP6",
+      620
+    ],
+    [
+      "CPSF3",
+      575
+    ],
+    [
+      "BUB1",
+      570
+    ],
+    [
+      "MED12",
+      567
+    ],
+    [
+      "MED19",
+      526
+    ],
+    [
+      "NRDE2",
+      495
+    ],
+    [
+      "TSR2",
+      486
+    ],
+    [
+      "TIMM23B",
+      480
+    ],
+    [
+      "ORC1",
+      477
+    ],
+    [
+      "SSRP1",
+      473
+    ],
+    [
+      "PMPCB",
+      471
+    ],
+    [
+      "MED10",
+      454
+    ],
+    [
+      "ARGLU1",
+      442
+    ],
+    [
+      "MZT1",
+      440
+    ],
+    [
+      "LSM6",
+      423
+    ],
+    [
+      "RPL24",
+      414
+    ],
+    [
+      "EIF2B5",
+      412
+    ],
+    [
+      "GTF2H1",
+      409
+    ],
+    [
+      "ATP6V1B2",
+      406
+    ],
+    [
+      "RPS12",
+      400
+    ],
+    [
+      "KRR1",
+      398
+    ],
+    [
+      "NLE1",
+      396
+    ],
+    [
+      "RPS19",
+      389
+    ],
+    [
+      "TRRAP",
+      387
+    ],
+    [
+      "HSPA9",
+      385
+    ],
+    [
+      "QARS",
+      376
+    ],
+    [
+      "CSE1L",
+      373
+    ],
+    [
+      "RPAP2",
+      373
+    ],
+    [
+      "GPS1",
+      372
+    ],
+    [
+      "SUPT5H",
+      367
+    ],
+    [
+      "PSTK",
+      355
+    ],
+    [
+      "BUB3",
+      354
+    ],
+    [
+      "RPL23",
+      354
+    ],
+    [
+      "INTS2",
+      351
+    ],
+    [
+      "ZMAT2",
+      348
+    ],
+    [
+      "EIF4E",
+      347
+    ],
+    [
+      "SLC7A5",
+      344
+    ],
+    [
+      "EIF3H",
+      341
+    ],
+    [
+      "RARS",
+      334
+    ],
+    [
+      "COG2",
+      332
+    ],
+    [
+      "FAM32A",
+      332
+    ],
+    [
+      "SLC1A5",
+      332
+    ],
+    [
+      "WDR3",
+      329
+    ],
+    [
+      "DNAJC19",
+      328
+    ],
+    [
+      "EIF4G1",
+      327
+    ],
+    [
+      "PHB2",
+      327
+    ],
+    [
+      "PSMD4",
+      327
+    ],
+    [
+      "SNRPG",
+      327
+    ],
+    [
+      "GNL2",
+      324
+    ],
+    [
+      "PSMG3",
+      324
+    ],
+    [
+      "WDR4",
+      323
+    ],
+    [
+      "DHX15",
+      313
+    ],
+    [
+      "EIF2B2",
+      307
+    ],
+    [
+      "INTS8",
+      307
+    ],
+    [
+      "NACA",
+      306
+    ],
+    [
+      "DHX16",
+      305
+    ],
+    [
+      "OXA1L",
+      305
+    ],
+    [
+      "CNOT3",
+      303
+    ],
+    [
+      "VPS41",
+      302
+    ],
+    [
+      "EIF2B4",
+      301
+    ],
+    [
+      "LSM2",
+      299
+    ],
+    [
+      "RPL30",
+      299
+    ],
+    [
+      "RIOK1",
+      290
+    ],
+    [
+      "TPX2",
+      289
+    ],
+    [
+      "DLD",
+      283
+    ],
+    [
+      "MED30",
+      283
+    ],
+    [
+      "MED22",
+      279
+    ],
+    [
+      "BDP1",
+      277
+    ],
+    [
+      "U2SURP",
+      275
+    ],
+    [
+      "RAB4A",
+      274
+    ],
+    [
+      "HNRNPC",
+      273
+    ],
+    [
+      "ASF1B",
+      271
+    ],
+    [
+      "GOLT1B",
+      269
+    ],
+    [
+      "DHX36",
+      267
+    ],
+    [
+      "DNAJC8",
+      267
+    ],
+    [
+      "NUP54",
+      266
+    ],
+    [
+      "CENPJ",
+      265
+    ],
+    [
+      "MED7",
+      265
+    ],
+    [
+      "HARS",
+      263
+    ],
+    [
+      "SRRT",
+      260
+    ],
+    [
+      "DDX41",
+      259
+    ],
+    [
+      "LTV1",
+      259
+    ],
+    [
+      "RPS28",
+      257
+    ],
+    [
+      "PRPF18",
+      256
+    ],
+    [
+      "SUPT6H",
+      256
+    ],
+    [
+      "PMF1",
+      255
+    ],
+    [
+      "AATF",
+      254
+    ],
+    [
+      "NAGLU",
+      254
+    ],
+    [
+      "COPS4",
+      253
+    ],
+    [
+      "XRCC1",
+      252
+    ],
+    [
+      "RPL31",
+      251
+    ],
+    [
+      "UBA1",
+      251
+    ],
+    [
+      "GPN3",
+      250
+    ],
+    [
+      "WDR36",
+      250
+    ],
+    [
+      "IGBP1",
+      245
+    ],
+    [
+      "RPS3",
+      243
+    ],
+    [
+      "ACTR8",
+      242
+    ]
+  ],
+  "de_summary": {
+    "NCBP2": {
+      "n_de": 1792,
+      "n_tested": 6546
+    },
+    "SLC39A9": {
+      "n_de": 438,
+      "n_tested": 6546
+    },
+    "DONSON": {
+      "n_de": 768,
+      "n_tested": 6546
+    },
+    "CHMP6": {
+      "n_de": 933,
+      "n_tested": 6546
+    },
+    "CPSF3": {
+      "n_de": 1350,
+      "n_tested": 6546
+    },
+    "BUB1": {
+      "n_de": 258,
+      "n_tested": 6546
+    },
+    "MED12": {
+      "n_de": 2713,
+      "n_tested": 6546
+    },
+    "MED19": {
+      "n_de": 2203,
+      "n_tested": 6546
+    },
+    "NRDE2": {
+      "n_de": 1616,
+      "n_tested": 6546
+    },
+    "TSR2": {
+      "n_de": 2521,
+      "n_tested": 6546
+    },
+    "TIMM23B": {
+      "n_de": 2420,
+      "n_tested": 6546
+    },
+    "ORC1": {
+      "n_de": 585,
+      "n_tested": 6546
+    },
+    "SSRP1": {
+      "n_de": 1933,
+      "n_tested": 6546
+    },
+    "PMPCB": {
+      "n_de": 1651,
+      "n_tested": 6546
+    },
+    "MED10": {
+      "n_de": 1777,
+      "n_tested": 6546
+    },
+    "ARGLU1": {
+      "n_de": 451,
+      "n_tested": 6546
+    },
+    "MZT1": {
+      "n_de": 288,
+      "n_tested": 6546
+    },
+    "LSM6": {
+      "n_de": 2195,
+      "n_tested": 6546
+    },
+    "RPL24": {
+      "n_de": 2101,
+      "n_tested": 6546
+    },
+    "EIF2B5": {
+      "n_de": 2104,
+      "n_tested": 6546
+    },
+    "GTF2H1": {
+      "n_de": 1365,
+      "n_tested": 6546
+    },
+    "ATP6V1B2": {
+      "n_de": 941,
+      "n_tested": 6546
+    },
+    "RPS12": {
+      "n_de": 2094,
+      "n_tested": 6546
+    },
+    "KRR1": {
+      "n_de": 1515,
+      "n_tested": 6546
+    },
+    "NLE1": {
+      "n_de": 1300,
+      "n_tested": 6546
+    },
+    "RPS19": {
+      "n_de": 1971,
+      "n_tested": 6546
+    },
+    "TRRAP": {
+      "n_de": 1468,
+      "n_tested": 6546
+    },
+    "HSPA9": {
+      "n_de": 3176,
+      "n_tested": 6546
+    },
+    "QARS": {
+      "n_de": 2306,
+      "n_tested": 6546
+    },
+    "CSE1L": {
+      "n_de": 2442,
+      "n_tested": 6546
+    },
+    "RPAP2": {
+      "n_de": 2185,
+      "n_tested": 6546
+    },
+    "GPS1": {
+      "n_de": 708,
+      "n_tested": 6546
+    },
+    "SUPT5H": {
+      "n_de": 3551,
+      "n_tested": 6546
+    },
+    "PSTK": {
+      "n_de": 238,
+      "n_tested": 6546
+    },
+    "BUB3": {
+      "n_de": 674,
+      "n_tested": 6546
+    },
+    "RPL23": {
+      "n_de": 2617,
+      "n_tested": 6546
+    },
+    "INTS2": {
+      "n_de": 3169,
+      "n_tested": 6546
+    },
+    "ZMAT2": {
+      "n_de": 1340,
+      "n_tested": 6546
+    },
+    "EIF4E": {
+      "n_de": 1403,
+      "n_tested": 6546
+    },
+    "SLC7A5": {
+      "n_de": 535,
+      "n_tested": 6546
+    },
+    "EIF3H": {
+      "n_de": 1085,
+      "n_tested": 6546
+    },
+    "RARS": {
+      "n_de": 2099,
+      "n_tested": 6546
+    },
+    "COG2": {
+      "n_de": 252,
+      "n_tested": 6546
+    },
+    "FAM32A": {
+      "n_de": 1489,
+      "n_tested": 6546
+    },
+    "SLC1A5": {
+      "n_de": 264,
+      "n_tested": 6546
+    },
+    "WDR3": {
+      "n_de": 1131,
+      "n_tested": 6546
+    },
+    "DNAJC19": {
+      "n_de": 2397,
+      "n_tested": 6546
+    },
+    "EIF4G1": {
+      "n_de": 1127,
+      "n_tested": 6546
+    },
+    "PHB2": {
+      "n_de": 3149,
+      "n_tested": 6546
+    },
+    "PSMD4": {
+      "n_de": 1190,
+      "n_tested": 6546
+    },
+    "SNRPG": {
+      "n_de": 2057,
+      "n_tested": 6546
+    },
+    "GNL2": {
+      "n_de": 1394,
+      "n_tested": 6546
+    },
+    "PSMG3": {
+      "n_de": 323,
+      "n_tested": 6546
+    },
+    "WDR4": {
+      "n_de": 247,
+      "n_tested": 6546
+    },
+    "DHX15": {
+      "n_de": 2713,
+      "n_tested": 6546
+    },
+    "EIF2B2": {
+      "n_de": 2070,
+      "n_tested": 6546
+    },
+    "INTS8": {
+      "n_de": 2493,
+      "n_tested": 6546
+    },
+    "NACA": {
+      "n_de": 2007,
+      "n_tested": 6546
+    },
+    "DHX16": {
+      "n_de": 2843,
+      "n_tested": 6546
+    },
+    "OXA1L": {
+      "n_de": 931,
+      "n_tested": 6546
+    },
+    "CNOT3": {
+      "n_de": 1876,
+      "n_tested": 6546
+    },
+    "VPS41": {
+      "n_de": 256,
+      "n_tested": 6546
+    },
+    "EIF2B4": {
+      "n_de": 2088,
+      "n_tested": 6546
+    },
+    "LSM2": {
+      "n_de": 2501,
+      "n_tested": 6546
+    },
+    "RPL30": {
+      "n_de": 2135,
+      "n_tested": 6546
+    },
+    "RIOK1": {
+      "n_de": 1513,
+      "n_tested": 6546
+    },
+    "TPX2": {
+      "n_de": 631,
+      "n_tested": 6546
+    },
+    "DLD": {
+      "n_de": 1875,
+      "n_tested": 6546
+    },
+    "MED30": {
+      "n_de": 2877,
+      "n_tested": 6546
+    },
+    "MED22": {
+      "n_de": 1982,
+      "n_tested": 6546
+    },
+    "BDP1": {
+      "n_de": 899,
+      "n_tested": 6546
+    },
+    "U2SURP": {
+      "n_de": 1689,
+      "n_tested": 6546
+    },
+    "RAB4A": {
+      "n_de": 224,
+      "n_tested": 6546
+    },
+    "HNRNPC": {
+      "n_de": 2159,
+      "n_tested": 6546
+    },
+    "ASF1B": {
+      "n_de": 243,
+      "n_tested": 6546
+    },
+    "GOLT1B": {
+      "n_de": 400,
+      "n_tested": 6546
+    },
+    "DHX36": {
+      "n_de": 712,
+      "n_tested": 6546
+    },
+    "DNAJC8": {
+      "n_de": 415,
+      "n_tested": 6546
+    },
+    "NUP54": {
+      "n_de": 1310,
+      "n_tested": 6546
+    },
+    "CENPJ": {
+      "n_de": 1096,
+      "n_tested": 6546
+    },
+    "MED7": {
+      "n_de": 2767,
+      "n_tested": 6546
+    },
+    "HARS": {
+      "n_de": 2701,
+      "n_tested": 6546
+    },
+    "SRRT": {
+      "n_de": 2516,
+      "n_tested": 6546
+    },
+    "DDX41": {
+      "n_de": 3202,
+      "n_tested": 6546
+    },
+    "LTV1": {
+      "n_de": 1902,
+      "n_tested": 6546
+    },
+    "RPS28": {
+      "n_de": 1650,
+      "n_tested": 6546
+    },
+    "PRPF18": {
+      "n_de": 1846,
+      "n_tested": 6546
+    },
+    "SUPT6H": {
+      "n_de": 3559,
+      "n_tested": 6546
+    },
+    "PMF1": {
+      "n_de": 626,
+      "n_tested": 6546
+    },
+    "AATF": {
+      "n_de": 1514,
+      "n_tested": 6546
+    },
+    "NAGLU": {
+      "n_de": 250,
+      "n_tested": 6546
+    },
+    "COPS4": {
+      "n_de": 967,
+      "n_tested": 6546
+    },
+    "XRCC1": {
+      "n_de": 246,
+      "n_tested": 6546
+    },
+    "RPL31": {
+      "n_de": 2696,
+      "n_tested": 6546
+    },
+    "UBA1": {
+      "n_de": 2206,
+      "n_tested": 6546
+    },
+    "GPN3": {
+      "n_de": 2253,
+      "n_tested": 6546
+    },
+    "WDR36": {
+      "n_de": 1443,
+      "n_tested": 6546
+    },
+    "IGBP1": {
+      "n_de": 1232,
+      "n_tested": 6546
+    },
+    "RPS3": {
+      "n_de": 2660,
+      "n_tested": 6546
+    },
+    "ACTR8": {
+      "n_de": 786,
+      "n_tested": 6546
+    }
+  },
+  "n_attention_edges": 582610,
+  "n_correlation_edges": 634865
+}

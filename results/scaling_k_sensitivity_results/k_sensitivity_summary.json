@@ -1,0 +1,53 @@
+{
+  "experiment": "scaling_k_sensitivity",
+  "K_values": [
+    20,
+    50,
+    100,
+    200,
+    500
+  ],
+  "degradation_200_to_1000": [
+    {
+      "K": 20,
+      "n_pairs": 9,
+      "n_degrading": 2,
+      "mean_f1_200": 0.0001,
+      "mean_f1_1000": 0.0001
+    },
+    {
+      "K": 50,
+      "n_pairs": 9,
+      "n_degrading": 5,
+      "mean_f1_200": 0.0001,
+      "mean_f1_1000": 0.0001
+    },
+    {
+      "K": 100,
+      "n_pairs": 9,
+      "n_degrading": 5,
+      "mean_f1_200": 0.0001,
+      "mean_f1_1000": 0.0001
+    },
+    {
+      "K": 200,
+      "n_pairs": 9,
+      "n_degrading": 8,
+      "mean_f1_200": 0.0001,
+      "mean_f1_1000": 0.0001
+    },
+    {
+      "K": 500,
+      "n_pairs": 9,
+      "n_degrading": 5,
+      "mean_f1_200": 0.0001,
+      "mean_f1_1000": 0.0001
+    }
+  ],
+  "continuous_auroc": {
+    "mean_200": 0.8575,
+    "mean_1000": 0.9247,
+    "n_degrade": 0,
+    "n_pairs": 9
+  }
+}

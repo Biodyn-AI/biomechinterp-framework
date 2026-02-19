@@ -1,0 +1,186 @@
+{
+  "experiment": "round13_non_k562_replication",
+  "dataset": "TianKampmann2021",
+  "cell_type": "iPSC-derived neurons",
+  "perturbation_modality": "CRISPRi",
+  "description": "Tian et al. 2021 \u2014 iPSC-induced glutamatergic neurons",
+  "n_cells_total": 32300,
+  "n_control_cells_used": 437,
+  "n_hvg": 2172,
+  "n_genes_with_tokens": 1407,
+  "primary_lfc_threshold": 0.1,
+  "n_evaluable_perturbations": 7,
+  "evaluable_perturbations": [
+    "AMFR",
+    "DCTN1",
+    "NDUFA2",
+    "RFC3",
+    "SH3RF1",
+    "TRAP1",
+    "VAPB"
+  ],
+  "eval_layers": [
+    6,
+    13,
+    15,
+    18
+  ],
+  "results_by_layer": {
+    "5": {
+      "layer_1indexed": 6,
+      "n_evaluated": 7,
+      "attention": {
+        "mean_auroc": 0.5351,
+        "std_auroc": 0.0452,
+        "median_auroc": 0.5205,
+        "mean_auprc": 0.0299,
+        "std_auprc": 0.0413
+      },
+      "correlation": {
+        "mean_auroc": 0.4754,
+        "std_auroc": 0.0669,
+        "median_auroc": 0.4551,
+        "mean_auprc": 0.0284,
+        "std_auprc": 0.0447
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.078125,
+        "paired_t_p": 0.101689,
+        "mean_diff_auroc": 0.0597,
+        "mean_diff_auprc": 0.0015,
+        "cohens_d": 0.7884,
+        "n_attn_better": 5,
+        "n_corr_better": 2,
+        "ci_95_auroc": [
+          -0.06,
+          0.1267
+        ],
+        "bootstrap_ci_95": [
+          0.0081,
+          0.1096
+        ]
+      }
+    },
+    "12": {
+      "layer_1indexed": 13,
+      "n_evaluated": 7,
+      "attention": {
+        "mean_auroc": 0.5361,
+        "std_auroc": 0.0446,
+        "median_auroc": 0.5182,
+        "mean_auprc": 0.0313,
+        "std_auprc": 0.0377
+      },
+      "correlation": {
+        "mean_auroc": 0.4754,
+        "std_auroc": 0.0669,
+        "median_auroc": 0.4551,
+        "mean_auprc": 0.0284,
+        "std_auprc": 0.0447
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.078125,
+        "paired_t_p": 0.079592,
+        "mean_diff_auroc": 0.0606,
+        "mean_diff_auprc": 0.0029,
+        "cohens_d": 0.8606,
+        "n_attn_better": 5,
+        "n_corr_better": 2,
+        "ci_95_auroc": [
+          -0.0688,
+          0.1126
+        ],
+        "bootstrap_ci_95": [
+          0.0015,
+          0.1058
+        ]
+      }
+    },
+    "14": {
+      "layer_1indexed": 15,
+      "n_evaluated": 7,
+      "attention": {
+        "mean_auroc": 0.5333,
+        "std_auroc": 0.0447,
+        "median_auroc": 0.5128,
+        "mean_auprc": 0.0297,
+        "std_auprc": 0.0415
+      },
+      "correlation": {
+        "mean_auroc": 0.4754,
+        "std_auroc": 0.0669,
+        "median_auroc": 0.4551,
+        "mean_auprc": 0.0284,
+        "std_auprc": 0.0447
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.078125,
+        "paired_t_p": 0.098048,
+        "mean_diff_auroc": 0.0579,
+        "mean_diff_auprc": 0.0013,
+        "cohens_d": 0.7991,
+        "n_attn_better": 5,
+        "n_corr_better": 2,
+        "ci_95_auroc": [
+          -0.0613,
+          0.1253
+        ],
+        "bootstrap_ci_95": [
+          -0.0022,
+          0.1066
+        ]
+      }
+    },
+    "17": {
+      "layer_1indexed": 18,
+      "n_evaluated": 7,
+      "attention": {
+        "mean_auroc": 0.5338,
+        "std_auroc": 0.0448,
+        "median_auroc": 0.5145,
+        "mean_auprc": 0.0302,
+        "std_auprc": 0.0419
+      },
+      "correlation": {
+        "mean_auroc": 0.4754,
+        "std_auroc": 0.0669,
+        "median_auroc": 0.4551,
+        "mean_auprc": 0.0284,
+        "std_auprc": 0.0447
+      },
+      "attn_vs_corr": {
+        "wilcoxon_p": 0.078125,
+        "paired_t_p": 0.113125,
+        "mean_diff_auroc": 0.0584,
+        "mean_diff_auprc": 0.0018,
+        "cohens_d": 0.757,
+        "n_attn_better": 5,
+        "n_corr_better": 2,
+        "ci_95_auroc": [
+          -0.0622,
+          0.133
+        ],
+        "bootstrap_ci_95": [
+          -0.0014,
+          0.1089
+        ]
+      }
+    }
+  },
+  "threshold_comparison": [
+    {
+      "lfc_threshold": 0.1,
+      "n_evaluable": 7,
+      "attn_mean": 0.5333,
+      "corr_mean": 0.4754,
+      "diff": 0.0579
+    }
+  ],
+  "power_analysis": {
+    "n_evaluable": 7,
+    "min_detectable_d": 1.0589,
+    "alpha": 0.05,
+    "power": 0.8
+  },
+  "total_time_seconds": 160.3
+}

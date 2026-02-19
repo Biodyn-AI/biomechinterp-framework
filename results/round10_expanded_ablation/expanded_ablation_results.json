@@ -1,0 +1,1325 @@
+{
+  "experiment": "round10_expanded_ablation",
+  "n_conditions": 13,
+  "n_layers": 18,
+  "n_heads": 18,
+  "extract_layer": 12,
+  "conditions": {
+    "baseline": {
+      "description": "Full model (no ablation)",
+      "ablated_heads": [],
+      "n_ablated": 0,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.147,
+      "median_auroc_attn": 0.6894,
+      "mean_auroc_corr": 0.7026,
+      "source": "round9",
+      "n_per_gene": 280
+    },
+    "regulatory_top5": {
+      "description": "Ablate top-5 TRRUST-ranked heads",
+      "ablated_heads": [
+        [
+          1,
+          11
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "n_ablated": 5,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7037,
+      "std_auroc_attn": 0.1469,
+      "median_auroc_attn": 0.6877,
+      "mean_auroc_corr": 0.7026,
+      "source": "round9",
+      "n_per_gene": 280
+    },
+    "regulatory_top10": {
+      "description": "Ablate top-10 TRRUST-ranked heads",
+      "ablated_heads": [
+        [
+          1,
+          11
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          16,
+          12
+        ],
+        [
+          15,
+          14
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          17,
+          11
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "n_ablated": 10,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.1468,
+      "median_auroc_attn": 0.6871,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "regulatory_top20": {
+      "description": "Ablate top-20 TRRUST-ranked heads",
+      "ablated_heads": [
+        [
+          1,
+          11
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          16,
+          12
+        ],
+        [
+          15,
+          14
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          17,
+          11
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          15,
+          13
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          15,
+          9
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          16,
+          11
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "n_ablated": 20,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7032,
+      "std_auroc_attn": 0.1469,
+      "median_auroc_attn": 0.6889,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "regulatory_top50": {
+      "description": "Ablate top-50 TRRUST-ranked heads",
+      "ablated_heads": [
+        [
+          1,
+          11
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          16,
+          12
+        ],
+        [
+          15,
+          14
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          17,
+          11
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          15,
+          13
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          15,
+          9
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          16,
+          11
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          16,
+          7
+        ],
+        [
+          16,
+          4
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          15,
+          11
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          6,
+          17
+        ],
+        [
+          7,
+          16
+        ],
+        [
+          15,
+          12
+        ],
+        [
+          16,
+          3
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          16,
+          10
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          17,
+          8
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          14,
+          5
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          12,
+          17
+        ]
+      ],
+      "n_ablated": 50,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7014,
+      "std_auroc_attn": 0.1457,
+      "median_auroc_attn": 0.682,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "bottom_5": {
+      "description": "Ablate bottom-5 TRRUST-ranked heads",
+      "ablated_heads": [
+        [
+          2,
+          16
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "n_ablated": 5,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7061,
+      "std_auroc_attn": 0.1453,
+      "median_auroc_attn": 0.6916,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "bottom_10": {
+      "description": "Ablate bottom-10 TRRUST-ranked heads",
+      "ablated_heads": [
+        [
+          2,
+          16
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          5,
+          14
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          17,
+          3
+        ],
+        [
+          9,
+          1
+        ]
+      ],
+      "n_ablated": 10,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7065,
+      "std_auroc_attn": 0.144,
+      "median_auroc_attn": 0.6875,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "composite_top5": {
+      "description": "Ablate top-5 by TRRUST\u00d7layer_AUROC composite",
+      "ablated_heads": [
+        [
+          16,
+          8
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          14,
+          0
+        ]
+      ],
+      "n_ablated": 5,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.147,
+      "median_auroc_attn": 0.6894,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "composite_top10": {
+      "description": "Ablate top-10 by TRRUST\u00d7layer_AUROC composite",
+      "ablated_heads": [
+        [
+          16,
+          8
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          16,
+          12
+        ],
+        [
+          15,
+          14
+        ],
+        [
+          15,
+          13
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          15,
+          9
+        ]
+      ],
+      "n_ablated": 10,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.147,
+      "median_auroc_attn": 0.6894,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "layer_L14_all": {
+      "description": "Ablate all 18 heads in L14 (best perturbation-first layer)",
+      "ablated_heads": [
+        [
+          14,
+          0
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          14,
+          5
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          14,
+          8
+        ],
+        [
+          14,
+          9
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          14,
+          11
+        ],
+        [
+          14,
+          12
+        ],
+        [
+          14,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          14,
+          17
+        ]
+      ],
+      "n_ablated": 18,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.147,
+      "median_auroc_attn": 0.6894,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "random_10": {
+      "description": "Ablate 10 random heads (control)",
+      "ablated_heads": [
+        [
+          11,
+          5
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          17,
+          6
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          2,
+          17
+        ]
+      ],
+      "n_ablated": 10,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7007,
+      "std_auroc_attn": 0.1483,
+      "median_auroc_attn": 0.6824,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "random_20": {
+      "description": "Ablate 20 random heads (control)",
+      "ablated_heads": [
+        [
+          12,
+          3
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          3,
+          17
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "n_ablated": 20,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.6965,
+      "std_auroc_attn": 0.148,
+      "median_auroc_attn": 0.6798,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    },
+    "random_50": {
+      "description": "Ablate 50 random heads (control)",
+      "ablated_heads": [
+        [
+          10,
+          13
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          15,
+          4
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          15,
+          9
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          15,
+          8
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          16,
+          11
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          6,
+          17
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          14,
+          13
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          10,
+          15
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          17,
+          2
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          17,
+          6
+        ],
+        [
+          17,
+          4
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          15,
+          11
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "n_ablated": 50,
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7033,
+      "std_auroc_attn": 0.1434,
+      "median_auroc_attn": 0.6817,
+      "mean_auroc_corr": 0.7026,
+      "source": "round10",
+      "n_per_gene": 280
+    }
+  },
+  "comparisons": {
+    "regulatory_top5": {
+      "n_compared": 280,
+      "mean_drop": -0.0002,
+      "std_drop": 0.0035,
+      "median_drop": -0.0,
+      "wilcoxon_p": 0.24403341282733404,
+      "ttest_p": 0.3203324681859122,
+      "cohens_d": -0.0596,
+      "n_baseline_better": 128,
+      "n_ablation_better": 140,
+      "ci_95": [
+        -0.0072,
+        0.0068
+      ]
+    },
+    "regulatory_top10": {
+      "n_compared": 280,
+      "mean_drop": 0.0,
+      "std_drop": 0.0044,
+      "median_drop": 0.0,
+      "wilcoxon_p": 0.9373820393759283,
+      "ttest_p": 0.9411957835238055,
+      "cohens_d": 0.0044,
+      "n_baseline_better": 133,
+      "n_ablation_better": 130,
+      "ci_95": [
+        -0.0089,
+        0.0098
+      ]
+    },
+    "regulatory_top20": {
+      "n_compared": 280,
+      "mean_drop": 0.0003,
+      "std_drop": 0.0201,
+      "median_drop": 0.0003,
+      "wilcoxon_p": 0.5956376716259649,
+      "ttest_p": 0.7842061683956432,
+      "cohens_d": 0.0164,
+      "n_baseline_better": 140,
+      "n_ablation_better": 128,
+      "ci_95": [
+        -0.0418,
+        0.0416
+      ]
+    },
+    "regulatory_top50": {
+      "n_compared": 280,
+      "mean_drop": 0.0021,
+      "std_drop": 0.0265,
+      "median_drop": 0.0012,
+      "wilcoxon_p": 0.09987803262832037,
+      "ttest_p": 0.1818834491989246,
+      "cohens_d": 0.0801,
+      "n_baseline_better": 147,
+      "n_ablation_better": 122,
+      "ci_95": [
+        -0.055,
+        0.0543
+      ]
+    },
+    "bottom_5": {
+      "n_compared": 280,
+      "mean_drop": -0.0025,
+      "std_drop": 0.016,
+      "median_drop": -0.0016,
+      "wilcoxon_p": 0.00527956498600284,
+      "ttest_p": 0.009061635146494617,
+      "cohens_d": -0.1573,
+      "n_baseline_better": 112,
+      "n_ablation_better": 155,
+      "ci_95": [
+        -0.0375,
+        0.0356
+      ]
+    },
+    "bottom_10": {
+      "n_compared": 280,
+      "mean_drop": -0.003,
+      "std_drop": 0.0221,
+      "median_drop": -0.001,
+      "wilcoxon_p": 0.05023407534898087,
+      "ttest_p": 0.023831358322221736,
+      "cohens_d": -0.136,
+      "n_baseline_better": 116,
+      "n_ablation_better": 150,
+      "ci_95": [
+        -0.0528,
+        0.0389
+      ]
+    },
+    "composite_top5": {
+      "n_compared": 280,
+      "mean_drop": 0.0,
+      "std_drop": 0.0,
+      "median_drop": 0.0,
+      "wilcoxon_p": NaN,
+      "ttest_p": NaN,
+      "cohens_d": 0.0,
+      "n_baseline_better": 0,
+      "n_ablation_better": 0,
+      "ci_95": [
+        0.0,
+        0.0
+      ]
+    },
+    "composite_top10": {
+      "n_compared": 280,
+      "mean_drop": 0.0,
+      "std_drop": 0.0,
+      "median_drop": 0.0,
+      "wilcoxon_p": NaN,
+      "ttest_p": NaN,
+      "cohens_d": 0.0,
+      "n_baseline_better": 0,
+      "n_ablation_better": 0,
+      "ci_95": [
+        0.0,
+        0.0
+      ]
+    },
+    "layer_L14_all": {
+      "n_compared": 280,
+      "mean_drop": 0.0,
+      "std_drop": 0.0,
+      "median_drop": 0.0,
+      "wilcoxon_p": NaN,
+      "ttest_p": NaN,
+      "cohens_d": 0.0,
+      "n_baseline_better": 0,
+      "n_ablation_better": 0,
+      "ci_95": [
+        0.0,
+        0.0
+      ]
+    },
+    "random_10": {
+      "n_compared": 280,
+      "mean_drop": 0.0029,
+      "std_drop": 0.0159,
+      "median_drop": 0.0003,
+      "wilcoxon_p": 0.009010496971489495,
+      "ttest_p": 0.0027758080006932955,
+      "cohens_d": 0.1807,
+      "n_baseline_better": 142,
+      "n_ablation_better": 127,
+      "ci_95": [
+        -0.0287,
+        0.0367
+      ]
+    },
+    "random_20": {
+      "n_compared": 280,
+      "mean_drop": 0.0071,
+      "std_drop": 0.0215,
+      "median_drop": 0.0046,
+      "wilcoxon_p": 1.0943655835862814e-08,
+      "ttest_p": 9.939460065224043e-08,
+      "cohens_d": 0.3276,
+      "n_baseline_better": 172,
+      "n_ablation_better": 97,
+      "ci_95": [
+        -0.0333,
+        0.0533
+      ]
+    },
+    "random_50": {
+      "n_compared": 280,
+      "mean_drop": 0.0002,
+      "std_drop": 0.0349,
+      "median_drop": 0.0,
+      "wilcoxon_p": 0.35100956153872076,
+      "ttest_p": 0.9061537442051579,
+      "cohens_d": 0.0071,
+      "n_baseline_better": 137,
+      "n_ablation_better": 131,
+      "ci_95": [
+        -0.0844,
+        0.0664
+      ]
+    }
+  },
+  "dose_response": [
+    {
+      "k": 5,
+      "regulatory_auroc": 0.7037,
+      "regulatory_drop": -0.0002,
+      "random_auroc": null,
+      "random_drop": null
+    },
+    {
+      "k": 10,
+      "regulatory_auroc": 0.7035,
+      "regulatory_drop": 0.0,
+      "random_auroc": 0.7007,
+      "random_drop": 0.0029
+    },
+    {
+      "k": 20,
+      "regulatory_auroc": 0.7032,
+      "regulatory_drop": 0.0003,
+      "random_auroc": 0.6965,
+      "random_drop": 0.0071
+    },
+    {
+      "k": 50,
+      "regulatory_auroc": 0.7014,
+      "regulatory_drop": 0.0021,
+      "random_auroc": 0.7033,
+      "random_drop": 0.0002
+    }
+  ],
+  "head_rankings": {
+    "top5_trrust": [
+      [
+        1,
+        11,
+        0.7461584521465139
+      ],
+      [
+        16,
+        8,
+        0.7301379588937779
+      ],
+      [
+        2,
+        14,
+        0.7084365469869389
+      ],
+      [
+        14,
+        17,
+        0.7073002178059833
+      ],
+      [
+        15,
+        17,
+        0.7014490665513806
+      ]
+    ],
+    "top5_composite": [
+      [
+        16,
+        8,
+        0.5300528903289093
+      ],
+      [
+        14,
+        17,
+        0.5255196789909097
+      ],
+      [
+        14,
+        7,
+        0.5154155190359406
+      ],
+      [
+        15,
+        17,
+        0.5119329245097094
+      ],
+      [
+        14,
+        0,
+        0.5107302070882827
+      ]
+    ],
+    "bottom5_trrust": [
+      [
+        2,
+        16,
+        0.3448358796617188
+      ],
+      [
+        9,
+        10,
+        0.40210471660104063
+      ],
+      [
+        12,
+        4,
+        0.41280752494106193
+      ],
+      [
+        1,
+        8,
+        0.4193048943634828
+      ],
+      [
+        0,
+        6,
+        0.422221980737703
+      ]
+    ]
+  },
+  "total_time_seconds": 19636.0
+}

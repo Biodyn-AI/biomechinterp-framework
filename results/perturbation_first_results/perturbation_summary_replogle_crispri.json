@@ -1,0 +1,19 @@
+{
+  "experiment": "perturbation_first_validation",
+  "dataset": "replogle_crispri",
+  "n_tfs_evaluated": 44,
+  "mean_auroc": 0.5111,
+  "median_auroc": 0.503,
+  "std_auroc": 0.0738,
+  "mean_fold_enrichment": 1.2956,
+  "ttest_vs_0.5": {
+    "t": 1.0013,
+    "p": 0.3222655546247538
+  },
+  "wilcoxon_vs_0.5": {
+    "stat": 542.0,
+    "p": 0.29540122026969584
+  },
+  "n_tfs_above_0.5": 22,
+  "n_tfs_below_0.5": 22
+}

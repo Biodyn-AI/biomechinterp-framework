@@ -1,0 +1,210 @@
+{
+  "experiment": "round11_multiplicity_sensitivity",
+  "n_analyses": 33,
+  "n_total_tests": 136,
+  "n_confirmatory": 90,
+  "n_descriptive": 46,
+  "classification_rule": "is_confirmatory = (p_value is not None)",
+  "families": {
+    "A_confirmatory": {
+      "description": "Current: all confirmatory",
+      "n_tests": 90,
+      "n_significant": 59
+    },
+    "B_maximal": {
+      "description": "Maximal: all 138 (descriptive p=1)",
+      "n_tests": 136,
+      "n_significant": 53
+    },
+    "C_analysis_level": {
+      "description": "Analysis-level: one primary per analysis",
+      "n_tests": 27,
+      "n_significant": 19
+    }
+  },
+  "stability": {
+    "n_headlines_tested": 17,
+    "n_stable": 11,
+    "pct_stable": 64.7,
+    "unstable_headlines": [
+      "Scaling degradation (Wilcoxon)",
+      "Cross-tissue immune-kidney",
+      "CSSI outperforms pooled",
+      "Trivial baseline: TF degree",
+      "L15 split-sample validation",
+      "Expanded ablation random-20"
+    ]
+  },
+  "stability_table": [
+    {
+      "headline": "Scaling degradation (Sign, TRRUST)",
+      "matched_test_ids": [
+        1
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": true,
+      "stable": true
+    },
+    {
+      "headline": "Scaling degradation (Wilcoxon)",
+      "matched_test_ids": [
+        2
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": false,
+      "stable": false
+    },
+    {
+      "headline": "Mediation bias lower bound",
+      "matched_test_ids": [
+        6
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": true,
+      "stable": true
+    },
+    {
+      "headline": "Detectability theory r=0.887",
+      "matched_test_ids": [
+        8
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": true,
+      "stable": true
+    },
+    {
+      "headline": "Cross-tissue immune-kidney",
+      "matched_test_ids": [
+        10
+      ],
+      "sig_A": true,
+      "sig_B": false,
+      "sig_C": true,
+      "stable": false
+    },
+    {
+      "headline": "CSSI outperforms pooled",
+      "matched_test_ids": [
+        44
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": false,
+      "stable": false
+    },
+    {
+      "headline": "Trivial baseline: variance",
+      "matched_test_ids": [
+        84
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": true,
+      "stable": true
+    },
+    {
+      "headline": "Trivial baseline: TF degree",
+      "matched_test_ids": [
+        87
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": false,
+      "stable": false
+    },
+    {
+      "headline": "Attn vs Corr CRISPRi L13",
+      "matched_test_ids": [
+        90
+      ],
+      "sig_A": false,
+      "sig_B": false,
+      "sig_C": false,
+      "stable": true
+    },
+    {
+      "headline": "L15 vs Corr raw",
+      "matched_test_ids": [
+        92
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": true,
+      "stable": true
+    },
+    {
+      "headline": "L15 split-sample validation",
+      "matched_test_ids": [
+        93
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": false,
+      "stable": false
+    },
+    {
+      "headline": "CRISPRa L13 Attn < Corr",
+      "matched_test_ids": [
+        106
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": true,
+      "stable": true
+    },
+    {
+      "headline": "Reg heads ablation null",
+      "matched_test_ids": [
+        109
+      ],
+      "sig_A": false,
+      "sig_B": false,
+      "sig_C": false,
+      "stable": true
+    },
+    {
+      "headline": "Nested CV L15 pooled",
+      "matched_test_ids": [
+        114
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": true,
+      "stable": true
+    },
+    {
+      "headline": "Expanded ablation reg-top5",
+      "matched_test_ids": [
+        124
+      ],
+      "sig_A": false,
+      "sig_B": false,
+      "sig_C": false,
+      "stable": true
+    },
+    {
+      "headline": "Expanded ablation random-20",
+      "matched_test_ids": [
+        131
+      ],
+      "sig_A": true,
+      "sig_B": true,
+      "sig_C": false,
+      "stable": false
+    },
+    {
+      "headline": "T-cell L15 Attn vs Corr",
+      "matched_test_ids": [
+        135
+      ],
+      "sig_A": false,
+      "sig_B": false,
+      "sig_C": false,
+      "stable": true
+    }
+  ]
+}

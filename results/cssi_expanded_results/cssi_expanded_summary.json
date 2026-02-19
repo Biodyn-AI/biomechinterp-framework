@@ -1,0 +1,54 @@
+{
+  "experiment": "cssi_expanded_null_and_baseline",
+  "null_inflation": {
+    "K=2": {
+      "oracle": 1.0,
+      "shuffled": 1.0,
+      "random": 0.9999,
+      "pooled": 1.0
+    },
+    "K=3": {
+      "oracle": 1.0,
+      "shuffled": 0.9972,
+      "random": 0.9994,
+      "pooled": 0.9998
+    },
+    "K=5": {
+      "oracle": 0.9998,
+      "shuffled": 0.9807,
+      "random": 0.9741,
+      "pooled": 0.9979
+    },
+    "K=8": {
+      "oracle": 1.0,
+      "shuffled": 0.9487,
+      "random": 0.9581,
+      "pooled": 0.9909
+    },
+    "K=10": {
+      "oracle": 0.9999,
+      "shuffled": 0.9305,
+      "random": 0.9194,
+      "pooled": 0.9906
+    },
+    "K=15": {
+      "oracle": 1.0,
+      "shuffled": 0.867,
+      "random": 0.8561,
+      "pooled": 0.9688
+    },
+    "K=20": {
+      "oracle": 1.0,
+      "shuffled": 0.7711,
+      "random": 0.7803,
+      "pooled": 0.966
+    }
+  },
+  "cssi_vs_scenic": {
+    "cssi_max": 0.9999,
+    "cssi_mean": 0.9962,
+    "scenic_style": 0.9962,
+    "pooled": 0.9948
+  },
+  "fdr_control": {}
+}

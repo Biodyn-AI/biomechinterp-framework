@@ -1,0 +1,20 @@
+{
+  "pooled_auroc": 0.5353843859689589,
+  "cssi_max_auroc": 0.5343963995403188,
+  "cssi_mean_auroc": 0.4179866949091901,
+  "n_cells": 500,
+  "n_cell_types": 9,
+  "cell_type_counts": {
+    "GABAergic interneuron": 40,
+    "astrocyte": 35,
+    "glutamatergic neuron": 113,
+    "macrophage": 1,
+    "microglial cell": 11,
+    "mural cell": 2,
+    "oligodendrocyte": 234,
+    "oligodendrocyte precursor cell": 27,
+    "pvalb GABAergic cortical interneuron": 37
+  },
+  "n_trrust_positives": 184,
+  "n_edges_evaluated": 6533560
+}

@@ -1,0 +1,160 @@
+{
+  "n_perturbations": 280,
+  "correlation_baseline": {
+    "mean_auroc": 0.7026,
+    "std_auroc": 0.1642
+  },
+  "per_layer": {
+    "0": {
+      "layer_1indexed": 1,
+      "mean_auroc": 0.4654,
+      "std_auroc": 0.1506,
+      "median_auroc": 0.4474,
+      "diff_vs_corr": -0.2372,
+      "wilcoxon_p_vs_corr": 0.0
+    },
+    "1": {
+      "layer_1indexed": 2,
+      "mean_auroc": 0.566,
+      "std_auroc": 0.1246,
+      "median_auroc": 0.57,
+      "diff_vs_corr": -0.1366,
+      "wilcoxon_p_vs_corr": 0.0
+    },
+    "2": {
+      "layer_1indexed": 3,
+      "mean_auroc": 0.6352,
+      "std_auroc": 0.1199,
+      "median_auroc": 0.6328,
+      "diff_vs_corr": -0.0673,
+      "wilcoxon_p_vs_corr": 0.0
+    },
+    "3": {
+      "layer_1indexed": 4,
+      "mean_auroc": 0.6325,
+      "std_auroc": 0.1231,
+      "median_auroc": 0.625,
+      "diff_vs_corr": -0.07,
+      "wilcoxon_p_vs_corr": 0.0
+    },
+    "4": {
+      "layer_1indexed": 5,
+      "mean_auroc": 0.7077,
+      "std_auroc": 0.141,
+      "median_auroc": 0.6917,
+      "diff_vs_corr": 0.0052,
+      "wilcoxon_p_vs_corr": 0.449318
+    },
+    "5": {
+      "layer_1indexed": 6,
+      "mean_auroc": 0.7051,
+      "std_auroc": 0.1447,
+      "median_auroc": 0.6819,
+      "diff_vs_corr": 0.0025,
+      "wilcoxon_p_vs_corr": 0.760156
+    },
+    "6": {
+      "layer_1indexed": 7,
+      "mean_auroc": 0.6778,
+      "std_auroc": 0.1285,
+      "median_auroc": 0.6602,
+      "diff_vs_corr": -0.0247,
+      "wilcoxon_p_vs_corr": 0.017439
+    },
+    "7": {
+      "layer_1indexed": 8,
+      "mean_auroc": 0.657,
+      "std_auroc": 0.1142,
+      "median_auroc": 0.6491,
+      "diff_vs_corr": -0.0456,
+      "wilcoxon_p_vs_corr": 4.7e-05
+    },
+    "8": {
+      "layer_1indexed": 9,
+      "mean_auroc": 0.6671,
+      "std_auroc": 0.138,
+      "median_auroc": 0.6439,
+      "diff_vs_corr": -0.0354,
+      "wilcoxon_p_vs_corr": 0.00039
+    },
+    "9": {
+      "layer_1indexed": 10,
+      "mean_auroc": 0.6047,
+      "std_auroc": 0.1024,
+      "median_auroc": 0.6002,
+      "diff_vs_corr": -0.0978,
+      "wilcoxon_p_vs_corr": 0.0
+    },
+    "10": {
+      "layer_1indexed": 11,
+      "mean_auroc": 0.6178,
+      "std_auroc": 0.1334,
+      "median_auroc": 0.5936,
+      "diff_vs_corr": -0.0848,
+      "wilcoxon_p_vs_corr": 0.0
+    },
+    "11": {
+      "layer_1indexed": 12,
+      "mean_auroc": 0.6931,
+      "std_auroc": 0.1375,
+      "median_auroc": 0.68,
+      "diff_vs_corr": -0.0095,
+      "wilcoxon_p_vs_corr": 0.176733
+    },
+    "12": {
+      "layer_1indexed": 13,
+      "mean_auroc": 0.7035,
+      "std_auroc": 0.147,
+      "median_auroc": 0.6894,
+      "diff_vs_corr": 0.001,
+      "wilcoxon_p_vs_corr": 0.726147
+    },
+    "13": {
+      "layer_1indexed": 14,
+      "mean_auroc": 0.6942,
+      "std_auroc": 0.1381,
+      "median_auroc": 0.6727,
+      "diff_vs_corr": -0.0084,
+      "wilcoxon_p_vs_corr": 0.196906
+    },
+    "14": {
+      "layer_1indexed": 15,
+      "mean_auroc": 0.743,
+      "std_auroc": 0.1387,
+      "median_auroc": 0.7233,
+      "diff_vs_corr": 0.0404,
+      "wilcoxon_p_vs_corr": 0.000933
+    },
+    "15": {
+      "layer_1indexed": 16,
+      "mean_auroc": 0.7298,
+      "std_auroc": 0.1397,
+      "median_auroc": 0.7071,
+      "diff_vs_corr": 0.0273,
+      "wilcoxon_p_vs_corr": 0.065371
+    },
+    "16": {
+      "layer_1indexed": 17,
+      "mean_auroc": 0.726,
+      "std_auroc": 0.1406,
+      "median_auroc": 0.71,
+      "diff_vs_corr": 0.0234,
+      "wilcoxon_p_vs_corr": 0.110887
+    },
+    "17": {
+      "layer_1indexed": 18,
+      "mean_auroc": 0.708,
+      "std_auroc": 0.1565,
+      "median_auroc": 0.6946,
+      "diff_vs_corr": 0.0054,
+      "wilcoxon_p_vs_corr": 0.750069
+    }
+  },
+  "split_sample": {
+    "discovery_best_layer": 14,
+    "discovery_best_auroc": 0.7362,
+    "validation_best_auroc": 0.7498,
+    "validation_corr_auroc": 0.7051,
+    "validation_wilcoxon_p": 0.017234
+  }
+}

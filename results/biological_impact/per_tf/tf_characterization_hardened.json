@@ -1,0 +1,340 @@
+{
+  "all_tests": [
+    {
+      "test": "master_vs_other_auroc_all18",
+      "description": "Master regulators vs other TFs (all 18)",
+      "observed_statistic": 0.2198155036986683,
+      "parametric_p": 0.017034597572071965,
+      "permutation_p": 0.0110988901109889,
+      "n": 18,
+      "alternative": "greater",
+      "raw_p": 0.0110988901109889,
+      "bh_adjusted_p": 0.1220877912208779,
+      "significant_after_bh": false
+    },
+    {
+      "test": "master_vs_other_auroc_robust",
+      "description": "Master vs other (\u22653 evaluable targets only)",
+      "observed_statistic": 0.1296444187004827,
+      "permutation_p": 0.2967703229677032,
+      "n": 5,
+      "alternative": "greater",
+      "raw_p": 0.2967703229677032,
+      "bh_adjusted_p": 0.5261797026502908,
+      "significant_after_bh": false
+    },
+    {
+      "test": "master_vs_other_auroc_multi",
+      "description": "Master vs other (\u22652 targets only)",
+      "observed_statistic": 0.20206068184560588,
+      "permutation_p": 0.09099090090990901,
+      "n": 8,
+      "alternative": "greater",
+      "raw_p": 0.09099090090990901,
+      "bh_adjusted_p": 0.33363330333633306,
+      "significant_after_bh": false
+    },
+    {
+      "test": "fisher_master_x_success",
+      "description": "Fisher exact: master regulator \u00d7 successful",
+      "observed_statistic": 4.375,
+      "parametric_p": 0.33484162895927594,
+      "n": 18,
+      "alternative": "two-sided",
+      "raw_p": 0.33484162895927594,
+      "bh_adjusted_p": 0.5261797026502908,
+      "significant_after_bh": false
+    },
+    {
+      "test": "auroc_vs_full_regulon",
+      "description": "Spearman: AUROC vs full regulon size",
+      "observed_statistic": 0.24392794174399174,
+      "parametric_p": 0.3293402784176245,
+      "n": 18,
+      "alternative": "two-sided",
+      "raw_p": 0.3293402784176245,
+      "bh_adjusted_p": 0.5261797026502908,
+      "significant_after_bh": false
+    },
+    {
+      "test": "auroc_vs_evaluable_regulon",
+      "description": "Spearman: AUROC vs evaluable regulon size",
+      "observed_statistic": 0.4494122147591722,
+      "parametric_p": 0.061335620062926276,
+      "n": 18,
+      "alternative": "two-sided",
+      "raw_p": 0.061335620062926276,
+      "bh_adjusted_p": 0.33363330333633306,
+      "significant_after_bh": false
+    },
+    {
+      "test": "auroc_vs_mean_expr",
+      "description": "Spearman: auroc_vs_mean_expr",
+      "observed_statistic": 0.1331269349845201,
+      "parametric_p": 0.5984607651208833,
+      "n": 18,
+      "alternative": "two-sided",
+      "raw_p": 0.5984607651208833,
+      "bh_adjusted_p": 0.6583068416329717,
+      "significant_after_bh": false
+    },
+    {
+      "test": "auroc_vs_variance",
+      "description": "Spearman: auroc_vs_variance",
+      "observed_statistic": 0.20123839009287925,
+      "parametric_p": 0.42328766928815786,
+      "n": 18,
+      "alternative": "two-sided",
+      "raw_p": 0.42328766928815786,
+      "bh_adjusted_p": 0.582020545271217,
+      "significant_after_bh": false
+    },
+    {
+      "test": "auroc_vs_nonzero_frac",
+      "description": "Spearman: auroc_vs_nonzero_frac",
+      "observed_statistic": 0.009287925696594427,
+      "parametric_p": 0.9708223763257615,
+      "n": 18,
+      "alternative": "two-sided",
+      "raw_p": 0.9708223763257615,
+      "bh_adjusted_p": 0.9708223763257615,
+      "significant_after_bh": false
+    },
+    {
+      "test": "expression_success_vs_fail",
+      "description": "Mann-Whitney: expression in successful vs unsuccessful",
+      "observed_statistic": 45.0,
+      "parametric_p": 0.5961538461538461,
+      "n": 18,
+      "alternative": "two-sided",
+      "raw_p": 0.5961538461538461,
+      "bh_adjusted_p": 0.6583068416329717,
+      "significant_after_bh": false
+    },
+    {
+      "test": "regulon_size_success_vs_fail",
+      "description": "Mann-Whitney: regulon size in successful vs unsuccessful",
+      "observed_statistic": 54.0,
+      "parametric_p": 0.1736375781422832,
+      "n": 18,
+      "alternative": "two-sided",
+      "raw_p": 0.1736375781422832,
+      "bh_adjusted_p": 0.4775033398912788,
+      "significant_after_bh": false
+    }
+  ],
+  "n_tests": 11,
+  "n_significant_after_bh": 0,
+  "permutation_details": {
+    "n_permutations": 10000,
+    "seed": 42,
+    "master_vs_other_all18": {
+      "observed_diff": 0.2198155036986683,
+      "permutation_p": 0.0110988901109889,
+      "null_95th": 0.16568209444533896,
+      "null_mean": 0.0009991985034607548,
+      "null_std": 0.09848491626327256
+    }
+  },
+  "robustness_checks": {
+    "all_18_tfs": {
+      "n": 18,
+      "master_mean_auroc": 0.8015057641706832,
+      "other_mean_auroc": 0.5816902604720149,
+      "permutation_p": 0.0110988901109889
+    },
+    "multi_target_only": {
+      "n": 8,
+      "excluded": [
+        "NCOA4",
+        "TBX5",
+        "TAL1",
+        "PA2G4",
+        "YBX1",
+        "KLF3",
+        "PAX3",
+        "MAL",
+        "KLF1",
+        "LEF1"
+      ],
+      "permutation_p": 0.09099090090990901,
+      "observed_diff": 0.20206068184560588
+    },
+    "robust_only_3plus": {
+      "n": 5,
+      "tfs": [
+        "FOXF2",
+        "WT1",
+        "GATA1",
+        "EGR1",
+        "PPARG"
+      ],
+      "permutation_p": 0.2967703229677032,
+      "observed_diff": 0.1296444187004827
+    }
+  },
+  "target_count_table": [
+    {
+      "tf": "GATA1",
+      "out_degree_in_hvg": 18,
+      "evaluable_regulon_size": 5,
+      "auroc": 0.8418307252229513,
+      "functional_category": "master_regulator",
+      "successful": true,
+      "note": ""
+    },
+    {
+      "tf": "PPARG",
+      "out_degree_in_hvg": 10,
+      "evaluable_regulon_size": 8,
+      "auroc": 0.9004022121669181,
+      "functional_category": "master_regulator",
+      "successful": true,
+      "note": ""
+    },
+    {
+      "tf": "EGR1",
+      "out_degree_in_hvg": 9,
+      "evaluable_regulon_size": 4,
+      "auroc": 0.8521496370742602,
+      "functional_category": "signal-dependent",
+      "successful": true,
+      "note": ""
+    },
+    {
+      "tf": "WT1",
+      "out_degree_in_hvg": 5,
+      "evaluable_regulon_size": 7,
+      "auroc": 0.6749247743229689,
+      "functional_category": "master_regulator",
+      "successful": true,
+      "note": ""
+    },
+    {
+      "tf": "FOXF2",
+      "out_degree_in_hvg": 3,
+      "evaluable_regulon_size": 2,
+      "auroc": 0.5,
+      "functional_category": "lineage-specific",
+      "successful": false,
+      "note": ""
+    },
+    {
+      "tf": "NKX2-5",
+      "out_degree_in_hvg": 2,
+      "evaluable_regulon_size": 1,
+      "auroc": 0.5717325988983475,
+      "functional_category": "master_regulator",
+      "successful": false,
+      "note": ""
+    },
+    {
+      "tf": "FOXA1",
+      "out_degree_in_hvg": 2,
+      "evaluable_regulon_size": 2,
+      "auroc": 0.8738107160741112,
+      "functional_category": "master_regulator",
+      "successful": false,
+      "note": ""
+    },
+    {
+      "tf": "RXRA",
+      "out_degree_in_hvg": 2,
+      "evaluable_regulon_size": 0,
+      "auroc": 0.3592889334001001,
+      "functional_category": "signal-dependent",
+      "successful": false,
+      "note": ""
+    },
+    {
+      "tf": "KLF1",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 0,
+      "auroc": 0.9954954954954957,
+      "functional_category": "master_regulator",
+      "successful": true,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "MAL",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 0,
+      "auroc": 0.8603603603603603,
+      "functional_category": "signal-dependent",
+      "successful": true,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "NCOA4",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 0,
+      "auroc": 0.3490990990990991,
+      "functional_category": "signal-dependent",
+      "successful": false,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "PAX3",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 2,
+      "auroc": 0.8023023023023023,
+      "functional_category": "master_regulator",
+      "successful": false,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "KLF3",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 0,
+      "auroc": 0.6441441441441442,
+      "functional_category": "lineage-specific",
+      "successful": false,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "YBX1",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 8,
+      "auroc": 0.6398898898898899,
+      "functional_category": "housekeeping",
+      "successful": false,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "PA2G4",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 0,
+      "auroc": 0.6296296296296297,
+      "functional_category": "housekeeping",
+      "successful": false,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "TAL1",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 0,
+      "auroc": 0.5560560560560561,
+      "functional_category": "master_regulator",
+      "successful": false,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "TBX5",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 0,
+      "auroc": 0.4006506506506506,
+      "functional_category": "lineage-specific",
+      "successful": false,
+      "note": "SINGLE TARGET"
+    },
+    {
+      "tf": "LEF1",
+      "out_degree_in_hvg": 1,
+      "evaluable_regulon_size": 6,
+      "auroc": 0.9969969969969972,
+      "functional_category": "master_regulator",
+      "successful": true,
+      "note": "SINGLE TARGET"
+    }
+  ]
+}

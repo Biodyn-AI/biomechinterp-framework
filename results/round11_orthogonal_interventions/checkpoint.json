@@ -1,0 +1,73 @@
+{
+  "completed": [
+    "baseline",
+    "uniform_attn_reg_top5",
+    "uniform_attn_reg_top10",
+    "uniform_attn_random_10",
+    "mlp_zero_L15",
+    "mlp_zero_L13_L14_L15",
+    "mlp_zero_random_layer"
+  ],
+  "results": {
+    "baseline": {
+      "description": "Full model (no intervention)",
+      "mean_auroc_attn": 0.7035,
+      "n_evaluated": 280,
+      "source": "round10"
+    },
+    "uniform_attn_reg_top5": {
+      "description": "Uniform attention on top-5 TRRUST heads",
+      "type": "uniform_attention",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.704,
+      "std_auroc_attn": 0.1469,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11"
+    },
+    "uniform_attn_reg_top10": {
+      "description": "Uniform attention on top-10 TRRUST heads",
+      "type": "uniform_attention",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7033,
+      "std_auroc_attn": 0.1468,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11"
+    },
+    "uniform_attn_random_10": {
+      "description": "Uniform attention on 10 random heads (control)",
+      "type": "uniform_attention",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7067,
+      "std_auroc_attn": 0.1468,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11"
+    },
+    "mlp_zero_L15": {
+      "description": "Zero MLP output at L15 (best perturbation-first)",
+      "type": "mlp_ablation",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.147,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11"
+    },
+    "mlp_zero_L13_L14_L15": {
+      "description": "Zero MLP output at L13+L14+L15",
+      "type": "mlp_ablation",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7035,
+      "std_auroc_attn": 0.147,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11"
+    },
+    "mlp_zero_random_layer": {
+      "description": "Zero MLP output at L8 (random control)",
+      "type": "mlp_ablation",
+      "n_evaluated": 280,
+      "mean_auroc_attn": 0.7088,
+      "std_auroc_attn": 0.1474,
+      "mean_auroc_corr": 0.7026,
+      "source": "round11"
+    }
+  }
+}

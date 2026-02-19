@@ -1,0 +1,141 @@
+{
+  "experiment": "round9_incremental_value",
+  "primary_layer": 12,
+  "n_perturbations": 280,
+  "n_observations": 559720,
+  "positive_rate": 0.028,
+  "cv_results": {
+    "A_gene_only": {
+      "mean_auroc": 0.8954,
+      "std_auroc": 0.008,
+      "mean_auprc": 0.2423,
+      "std_auprc": 0.0104,
+      "per_fold_auroc": [
+        0.9004,
+        0.8861,
+        0.8886,
+        0.9079,
+        0.8938
+      ]
+    },
+    "B_attn_only": {
+      "mean_auroc": 0.6555,
+      "std_auroc": 0.0071,
+      "mean_auprc": 0.0594,
+      "std_auprc": 0.0035,
+      "per_fold_auroc": [
+        0.6641,
+        0.6441,
+        0.6534,
+        0.662,
+        0.654
+      ]
+    },
+    "C_corr_only": {
+      "mean_auroc": 0.639,
+      "std_auroc": 0.0247,
+      "mean_auprc": 0.0708,
+      "std_auprc": 0.0093,
+      "per_fold_auroc": [
+        0.6249,
+        0.6477,
+        0.5997,
+        0.6511,
+        0.6717
+      ]
+    },
+    "D_gene_plus_attn": {
+      "mean_auroc": 0.895,
+      "std_auroc": 0.0083,
+      "mean_auprc": 0.2439,
+      "std_auprc": 0.0101,
+      "per_fold_auroc": [
+        0.9003,
+        0.8851,
+        0.8887,
+        0.9083,
+        0.8927
+      ]
+    },
+    "E_gene_plus_corr": {
+      "mean_auroc": 0.8939,
+      "std_auroc": 0.0082,
+      "mean_auprc": 0.2426,
+      "std_auprc": 0.0098,
+      "per_fold_auroc": [
+        0.8978,
+        0.8859,
+        0.8845,
+        0.9069,
+        0.8941
+      ]
+    }
+  },
+  "delta_auroc": {
+    "gene_plus_attn_minus_gene": -0.0004,
+    "gene_plus_corr_minus_gene": -0.0015
+  },
+  "bootstrap_summary": {
+    "A_gene_only": {
+      "mean": 0.8948,
+      "ci_95": [
+        0.8841,
+        0.9049
+      ]
+    },
+    "B_attn_only": {
+      "mean": 0.659,
+      "ci_95": [
+        0.6436,
+        0.6735
+      ]
+    },
+    "C_corr_only": {
+      "mean": 0.6388,
+      "ci_95": [
+        0.6158,
+        0.67
+      ]
+    },
+    "D_gene_plus_attn": {
+      "mean": 0.8944,
+      "ci_95": [
+        0.8837,
+        0.9043
+      ]
+    },
+    "E_gene_plus_corr": {
+      "mean": 0.8932,
+      "ci_95": [
+        0.8835,
+        0.9035
+      ]
+    }
+  },
+  "bootstrap_delta_ci": {
+    "attn": [
+      -0.0013,
+      0.0
+    ],
+    "corr": [
+      -0.0047,
+      -0.0002
+    ]
+  },
+  "stratified_results": {
+    "TF": {
+      "A_gene_only": 0.913,
+      "B_attn_only": 0.752,
+      "C_corr_only": 0.7045,
+      "D_gene_plus_attn": 0.9101,
+      "E_gene_plus_corr": 0.9087
+    },
+    "non-TF": {
+      "A_gene_only": 0.8952,
+      "B_attn_only": 0.656,
+      "C_corr_only": 0.6368,
+      "D_gene_plus_attn": 0.895,
+      "E_gene_plus_corr": 0.8942
+    }
+  }
+}
