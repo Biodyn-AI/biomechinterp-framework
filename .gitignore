@@ -8,6 +8,12 @@ docs/
 prompts/
 AGENTS.md
 CLAUDE.md
+.claude/
+
+# Dev-time artifacts (not part of the public codebase)
+experiments
+figshare_upload/
+figshare_upload.zip
 
 # Python
 __pycache__/

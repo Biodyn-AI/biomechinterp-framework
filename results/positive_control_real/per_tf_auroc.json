@@ -1,0 +1,310 @@
+{
+  "layers": {
+    "0": {
+      "layer": 0,
+      "n_tfs": 9,
+      "mean_auroc": 0.5885571322135458,
+      "median_auroc": 0.5638572905894519,
+      "auroc_ci_95": [
+        0.4745444632224273,
+        0.7016560808127525
+      ],
+      "n_above_chance": 6,
+      "frac_above_chance": 0.6666666666666666,
+      "max_auroc_tf": "PTTG1",
+      "max_auroc_value": 0.8726614987080102,
+      "per_tf": {
+        "BRCA1": {
+          "auroc": 0.5638572905894519,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "CTNNB1": {
+          "auroc": 0.7143595041322315,
+          "n_targets": 4,
+          "n_evaluable": 1940
+        },
+        "HIF1A": {
+          "auroc": 0.5146501206480524,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "JUN": {
+          "auroc": 0.7739018087855297,
+          "n_targets": 4,
+          "n_evaluable": 1939
+        },
+        "MYC": {
+          "auroc": 0.6600281857291204,
+          "n_targets": 14,
+          "n_evaluable": 1940
+        },
+        "PTTG1": {
+          "auroc": 0.8726614987080102,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "RB1": {
+          "auroc": 0.4508527131782946,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "STAT3": {
+          "auroc": 0.32386069089023994,
+          "n_targets": 11,
+          "n_evaluable": 1940
+        },
+        "TFDP1": {
+          "auroc": 0.4228423772609819,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        }
+      }
+    },
+    "6": {
+      "layer": 6,
+      "n_tfs": 9,
+      "mean_auroc": 0.6078679496251387,
+      "median_auroc": 0.6134104732235572,
+      "auroc_ci_95": [
+        0.5503662760826987,
+        0.6653184666949911
+      ],
+      "n_above_chance": 7,
+      "frac_above_chance": 0.7777777777777778,
+      "max_auroc_tf": "PTTG1",
+      "max_auroc_value": 0.740671834625323,
+      "per_tf": {
+        "BRCA1": {
+          "auroc": 0.6589968976215098,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "CTNNB1": {
+          "auroc": 0.4895402892561983,
+          "n_targets": 4,
+          "n_evaluable": 1940
+        },
+        "HIF1A": {
+          "auroc": 0.5481730437780076,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "JUN": {
+          "auroc": 0.6714470284237727,
+          "n_targets": 4,
+          "n_evaluable": 1939
+        },
+        "MYC": {
+          "auroc": 0.6134104732235572,
+          "n_targets": 14,
+          "n_evaluable": 1940
+        },
+        "PTTG1": {
+          "auroc": 0.740671834625323,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "RB1": {
+          "auroc": 0.4735917312661499,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "STAT3": {
+          "auroc": 0.581130119232763,
+          "n_targets": 11,
+          "n_evaluable": 1940
+        },
+        "TFDP1": {
+          "auroc": 0.6938501291989664,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        }
+      }
+    },
+    "13": {
+      "layer": 13,
+      "n_tfs": 9,
+      "mean_auroc": 0.6543785991904799,
+      "median_auroc": 0.6146714137368343,
+      "auroc_ci_95": [
+        0.5944342431375489,
+        0.7173314177317005
+      ],
+      "n_above_chance": 9,
+      "frac_above_chance": 1.0,
+      "max_auroc_tf": "TFDP1",
+      "max_auroc_value": 0.8297674418604652,
+      "per_tf": {
+        "BRCA1": {
+          "auroc": 0.6115132712857635,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "CTNNB1": {
+          "auroc": 0.6055010330578512,
+          "n_targets": 4,
+          "n_evaluable": 1940
+        },
+        "HIF1A": {
+          "auroc": 0.6774388142019994,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "JUN": {
+          "auroc": 0.5131782945736434,
+          "n_targets": 4,
+          "n_evaluable": 1939
+        },
+        "MYC": {
+          "auroc": 0.6146714137368343,
+          "n_targets": 14,
+          "n_evaluable": 1940
+        },
+        "PTTG1": {
+          "auroc": 0.7524547803617571,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "RB1": {
+          "auroc": 0.7254780361757106,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "STAT3": {
+          "auroc": 0.559404307460295,
+          "n_targets": 11,
+          "n_evaluable": 1940
+        },
+        "TFDP1": {
+          "auroc": 0.8297674418604652,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        }
+      }
+    },
+    "15": {
+      "layer": 15,
+      "n_tfs": 9,
+      "mean_auroc": 0.6551232655210918,
+      "median_auroc": 0.631421188630491,
+      "auroc_ci_95": [
+        0.5949553664972727,
+        0.7164121182760077
+      ],
+      "n_above_chance": 8,
+      "frac_above_chance": 0.8888888888888888,
+      "max_auroc_tf": "PTTG1",
+      "max_auroc_value": 0.8049612403100775,
+      "per_tf": {
+        "BRCA1": {
+          "auroc": 0.5964322647362977,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "CTNNB1": {
+          "auroc": 0.6239669421487604,
+          "n_targets": 4,
+          "n_evaluable": 1940
+        },
+        "HIF1A": {
+          "auroc": 0.6932092381937263,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "JUN": {
+          "auroc": 0.6258397932816537,
+          "n_targets": 4,
+          "n_evaluable": 1939
+        },
+        "MYC": {
+          "auroc": 0.46877317905355287,
+          "n_targets": 14,
+          "n_evaluable": 1940
+        },
+        "PTTG1": {
+          "auroc": 0.8049612403100775,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "RB1": {
+          "auroc": 0.631421188630491,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "STAT3": {
+          "auroc": 0.6711437862293228,
+          "n_targets": 11,
+          "n_evaluable": 1940
+        },
+        "TFDP1": {
+          "auroc": 0.7803617571059431,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        }
+      }
+    },
+    "17": {
+      "layer": 17,
+      "n_tfs": 9,
+      "mean_auroc": 0.6723748355561189,
+      "median_auroc": 0.6836175710594316,
+      "auroc_ci_95": [
+        0.6100621476980891,
+        0.7453607458956747
+      ],
+      "n_above_chance": 9,
+      "frac_above_chance": 1.0,
+      "max_auroc_tf": "TFDP1",
+      "max_auroc_value": 0.8536434108527132,
+      "per_tf": {
+        "BRCA1": {
+          "auroc": 0.6205618752154429,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "CTNNB1": {
+          "auroc": 0.5685692148760331,
+          "n_targets": 4,
+          "n_evaluable": 1940
+        },
+        "HIF1A": {
+          "auroc": 0.7055325749741469,
+          "n_targets": 6,
+          "n_evaluable": 1940
+        },
+        "JUN": {
+          "auroc": 0.5670542635658915,
+          "n_targets": 4,
+          "n_evaluable": 1939
+        },
+        "MYC": {
+          "auroc": 0.5317460317460317,
+          "n_targets": 14,
+          "n_evaluable": 1940
+        },
+        "PTTG1": {
+          "auroc": 0.8296640826873385,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "RB1": {
+          "auroc": 0.6836175710594316,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        },
+        "STAT3": {
+          "auroc": 0.6909844950280409,
+          "n_targets": 11,
+          "n_evaluable": 1940
+        },
+        "TFDP1": {
+          "auroc": 0.8536434108527132,
+          "n_targets": 5,
+          "n_evaluable": 1940
+        }
+      }
+    }
+  },
+  "min_targets": 4
+}

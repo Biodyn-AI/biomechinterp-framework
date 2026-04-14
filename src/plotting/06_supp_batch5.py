@@ -16,7 +16,7 @@ sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 1)
 
 BASE = '/Volumes/Crucial X6/MacBook/biomechinterp/biodyn-nmi-paper'
 FIG_DIR = os.path.join(BASE, 'figures')
-EXP_DIR = os.path.join(BASE, 'experiments')
+EXP_DIR = os.path.join(BASE, 'results')
 
 plt.rcParams.update({
     'font.size': 16, 'axes.titlesize': 18, 'axes.labelsize': 16,
@@ -50,7 +50,7 @@ dose_conds = {
     'Random': ['random_10', 'random_20', 'random_50'],
     'Bottom': ['bottom_5', 'bottom_10'],
 }
-dose_colors = {'Regulatory': '#C44E52', 'Random': '#4C72B0', 'Bottom': '#55A868'}
+dose_colors = {'Regulatory': '#D55E00', 'Random': '#0072B2', 'Bottom': '#009E73'}
 dose_markers = {'Regulatory': 'o', 'Random': 's', 'Bottom': '^'}
 
 for group, group_conds in dose_conds.items():
@@ -84,15 +84,15 @@ aurocs_b = [non_baseline[c]['mean_auroc_attn'] for c in cond_names]
 colors_b = []
 for c in cond_names:
     if 'regulatory' in c or 'composite' in c:
-        colors_b.append('#C44E52')
+        colors_b.append('#D55E00')
     elif 'random' in c:
-        colors_b.append('#4C72B0')
+        colors_b.append('#0072B2')
     elif 'bottom' in c:
-        colors_b.append('#55A868')
+        colors_b.append('#009E73')
     elif 'layer' in c:
-        colors_b.append('#8172B2')
+        colors_b.append('#CC79A7')
     else:
-        colors_b.append('#E8A838')
+        colors_b.append('#E69F00')
 
 short_names = []
 for c in cond_names:
@@ -132,14 +132,17 @@ common_ks = sorted(set(reg_at_k.keys()) & set(rnd_at_k.keys()))
 if common_ks:
     x_c = np.arange(len(common_ks))
     w_c = 0.35
-    ax.bar(x_c - w_c/2, [reg_at_k[k] for k in common_ks], w_c, label='Regulatory', color='#C44E52', edgecolor='black', linewidth=0.5)
-    ax.bar(x_c + w_c/2, [rnd_at_k[k] for k in common_ks], w_c, label='Random', color='#4C72B0', edgecolor='black', linewidth=0.5)
+    ax.bar(x_c - w_c/2, [reg_at_k[k] for k in common_ks], w_c, label='Regulatory', color='#D55E00', edgecolor='black', linewidth=0.5)
+    ax.bar(x_c + w_c/2, [rnd_at_k[k] for k in common_ks], w_c, label='Random', color='#0072B2', edgecolor='black', linewidth=0.5)
     ax.set_xticks(x_c)
     ax.set_xticklabels([f'k={k}' for k in common_ks], fontsize=13)
     ax.legend(fontsize=13)
     for i, k in enumerate(common_ks):
         ax.text(i - w_c/2, reg_at_k[k] + 0.0003, f'{reg_at_k[k]:.4f}', ha='center', fontsize=11)
         ax.text(i + w_c/2, rnd_at_k[k] + 0.0003, f'{rnd_at_k[k]:.4f}', ha='center', fontsize=11)
+    # Add top margin so labels on tallest bar don't clip
+    all_vals = list(reg_at_k.values()) + list(rnd_at_k.values())
+    ax.set_ylim(top=max(all_vals) * 1.25)
 ax.set_ylabel('|AUROC Drop from Baseline|', fontsize=16)
 ax.set_title('C. Regulatory vs Random Drop', fontsize=18, fontweight='bold')
 
@@ -156,7 +159,7 @@ for c in cond_names:
     effect_labels.append(short_names[cond_names.index(c)])
 
 y_d = np.arange(len(effects))
-bar_colors_d = ['#C44E52' if abs(e) > 0.02 else '#55A868' for e in effects]
+bar_colors_d = ['#D55E00' if abs(e) > 0.02 else '#009E73' for e in effects]
 ax.barh(y_d, effects, color=bar_colors_d, edgecolor='black', linewidth=0.5, height=0.7)
 ax.axvline(0, color='gray', linestyle='-', alpha=0.5)
 
@@ -261,7 +264,12 @@ for row_i, tissue in enumerate(tissues):
                         ax.text(i + w, 0 + offset, '0',
                                ha='center', fontsize=10, color='#4E9E72', fontweight='bold')
 
-                ax.legend(fontsize=13, loc='upper right')
+                # Place legend where it won't overlap tall bars
+                # Check if rightmost bars are taller than leftmost
+                if te_abs_vals[-1] > te_abs_vals[0]:
+                    ax.legend(fontsize=13, loc='upper left')
+                else:
+                    ax.legend(fontsize=13, loc='upper right')
 
         except Exception as e:
             ax.text(0.5, 0.5, f'Error: {e}', ha='center', va='center', transform=ax.transAxes, fontsize=12)
@@ -301,7 +309,7 @@ aurocs_a = [per_layer[l]['mean_auroc'] for l in layers]
 stds_a = [per_layer[l]['std_auroc'] for l in layers]
 layer_ints = [int(l) for l in layers]
 
-ax.errorbar(layer_ints, aurocs_a, yerr=stds_a, fmt='o-', color='#4C72B0', linewidth=2, markersize=6, capsize=3,
+ax.errorbar(layer_ints, aurocs_a, yerr=stds_a, fmt='o-', color='#0072B2', linewidth=2, markersize=6, capsize=3,
            label='Attention')
 ax.axhline(corr_baseline['mean_auroc'], color='orange', linestyle='--', linewidth=2, alpha=0.8,
           label=f'Correlation ({corr_baseline["mean_auroc"]:.3f})')
@@ -357,7 +365,7 @@ try:
 
     if attn_col and corr_col:
         diffs = pg[attn_col] - pg[corr_col]
-        ax.hist(diffs, bins=40, color='#4C72B0', edgecolor='white', alpha=0.8)
+        ax.hist(diffs, bins=40, color='#0072B2', edgecolor='white', alpha=0.8)
         ax.axvline(0, color='red', linestyle='--', linewidth=2, label='No advantage')
         mean_diff = diffs.mean()
         ax.axvline(mean_diff, color='blue', linestyle='-', linewidth=2, label=f'Mean = {mean_diff:+.3f}')
@@ -373,7 +381,7 @@ try:
         all_deltas = []
         for fold in ncv['fold_results']:
             all_deltas.append(fold['test_delta'])
-        ax.bar(range(len(all_deltas)), all_deltas, color='#4C72B0', edgecolor='black', linewidth=0.5)
+        ax.bar(range(len(all_deltas)), all_deltas, color='#0072B2', edgecolor='black', linewidth=0.5)
         ax.set_xticks(range(len(all_deltas)))
         ax.set_xticklabels([f'Fold {i}' for i in range(len(all_deltas))], fontsize=13)
         ax.set_ylabel('AUROC \u0394 (Attention \u2212 Correlation)', fontsize=14)
@@ -411,8 +419,8 @@ fold_layers = [f'Fold {f["fold"]}\n(L{f["selected_layer"]})' for f in ncv['fold_
 
 x_a = np.arange(n_folds)
 w_a = 0.35
-ax.bar(x_a - w_a/2, fold_selected, w_a, label='Selected Layer (L14)', color='#4C72B0', edgecolor='black', linewidth=0.5)
-ax.bar(x_a + w_a/2, fold_corr, w_a, label='Correlation', color='#E8A838', edgecolor='black', linewidth=0.5)
+ax.bar(x_a - w_a/2, fold_selected, w_a, label='Selected Layer (L14)', color='#0072B2', edgecolor='black', linewidth=0.5)
+ax.bar(x_a + w_a/2, fold_corr, w_a, label='Correlation', color='#E69F00', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x_a)
 ax.set_xticklabels(fold_layers, fontsize=13)
 ax.set_ylabel('Held-out AUROC', fontsize=16)
@@ -430,7 +438,7 @@ ax.set_title('A. Per-Fold: Selected Layer vs Correlation', fontsize=18, fontweig
 # Panel B: Held-out performance comparison
 ax = axes[1]
 fold_deltas = [f['test_delta'] for f in ncv['fold_results']]
-colors_delta = ['#55A868' if d > 0 else '#C44E52' for d in fold_deltas]
+colors_delta = ['#009E73' if d > 0 else '#D55E00' for d in fold_deltas]
 ax.bar(range(n_folds), fold_deltas, color=colors_delta, edgecolor='black', linewidth=0.5, width=0.6)
 ax.set_xticks(range(n_folds))
 ax.set_xticklabels([f'Fold {i}' for i in range(n_folds)], fontsize=13)

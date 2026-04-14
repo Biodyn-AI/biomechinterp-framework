@@ -145,11 +145,11 @@ n_tfs = len(ortho_sorted)
 colors_15 = []
 for v in ortho_sorted[rho_col]:
     if v >= 0.5:
-        colors_15.append('#55A868')
+        colors_15.append('#009E73')
     elif v >= 0:
-        colors_15.append('#E8A838')
+        colors_15.append('#E69F00')
     else:
-        colors_15.append('#C44E52')
+        colors_15.append('#D55E00')
 
 y_pos = np.arange(n_tfs)
 ax.barh(y_pos, ortho_sorted[rho_col], color=colors_15, edgecolor='none', height=0.8)
@@ -178,7 +178,7 @@ if edge_col:
             break
 
     sizes = ortho_df[size_col].values * 100 if size_col else np.full(len(ortho_df), 50)
-    ax.scatter(ortho_df[edge_col], ortho_df[rho_col], s=sizes, alpha=0.6, color='#4C72B0', edgecolors='black', linewidth=0.3)
+    ax.scatter(ortho_df[edge_col], ortho_df[rho_col], s=sizes, alpha=0.6, color='#0072B2', edgecolors='black', linewidth=0.3)
 
     # Label notable TFs
     for _, row in ortho_sorted.head(10).iterrows():
@@ -266,7 +266,7 @@ cond_order = ['baseline', 'ablate_regulatory', 'ablate_random_1', 'ablate_random
 cond_labels = ['Baseline', 'Ablate\nRegulatory', 'Ablate\nRandom 1', 'Ablate\nRandom 2', 'Ablate\nRandom 3', 'Ablate\nEntropy-matched']
 aurocs = [conds[c]['mean_auroc_attn'] for c in cond_order]
 stds = [conds[c]['std_auroc_attn'] for c in cond_order]
-colors_33 = ['#55A868', '#C44E52', '#4C72B0', '#4C72B0', '#4C72B0', '#E8A838']
+colors_33 = ['#009E73', '#D55E00', '#0072B2', '#0072B2', '#0072B2', '#E69F00']
 
 ax.bar(range(len(cond_order)), aurocs, yerr=stds, color=colors_33, edgecolor='black',
        linewidth=0.5, width=0.7, capsize=4)
@@ -299,7 +299,7 @@ baseline_per = [g['auroc_attn'] for g in baseline_pg] if baseline_pg else None
 reg_per = [g['auroc_attn'] for g in reg_pg] if reg_pg else None
 
 if baseline_per and reg_per and len(baseline_per) == len(reg_per):
-    ax.scatter(baseline_per, reg_per, alpha=0.3, s=15, color='#4C72B0', rasterized=True)
+    ax.scatter(baseline_per, reg_per, alpha=0.3, s=15, color='#0072B2', rasterized=True)
     lims = [min(min(baseline_per), min(reg_per)), max(max(baseline_per), max(reg_per))]
     ax.plot(lims, lims, 'k--', alpha=0.5, linewidth=1)
     ax.set_xlabel('Baseline AUROC', fontsize=16)
@@ -320,10 +320,10 @@ if baseline_per and reg_per:
     rnd_per = [g['auroc_attn'] for g in rnd_pg] if rnd_pg else None
     if rnd_per:
         deltas_rnd = [b - r for b, r in zip(baseline_per, rnd_per)]
-        ax.hist(deltas_reg, bins=50, alpha=0.6, color='#C44E52', label='Regulatory ablation', density=True)
-        ax.hist(deltas_rnd, bins=50, alpha=0.4, color='#4C72B0', label='Random 1', density=True)
+        ax.hist(deltas_reg, bins=50, alpha=0.6, color='#D55E00', label='Regulatory ablation', density=True)
+        ax.hist(deltas_rnd, bins=50, alpha=0.4, color='#0072B2', label='Random 1', density=True)
     else:
-        ax.hist(deltas_reg, bins=50, alpha=0.7, color='#C44E52', label='Regulatory ablation', density=True)
+        ax.hist(deltas_reg, bins=50, alpha=0.7, color='#D55E00', label='Regulatory ablation', density=True)
     ax.axvline(0, color='black', linestyle='-', alpha=0.3)
     ax.set_xlabel('\u0394AUROC (Baseline \u2212 Ablation)', fontsize=16)
     ax.set_ylabel('Density', fontsize=16)

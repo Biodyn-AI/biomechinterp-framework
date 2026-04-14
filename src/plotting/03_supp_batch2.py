@@ -41,7 +41,7 @@ ax.set_title(f'(A) Per-TF AUROC distribution\n(n={s11["n_tfs_evaluated"]} TFs)',
 # Panel B: Fold enrichment
 ax = axes[1]
 sorted_df = df11.sort_values('fold_enrichment', ascending=False)
-ax.bar(range(len(sorted_df)), sorted_df['fold_enrichment'], color='#55A868', edgecolor='white', linewidth=0.3)
+ax.bar(range(len(sorted_df)), sorted_df['fold_enrichment'], color='#009E73', edgecolor='white', linewidth=0.3)
 ax.axhline(1.0, color='red', linestyle='--', linewidth=2, label='No enrichment')
 ax.set_xlabel('Ranked TFs', fontsize=16)
 ax.set_ylabel('Fold enrichment (top-K)', fontsize=16)
@@ -50,7 +50,7 @@ ax.set_title('(B) Perturbation target enrichment', fontsize=18, fontweight='bold
 
 # Panel C: AUROC vs target count
 ax = axes[2]
-ax.scatter(df11['n_de_targets'], df11['auroc'], s=50, alpha=0.7, color='#E8A838', edgecolor='gray', linewidth=0.3)
+ax.scatter(df11['n_de_targets'], df11['auroc'], s=50, alpha=0.7, color='#E69F00', edgecolor='gray', linewidth=0.3)
 ax.axhline(0.5, color='gray', linestyle='--', alpha=0.5)
 # Fit trend line
 z = np.polyfit(df11['n_de_targets'], df11['auroc'], 1)
@@ -80,7 +80,7 @@ fig, axes = plt.subplots(1, 2, figsize=(24, 12))
 
 # Panel A: Horizontal bar chart
 ax = axes[0]
-colors = ['#55A868' if r > 0.5 else '#E8A838' if r > 0 else '#C44E52' for r in df15['spearman_rho']]
+colors = ['#009E73' if r > 0.5 else '#E69F00' if r > 0 else '#D55E00' for r in df15['spearman_rho']]
 ax.barh(range(len(df15)), df15['spearman_rho'], color=colors, edgecolor='none', height=0.8)
 ax.set_yticks(range(len(df15)))
 ax.set_yticklabels(df15['tf'], fontsize=8)
@@ -135,7 +135,7 @@ bq = sv['bias_quantification']
 single = float(bq['single_correlation'])
 shapley = float(bq['shapley_correlation'])
 bars = ax.bar(['Single\nComponent', 'Shapley\nValues'], [single, shapley],
-              color=['#C44E52', '#4C9BD8'], edgecolor='black', linewidth=0.5, width=0.5)
+              color=['#D55E00', '#4C9BD8'], edgecolor='black', linewidth=0.5, width=0.5)
 ax.axhline(0, color='black', linewidth=0.5)
 # Zoom y-axis to show the values clearly
 y_max = max(abs(single), abs(shapley)) * 1.8
@@ -204,7 +204,7 @@ for i, cc in enumerate(cell_counts):
     r = acm['results_by_cell_count'][cc]
     labels = ['R²(|corr|)', 'R²(signed)', 'R²(corr+expr)']
     vals = [r['r2_abs_corr'], r['r2_signed_corr'], r['r2_multi']]
-    colors = ['#4C9BD8', '#55A868', '#E8A838']
+    colors = ['#4C9BD8', '#009E73', '#E69F00']
     bars = ax.bar(range(3), vals, color=colors, edgecolor='black', linewidth=0.5, width=0.6)
     ax.set_xticks(range(3))
     ax.set_xticklabels(labels, fontsize=14)
@@ -259,7 +259,7 @@ y_pos = np.arange(len(df28_sorted))
 colors_28 = []
 for _, row in df28_sorted.iterrows():
     if row['ci_95_lo'] > 0.5:
-        colors_28.append('#55A868')  # CI above 0.5
+        colors_28.append('#009E73')  # CI above 0.5
     else:
         colors_28.append('#4C9BD8')  # CI includes 0.5
 
@@ -268,7 +268,7 @@ for i, (_, row) in enumerate(df28_sorted.iterrows()):
     ax.plot(row['observed_auroc'], i, 'o', color=colors_28[i], markersize=8)
     # Degree-matched control
     if row['degree_matched_auroc'] > 0:
-        ax.plot(row['degree_matched_auroc'], i, 'D', color='#E8A838', markersize=7)
+        ax.plot(row['degree_matched_auroc'], i, 'D', color='#E69F00', markersize=7)
 
 ax.axvline(0.5, color='gray', linestyle='--', alpha=0.5)
 ax.set_yticks(y_pos)
@@ -278,12 +278,12 @@ ax.set_ylabel('Transcription Factor', fontsize=16)
 # Legend
 from matplotlib.lines import Line2D
 legend_elements = [
-    Line2D([0], [0], marker='o', color='#55A868', label=f'CI > 0.5 (n={sum(1 for c in colors_28 if c=="#55A868")})', markersize=8, linewidth=2),
+    Line2D([0], [0], marker='o', color='#009E73', label=f'CI > 0.5 (n={sum(1 for c in colors_28 if c=="#009E73")})', markersize=8, linewidth=2),
     Line2D([0], [0], marker='o', color='#4C9BD8', label=f'CI includes 0.5 (n={sum(1 for c in colors_28 if c=="#4C9BD8")})', markersize=8, linewidth=2),
-    Line2D([0], [0], marker='D', color='#E8A838', label='Degree-matched control', markersize=7, linewidth=0),
+    Line2D([0], [0], marker='D', color='#E69F00', label='Degree-matched control', markersize=7, linewidth=0),
 ]
 ax.legend(handles=legend_elements, fontsize=13, loc='lower right')
-n_above = sum(1 for c in colors_28 if c == '#55A868')
+n_above = sum(1 for c in colors_28 if c == '#009E73')
 ax.set_title(f'(B) Per-TF AUROC with 95% bootstrap CIs\n({n_above}/{len(df28_sorted)} TFs with CI above 0.5)', fontsize=18, fontweight='bold')
 
 plt.tight_layout(w_pad=4)
@@ -314,7 +314,7 @@ corr_r2 = [res['correlation']['ols']['mean_r2'], res['correlation']['gbdt']['mea
 x_a = np.arange(2)
 w_a = 0.35
 ax.bar(x_a - w_a/2, attn_r2, w_a, label='Attention', color='#4C9BD8', edgecolor='black', linewidth=0.5)
-ax.bar(x_a + w_a/2, corr_r2, w_a, label='Correlation', color='#E8A838', edgecolor='black', linewidth=0.5)
+ax.bar(x_a + w_a/2, corr_r2, w_a, label='Correlation', color='#E69F00', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x_a)
 ax.set_xticklabels(labels_a, fontsize=14)
 ax.set_ylabel('R² (covariates explaining edge scores)', fontsize=14)
@@ -331,7 +331,7 @@ attn_auroc = [res['attention']['baseline_auroc'], res['attention']['ols']['auroc
 corr_auroc = [res['correlation']['baseline_auroc'], res['correlation']['ols']['auroc_abs_residual'], res['correlation']['gbdt']['auroc_abs_residual']]
 x_b = np.arange(3)
 ax.bar(x_b - w_a/2, attn_auroc, w_a, label='Attention', color='#4C9BD8', edgecolor='black', linewidth=0.5)
-ax.bar(x_b + w_a/2, corr_auroc, w_a, label='Correlation', color='#E8A838', edgecolor='black', linewidth=0.5)
+ax.bar(x_b + w_a/2, corr_auroc, w_a, label='Correlation', color='#E69F00', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x_b)
 ax.set_xticklabels(labels_b, fontsize=12)
 ax.set_ylabel('AUROC vs TRRUST', fontsize=16)
@@ -352,8 +352,8 @@ for j, (label, key) in enumerate([('Attention', 'attention'), ('Correlation', 'c
     degree_confound = null_mean - chance
     signal = excess
     ax.bar(j, chance, color='#CCCCCC', edgecolor='black', linewidth=0.5, width=0.5, label='Chance' if j == 0 else '')
-    ax.bar(j, degree_confound, bottom=chance, color='#E8A838', edgecolor='black', linewidth=0.5, width=0.5, label='Degree confound' if j == 0 else '')
-    ax.bar(j, signal, bottom=null_mean, color='#55A868', edgecolor='black', linewidth=0.5, width=0.5, label='Signal above degree' if j == 0 else '')
+    ax.bar(j, degree_confound, bottom=chance, color='#E69F00', edgecolor='black', linewidth=0.5, width=0.5, label='Degree confound' if j == 0 else '')
+    ax.bar(j, signal, bottom=null_mean, color='#009E73', edgecolor='black', linewidth=0.5, width=0.5, label='Signal above degree' if j == 0 else '')
 ax.set_xticks([0, 1])
 ax.set_xticklabels(['Attention', 'Correlation'], fontsize=14)
 ax.set_ylabel('AUROC decomposition', fontsize=16)
@@ -370,7 +370,7 @@ else:
     auroc_col = df32_tf.columns[1]  # assume second column
 tf_col = 'tf' if 'tf' in df32_tf.columns else df32_tf.columns[0]
 df32_sorted = df32_tf.sort_values(auroc_col, ascending=True)
-colors_d = ['#55A868' if v > 0.5 else '#C44E52' for v in df32_sorted[auroc_col]]
+colors_d = ['#009E73' if v > 0.5 else '#D55E00' for v in df32_sorted[auroc_col]]
 ax.barh(range(len(df32_sorted)), df32_sorted[auroc_col], color=colors_d, edgecolor='none', height=0.8)
 ax.set_yticks(range(len(df32_sorted)))
 ax.set_yticklabels(df32_sorted[tf_col], fontsize=7 if len(df32_sorted) > 30 else 10)
@@ -404,7 +404,7 @@ fig, axes = plt.subplots(2, 2, figsize=(22, 18))
 ax = axes[0, 0]
 aurocs = [conditions[c]['mean_auroc_attn'] for c in cond_names]
 short_names = [c.replace('uniform_attn_', 'Unif ').replace('mlp_zero_', 'MLP0 ').replace('_', ' ') for c in cond_names]
-colors_34 = ['#55A868', '#4C9BD8', '#E8A838', '#C44E52', '#8172B2', '#CCB974'][:len(cond_names)]
+colors_34 = ['#009E73', '#4C9BD8', '#E69F00', '#D55E00', '#CC79A7', '#F0E442'][:len(cond_names)]
 bars = ax.bar(range(len(cond_names)), aurocs, color=colors_34, edgecolor='black', linewidth=0.5, width=0.7)
 ax.axhline(baseline_auroc, color='green', linestyle='--', linewidth=2, alpha=0.6, label=f'Baseline={baseline_auroc:.3f}')
 ax.set_xticks(range(len(cond_names)))
@@ -420,7 +420,7 @@ ax.set_title('A. Orthogonal Intervention Results', fontsize=18, fontweight='bold
 ax = axes[0, 1]
 drops = [conditions[c]['mean_auroc_attn'] - baseline_auroc for c in cond_names]
 y_b = np.arange(len(cond_names))
-barcolors = ['#C44E52' if abs(d) > 0.003 else '#E8A838' for d in drops]
+barcolors = ['#D55E00' if abs(d) > 0.003 else '#E69F00' for d in drops]
 ax.barh(y_b, drops, color=barcolors, edgecolor='black', linewidth=0.5, height=0.6)
 ax.set_yticks(y_b)
 ax.set_yticklabels(short_names, fontsize=12)
@@ -442,7 +442,7 @@ attn_names = [c.replace('uniform_attn_', '').replace('_', ' ') for c in attn_con
 mlp_names = [c.replace('mlp_zero_', '').replace('_', ' ') for c in mlp_conds]
 all_names = attn_names + mlp_names
 all_drops_c = attn_drops + mlp_drops
-all_colors_c = ['#4C9BD8'] * len(attn_conds) + ['#C44E52'] * len(mlp_conds)
+all_colors_c = ['#4C9BD8'] * len(attn_conds) + ['#D55E00'] * len(mlp_conds)
 y_c = np.arange(len(all_names))
 ax.barh(y_c, all_drops_c, color=all_colors_c, edgecolor='black', linewidth=0.5, height=0.6)
 ax.set_yticks(y_c)
@@ -455,7 +455,7 @@ ax.set_title('C. Cross-Intervention Comparison', fontsize=18, fontweight='bold')
 # Legend
 from matplotlib.patches import Patch
 ax.legend(handles=[Patch(facecolor='#4C9BD8', label='Attention interventions'),
-                   Patch(facecolor='#C44E52', label='MLP interventions')], fontsize=13)
+                   Patch(facecolor='#D55E00', label='MLP interventions')], fontsize=13)
 
 # Panel D: Summary
 ax = axes[1, 1]
@@ -534,8 +534,8 @@ logit_cos = [summary[c]['logit_cosine_dist'] for c in cond_list]
 logit_l2 = [summary[c]['logit_l2_dist'] for c in cond_list]
 x_b2 = np.arange(len(cond_list))
 w_b2 = 0.35
-ax.bar(x_b2 - w_b2/2, logit_cos, w_b2, label='Cosine Distance', color='#4C72B0', edgecolor='black', linewidth=0.5)
-ax.bar(x_b2 + w_b2/2, logit_l2, w_b2, label='L2 Distance', color='#C44E52', edgecolor='black', linewidth=0.5)
+ax.bar(x_b2 - w_b2/2, logit_cos, w_b2, label='Cosine Distance', color='#0072B2', edgecolor='black', linewidth=0.5)
+ax.bar(x_b2 + w_b2/2, logit_l2, w_b2, label='L2 Distance', color='#D55E00', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x_b2)
 ax.set_xticklabels(short_conds, fontsize=11, rotation=30, ha='right')
 ax.legend(fontsize=14)
@@ -562,8 +562,8 @@ ax = axes[1, 1]
 max_hidden = [summary[c]['max_hidden_cosine_dist'] for c in cond_list]
 mean_logit = [summary[c]['logit_cosine_dist'] for c in cond_list]
 x_d2 = np.arange(len(cond_list))
-ax.bar(x_d2 - w_b2/2, max_hidden, w_b2, label='Max Hidden Cos', color='#4C72B0', edgecolor='black', linewidth=0.5)
-ax.bar(x_d2 + w_b2/2, mean_logit, w_b2, label='Mean Logit Cos', color='#E8A838', edgecolor='black', linewidth=0.5)
+ax.bar(x_d2 - w_b2/2, max_hidden, w_b2, label='Max Hidden Cos', color='#0072B2', edgecolor='black', linewidth=0.5)
+ax.bar(x_d2 + w_b2/2, mean_logit, w_b2, label='Mean Logit Cos', color='#E69F00', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x_d2)
 ax.set_xticklabels(short_conds, fontsize=11, rotation=30, ha='right')
 ax.legend(fontsize=14)

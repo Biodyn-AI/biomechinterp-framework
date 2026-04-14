@@ -1,0 +1,456 @@
+{
+  "n_genes": 1200,
+  "n_trrust_positives": 28,
+  "tissues": {
+    "immune": {
+      "baseline_auroc": 0.7063469281734428,
+      "per_head_auroc_range": [
+        0.554384171962738,
+        0.7112983465194702
+      ],
+      "per_head_auroc_mean": 0.7028470039367676,
+      "per_head_auroc_std": 0.021350940689444542,
+      "per_layer_pooled_auroc": [
+        0.7057388096971825,
+        0.7028966245440977,
+        0.7047193968337887,
+        0.7071180842338627,
+        0.7071892611376602,
+        0.7072498837808585,
+        0.7078605764670209,
+        0.7075869379544107,
+        0.7067047562209064,
+        0.7070900639590767,
+        0.7062323372196436,
+        0.7065672676700265
+      ],
+      "best_layer": 6,
+      "conditions": {
+        "baseline": {
+          "auroc": 0.7063469281734428,
+          "delta": 0.0,
+          "k": 0,
+          "description": "all 96 heads included",
+          "n_positives": 27,
+          "n_negatives": 1438773
+        },
+        "reg_top_5": {
+          "auroc": 0.7057500976076039,
+          "delta": -0.0005968305658389239,
+          "k": 5,
+          "description": "exclude top-5 TRRUST-ranked heads"
+        },
+        "reg_top_10": {
+          "auroc": 0.7054127216578138,
+          "delta": -0.0009342065156290325,
+          "k": 10,
+          "description": "exclude top-10 TRRUST-ranked heads"
+        },
+        "reg_top_20": {
+          "auroc": 0.7047783333695009,
+          "delta": -0.0015685948039418918,
+          "k": 20,
+          "description": "exclude top-20 TRRUST-ranked heads"
+        },
+        "reg_top_50": {
+          "auroc": 0.7029059817970924,
+          "delta": -0.0034409463763503956,
+          "k": 50,
+          "description": "exclude top-50 TRRUST-ranked heads"
+        },
+        "bottom_5": {
+          "auroc": 0.706858629617814,
+          "delta": 0.000511701444371182,
+          "k": 5,
+          "description": "exclude bottom-5 TRRUST-ranked heads"
+        },
+        "random_5_rep0": {
+          "auroc": 0.7063691436048992,
+          "delta": 2.2215431456418244e-05,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 0)"
+        },
+        "random_5_rep1": {
+          "auroc": 0.7063150851969517,
+          "delta": -3.184297649105883e-05,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 1)"
+        },
+        "random_5_rep2": {
+          "auroc": 0.7063491677360578,
+          "delta": 2.2395626150251147e-06,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 2)"
+        },
+        "random_10_rep0": {
+          "auroc": 0.706356272555388,
+          "delta": 9.344381945219915e-06,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 0)"
+        },
+        "random_10_rep1": {
+          "auroc": 0.7063710227781279,
+          "delta": 2.409460468510982e-05,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 1)"
+        },
+        "random_10_rep2": {
+          "auroc": 0.7063055606203136,
+          "delta": -4.136755312922347e-05,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 2)"
+        },
+        "random_20_rep0": {
+          "auroc": 0.7062338431324366,
+          "delta": -0.00011308504100615568,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 0)"
+        },
+        "random_20_rep1": {
+          "auroc": 0.7062801531685782,
+          "delta": -6.677500486462762e-05,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 1)"
+        },
+        "random_20_rep2": {
+          "auroc": 0.7058373890653896,
+          "delta": -0.0005095391080531808,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 2)"
+        },
+        "random_50_rep0": {
+          "auroc": 0.7059641946451749,
+          "delta": -0.00038273352826789786,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 0)"
+        },
+        "random_50_rep1": {
+          "auroc": 0.706732763624643,
+          "delta": 0.00038583545120018936,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 1)"
+        },
+        "random_50_rep2": {
+          "auroc": 0.7061672483222652,
+          "delta": -0.00017967985117761653,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 2)"
+        },
+        "full_layer_L6": {
+          "auroc": 0.706207045607354,
+          "delta": -0.00013988256608876704,
+          "k": 8,
+          "description": "exclude all heads at best layer L6 (pooled AUROC 0.708)"
+        }
+      },
+      "deltas_summary": {
+        "reg_top_5": -0.0005968305658389239,
+        "reg_top_10": -0.0009342065156290325,
+        "reg_top_20": -0.0015685948039418918,
+        "reg_top_50": -0.0034409463763503956,
+        "random_5_mean": -2.4626608065384894e-06,
+        "random_20_mean": -0.0002297997179746547
+      }
+    },
+    "kidney": {
+      "baseline_auroc": 0.7073296328036304,
+      "per_head_auroc_range": [
+        0.5509408712387085,
+        0.7119121551513672
+      ],
+      "per_head_auroc_mean": 0.704861581325531,
+      "per_head_auroc_std": 0.016502700746059418,
+      "per_layer_pooled_auroc": [
+        0.7045253657624059,
+        0.7057389126655785,
+        0.7053709679731991,
+        0.7061232936881839,
+        0.7079302989422236,
+        0.7082860032665177,
+        0.7087847950482291,
+        0.708195687112097,
+        0.7081841160385864,
+        0.7081461335714787,
+        0.7080744032125521,
+        0.7072061222125202
+      ],
+      "best_layer": 6,
+      "conditions": {
+        "baseline": {
+          "auroc": 0.7073296328036304,
+          "delta": 0.0,
+          "k": 0,
+          "description": "all 96 heads included",
+          "n_positives": 27,
+          "n_negatives": 1438773
+        },
+        "reg_top_5": {
+          "auroc": 0.7070718256819191,
+          "delta": -0.0002578071217113065,
+          "k": 5,
+          "description": "exclude top-5 TRRUST-ranked heads"
+        },
+        "reg_top_10": {
+          "auroc": 0.7068248817259953,
+          "delta": -0.000504751077635035,
+          "k": 10,
+          "description": "exclude top-10 TRRUST-ranked heads"
+        },
+        "reg_top_20": {
+          "auroc": 0.7063362709444474,
+          "delta": -0.000993361859182973,
+          "k": 20,
+          "description": "exclude top-20 TRRUST-ranked heads"
+        },
+        "reg_top_50": {
+          "auroc": 0.7048856779224252,
+          "delta": -0.0024439548812051903,
+          "k": 50,
+          "description": "exclude top-50 TRRUST-ranked heads"
+        },
+        "bottom_5": {
+          "auroc": 0.7076539575092161,
+          "delta": 0.00032432470558574344,
+          "k": 5,
+          "description": "exclude bottom-5 TRRUST-ranked heads"
+        },
+        "random_5_rep0": {
+          "auroc": 0.7074748439842168,
+          "delta": 0.00014521118058641314,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 0)"
+        },
+        "random_5_rep1": {
+          "auroc": 0.7073447948999547,
+          "delta": 1.5162096324350394e-05,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 1)"
+        },
+        "random_5_rep2": {
+          "auroc": 0.7073858020636977,
+          "delta": 5.6169260067351345e-05,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 2)"
+        },
+        "random_10_rep0": {
+          "auroc": 0.7073037362520137,
+          "delta": -2.5896551616666486e-05,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 0)"
+        },
+        "random_10_rep1": {
+          "auroc": 0.707348450278016,
+          "delta": 1.881747438559067e-05,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 1)"
+        },
+        "random_10_rep2": {
+          "auroc": 0.7073375356280303,
+          "delta": 7.902824399885766e-06,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 2)"
+        },
+        "random_20_rep0": {
+          "auroc": 0.7069937756376826,
+          "delta": -0.0003358571659477505,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 0)"
+        },
+        "random_20_rep1": {
+          "auroc": 0.707525298498301,
+          "delta": 0.00019566569467066586,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 1)"
+        },
+        "random_20_rep2": {
+          "auroc": 0.7071948214310491,
+          "delta": -0.0001348113725813116,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 2)"
+        },
+        "random_50_rep0": {
+          "auroc": 0.707390847515106,
+          "delta": 6.121471147557678e-05,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 0)"
+        },
+        "random_50_rep1": {
+          "auroc": 0.7074426148762406,
+          "delta": 0.00011298207261023485,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 1)"
+        },
+        "random_50_rep2": {
+          "auroc": 0.7069143870042969,
+          "delta": -0.0004152457993334968,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 2)"
+        },
+        "full_layer_L6": {
+          "auroc": 0.7071692852688187,
+          "delta": -0.00016034753481164454,
+          "k": 8,
+          "description": "exclude all heads at best layer L6 (pooled AUROC 0.709)"
+        }
+      },
+      "deltas_summary": {
+        "reg_top_5": -0.0002578071217113065,
+        "reg_top_10": -0.000504751077635035,
+        "reg_top_20": -0.000993361859182973,
+        "reg_top_50": -0.0024439548812051903,
+        "random_5_mean": 7.218084565937162e-05,
+        "random_20_mean": -9.166761461946542e-05
+      }
+    },
+    "brain": {
+      "baseline_auroc": 0.7071817444447456,
+      "per_head_auroc_range": [
+        0.6358270049095154,
+        0.7142778038978577
+      ],
+      "per_head_auroc_mean": 0.7055512070655823,
+      "per_head_auroc_std": 0.007668647915124893,
+      "per_layer_pooled_auroc": [
+        0.7080572975877517,
+        0.7081655431141416,
+        0.7075903616535808,
+        0.7071939848128308,
+        0.7084025377487931,
+        0.7080124291091553,
+        0.7064437828210153,
+        0.7055908955961987,
+        0.7071006310907254,
+        0.7043958057780253,
+        0.7058986810031622,
+        0.7062796898107959
+      ],
+      "best_layer": 4,
+      "conditions": {
+        "baseline": {
+          "auroc": 0.7071817444447456,
+          "delta": 0.0,
+          "k": 0,
+          "description": "all 96 heads included",
+          "n_positives": 27,
+          "n_negatives": 1438773
+        },
+        "reg_top_5": {
+          "auroc": 0.7066229864433612,
+          "delta": -0.0005587580013843851,
+          "k": 5,
+          "description": "exclude top-5 TRRUST-ranked heads"
+        },
+        "reg_top_10": {
+          "auroc": 0.7063549082241398,
+          "delta": -0.0008268362206057533,
+          "k": 10,
+          "description": "exclude top-10 TRRUST-ranked heads"
+        },
+        "reg_top_20": {
+          "auroc": 0.7059564720154681,
+          "delta": -0.001225272429277502,
+          "k": 20,
+          "description": "exclude top-20 TRRUST-ranked heads"
+        },
+        "reg_top_50": {
+          "auroc": 0.7040964380374419,
+          "delta": -0.003085306407303645,
+          "k": 50,
+          "description": "exclude top-50 TRRUST-ranked heads"
+        },
+        "bottom_5": {
+          "auroc": 0.7074137837253351,
+          "delta": 0.0002320392805895688,
+          "k": 5,
+          "description": "exclude bottom-5 TRRUST-ranked heads"
+        },
+        "random_5_rep0": {
+          "auroc": 0.7071249573743017,
+          "delta": -5.678707044387554e-05,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 0)"
+        },
+        "random_5_rep1": {
+          "auroc": 0.7073130806339588,
+          "delta": 0.00013133618921323809,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 1)"
+        },
+        "random_5_rep2": {
+          "auroc": 0.7070237909251429,
+          "delta": -0.00015795351960268267,
+          "k": 5,
+          "description": "exclude 5 random heads (repeat 2)"
+        },
+        "random_10_rep0": {
+          "auroc": 0.7072736952224542,
+          "delta": 9.195077770862703e-05,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 0)"
+        },
+        "random_10_rep1": {
+          "auroc": 0.7072119656689981,
+          "delta": 3.022122425255791e-05,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 1)"
+        },
+        "random_10_rep2": {
+          "auroc": 0.7073480641465306,
+          "delta": 0.00016631970178504485,
+          "k": 10,
+          "description": "exclude 10 random heads (repeat 2)"
+        },
+        "random_20_rep0": {
+          "auroc": 0.7070640515680142,
+          "delta": -0.00011769287673135675,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 0)"
+        },
+        "random_20_rep1": {
+          "auroc": 0.7068753619821786,
+          "delta": -0.00030638246256697865,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 1)"
+        },
+        "random_20_rep2": {
+          "auroc": 0.7071507509575223,
+          "delta": -3.099348722324091e-05,
+          "k": 20,
+          "description": "exclude 20 random heads (repeat 2)"
+        },
+        "random_50_rep0": {
+          "auroc": 0.7070327877887513,
+          "delta": -0.0001489566559942368,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 0)"
+        },
+        "random_50_rep1": {
+          "auroc": 0.7074693866592241,
+          "delta": 0.0002876422144785229,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 1)"
+        },
+        "random_50_rep2": {
+          "auroc": 0.7073913880991857,
+          "delta": 0.0002096436544400948,
+          "k": 50,
+          "description": "exclude 50 random heads (repeat 2)"
+        },
+        "full_layer_L4": {
+          "auroc": 0.7070657248044507,
+          "delta": -0.00011601964029483991,
+          "k": 8,
+          "description": "exclude all heads at best layer L4 (pooled AUROC 0.708)"
+        }
+      },
+      "deltas_summary": {
+        "reg_top_5": -0.0005587580013843851,
+        "reg_top_10": -0.0008268362206057533,
+        "reg_top_20": -0.001225272429277502,
+        "reg_top_50": -0.003085306407303645,
+        "random_5_mean": -2.780146694444004e-05,
+        "random_20_mean": -0.00015168960884052543
+      }
+    }
+  }
+}

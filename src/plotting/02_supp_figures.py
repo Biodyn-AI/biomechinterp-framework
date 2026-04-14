@@ -142,11 +142,11 @@ fig, axes = plt.subplots(1, 3, figsize=(28, 9))
 ax = axes[0]
 colors_orth = []
 for c in cond_names:
-    if 'baseline' in c: colors_orth.append('#55A868')
-    elif 'uniform' in c and 'random' not in c: colors_orth.append('#C44E52')
-    elif 'random' in c: colors_orth.append('#E8A838')
-    elif 'mlp' in c: colors_orth.append('#4C72B0')
-    else: colors_orth.append('#8172B2')
+    if 'baseline' in c: colors_orth.append('#009E73')
+    elif 'uniform' in c and 'random' not in c: colors_orth.append('#D55E00')
+    elif 'random' in c: colors_orth.append('#E69F00')
+    elif 'mlp' in c: colors_orth.append('#0072B2')
+    else: colors_orth.append('#CC79A7')
 short_labels = [c.replace('uniform_attn_', 'Unif\n').replace('mlp_zero_', 'MLP\n').replace('_', ' ') for c in cond_names]
 bars = ax.bar(range(len(cond_names)), cond_aurocs, color=colors_orth, edgecolor='black', linewidth=0.5, width=0.7)
 ax.axhline(baseline_auroc, color='green', linestyle='--', linewidth=1.5, alpha=0.7, label=f'Baseline={baseline_auroc:.3f}')
@@ -166,7 +166,7 @@ non_baseline = [c for c in cond_names if c != 'baseline']
 drops = [conditions[c]['mean_auroc_attn'] - baseline_auroc for c in non_baseline]
 p_vals = [comps.get(c, {}).get('wilcoxon_p', 1.0) for c in non_baseline]
 sig_labels = ['*' if p < 0.05 else 'ns' for p in p_vals]
-colors_drop = ['#4C72B0' if d < -0.002 else '#C44E52' if d > 0 else '#E8A838' for d in drops]
+colors_drop = ['#0072B2' if d < -0.002 else '#D55E00' if d > 0 else '#E69F00' for d in drops]
 y_pos = np.arange(len(non_baseline))
 ax.barh(y_pos, drops, color=colors_drop, edgecolor='black', linewidth=0.5, height=0.6)
 ax.set_yticks(y_pos)
@@ -187,7 +187,7 @@ if all_comp:
     comp_drops = [conditions[c]['mean_auroc_attn'] - baseline_auroc for c in all_comp]
     comp_labels = [c.replace('uniform_attn_', 'Uniform\n').replace('mlp_zero_', 'MLP zero\n').replace('_', ' ') for c in all_comp]
     p_comp = [comps.get(c, {}).get('wilcoxon_p', 1.0) for c in all_comp]
-    colors_comp = ['#C44E52' if 'reg' in c else '#808080' for c in all_comp]
+    colors_comp = ['#D55E00' if 'reg' in c else '#808080' for c in all_comp]
     y_c = np.arange(len(all_comp))
     ax.barh(y_c, comp_drops, color=colors_comp, edgecolor='black', linewidth=0.5, height=0.6)
     ax.set_yticks(y_c)
@@ -265,8 +265,8 @@ logit_cos = [summary[c]['logit_cosine_dist'] for c in cond_list]
 logit_l2 = [summary[c]['logit_l2_dist'] for c in cond_list]
 x_b = np.arange(len(cond_list))
 w_b = 0.35
-bars1 = ax.bar(x_b - w_b/2, logit_cos, w_b, label='Cosine Distance', color='#4C72B0', edgecolor='black', linewidth=0.5)
-bars2 = ax.bar(x_b + w_b/2, logit_l2, w_b, label='L2 Distance', color='#C44E52', edgecolor='black', linewidth=0.5)
+bars1 = ax.bar(x_b - w_b/2, logit_cos, w_b, label='Cosine Distance', color='#0072B2', edgecolor='black', linewidth=0.5)
+bars2 = ax.bar(x_b + w_b/2, logit_l2, w_b, label='L2 Distance', color='#D55E00', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x_b)
 ax.set_xticklabels(short_conds, fontsize=11, rotation=30, ha='right')
 ax.legend(fontsize=13)
@@ -300,8 +300,8 @@ ax = axes[1, 1]
 max_hidden = [summary[c]['max_hidden_cosine_dist'] for c in cond_list]
 mean_logit = [summary[c]['logit_cosine_dist'] for c in cond_list]
 x_d = np.arange(len(cond_list))
-bars1 = ax.bar(x_d - w_b/2, max_hidden, w_b, label='Max Hidden Cos', color='#4C72B0', edgecolor='black', linewidth=0.5)
-bars2 = ax.bar(x_d + w_b/2, mean_logit, w_b, label='Mean Logit Cos', color='#E8A838', edgecolor='black', linewidth=0.5)
+bars1 = ax.bar(x_d - w_b/2, max_hidden, w_b, label='Max Hidden Cos', color='#0072B2', edgecolor='black', linewidth=0.5)
+bars2 = ax.bar(x_d + w_b/2, mean_logit, w_b, label='Mean Logit Cos', color='#E69F00', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x_d)
 ax.set_xticklabels(short_conds, fontsize=11, rotation=30, ha='right')
 ax.legend(fontsize=13)
@@ -346,8 +346,8 @@ smd_after = [abs(ba[k]['smd']) for k in cov_names]
 
 if cov_names:
     y = np.arange(len(cov_names))
-    ax.barh(y + 0.2, smd_before, 0.35, label='Before', color='#C44E52', alpha=0.8, edgecolor='black', linewidth=0.5)
-    ax.barh(y - 0.2, smd_after, 0.35, label='After', color='#55A868', alpha=0.8, edgecolor='black', linewidth=0.5)
+    ax.barh(y + 0.2, smd_before, 0.35, label='Before', color='#D55E00', alpha=0.8, edgecolor='black', linewidth=0.5)
+    ax.barh(y - 0.2, smd_after, 0.35, label='After', color='#009E73', alpha=0.8, edgecolor='black', linewidth=0.5)
     ax.set_yticks(y)
     ax.set_yticklabels(cov_names, fontsize=14)
     ax.axvline(0.1, color='gray', linestyle=':', alpha=0.7, label='SMD=0.1')
@@ -368,7 +368,7 @@ if raw:
     corr_std = raw['corr_raw']['std_auroc']
     bars_b = ax.bar([0, 1], [attn_auroc, corr_auroc],
                     yerr=[attn_std, corr_std],
-                    capsize=8, color=['#C44E52', '#4C72B0'], edgecolor='black', linewidth=0.5, width=0.6)
+                    capsize=8, color=['#D55E00', '#0072B2'], edgecolor='black', linewidth=0.5, width=0.6)
     ax.set_xticks([0, 1])
     ax.set_xticklabels(['Attention', 'Correlation'], fontsize=15)
     ax.set_ylim(0.3, 0.85)
@@ -385,7 +385,7 @@ cv_r = eval_res.get('cv_results', {})
 if cv_r:
     m_names = ['A_gene_only', 'B_gene_plus_attn', 'C_gene_plus_corr']
     m_labels = ['Gene only', 'Gene + Attn', 'Gene + Corr']
-    m_colors = ['#55A868', '#8172B2', '#CCB974']
+    m_colors = ['#009E73', '#CC79A7', '#F0E442']
     m_vals = [cv_r.get(m, {}).get('mean_auroc', cv_r.get(m, {}).get('auroc', 0)) for m in m_names]
     m_stds = [cv_r.get(m, {}).get('std_auroc', 0) for m in m_names]
 
@@ -420,7 +420,7 @@ if os.path.exists(direct_file):
     corr_dt_std = direct['std_corr_auroc']
     n_tfs_dt = direct['n_evaluable_tfs']
     bars_d = ax.bar([0, 1], [attn_dt, corr_dt], yerr=[attn_dt_std, corr_dt_std],
-                    capsize=8, color=['#C44E52', '#4C72B0'], edgecolor='black', linewidth=0.5, width=0.6)
+                    capsize=8, color=['#D55E00', '#0072B2'], edgecolor='black', linewidth=0.5, width=0.6)
     ax.set_xticks([0, 1])
     ax.set_xticklabels(['Attention', 'Correlation'], fontsize=15)
     ax.set_ylim(0, 0.85)
@@ -457,7 +457,7 @@ fig, axes = plt.subplots(1, 3, figsize=(28, 9))
 
 model_order = ['A_gene_only', 'B_attn_only', 'C_corr_only', 'D_gene_plus_attn', 'E_gene_plus_corr']
 model_short = ['Gene\nonly', 'Attn\nonly', 'Corr\nonly', 'Gene\n+Attn', 'Gene\n+Corr']
-model_colors = ['#4C72B0', '#E8A838', '#55A868', '#C44E52', '#8172B2']
+model_colors = ['#0072B2', '#E69F00', '#009E73', '#D55E00', '#CC79A7']
 
 for i, (split_key, label) in enumerate(zip(split_names, split_labels)):
     ax = axes[i]
@@ -504,7 +504,7 @@ r2_data = {
 if 'models' in resid:
     for m in resid['models']:
         r2_data[m.get('name', '')] = m.get('r2', 0)
-colors_r2 = ['#4C72B0', '#E8A838', '#55A868', '#C44E52']
+colors_r2 = ['#0072B2', '#E69F00', '#009E73', '#D55E00']
 ax.bar(range(len(r2_data)), list(r2_data.values()), color=colors_r2[:len(r2_data)], edgecolor='black', linewidth=0.5, width=0.6)
 ax.set_xticks(range(len(r2_data)))
 ax.set_xticklabels(list(r2_data.keys()), fontsize=13, rotation=15, ha='right')
@@ -525,7 +525,7 @@ ols_auroc = cf_ols.get('auroc_abs_residual', cf_ols.get('auroc', 0.732))
 gbdt_auroc = cf_gbdt.get('auroc_abs_residual', cf_gbdt.get('auroc', 0.736))
 resid_labels = ['Baseline\n(raw |corr|)', 'Non-CF\n(resid)', 'CF-OLS\n(resid)', 'CF-GBDT\n(resid)']
 resid_vals = [b_auroc, noncf, ols_auroc, gbdt_auroc]
-resid_colors = ['#4C72B0', '#55A868', '#E8A838', '#C44E52']
+resid_colors = ['#0072B2', '#009E73', '#E69F00', '#D55E00']
 ax.bar(range(4), resid_vals, color=resid_colors, edgecolor='black', linewidth=0.5, width=0.6)
 ax.set_xticks(range(4))
 ax.set_xticklabels(resid_labels, fontsize=12)
@@ -543,13 +543,13 @@ stab_std = stab.get('std', 0.001)
 # If we have individual seed values
 seed_vals = stab.get('values', stab.get('seeds', None))
 if seed_vals:
-    ax.hist(seed_vals, bins=max(5, len(seed_vals)//2), color='#C44E52', edgecolor='white', alpha=0.8)
+    ax.hist(seed_vals, bins=max(5, len(seed_vals)//2), color='#D55E00', edgecolor='white', alpha=0.8)
     ax.axvline(stab_mean, color='red', linestyle='--', linewidth=2, label=f'Mean: {stab_mean:.3f}')
 else:
     # Simulate from mean and std
     np.random.seed(42)
     sim_vals = np.random.normal(stab_mean, stab_std, 10)
-    ax.hist(sim_vals, bins=8, color='#C44E52', edgecolor='white', alpha=0.8)
+    ax.hist(sim_vals, bins=8, color='#D55E00', edgecolor='white', alpha=0.8)
     ax.axvline(stab_mean, color='red', linestyle='--', linewidth=2, label=f'Mean: {stab_mean:.3f}')
 ax.set_xlabel('Cross-fitted AUROC(|resid|)', fontsize=16)
 ax.set_ylabel('Count', fontsize=16)
@@ -563,7 +563,7 @@ if signed_abs and isinstance(signed_abs, dict):
     rob_labels = list(signed_abs.keys())[:5]
     rob_vals = [signed_abs[k] if isinstance(signed_abs[k], (int, float)) else 0 for k in rob_labels]
     short_rob = [l.replace('auroc_', '').replace('_', '\n')[:20] for l in rob_labels]
-    ax.bar(range(len(rob_labels)), rob_vals, color='#8172B2', edgecolor='black', linewidth=0.5, width=0.6)
+    ax.bar(range(len(rob_labels)), rob_vals, color='#CC79A7', edgecolor='black', linewidth=0.5, width=0.6)
     ax.set_xticks(range(len(rob_labels)))
     ax.set_xticklabels(short_rob, fontsize=11)
     for i, v in enumerate(rob_vals):
@@ -603,7 +603,7 @@ table.set_fontsize(14)
 table.scale(1, 2)
 for (i, j), cell in table.get_celld().items():
     if i == 0:
-        cell.set_facecolor('#4C72B0')
+        cell.set_facecolor('#0072B2')
         cell.set_text_props(color='white', fontweight='bold')
     cell.set_edgecolor('gray')
 ax.set_title('(F) Summary Statistics', fontsize=17, fontweight='bold')
@@ -652,8 +652,8 @@ for fig_name, data_dir, summary_file, title_str in [
 
     x = np.arange(len(layer_keys))
     w = 0.35
-    ax.bar(x - w/2, attn_m, w, color='#4C72B0', label='Attention', edgecolor='black', linewidth=0.5)
-    ax.bar(x + w/2, corr_m, w, color='#E8A838', label='Correlation', edgecolor='black', linewidth=0.5)
+    ax.bar(x - w/2, attn_m, w, color='#0072B2', label='Attention', edgecolor='black', linewidth=0.5)
+    ax.bar(x + w/2, corr_m, w, color='#E69F00', label='Correlation', edgecolor='black', linewidth=0.5)
     ax.set_xticks(x)
     ax.set_xticklabels(layer_lbls, fontsize=14)
     ax.set_ylabel('Mean AUROC', fontsize=16)
@@ -672,7 +672,7 @@ for fig_name, data_dir, summary_file, title_str in [
         csv_path = os.path.join(EXP_DIR, data_dir, pattern)
         if os.path.exists(csv_path):
             df = pd.read_csv(csv_path)
-            ax.scatter(df['auroc_corr'], df['auroc_attn'], alpha=0.6, s=60, color='#E8A838', edgecolor='black', linewidth=0.3)
+            ax.scatter(df['auroc_corr'], df['auroc_attn'], alpha=0.6, s=60, color='#E69F00', edgecolor='black', linewidth=0.3)
             lims = [min(df['auroc_corr'].min(), df['auroc_attn'].min()) - 0.05,
                     max(df['auroc_corr'].max(), df['auroc_attn'].max()) + 0.05]
             ax.plot(lims, lims, 'k--', alpha=0.4, linewidth=1)
@@ -686,7 +686,7 @@ for fig_name, data_dir, summary_file, title_str in [
         if csv_files:
             df = pd.read_csv(os.path.join(EXP_DIR, data_dir, csv_files[0]))
             if 'auroc_corr' in df.columns and 'auroc_attn' in df.columns:
-                ax.scatter(df['auroc_corr'], df['auroc_attn'], alpha=0.6, s=60, color='#E8A838', edgecolor='black', linewidth=0.3)
+                ax.scatter(df['auroc_corr'], df['auroc_attn'], alpha=0.6, s=60, color='#E69F00', edgecolor='black', linewidth=0.3)
                 lims = [min(df['auroc_corr'].min(), df['auroc_attn'].min()) - 0.05,
                         max(df['auroc_corr'].max(), df['auroc_attn'].max()) + 0.05]
                 ax.plot(lims, lims, 'k--', alpha=0.4, linewidth=1)
@@ -708,7 +708,7 @@ for fig_name, data_dir, summary_file, title_str in [
             d = r.get('mean_diff', 0)
         diffs.append(d)
     y_pos = np.arange(len(layer_keys))
-    colors_ef = ['#55A868' if d > 0 else '#C44E52' for d in diffs]
+    colors_ef = ['#009E73' if d > 0 else '#D55E00' for d in diffs]
     ax.barh(y_pos, diffs, color=colors_ef, edgecolor='black', linewidth=0.5, height=0.6)
     ax.set_yticks(y_pos)
     ax.set_yticklabels(layer_lbls, fontsize=14)

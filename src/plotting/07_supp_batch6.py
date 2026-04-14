@@ -43,11 +43,11 @@ n_tfs = len(ortho_sorted)
 colors_15 = []
 for v in ortho_sorted[rho_col]:
     if v >= 0.5:
-        colors_15.append('#55A868')
+        colors_15.append('#009E73')
     elif v >= 0:
-        colors_15.append('#E8A838')
+        colors_15.append('#E69F00')
     else:
-        colors_15.append('#C44E52')
+        colors_15.append('#D55E00')
 
 y_pos = np.arange(n_tfs)
 ax.barh(y_pos, ortho_sorted[rho_col], color=colors_15, edgecolor='none', height=0.8)
@@ -63,7 +63,7 @@ ax.invert_yaxis()
 ax = axes[1]
 sizes = ortho_df[size_col].values * 100
 ax.scatter(ortho_df[edge_col], ortho_df[rho_col], s=sizes, alpha=0.6,
-           color='#4C72B0', edgecolors='black', linewidth=0.3)
+           color='#0072B2', edgecolors='black', linewidth=0.3)
 
 # Select TFs to label: top 10 by rho + bottom 5
 label_tfs_top = ortho_sorted.head(10)[tf_col].values
@@ -136,7 +136,7 @@ cond_names = [k for k in conditions if k != 'baseline']
 
 aurocs = [conditions[c]['mean_auroc_attn'] for c in cond_names]
 short_names = [c.replace('uniform_attn_', 'Unif ').replace('mlp_zero_', 'MLP0 ').replace('_', ' ') for c in cond_names]
-colors_34 = ['#55A868', '#4C9BD8', '#E8A838', '#C44E52', '#8172B2', '#CCB974'][:len(cond_names)]
+colors_34 = ['#009E73', '#4C9BD8', '#E69F00', '#D55E00', '#CC79A7', '#F0E442'][:len(cond_names)]
 
 fig, axes = plt.subplots(2, 2, figsize=(22, 16))
 
@@ -157,7 +157,7 @@ ax.set_title('A. Orthogonal Intervention Results', fontsize=18, fontweight='bold
 ax = axes[0, 1]
 drops = [conditions[c]['mean_auroc_attn'] - baseline_auroc for c in cond_names]
 y_b = np.arange(len(cond_names))
-barcolors = ['#C44E52' if abs(d) > 0.003 else '#E8A838' for d in drops]
+barcolors = ['#D55E00' if abs(d) > 0.003 else '#E69F00' for d in drops]
 ax.barh(y_b, drops, color=barcolors, edgecolor='black', linewidth=0.5, height=0.6)
 ax.set_yticks(y_b)
 ax.set_yticklabels(short_names, fontsize=12)
@@ -189,7 +189,7 @@ attn_names = [c.replace('uniform_attn_', '').replace('_', ' ') for c in attn_con
 mlp_names = [c.replace('mlp_zero_', '').replace('_', ' ') for c in mlp_conds]
 all_names = attn_names + mlp_names
 all_drops_c = attn_drops + mlp_drops
-all_colors_c = ['#4C9BD8'] * len(attn_conds) + ['#C44E52'] * len(mlp_conds)
+all_colors_c = ['#4C9BD8'] * len(attn_conds) + ['#D55E00'] * len(mlp_conds)
 y_c = np.arange(len(all_names))
 ax.barh(y_c, all_drops_c, color=all_colors_c, edgecolor='black', linewidth=0.5, height=0.6)
 ax.set_yticks(y_c)
@@ -206,7 +206,7 @@ ax.set_xlabel('AUROC Drop from Baseline', fontsize=16)
 ax.set_title('C. Cross-Intervention Comparison', fontsize=18, fontweight='bold')
 from matplotlib.patches import Patch
 ax.legend(handles=[Patch(facecolor='#4C9BD8', label='Attention interventions'),
-                   Patch(facecolor='#C44E52', label='MLP interventions')], fontsize=13)
+                   Patch(facecolor='#D55E00', label='MLP interventions')], fontsize=13)
 
 # Panel D: Summary
 ax = axes[1, 1]

@@ -319,7 +319,7 @@ def run():
     }
     model_labels = ['Gene\nonly', 'Attn\nonly', 'Corr\nonly', 'Gene\n+Attn', 'Gene\n+Corr']
     model_keys = list(model_configs.keys())
-    colors = ['#4C72B0', '#DD8452', '#55A868', '#C44E52', '#8172B3']
+    colors = ['#0072B2', '#DD8452', '#009E73', '#D55E00', '#8172B3']
 
     for ax_idx, split_type in enumerate(['cross_perturbation', 'cross_gene', 'joint']):
         ax = axes[ax_idx]

@@ -37,7 +37,7 @@ fig, axes = plt.subplots(1, 3, figsize=(24, 7), gridspec_kw={'width_ratios': [1.
 ax = axes[0]
 models = ['A_gene_only', 'B_attn_only', 'C_corr_only', 'D_gene_plus_attn', 'E_gene_plus_corr']
 labels = ['Gene\nonly', 'Attn\nonly', 'Corr\nonly', 'Gene+\nAttn', 'Gene+\nCorr']
-colors = ['#4C72B0', '#55A868', '#C44E52', '#8172B2', '#CCB974']
+colors = ['#0072B2', '#009E73', '#D55E00', '#CC79A7', '#E69F00']  # Okabe-Ito (R3.3 colorblind-safe)
 means = [cv[m]['mean_auroc'] for m in models]
 stds = [cv[m]['std_auroc'] for m in models]
 bars = ax.bar(range(5), means, yerr=stds, capsize=5, color=colors, edgecolor='black', linewidth=0.5, width=0.7)
@@ -56,13 +56,13 @@ ci_corr = bd['corr']
 # Place Gene+Attn delta at bar 3, pointing down with arrow
 ax.annotate(f'$\\Delta$={delta_attn:+.4f}\n95% CI [{ci_attn[0]:+.4f}, {ci_attn[1]:+.4f}]',
             xy=(3, means[3] - stds[3] - 0.01), xytext=(3, 0.38), fontsize=10, ha='center', color='#555555',
-            arrowprops=dict(arrowstyle='->', color='#8172B2', lw=1.5),
-            bbox=dict(boxstyle='round,pad=0.3', facecolor='#8172B2', alpha=0.12, edgecolor='#8172B2'))
+            arrowprops=dict(arrowstyle='->', color='#CC79A7', lw=1.5),
+            bbox=dict(boxstyle='round,pad=0.3', facecolor='#CC79A7', alpha=0.12, edgecolor='#CC79A7'))
 # Place Gene+Corr delta at bar 4
 ax.annotate(f'$\\Delta$={delta_corr:+.4f}\n95% CI [{ci_corr[0]:+.4f}, {ci_corr[1]:+.4f}]',
             xy=(4, means[4] - stds[4] - 0.01), xytext=(4, 0.22), fontsize=10, ha='center', color='#555555',
-            arrowprops=dict(arrowstyle='->', color='#CCB974', lw=1.5),
-            bbox=dict(boxstyle='round,pad=0.3', facecolor='#CCB974', alpha=0.12, edgecolor='#CCB974'))
+            arrowprops=dict(arrowstyle='->', color='#F0E442', lw=1.5),
+            bbox=dict(boxstyle='round,pad=0.3', facecolor='#F0E442', alpha=0.12, edgecolor='#F0E442'))
 ax.set_title('(A) Model comparison\n(5-fold GroupKFold)', fontsize=17, fontweight='bold')
 
 # Panel B: Bootstrap delta distribution
@@ -82,8 +82,8 @@ for _ in range(n_boot):
 boot_delta_attn = np.array(boot_delta_attn)
 boot_delta_corr = np.array(boot_delta_corr)
 
-ax.hist(boot_delta_attn, bins=30, alpha=0.6, color='#8172B2', label='Gene+Attn $-$ Gene', edgecolor='white')
-ax.hist(boot_delta_corr, bins=30, alpha=0.6, color='#CCB974', label='Gene+Corr $-$ Gene', edgecolor='white')
+ax.hist(boot_delta_attn, bins=30, alpha=0.6, color='#CC79A7', label='Gene+Attn $-$ Gene', edgecolor='white')
+ax.hist(boot_delta_corr, bins=30, alpha=0.6, color='#F0E442', label='Gene+Corr $-$ Gene', edgecolor='white')
 ax.axvline(0, color='red', linestyle='--', linewidth=1.5, alpha=0.8)
 ax.set_xlabel('$\\Delta$AUROC', fontsize=16)
 ax.set_ylabel('Count', fontsize=16)
@@ -96,9 +96,9 @@ x = np.arange(2)
 width = 0.25
 tf_vals = [strat['TF']['A_gene_only'], strat['TF']['D_gene_plus_attn'], strat['TF']['E_gene_plus_corr']]
 nontf_vals = [strat['non-TF']['A_gene_only'], strat['non-TF']['D_gene_plus_attn'], strat['non-TF']['E_gene_plus_corr']]
-bars1 = ax.bar(x - width, [tf_vals[0], nontf_vals[0]], width, label='Gene only', color='#4C72B0', edgecolor='black', linewidth=0.5)
-bars2 = ax.bar(x, [tf_vals[1], nontf_vals[1]], width, label='Gene + Attn', color='#8172B2', edgecolor='black', linewidth=0.5)
-bars3 = ax.bar(x + width, [tf_vals[2], nontf_vals[2]], width, label='Gene + Corr', color='#CCB974', edgecolor='black', linewidth=0.5)
+bars1 = ax.bar(x - width, [tf_vals[0], nontf_vals[0]], width, label='Gene only', color='#0072B2', edgecolor='black', linewidth=0.5)
+bars2 = ax.bar(x, [tf_vals[1], nontf_vals[1]], width, label='Gene + Attn', color='#CC79A7', edgecolor='black', linewidth=0.5)
+bars3 = ax.bar(x + width, [tf_vals[2], nontf_vals[2]], width, label='Gene + Corr', color='#F0E442', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x)
 ax.set_xticklabels(['TF\nperturbations', 'non-TF\nperturbations'], fontsize=14)
 ax.set_ylabel('CV AUROC', fontsize=16)
@@ -153,8 +153,8 @@ for row, ds in enumerate(datasets_info):
 
     x = np.arange(len(layer_keys))
     w = 0.35
-    ax.bar(x - w/2, attn_means, w, color='#4C72B0', label='Attention', edgecolor='black', linewidth=0.5)
-    ax.bar(x + w/2, corr_means, w, color='#E8A838', label='Correlation', edgecolor='black', linewidth=0.5)
+    ax.bar(x - w/2, attn_means, w, color='#0072B2', label='Attention', edgecolor='black', linewidth=0.5)
+    ax.bar(x + w/2, corr_means, w, color='#E69F00', label='Correlation', edgecolor='black', linewidth=0.5)
     ax.set_xticks(x)
     ax.set_xticklabels(layer_labels, fontsize=14)
     ax.set_ylabel('Mean AUROC', fontsize=16)
@@ -171,7 +171,7 @@ for row, ds in enumerate(datasets_info):
     if os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
         ax.scatter(df['auroc_corr'], df['auroc_attn'], alpha=0.4, s=15 if row == 1 else 40,
-                   color='#E8A838', edgecolor='none')
+                   color='#E69F00', edgecolor='none')
         lims = [min(df['auroc_corr'].min(), df['auroc_attn'].min()) - 0.02,
                 max(df['auroc_corr'].max(), df['auroc_attn'].max()) + 0.02]
         ax.plot(lims, lims, 'k--', alpha=0.4, linewidth=1)
@@ -201,7 +201,7 @@ for row, ds in enumerate(datasets_info):
     ci_lo = [d['ci_lo'] for d in ds_list]
     ci_hi = [d['ci_hi'] for d in ds_list]
     xerr = [[d - l for d, l in zip(diffs, ci_lo)], [h - d for d, h in zip(diffs, ci_hi)]]
-    ax.barh(y_pos, diffs, xerr=xerr, capsize=5, color='#55A868', edgecolor='black', linewidth=0.5, height=0.6)
+    ax.barh(y_pos, diffs, xerr=xerr, capsize=5, color='#0072B2', edgecolor='black', linewidth=0.5, height=0.6)
     ax.set_yticks(y_pos)
     ax.set_yticklabels([d['layer'] for d in ds_list], fontsize=14)
     ax.axvline(0, color='gray', linestyle='--', alpha=0.5)
@@ -237,7 +237,7 @@ p1 = bat['part1_trivial_baselines']['summary']
 names = [p['predictor'] for p in p1]
 aurocs = [p['mean_auroc'] for p in p1]
 stds = [p['std_auroc'] for p in p1]
-colors_a = ['#C44E52', '#CCB974', '#55A868', '#4C72B0', '#E8A838']
+colors_a = ['#D55E00', '#CC79A7', '#009E73', '#0072B2', '#E69F00']  # Okabe-Ito (R3.3 colorblind-safe)
 bars = ax.bar(range(len(names)), aurocs, yerr=stds, capsize=4, color=colors_a, edgecolor='black', linewidth=0.5, width=0.7)
 ax.set_xticks(range(len(names)))
 short_names = ['Mean\nExpr', '1-Dropout', 'Variance', 'Attention\n(L15)', 'Spearman\nCorr']
@@ -254,7 +254,7 @@ ax = axes[0, 1]
 p2 = bat['part2_incremental_value']['cv_results']
 model_names = ['A_gene_only', 'B_attn_only', 'C_corr_only', 'D_gene_plus_attn', 'E_gene_plus_corr']
 model_labels = ['Gene\nonly', 'Attn\nonly', 'Corr\nonly', 'Gene+\nAttn', 'Gene+\nCorr']
-model_colors = ['#4C72B0', '#55A868', '#C44E52', '#8172B2', '#CCB974']
+model_colors = ['#0072B2', '#009E73', '#D55E00', '#CC79A7', '#E69F00']  # Okabe-Ito (R3.3 colorblind-safe)
 m_aurocs = [p2[m]['mean_auroc'] for m in model_names]
 m_stds = [p2[m]['std_auroc'] for m in model_names]
 bars = ax.bar(range(5), m_aurocs, yerr=m_stds, capsize=4, color=model_colors, edgecolor='black', linewidth=0.5, width=0.7)
@@ -284,8 +284,8 @@ if cov_balance and isinstance(cov_balance, list):
     smd_before = [c.get('smd_before', c.get('before', 0)) for c in cov_balance]
     smd_after = [c.get('smd_after', c.get('after', 0)) for c in cov_balance]
     y = np.arange(len(cov_names))
-    ax.barh(y + 0.2, smd_before, 0.35, label='Before', color='#C44E52', alpha=0.8)
-    ax.barh(y - 0.2, smd_after, 0.35, label='After', color='#55A868', alpha=0.8)
+    ax.barh(y + 0.2, smd_before, 0.35, label='Before', color='#D55E00', alpha=0.8)
+    ax.barh(y - 0.2, smd_after, 0.35, label='After', color='#0072B2', alpha=0.8)
     ax.set_yticks(y)
     ax.set_yticklabels(cov_names, fontsize=13)
     ax.axvline(0.1, color='gray', linestyle=':', alpha=0.5, label='SMD=0.1')
@@ -295,8 +295,8 @@ elif cov_balance and isinstance(cov_balance, dict):
     smd_before = [abs(cov_balance[k].get('smd_before', cov_balance[k].get('before', 0))) for k in cov_names]
     smd_after = [abs(cov_balance[k].get('smd_after', cov_balance[k].get('after', 0))) for k in cov_names]
     y = np.arange(len(cov_names))
-    ax.barh(y + 0.2, smd_before, 0.35, label='Before', color='#C44E52', alpha=0.8, edgecolor='black', linewidth=0.5)
-    ax.barh(y - 0.2, smd_after, 0.35, label='After', color='#55A868', alpha=0.8, edgecolor='black', linewidth=0.5)
+    ax.barh(y + 0.2, smd_before, 0.35, label='Before', color='#D55E00', alpha=0.8, edgecolor='black', linewidth=0.5)
+    ax.barh(y - 0.2, smd_after, 0.35, label='After', color='#0072B2', alpha=0.8, edgecolor='black', linewidth=0.5)
     ax.set_yticks(y)
     ax.set_yticklabels(cov_names, fontsize=13)
     ax.axvline(0.1, color='gray', linestyle=':', alpha=0.5, label='SMD=0.1')
@@ -316,8 +316,8 @@ else:
             smd_before = [cb[k].get('smd_before', cb[k].get('before', 0)) for k in cov_names]
             smd_after = [cb[k].get('smd_after', cb[k].get('after', 0)) for k in cov_names]
             y = np.arange(len(cov_names))
-            ax.barh(y + 0.2, smd_before, 0.35, label='Before', color='#C44E52', alpha=0.8)
-            ax.barh(y - 0.2, smd_after, 0.35, label='After', color='#55A868', alpha=0.8)
+            ax.barh(y + 0.2, smd_before, 0.35, label='Before', color='#D55E00', alpha=0.8)
+            ax.barh(y - 0.2, smd_after, 0.35, label='After', color='#0072B2', alpha=0.8)
             ax.set_yticks(y)
             ax.set_yticklabels(cov_names, fontsize=13)
             ax.axvline(0.1, color='gray', linestyle=':', alpha=0.5)
@@ -342,9 +342,9 @@ if raw_edge:
     edge_names.extend(['Attn\n(raw edge)', 'Corr\n(raw edge)'])
     edge_aurocs.extend([raw_edge['attn_mean_auroc'], raw_edge['corr_mean_auroc']])
     edge_stds.extend([raw_edge.get('attn_std_auroc', 0), raw_edge.get('corr_std_auroc', 0)])
-    edge_colors_d.extend(['#4C72B0', '#E8A838'])
+    edge_colors_d.extend(['#0072B2', '#E69F00'])
 if matched_cv:
-    for k, lbl, c in [('A_gene_only', 'Gene\nonly', '#55A868'), ('B_gene_plus_attn', 'Gene+\nAttn', '#8172B2'), ('C_gene_plus_corr', 'Gene+\nCorr', '#CCB974')]:
+    for k, lbl, c in [('A_gene_only', 'Gene\nonly', '#009E73'), ('B_gene_plus_attn', 'Gene+\nAttn', '#CC79A7'), ('C_gene_plus_corr', 'Gene+\nCorr', '#F0E442')]:
         if k in matched_cv:
             edge_names.append(lbl)
             edge_aurocs.append(matched_cv[k]['mean_auroc'])
@@ -389,8 +389,8 @@ for label, attn_key, corr_key in res_methods:
         res_corr.append(corr_val.get('auroc_abs_residual', 0.5) if isinstance(corr_val, dict) else 0.5)
 x_r = np.arange(len(res_labels))
 w_r = 0.35
-ax.bar(x_r - w_r/2, res_attn, w_r, label='Attention', color='#C44E52', edgecolor='black', linewidth=0.5)
-ax.bar(x_r + w_r/2, res_corr, w_r, label='Correlation', color='#4C72B0', edgecolor='black', linewidth=0.5)
+ax.bar(x_r - w_r/2, res_attn, w_r, label='Attention', color='#D55E00', edgecolor='black', linewidth=0.5)
+ax.bar(x_r + w_r/2, res_corr, w_r, label='Correlation', color='#0072B2', edgecolor='black', linewidth=0.5)
 ax.set_xticks(x_r)
 ax.set_xticklabels(res_labels, fontsize=11, rotation=15, ha='right')
 ax.legend(fontsize=12)
@@ -410,7 +410,7 @@ trrust_attn_std = p5['std_attn_auroc']
 trrust_corr_std = p5['std_corr_auroc']
 n_tfs = p5['n_evaluable_tfs']
 bars_f = ax.bar([0, 1], [trrust_attn, trrust_corr], yerr=[trrust_attn_std, trrust_corr_std],
-                 capsize=6, color=['#C44E52', '#4C72B0'], edgecolor='black', linewidth=0.5, width=0.6)
+                 capsize=6, color=['#D55E00', '#0072B2'], edgecolor='black', linewidth=0.5, width=0.6)
 ax.set_xticks([0, 1])
 ax.set_xticklabels(['Attention', 'Correlation'], fontsize=14)
 ax.set_ylim(0, 1.0)

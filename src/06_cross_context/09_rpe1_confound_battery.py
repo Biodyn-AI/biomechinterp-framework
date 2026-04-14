@@ -1126,7 +1126,7 @@ def generate_summary_figure(part1, part2, part3, part4, part5):
             mcv.get('B_gene_plus_attn', {}).get('mean_auroc', 0.5),
             mcv.get('C_gene_plus_corr', {}).get('mean_auroc', 0.5),
         ]
-        bar_colors = ['#DD8452', '#55A868', '#4C72B0', '#C44E52', '#8172B3']
+        bar_colors = ['#DD8452', '#009E73', '#0072B2', '#D55E00', '#8172B3']
         ax.bar(range(len(bar_labels)), bar_vals, color=bar_colors, alpha=0.8,
                edgecolor='black', linewidth=0.5)
         ax.axhline(0.5, color='gray', linestyle=':', alpha=0.5)
@@ -1157,7 +1157,7 @@ def generate_summary_figure(part1, part2, part3, part4, part5):
     width = 0.35
     ax.bar(x - width / 2, attn_vals, width, label='Attention', color='#DD8452',
            alpha=0.8, edgecolor='black', linewidth=0.5)
-    ax.bar(x + width / 2, corr_vals, width, label='Correlation', color='#55A868',
+    ax.bar(x + width / 2, corr_vals, width, label='Correlation', color='#009E73',
            alpha=0.8, edgecolor='black', linewidth=0.5)
     ax.axhline(0.5, color='gray', linestyle='--', alpha=0.5)
     ax.set_xticks(x)
@@ -1183,7 +1183,7 @@ def generate_summary_figure(part1, part2, part3, part4, part5):
         ax.bar(x - width / 2, attn_v, width, yerr=attn_e,
                label='Attention', color='#DD8452', alpha=0.8, capsize=3)
         ax.bar(x + width / 2, corr_v, width, yerr=corr_e,
-               label='Correlation', color='#55A868', alpha=0.8, capsize=3)
+               label='Correlation', color='#009E73', alpha=0.8, capsize=3)
         ax.axhline(0.5, color='gray', linestyle=':', alpha=0.5)
         ax.set_xticks(x)
         ax.set_xticklabels(metrics)

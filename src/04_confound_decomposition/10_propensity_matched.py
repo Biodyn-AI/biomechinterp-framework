@@ -697,7 +697,7 @@ def generate_figure(match_summary, eval_results, direct_results, boot_cis):
     # attn_raw, corr_raw, gene_only_LR, gene+attn_LR, gene+corr_LR
     bar_labels = ['Attn\n(raw)', 'Corr\n(raw)', 'Gene-only\n(LR)',
                   'Gene+Attn\n(LR)', 'Gene+Corr\n(LR)']
-    bar_colors = ['#DD8452', '#55A868', '#4C72B0', '#C44E52', '#8172B3']
+    bar_colors = ['#DD8452', '#009E73', '#0072B2', '#D55E00', '#8172B3']
 
     raw_results = eval_results.get('raw_edge_results', {})
     cv_results = eval_results.get('cv_results', {})
@@ -761,7 +761,7 @@ def generate_figure(match_summary, eval_results, direct_results, boot_cis):
                             label='Attention edges', color='#DD8452', alpha=0.8,
                             edgecolor='black', linewidth=0.5, capsize=3)
         bars_corr = ax.bar(x + width/2, corr_vals, width, yerr=corr_errs,
-                            label='Correlation edges', color='#55A868', alpha=0.8,
+                            label='Correlation edges', color='#009E73', alpha=0.8,
                             edgecolor='black', linewidth=0.5, capsize=3)
 
         ax.axhline(0.5, color='gray', linestyle=':', alpha=0.5)
